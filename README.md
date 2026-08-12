@@ -1,3 +1,6 @@
+<img width="1402" height="1122" alt="image" src="https://github.com/user-attachments/assets/b0d325c9-d0a3-4527-a8c4-209fedf800cb" />
+
+
 # 🗃️ Ideenarchiv
 
 Ein persönlicher digitaler Zettelkasten für tausende Schreib- und Storyideen – schnell durchsuchbar, visuell organisiert und mit Fokus auf unkompliziertes Sammeln.
