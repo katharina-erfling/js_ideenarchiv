@@ -6,6 +6,41 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.2.0
+
+### 📚 Kategorien
+
+- Kategorien können jetzt direkt im Ideenarchiv angelegt und bearbeitet werden.
+- Neue Unterkategorien können einer bestehenden übergeordneten Kategorie zugeordnet werden.
+- Kategorien können gelöscht werden.
+- Beim Löschen einer Kategorie werden vorhandene Ideen sinnvoll in die verbleibende Struktur übernommen.
+- Eine Kategoriesuche erleichtert die Navigation in umfangreichen Kategorienbäumen.
+
+### 🗃️ Ideen verwalten
+
+- Ideen können jetzt komfortabel in eine andere Kategorie verschoben werden.
+- Die Zielkategorie wird über eine Auswahl gewählt, statt über eine interne Kategorie-ID angegeben zu werden.
+
+### ✍️ Massenerfassung
+
+- Neuer Modus zur schnellen Erfassung vieler Ideen.
+- Eine Zielkategorie kann einmalig ausgewählt werden.
+- Anschließend können beliebig viele Ideen zeilenweise eingegeben werden.
+- Jede Zeile wird beim Speichern automatisch als eigener Ideenzettel angelegt.
+- Die Massenerfassung erleichtert insbesondere die Digitalisierung umfangreicher analoger Notizsammlungen.
+
+### 💾 Backup & Import
+
+- Das vollständige Ideenarchiv kann als JSON-Backup exportiert werden.
+- Vorhandene JSON-Backups können wieder in die Anwendung importiert werden.
+- Kategorien und Ideendaten werden gemeinsam gesichert.
+- Damit steht erstmals eine grundlegende Sicherungs- und Wiederherstellungsfunktion für das lokale Archiv zur Verfügung.
+
+### 🎨 Oberfläche
+
+- Die bestehende papierbasierte Zettelkasten-Gestaltung wurde für die neuen Verwaltungsfunktionen beibehalten.
+- Neue Funktionen wurden in die vorhandene Oberfläche integriert, ohne den kompakten Charakter des Ideenarchivs zu verändern.
+
 
 ## v0.1.1
 
