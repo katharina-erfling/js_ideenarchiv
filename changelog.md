@@ -6,6 +6,48 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.7
+
+### 🗂 Ideenarchiv – versetztes Kartenlayout
+
+- Ideenraster auf versetztes Masonry-Layout erweitert.
+- Lange Ideen erzeugen keine großen Leerflächen mehr neben kurzen Karten.
+- Nachfolgende Karten rücken in freie Bereiche nach.
+- Listen- und Fokusansicht bleiben unverändert.
+- Kartengrößen werden bei Änderungen automatisch neu berechnet.
+
+### 🔗 Aktionslinks – zusätzliche Fallback-Navigation
+
+Zusätzliche zentrale Absicherung für:
+
+- Suite-Dashboard
+- Buch-Dashboard
+- Romanprojekt-Dashboard
+- Workflow-Sprünge
+- Romanideen
+- Recherchekarten
+- Inspirationskarten
+- Romanprojektkarten
+- Bücherregal
+- Analyse → Manuskript
+
+Die lokalen Click-Handler bleiben bestehen.
+
+Zusätzlich gibt es jetzt eine globale Delegation als Sicherheitsnetz, damit ein Fehler in einem einzelnen Modul nicht mehr andere Aktionslinks wirkungslos macht.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Masonry-Berechnung integriert
+- ResizeObserver abgesichert
+- Suite-Dashboard-Aktionen abgesichert
+- Buch-Dashboard-Aktionen abgesichert
+- Projekt-Dashboard-Aktionen abgesichert
+- dynamische Hauptkarten mit Fallback versehen
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionsdefinitionen
+
 ## v0.80.6
 
 ### 🔗 Navigation – echter Funktionsfix
