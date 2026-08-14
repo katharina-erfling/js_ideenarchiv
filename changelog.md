@@ -6,6 +6,95 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.8
+
+### 🛠 Reliability Rebuild – Kernfunktionen repariert
+
+### 🔥 Gefundene eigentliche Ursache
+
+Im Mindmap-Code fehlten:
+
+- openMindmapEdgeDialog
+- saveMindmapEdge
+- deleteMindmapEdge
+
+deleteMindmapEdge wurde beim Start direkt als Handler referenziert.
+
+Dadurch brach bindEvents() mit einem ReferenceError ab.
+
+Alle danach liegenden UI-Bindings wurden nicht mehr gesetzt.
+
+Betroffen waren unter anderem:
+
+- neue Mindmap
+- Mindmap bearbeiten
+- Namenslisten
+- Statistiken
+- Inspiration
+- Recherche
+- Romanprojekte
+- Romanideen
+- weitere Formulare und Filter
+
+### 🕸 Mindmap-Verbindungen vollständig implementiert
+
+- Verbindungsdialog
+- Von-/Zu-Knoten
+- Beschriftung
+- Linienstil
+- Speichern
+- Bearbeiten
+- Löschen
+- Validierung
+
+### 🧱 Kernbindings entkoppelt
+
+Unabhängige Bindings für:
+
+- Bücher
+- Romanideen
+- Romanprojekte
+- Namenslisten
+- Recherche
+- Inspiration
+- Mindmaps
+- Statistiken
+
+### 🛡 Doppelte Ausfallsicherung
+
+Kernaktionen besitzen jetzt:
+
+1. direkte modulare Bindings
+2. zentrale Event-Delegation als Sicherheitsnetz
+
+### 🧪 Vollständiger Systemtest
+
+Neu unter Einstellungen:
+
+- Kernbuttons
+- Kernformulare
+- Hauptnavigation
+- Funktionskern
+- Render-Smoke-Test
+- echter IndexedDB-Schreib-/Löschtest über alle Suite-Stores
+
+### 🧭 Weitere reparierte Laufzeitlücken
+
+- universeBookIdsForTimeline ergänzt
+- renderWritingView → renderWriting korrigiert
+- docxPageBreak ergänzt
+
+### ✓ Abschlussprüfung
+
+- keine fehlenden Event-Handler
+- keine fehlenden Kernfunktionen
+- keine ungebundenen Formulare
+- keine unreferenzierten statischen Buttons
+- keine fehlenden UI-IDs
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- JavaScript-Syntax gültig
+
 ## v0.80.7
 
 ### 🗂 Ideenarchiv – versetztes Kartenlayout
