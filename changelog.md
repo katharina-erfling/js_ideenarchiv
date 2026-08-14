@@ -6,6 +6,195 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.69.0
+
+### 🧩 Plotting Studio
+
+- Neuer eigener Buch-Reiter „Plotting“.
+- Plotlinien, Beats, Plotstrukturen und Szenenattribute direkt mit dem bestehenden Manuskript verbunden.
+
+### 〰 Plotlinien
+
+Beliebig viele Plotlinien:
+
+- Hauptplot
+- Nebenplot
+- Figurenbogen
+- Beziehung
+- Geheimnis
+- Welt / Politik
+- eigene Plotlinie
+
+Mit:
+
+- Name
+- Art
+- Status
+- Beschreibung
+- Beats
+
+### ◆ Plotpunkte / Beats
+
+- Titel
+- Plotlinie
+- Position 0–100 %
+- optional Szene/Kapitel
+- Funktion / Veränderung
+
+Bei Szenenverknüpfung folgt die Beat-Position automatisch der tatsächlichen Manuskriptreihenfolge.
+
+### 🧭 Plotlinien-Ansicht
+
+- eigene Lane pro Plotlinie
+- dramaturgische Achse 0–100 %
+- Beats direkt auf der Achse
+- verknüpfte Manuskriptszenen sichtbar
+- direkte Bearbeitung
+
+### ◆ Beat-Ansicht
+
+Gesamtübersicht mit:
+
+- Position
+- Beat
+- Plotlinie
+- verknüpftem Manuskriptabschnitt
+- Funktion
+
+### ▦ Szenenmatrix
+
+Standardspalten:
+
+- Szene
+- Status
+- POV
+- Ort
+- Plotlinien
+- Ziel / Konflikt
+- Ergebnis
+
+Plotlinien können direkt per Checkbox Szenen zugeordnet werden.
+
+### ✚ Eigene Szenenattribute
+
+Frei definierbar pro Buch.
+
+Feldtypen:
+
+- Text
+- Auswahl
+- Zahl / Skala
+- Ja / Nein
+
+Eigene Felder erscheinen direkt in der Szenenmatrix.
+
+### ✦ Plotstruktur-Vorlagen
+
+Enthalten:
+
+- Drei-Akt-Struktur
+- Heldenreise
+- Sieben-Punkte-Struktur
+- Mystery / Enthüllung
+- Beziehungsbogen
+
+Vorlagen ergänzen Beats und bleiben danach vollständig editierbar.
+
+### 🔎 Filter
+
+- Plotlinie
+- Szenenstatus
+
+### 📊 Plotting-Überblick
+
+- Plotlinien
+- Beats
+- gekoppelte Beats
+- Szenen ohne Plotlinie
+- nicht aufgelöste Plotlinien
+
+Keine Qualitätsbewertung.
+
+### 🌱 Story Growth
+
+Neue Wachstumsschritte:
+
+- Plotlinie angelegt
+- Plotpunkt ergänzt
+- Plotstruktur übernommen
+
+### 🕸️ Story Graph
+
+Plotlinien sind echte Graph-Knoten.
+
+Verbindungen:
+
+- Plotlinie ↔ Szene
+- Plotlinie ↔ Szene über Beat
+
+### 🔎 Globale Suche
+
+Durchsuchbar:
+
+- Plotlinienname
+- Beschreibung
+- Typ
+- Beat-Titel
+- Beat-Beschreibung
+- verknüpfte Manuskriptabschnitte
+
+Treffer öffnen direkt das Plotting Studio.
+
+### 🗂️ Manuscript Navigator
+
+Plotting Studio verwendet dieselben Manuskriptszenen.
+
+Verschieben einer Szene verändert automatisch die relative Position eines daran gekoppelten Beats.
+
+### 📸 Snapshots
+
+Plotlinienzuordnungen und eigene Szenenattribute liegen am Dokument und werden über den vollständigen Snapshot-Zustand mitgesichert.
+
+### 💾 Backup
+
+- Plotlinien und Beats am Buch
+- Szenenattribute an der Szene
+- automatisch im bestehenden Komplett-Backup
+
+### 🧬 Produktprinzip
+
+Eine Szene wird nur einmal angelegt.
+
+Dieselbe Szene kann anschließend:
+
+- geschrieben
+- im Navigator sortiert
+- dramaturgisch geplottet
+- chronologisch betrachtet
+- im Story Graph vernetzt
+- überarbeitet
+- versioniert
+
+werden.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Plotting-Routing geprüft
+- Plotlinien-CRUD geprüft
+- Beat-CRUD geprüft
+- Szenenverknüpfung geprüft
+- Plotvorlagen geprüft
+- Szenenmatrix geprüft
+- freie Attribute geprüft
+- Story Growth geprüft
+- Story Graph geprüft
+- globale Suche erweitert
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.68.1 – Roadmap v0.67 nachgeholt
 
 ### 🗂️ Manuscript Navigator
