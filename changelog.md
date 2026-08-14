@@ -6,6 +6,120 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.42.0
+
+### ◷ Story-Timeline & Chronologie
+
+- Jedes Buch besitzt jetzt einen eigenen Bereich „Timeline“.
+- Die Timeline trennt bewusst die Reihenfolge im Manuskript von der tatsächlichen Chronologie innerhalb der Geschichte.
+- Konkrete Daten und Uhrzeiten können mit unscharfen oder relativen Zeitangaben kombiniert werden.
+- Die Timeline kann wahlweise nur das aktuelle Buch oder die komplette verbundene Reihe bzw. das Universum anzeigen.
+
+### ✒️ Szenen zeitlich einordnen
+
+- Kapitel und Szenen besitzen jetzt zusätzliche Chronologie-Felder.
+- Hinterlegt werden können:
+  - Datum
+  - Uhrzeit
+  - relative bzw. unscharfe Zeit
+  - Handlungsstrang
+  - Dauer
+- Die bisherige freie Angabe „Zeit / Einordnung“ bleibt erhalten und kann parallel weiterverwendet werden.
+- Chronologie-Angaben werden direkt im Szenen-Inspector gepflegt und automatisch mit dem Abschnitt gespeichert.
+
+### 🌫️ Unscharfe & relative Zeit
+
+- Geschichten benötigen nicht zwingend echte Kalenderdaten.
+- Angaben wie „Frühling“, „Tag 17“, „drei Tage später“, „zehn Jahre zuvor“ oder andere freie Formulierungen können direkt verwendet werden.
+- Undatierte Timeline-Punkte können per Drag & Drop in eine relative Reihenfolge gebracht werden.
+- Die Veränderung der Story-Chronologie ändert dabei nicht automatisch die Reihenfolge des Manuskripts.
+
+### 🧱 Manuskript vs. Story-Reihenfolge
+
+- Manuskriptabschnitte zeigen auf der Timeline zusätzlich ihre Position im eigentlichen Manuskript.
+- Weicht die chronologische Position deutlich von der Manuskriptreihenfolge ab, wird dies als möglicher Zeitsprung bzw. Rückblenden-Hinweis sichtbar gemacht.
+- Die Suite verändert die Manuskriptstruktur dabei niemals automatisch.
+
+### ➕ Freie Timeline-Ereignisse
+
+- Unabhängig vom Manuskript können eigene Timeline-Ereignisse angelegt werden.
+- Freie Ereignisse besitzen Titel, Beschreibung, Datum, Uhrzeit, relative Zeit, Handlungsstrang und Ort.
+- Ein Ereignis kann mit einem oder mehreren Büchern verknüpft werden.
+- Story-Bibel-Akten können zusätzlich direkt mit einem Timeline-Ereignis verbunden werden.
+- Dadurch lassen sich beispielsweise Geburten, Umzüge, Kriege, Gründungen, historische Ereignisse oder Geschehnisse außerhalb des eigentlichen Manuskripts dokumentieren.
+
+### 📎 Story-Bibel & Chronologie
+
+- Story-Bibel-Einträge besitzen jetzt optionale Chronologie-Felder.
+- Besonders Ereignis-Akten können dadurch direkt auf der Timeline erscheinen.
+- Auch Figuren-, Orts- oder Weltakten können bei Bedarf zeitlich eingeordnet werden.
+- Unterstützt werden Datum, Uhrzeit, relative Zeit und ein Handlungsstrang.
+- Die bereits vorhandenen bandspezifischen Kontinuitätsstände bleiben davon unabhängig erhalten.
+
+### 🧵 Handlungsfäden auf der Timeline
+
+- Stationen aus Handlungsfäden können auf der Timeline erscheinen, wenn sie mit einer zeitlich eingeordneten Szene verknüpft sind.
+- Dadurch werden Einführung, Entwicklung und Auflösung eines Geheimnisses oder Konflikts im zeitlichen Verlauf der Geschichte sichtbar.
+- Handlungsfäden bleiben weiterhin in ihrem eigenen Bereich vollständig bearbeitbar.
+
+### 👤 Figurenfilter
+
+- Die Timeline kann nach Story-Bibel-Figuren gefiltert werden.
+- Dadurch lässt sich gezielt verfolgen, welche zeitlich eingeordneten Szenen und Ereignisse mit einer bestimmten Figur verbunden sind.
+- Voraussetzung ist eine vorhandene Verknüpfung des Timeline-Punkts mit der entsprechenden Figurenakte.
+
+### 🛤️ Handlungsstränge & Parallelhandlungen
+
+- Timeline-Punkte können einem frei benannten Handlungsstrang zugeordnet werden.
+- Die Timeline kann anschließend gezielt nach einem Handlungsstrang gefiltert werden.
+- Dadurch lassen sich parallele Erzählstränge, Rückblenden, unterschiedliche Figurenperspektiven oder historische Ebenen voneinander trennen.
+
+### ⚠️ Dezente Kontinuitätshinweise
+
+- Die Timeline erkennt einfache mögliche Zeitüberschneidungen.
+- Wenn dieselbe verknüpfte Figur zur exakt gleichen Zeit an unterschiedlichen hinterlegten Orten auftaucht, wird ein Hinweis angezeigt.
+- Die Suite entscheidet nicht selbstständig, dass ein Fehler vorliegt.
+- Hinweise bleiben rein diagnostisch und verändern keine Story-Daten.
+
+### ✦ Reihe & Universum
+
+- Die Timeline kann auf „Reihe / Universum“ umgeschaltet werden.
+- Dafür werden die bereits vorhandenen Buchverknüpfungen und Reihendaten verwendet.
+- Zeitlich eingeordnete Szenen, Story-Bibel-Ereignisse, freie Timeline-Ereignisse und Handlungsfaden-Stationen aus mehreren Bänden können gemeinsam betrachtet werden.
+- Es entsteht keine zweite getrennte Reihenverwaltung.
+
+### ⌂ Integration in die Buchübersicht
+
+- Bücher mit vorhandenen Timeline-Punkten zeigen auf der Buchübersicht einen direkten Hinweis auf ihre Chronologie.
+- Von dort kann direkt in die Timeline gewechselt werden.
+
+### 🔎 Globale Suche
+
+- Freie Timeline-Ereignisse sind Bestandteil der globalen Suche.
+- Durchsucht werden Titel, Beschreibung, Datum, relative Zeit, Handlungsstrang, Ort, verknüpfte Bücher und verknüpfte Story-Bibel-Akten.
+- Suchtreffer führen direkt in die Timeline und öffnen bei Bedarf das entsprechende Ereignis.
+
+### 🛠️ Universumskarte
+
+- Die Ermittlung verbundener Bücher aus der Universumskarte wurde korrigiert und gehärtet.
+- Direkte Buchverknüpfungen werden jetzt zuverlässig über die vorhandenen Gegenbeziehungen verfolgt.
+- Hinterlegte Cover verwenden wieder konsistent das tatsächliche Coverfeld des Buches.
+
+### 💾 Datenmodell & Backup
+
+- IndexedDB wurde um einen eigenen Speicherbereich für freie Timeline-Ereignisse erweitert.
+- Das Datenbankschema wurde auf Version 7 erweitert.
+- Das vollständige Backupformat wurde auf Version 7 erweitert.
+- v0.42-Backups enthalten Timeline-Ereignisse und alle neuen Chronologie-Felder.
+- Backups aus v0.41/v0.40 sowie ältere v6-, v5- und v4-Backups bleiben weiterhin importierbar.
+- Sämtliche Chronologie-Daten bleiben vollständig lokal im Browser.
+
+### ✓ Systemcheck
+
+- Der Systemcheck prüft jetzt Timeline-Ereignisse auf Verknüpfungen zu nicht mehr vorhandenen Büchern.
+- Auch fehlende Story-Bibel-Akten innerhalb von Timeline-Ereignissen werden als Hinweis erkannt.
+- Die Prüfung bleibt rein diagnostisch und verändert keine Timeline-Daten automatisch.
+
 ## v0.41.0
 
 ### ✦ Reihen- & Universumskarte
