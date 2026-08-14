@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.11.0
+
+### ▱ Romanideen
+
+- „Romanideen“ ist jetzt der zweite vollständig nutzbare Bereich der Autoren-Suite.
+- Große Romanideen werden bewusst getrennt von den kleinen Ideenzetteln verwaltet.
+- Neue Romanideen können mit Arbeitstitel, Status, Genre, Prämisse, Stimmung und freien Notizen angelegt werden.
+- Romanideen werden als eigene papierartige Dossier-Karten dargestellt.
+- Suche, Statusfilter und Sortierung erleichtern die Verwaltung wachsender Sammlungen.
+- Vier Entwicklungsstände stehen zur Verfügung: „Funke“, „Sammeln“, „Entwickeln“ und „Bereit fürs Projekt“.
+
+### 🔗 Ideenzettel verknüpfen
+
+- Vorhandene Zettel aus dem Ideenarchiv können direkt mit einer Romanidee verknüpft werden.
+- Die Zettel bleiben weiterhin eigenständig im Ideenarchiv erhalten.
+- Innerhalb der Romanidee können verknüpfte Zettel gesucht, hinzugefügt und wieder entfernt werden.
+- In der Detailansicht einer Romanidee werden die zugehörigen Zettel gemeinsam angezeigt.
+
+### ▤ Übergang zum Romanprojekt
+
+- Eine Romanidee kann jetzt direkt in ein neues Romanprojekt überführt werden.
+- Arbeitstitel, Prämisse, Genre, Stimmung und verknüpfte Ideenzettel werden dabei als Ausgangsdaten übernommen.
+- Die ursprüngliche Romanidee bleibt erhalten und wird mit dem erzeugten Projekt verknüpft.
+- Bereits überführte Romanideen werden entsprechend gekennzeichnet und nicht versehentlich mehrfach konvertiert.
+
+### 💾 Daten & Backup
+
+- Romanideen werden im bereits vorbereiteten eigenen IndexedDB-Bereich gespeichert.
+- Bestehende Ideenarchiv-Daten bleiben unverändert.
+- Romanideen und ihre Verknüpfungen werden automatisch in die Autoren-Suite-Backups aufgenommen.
+
 ## v0.10.0
 
 ### ✒️ Autoren-Suite
