@@ -6,6 +6,180 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.64.0
+
+### 🕸️ Story Graph
+
+- Neuer eigener Buch-Reiter „Story Graph“.
+- Automatisch aus bestehenden Story-Verknüpfungen aufgebaut.
+- Keine separaten Graph-Datenkopien.
+- Verschieben verändert nur die Darstellung.
+
+### ◈ Automatisch vernetzte Story-Inhalte
+
+Darstellbar sind unter anderem:
+
+- Szenen und Kapitel
+- Figuren
+- Orte
+- Story-Bibel-Akten
+- Ideen
+- Handlungsfäden
+- Timeline-Ereignisse
+- Recherche
+- Mindmap-Knoten
+- Weltkarten
+
+### ↔ Reale Verbindungen
+
+Kanten entstehen aus vorhandenen Beziehungen, unter anderem:
+
+- Living Knowledge
+- Szene ↔ Story-Bibel
+- Szene ↔ Idee
+- Szene ↔ Recherche
+- Story-Bibel ↔ Story-Bibel
+- Handlungsfaden ↔ Szene
+- Timeline ↔ Story-Bibel
+- Mindmap-Verbindungen
+- Story-Beziehungen
+- Weltkarte ↔ Ort
+
+### 🧲 Mausbedienung
+
+- Knoten frei verschieben
+- freie Fläche ziehen → Graph verschieben
+- Mausrad → Zoom
+- Klick → auswählen
+- Doppelklick → Originalinhalt öffnen
+- Rechtsklick → Aktionsmenü
+
+### 🖱️ Rechtsklick-Menü
+
+- Inhalt öffnen
+- direktes Umfeld fokussieren
+- Knoten zentrieren
+- Inhaltstyp ausblenden
+
+### ⌨️ Tastatur
+
+- Pfeiltasten → Knoten fein bewegen
+- Shift + Pfeil → größere Schritte
+- Enter → Inhalt öffnen
+- F → Umfeld fokussieren
+- + / - → Zoom
+- 0 → Netz einpassen
+- Escape → Fokus/Auswahl lösen
+
+### ◎ Fokusmodus
+
+- ausgewählter Knoten + direkte Nachbarn
+- ideal für Fragen wie:
+  - Was hängt an dieser Figur?
+  - Welche Szenen gehören zu diesem Faden?
+  - Was ist mit diesem Ort verbunden?
+- Fokus verändert keine Storydaten.
+
+### 🔎 Suche & Typfilter
+
+- eigene Graph-Suche
+- Suche in Titel, Kontext und Inhaltstyp
+- einzelne Inhaltstypen ein-/ausblendbar
+- Darstellungspräferenzen pro Buch gespeichert
+
+### ✦ Automatische Anordnung
+
+- automatische Ausgangsanordnung
+- räumliche Gruppierung nach Inhaltstyp
+- „Neu anordnen“ für frisches Layout
+- manuelle Positionen bleiben erhalten
+
+### ⌂ Einpassen & Zoom
+
+- sichtbares Netz automatisch in den Arbeitsbereich einpassen
+- Zoom von 30 % bis 280 %
+- freie Navigation jederzeit möglich
+
+### 🧭 Kontext-Inspector
+
+Zeigt beim ausgewählten Knoten:
+
+- Inhaltstyp
+- Titel
+- Kontext
+- Anzahl direkter Verbindungen
+- verbundene Story-Inhalte
+- Art der Verbindung
+
+Mit direkter Navigation.
+
+### 📊 Netzwerküberblick
+
+- Story-Inhalte
+- Verbindungen
+- Inhaltstypen
+- isolierte Inhalte
+
+„Isoliert“ ist kein Fehlerstatus.
+
+### 🎨 Ruhige visuelle Sprache
+
+- keine roten Fehlerknoten
+- zurückhaltende Typfarben
+- aktive Verbindungen erst bei Auswahl hervorgehoben
+- stärker vernetzte Knoten leicht größer
+
+### 🧠 Story Intelligence
+
+- direkter Zugang zum Story Graph aus Story Intelligence
+
+### 🏠 Buch-Dashboard
+
+- direkter Zugang zum Story Graph
+
+### 🕸️ Living Knowledge
+
+Living Knowledge beantwortet:
+
+> Was hängt an diesem konkreten Inhalt?
+
+Story Graph beantwortet:
+
+> Wie hängt die Geschichte als Ganzes zusammen?
+
+Beide verwenden dieselben Daten.
+
+### 💾 Layout & Backup
+
+- Knotenpositionen pro Buch gespeichert
+- ausgeblendete Typen gespeichert
+- Zoom-/Pan-Zustand gespeichert
+- alles reine Darstellungsdaten
+- Komplett-Backup übernimmt die Daten automatisch
+
+### 🧬 Produktprinzip
+
+Der Story Graph ist kein Mindmap-Ersatz.
+
+Die Mindmap ist eine freie Denkfläche.
+
+Der Story Graph visualisiert automatisch das bereits vorhandene Storymodell.
+
+> Ein Inhalt wird einmal angelegt – und erscheint überall dort, wo er gebraucht wird.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Story-Graph-Routing geprüft
+- Maus-, Pointer-, Tastatur-, Zoom- und Kontextmenü-Handler geprüft
+- automatische Graph-Erzeugung geprüft
+- persistente Layoutdaten geprüft
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen statischen Buttons oder Formulare
+- bestehende Storydaten bleiben kompatibel
+
 ## v0.63.0
 
 ### 📖 EPUB & Publishing Export
