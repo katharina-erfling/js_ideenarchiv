@@ -6,6 +6,22 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.2
+
+### 📚 Hoverkarte am Bücherregal korrigiert
+
+- Die Buch-Infokarte bleibt jetzt innerhalb der sichtbaren Regalfläche.
+- Bei Büchern am linken Rand wird die Karte automatisch nach rechts verschoben.
+- Bei Büchern am rechten Rand wird sie entsprechend nach links verschoben.
+- Die Pfeilspitze der Infokarte bleibt optisch auf den jeweiligen Buchrücken ausgerichtet.
+- Die Position wird beim Hover bzw. Tastaturfokus anhand der tatsächlichen Regalbreite berechnet.
+- Die Buchrücken selbst bleiben unverändert direkt aneinander stehen.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.46.0
 
 ### 📚 Cover-Bücher im Regal
