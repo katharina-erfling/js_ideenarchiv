@@ -6,6 +6,44 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.19.0
+
+### ♧ Inspiration & Moodboards
+
+- „Inspiration“ ist jetzt als eigener nutzbarer Bereich der Autoren-Suite verfügbar.
+- Bilder, Musik, Textschnipsel, Farben, Links und freie Inspirationsnotizen können zentral gesammelt werden.
+- Inspiration ist bewusst von der sachlicheren Recherche getrennt und darf stärker visuell, emotional und assoziativ funktionieren.
+- Einträge können projektübergreifend bleiben oder direkt einem Romanprojekt zugeordnet werden.
+- Suche sowie Filter nach Typ und Romanprojekt erleichtern die Arbeit mit größeren Inspirationssammlungen.
+
+### 🖼️ Visuelle Sammlung
+
+- Bilder können direkt als Inspirationsmaterial hochgeladen werden.
+- Hochgeladene Bilder werden automatisch verkleinert und lokal gespeichert.
+- Die Inspirationsübersicht verwendet eine freie, unterschiedlich hohe Kartenanordnung, die an ein digitales Moodboard erinnert.
+- Farben können als eigene Inspirationskarten gespeichert und großflächig dargestellt werden.
+- Bild- und Farbkarten stehen gleichberechtigt neben Text- und Musikinspirationen.
+
+### ♫ Musik, Texte & Links
+
+- Musik kann als eigener Inspirationstyp mit Link gespeichert werden.
+- Text- und Zitatschnipsel erhalten eine bewusst stärker literarische Darstellung.
+- Lose Links und freie Notizen können ebenfalls gesammelt werden.
+- Stichwörter und Stimmungen können jedem Eintrag unabhängig vom Typ hinzugefügt werden.
+
+### 🧭 Projektbezug
+
+- Inspirationen können direkt einem Romanprojekt zugeordnet werden.
+- Projektübergreifende Mood- und Ideensammlungen bleiben weiterhin möglich.
+- Die Projektzuordnung wird direkt auf den Inspirationskarten angezeigt.
+
+### 💾 Datensicherheit
+
+- Inspirationen werden im bereits vorbereiteten eigenen IndexedDB-Speicher abgelegt.
+- Bilder werden lokal im Browser gespeichert.
+- Inspirationsdaten sind Bestandteil der bestehenden Autoren-Suite-Backups.
+- Bestehende Ideen-, Recherche- und Manuskriptdaten bleiben beim Wechsel auf v0.19.0 unverändert.
+
 ## v0.18.0
 
 ### ◉ Recherche & Medien
