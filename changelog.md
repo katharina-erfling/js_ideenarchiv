@@ -6,6 +6,120 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.54.0
+
+### 🧪 Vorab-Audit: Navigation, Links & neue Workflows
+
+- JavaScript-Syntax vollständig geprüft.
+- Statische UI-IDs gegen alle direkten JavaScript-Referenzen geprüft.
+- Keine fehlenden statischen UI-Referenzen gefunden.
+- Keine doppelten HTML-IDs gefunden.
+- Keine doppelten Funktionsdefinitionen gefunden.
+- Statische Buttons und Formulare auf Handler bzw. Submit-/Delegationslogik geprüft.
+- Hauptnavigation und Buch-Workflow-Routing geprüft.
+- Die neuen Bereiche aus v0.49 bis v0.53 wurden dabei mit berücksichtigt.
+
+### 🔧 Zwei echte Verknüpfungsfehler behoben
+
+- „＋ Projekt anlegen“ im Bücherregal öffnet wieder zuverlässig den Projekt-Editor.
+- Mit Romanideen verknüpfte Mindmap-Knoten lassen sich jetzt direkt öffnen.
+
+### 🧠 Mindmap 2.0 – semantische Knoten
+
+- Knotenarten:
+  - freier Gedanke
+  - Idee
+  - Figur
+  - Ort
+  - Szene
+  - Kapitel
+  - Handlungsfaden
+  - Recherche
+  - Buch
+- Knotenart und grafische Form bleiben unabhängig voneinander.
+- Verknüpfte Inhalte können ihre semantische Art automatisch anzeigen.
+
+### ↗ Echte Suite-Inhalte direkt öffnen
+
+- Verknüpfte Knoten zeigen einen anklickbaren Verknüpfungs-Chip.
+- Rechtsklick → „Verknüpften Inhalt öffnen“.
+- Direkter Sprung zum tatsächlichen Inhalt der Suite.
+
+### ✦ Gedanken in echte Inhalte umwandeln
+
+- Unterstützte Ziele:
+  - Idee
+  - Charakterakte
+  - Ortsakte
+  - Szene
+  - Kapitel
+  - Handlungsfaden
+  - Recherche
+  - Buch
+- Der Mindmap-Knoten bleibt bestehen.
+- Der neu erzeugte Inhalt wird automatisch zurück mit dem Knoten verknüpft.
+
+### 📎 Mindmap → Story-Bibel
+
+- Figur erzeugt eine echte Charakterakte.
+- Ort erzeugt eine echte Ortsakte.
+- Reiter-Templates aus v0.53 werden übernommen.
+- Falls nötig, wird automatisch eine Story-Bibel für das Zielbuch angelegt.
+
+### ✒ Mindmap → Manuskript
+
+- Knoten können zu Kapitel oder Szene werden.
+- Zielbuch und Romanprojekt werden gewählt bzw. vorausgefüllt.
+- Szenen können optional direkt einem Kapitel zugeordnet werden.
+- Neue Manuskriptabschnitte starten als „geplant“.
+
+### 🧵 Mindmap → Handlungsfaden
+
+- Knoten können direkt zu echten Handlungsfäden werden.
+- Titel und Beschreibung werden übernommen.
+- Der Faden startet als „angelegt“.
+
+### ◉ Mindmap → Recherche
+
+- Knoten können direkt als Rechercheeintrag gespeichert werden.
+- Projektbezug wird übernommen.
+
+### 📚 Mindmap → Buch
+
+- Ein Gedanke kann als neues Entwurfsbuch innerhalb eines Romanprojekts angelegt werden.
+- Knotentitel → Buchtitel.
+- Knotennotiz → erste Buchnotiz.
+
+### 💡 Mindmap → Idee
+
+- Die bisherige Einzelfunktion wurde in den allgemeinen Umwandlungsworkflow integriert.
+- Projekt-/Buchbezug wird nach Möglichkeit direkt übernommen.
+
+### 🖱️ Rechtsklick-Menü erweitert
+
+- Bearbeiten
+- verbundenen Gedanken erstellen
+- Verbindung herstellen
+- Inhalt verknüpfen
+- verknüpften Inhalt öffnen
+- in Suite-Inhalt umwandeln
+- löschen
+
+### 🔒 Datenmodell & Sicherheit
+
+- Bestehende Mindmaps bleiben kompatibel.
+- Farben, Formen, Positionen und Verbindungen bleiben erhalten.
+- Umwandlungen löschen den ursprünglichen Knoten nicht.
+- Keine destruktive Datenmigration erforderlich.
+
+### ✓ Abschlussprüfung
+
+- JavaScript-Syntax geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionsdefinitionen.
+
 ## v0.53.0
 
 ### 📎 Story-Bibel mit eigenen Reitern
