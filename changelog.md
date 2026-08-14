@@ -6,6 +6,53 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.49.0
+
+### 🎬 Szenenplanung
+
+- Szenentrenner auf der Buch-Planungswand sind jetzt echte Szenenplaner statt bloßer Trenner.
+- Für geplante Szenen können zusätzlich festgehalten werden:
+  - Kurzinhalt
+  - Ziel / Konflikt
+  - Ergebnis / Veränderung
+  - Stimmung
+- Die wichtigsten Angaben erscheinen kompakt direkt auf der Szenenkarte der Planungswand.
+- Die bestehende Drag-&-Drop-Reihenfolge der Planung bleibt erhalten.
+
+### ✒ Planung → Manuskript
+
+- Beim Übergeben einer geplanten Szene ins Manuskript werden ihre Szenendaten mitgenommen.
+- Kurzinhalt, Ziel/Konflikt, Ergebnis und Stimmung stehen anschließend im Inspector des Manuskripts zur Verfügung.
+- Die geplante Szene wird damit zum selben inhaltlichen Objekt im Schreibworkflow, statt beim Übergang ihre Planungsinformationen zu verlieren.
+- Bereits übergebene Planungsblöcke werden weiterhin erkannt und nicht unbemerkt dupliziert.
+
+### 📌 Schnellablage im Schreibflow
+
+- Im Manuskripteditor gibt es jetzt „＋ Gedanke“.
+- Ein Gedanke kann festgehalten werden, ohne den aktuellen Schreibabschnitt verlassen zu müssen.
+- Zur Auswahl stehen:
+  - Idee
+  - Überarbeiten
+  - Recherche
+  - Kontinuität
+  - Szenennotiz
+- Neue Ideen werden automatisch mit dem aktuellen Romanprojekt, Buch und Manuskriptabschnitt verknüpft.
+- Recherchegedanken werden als Rechercheeintrag angelegt und mit dem Abschnitt verbunden.
+- Szenennotizen landen direkt beim aktuellen Abschnitt.
+- Nach dem Speichern springt der Fokus zurück in den Manuskripttext.
+
+### 🧭 Szenen-Inspector
+
+- Der Inspector zeigt zusätzlich „Ergebnis / Veränderung“ und „Stimmung“.
+- Diese Angaben werden wie die übrigen Szenendaten automatisch gespeichert.
+- Aus der Planung übernommene Werte können beim Schreiben jederzeit weiterentwickelt werden.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Planungswände, Manuskripte und Bücher bleiben kompatibel.
+- Keine destruktive Datenmigration notwendig.
+
 ## v0.48.2
 
 ### 📚 Hierarchische Roman-/Buchauswahl
