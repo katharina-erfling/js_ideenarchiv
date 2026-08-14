@@ -6,6 +6,77 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.15
+
+### 📖 Eine Story-Bibel pro Buch
+
+Die zusätzliche linke Anhang-Verwaltung wurde entfernt.
+
+Für ein Buch gibt es jetzt genau eine sichtbare Story-Bibel. Die eigentliche Organisation erfolgt darin über:
+
+- Reiter
+- eigene Reiter
+- Ordner
+- Unterordner
+- Story-Bibel-/Worldbuilding-Einträge
+
+### 🧭 Oberfläche vereinfacht
+
+Entfernt wurden:
+
+- linke Liste mehrerer Anhänge
+- „+ Neuer Anhang“
+- „Bestehenden Anhang verknüpfen“
+- „Verknüpfung lösen“
+
+Der Story-Bibel-Arbeitsbereich nutzt jetzt die volle Breite.
+
+Oben bleiben:
+
+- Module
+- Eigener Reiter
+- Freigabe
+
+### 🔗 Freigabe bleibt erhalten
+
+Die Story-Bibel kann weiterhin gelten für:
+
+- dieses Buch
+- mehrere Bücher
+- ganze Reihe
+- Universum
+
+Einzelne Worldbuilding-Einträge behalten zusätzlich ihre eigene Freigabelogik.
+
+### 🔄 Bestehende mehrere Anhänge
+
+Falls ältere Daten für ein Buch mehrere Anhänge enthalten, werden diese beim ersten Öffnen automatisch zu einer gemeinsamen Story-Bibel zusammengeführt.
+
+Übernommen werden:
+
+- Einträge
+- eigene Reiter
+- Systemreiter
+- Ordner
+- Unterordner
+- Eintrags-Freigaben
+
+### 🧩 Interne Kompatibilität
+
+Der technische Appendix-Datensatz bleibt intern als Container bestehen.
+
+In der Oberfläche ist diese technische Ebene nicht mehr als eigene Verwaltung sichtbar.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Story-Bibel wird bei fehlendem Container automatisch angelegt
+- mehrere ältere Container werden konsolidiert
+- linke Mehrfach-Anhang-Navigation entfernt
+- Reiter-/Ordner-/Eintragslogik bleibt bestehen
+- Scope-/Freigabesystem bleibt bestehen
+- keine doppelten HTML-IDs
+
 ## v0.80.14
 
 ### 🔎 Suche wird bei bewusster Navigation verlassen
