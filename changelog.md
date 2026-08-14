@@ -6,6 +6,45 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.17.0
+
+### 🧭 Szenen-Inspector
+
+- Der Schreibeditor besitzt jetzt einen echten Inspector für den aktuell geöffneten Manuskriptabschnitt.
+- Der Inspector ist in die Bereiche „Szene“, „Projekt“ und „Verknüpft“ gegliedert.
+- Szeneninformationen bleiben direkt neben dem Manuskript sichtbar, ohne den Schreibfluss zu unterbrechen.
+
+### 🎭 Szenendaten
+
+- Für jeden Kapitel- oder Szenenabschnitt kann ein Kurzinhalt hinterlegt werden.
+- Eine POV-Figur kann aus den im Romanprojekt angelegten Figuren gewählt werden.
+- Ein Ort kann direkt aus der Ortsplanung des Projekts zugeordnet werden.
+- Freie Zeitangaben wie Tageszeit, Tag im Handlungsverlauf oder Zeitsprung können gespeichert werden.
+- Ziel und Konflikt des aktuellen Abschnitts besitzen ein eigenes Feld.
+- Beliebig viele im Projekt angelegte Figuren können als in der Szene auftretend markiert werden.
+- Die bereits vorhandene freie Szenennotiz bleibt zusätzlich erhalten.
+
+### 🔗 Verknüpfte Inhalte
+
+- Projektspezifische Ideenzettel können jetzt direkt mit einem einzelnen Manuskriptabschnitt verknüpft werden.
+- Der Inspector durchsucht dafür die bereits zum Romanprojekt gehörenden Ideenzettel.
+- Verknüpfungen können direkt hinzugefügt oder wieder entfernt werden.
+- Planungsblöcke, aus denen ein Manuskriptabschnitt bei der Übergabe entstanden ist, werden im Inspector als Planungsgrundlage angezeigt.
+- Der Bereich für spätere Recherche-Verknüpfungen ist bereits in die Inspector-Struktur integriert.
+
+### 🗂️ Projekt im Blick
+
+- Prämisse, Stimmung, Figuren, Orte und Planungsnotizen des Gesamtprojekts bleiben über einen eigenen Inspector-Tab erreichbar.
+- Dadurch kann zwischen szenenspezifischen Details und der großen Projektperspektive gewechselt werden.
+
+### 💾 Autosave & Sicherheit
+
+- Inspector-Daten werden automatisch gemeinsam mit dem aktuellen Manuskriptabschnitt gespeichert.
+- Kurzinhalt, POV, Ort, Zeit, Ziel/Konflikt, Figuren und Notizen werden von der bestehenden Notfallsicherung berücksichtigt.
+- Beim Zusammenführen zweier Manuskriptabschnitte werden Szenendaten möglichst verlustfrei zusammengeführt.
+- Ideenzettel- und Planungsverknüpfungen bleiben beim Zusammenführen erhalten.
+- Alle Inspector-Daten werden automatisch in den bestehenden Autoren-Suite-Backups gesichert.
+
 ## v0.16.0
 
 ### ✒️ Romaneditor
