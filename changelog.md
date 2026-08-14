@@ -6,6 +6,47 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.0
+
+### 📚 Cover-Bücher im Regal
+
+- Bücher mit Cover werden jetzt als gerade stehende Bücher dargestellt.
+- Das Cover füllt die sichtbare Vorderseite vollständig aus.
+- Ein schmaler echter Buchrücken wird links neben dem Cover dargestellt.
+- Bücher kippen weder im normalen Zustand noch beim Hover.
+- Bücher ohne Cover verwenden weiterhin die Buchrückenansicht, ebenfalls ohne Schrägstellung.
+
+### 🎨 Buchrückenfarbe automatisch aus dem Cover
+
+- Neue Option „Automatisch aus dem Cover übernehmen“.
+- Beim Auswählen eines Covers wird lokal eine dominante Bildfarbe ermittelt.
+- Sehr helle, sehr dunkle und nahezu graue Bildbereiche werden bei der Ermittlung reduziert gewichtet.
+- Die gefundene Farbe wird als Buchrückenfarbe eingesetzt.
+- Manuelle Änderungen bleiben weiterhin möglich und deaktivieren die Automatik.
+- Die Farbanalyse erfolgt vollständig lokal im Browser.
+
+### 📁 Ordner & Unterordner im Anhang
+
+- Anhänge können jetzt eigene Ordnerstrukturen besitzen.
+- Ordner können auf der Wurzelebene angelegt werden.
+- Jeder Ordner kann weitere Unterordner besitzen.
+- Eine Breadcrumb-Navigation zeigt den aktuellen Pfad.
+- Story-Bibel-Einträge können direkt einem Ordner oder Unterordner zugewiesen werden.
+- Bestehende Einträge bleiben unverändert auf der Wurzelebene.
+
+### 🎨 Ideenstatistik
+
+- „+X dieses Jahr“ verwendet jetzt dieselbe grüne Wachstumsfarbe wie Woche und Monat.
+- Die bisherige rote Darstellung stammte lediglich aus einer alten CSS-Akzentregel und hatte keine inhaltliche Bedeutung.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine fehlenden festen UI-Verweise.
+- Keine doppelten HTML-IDs.
+- Keine doppelten JavaScript-Funktionen.
+- Keine Datenbankmigration notwendig.
+
 ## v0.45.5
 
 ### 🛡️ Data Guard & Recovery
