@@ -6,6 +6,171 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.63.0
+
+### 📖 EPUB & Publishing Export
+
+- Das Exportzentrum kann Manuskripte jetzt direkt als EPUB-3-Datei ausgeben.
+- EPUB wird als echtes E-Book-Paket mit notwendiger Paketstruktur erzeugt.
+
+### 📚 Kapitel & Szenen
+
+- Manuskriptkapitel werden zu EPUB-Inhaltsabschnitten.
+- Szenen werden ihrem Kapitel zugeordnet.
+- Szenen ohne Kapitel bleiben exportierbar.
+- Szenentitel können optional ausgegeben werden.
+- Ohne Szenentitel werden Szenen durch ruhige Szenentrenner getrennt.
+
+### 🧭 Inhaltsverzeichnis
+
+- Automatisches EPUB-3-Navigationsdokument.
+- Kapitelreihenfolge entspricht dem Manuskript.
+- Inhaltsverzeichnis verlinkt direkt auf die jeweiligen Kapitel.
+
+### 🏷️ Publishing-Metadaten
+
+Neue Buchfelder:
+
+- Autor:in
+- Sprache
+- eigener BCP-47-Sprachcode
+- Rechte / Copyright
+- optionale EPUB-Kennung
+
+Zusätzlich verwendet werden:
+
+- Titel
+- Untertitel
+- Reihe
+- Bandnummer
+- ISBN
+- Verlag / Imprint
+- Veröffentlichungsdatum
+
+### 🖼️ Cover
+
+- Vorhandenes Buchcover kann eingebettet werden.
+- Cover wird im EPUB-Manifest als echtes Coverbild markiert.
+- Automatische Coverseite.
+- EPUB bleibt auch ohne Cover exportierbar.
+
+### 🖼️ Bilder im Manuskript
+
+- Eingebettete Data-URL-Bilder werden als echte EPUB-Bilddateien übernommen.
+- Unterstützt:
+  - PNG
+  - JPEG / JPG
+  - WEBP
+  - GIF
+
+### ✨ Titelseite
+
+Optional automatisch mit:
+
+- Titel
+- Untertitel
+- Autor:in
+- Reihe
+- Bandnummer
+
+### 🎨 EPUB-Stylesheet
+
+Enthalten sind Reader-freundliche Regeln für:
+
+- Kapitel
+- Szenen
+- Absätze
+- Szenentrenner
+- Zitate
+- Listen
+- Bilder
+- Titelseite
+- Coverseite
+
+### 🧹 XHTML-Aufbereitung
+
+- Manuskript-HTML wird für EPUB bereinigt.
+- Scripts, Formulare, Buttons, Frames usw. werden entfernt.
+- Absätze, Hervorhebungen, Zitate, Listen, Links und Bilder bleiben erhalten.
+- Reiner Text wird automatisch in Absatzstruktur überführt.
+
+### ✓ EPUB-Prüfung
+
+Vor dem Export geprüft:
+
+- Titel
+- Manuskriptinhalt
+- Sprachcode
+- Autor:in
+- Cover
+- Kapitelstruktur
+
+Hinweise und echte Exportblocker werden getrennt dargestellt.
+
+### 🧱 Paket-Strukturprüfung
+
+Beim Erzeugen zusätzlich geprüft:
+
+- `mimetype`
+- `META-INF/container.xml`
+- OPF-Paketdatei
+- Navigationsdatei
+- Stylesheet
+- Inhaltsverzeichnis
+- doppelte Dateipfade
+
+Die interne Prüfung ersetzt noch kein externes offizielles EPUBCheck.
+
+### 📦 Exportoptionen
+
+- Cover einbetten
+- Szenentitel ausgeben
+- Titelseite erzeugen
+
+Die Optionen verändern nur den Export, niemals das Manuskript.
+
+### 📎 Buchakte erweitert
+
+- Autor:in
+- Sprache
+- EPUB-Kennung
+
+werden auch in der Buchakte sichtbar.
+
+### 🔒 Portabilität
+
+- Neue Metadaten liegen direkt im Buch-Datenmodell.
+- Komplett-Backups sichern sie automatisch.
+- Keine neue Publishing-Datenablage.
+- Alte Bücher bleiben kompatibel.
+
+### 🧬 Produktprinzip
+
+EPUB verwendet dieselben:
+
+- Manuskriptkapitel
+- Szenen
+- Cover
+- Buchdaten
+- Publikationsdaten
+
+wie der Rest der Suite.
+
+Kein Export-Silo.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- EPUB-Workflow geprüft.
+- Publishing-Metadaten geprüft.
+- Cover- und Bildverarbeitung geprüft.
+- interne EPUB-Strukturprüfung ergänzt.
+- keine fehlenden statischen UI-Referenzen.
+- keine doppelten HTML-IDs.
+- keine doppelten Funktionen.
+- keine ungebundenen statischen Buttons oder Formulare.
+- bestehende TXT-, MD-, HTML-, DOCX-, RTF-, PDF-, Projekt- und Backup-Exporte bleiben erhalten.
+
 ## v0.62.0
 
 ### 📚 Living Bookshelf 2.0
