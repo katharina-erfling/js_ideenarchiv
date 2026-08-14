@@ -6,6 +6,57 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.40.0
+
+### 🧵 Kontinuität & Handlungsfäden
+
+- Die Autoren-Suite besitzt jetzt einen eigenen buch- und reihenübergreifenden Bereich für offene Handlungsfäden.
+- Unterstützte Fadentypen sind Geheimnis, Foreshadowing, Konflikt, Versprechen, offene Frage, Beziehung, Hinweis/Gegenstand und freie Typen.
+- Jeder Faden besitzt einen Status: offen, in Entwicklung, aufgelöst oder fallengelassen.
+- Handlungsfäden können mit mehreren Büchern und mehreren Story-Bibel-Akten gleichzeitig verbunden werden.
+
+### 🗺️ Verlauf eines Handlungsfadens
+
+- Für jeden Faden können beliebig viele Stationen angelegt werden.
+- Stationen können als Einführung, Wiederaufnahme, Entwicklung oder Auflösung markiert werden.
+- Jede Station kann einem Buch und optional einem konkreten Kapitel bzw. einer Szene zugeordnet werden.
+- Dadurch lässt sich nachvollziehen, wo ein Geheimnis eingeführt, später wieder aufgegriffen und schließlich aufgelöst wird.
+
+### 📌 Kontinuitätsstand pro Buch
+
+- Story-Bibel-Einträge besitzen jetzt zusätzlich zur gemeinsamen Hauptakte bandspezifische Kontinuitätsnotizen.
+- Pro Buch können frei benannte Angaben gespeichert werden, etwa Wissensstand, Wohnort, Beziehungsstatus, Besitz, Verletzungen oder andere Veränderungen.
+- Ein Story-Bibel-Eintrag kann beliebig viele solcher Angaben pro Band besitzen.
+- Die allgemeine Akte wird dabei nicht dupliziert.
+- So kann dieselbe Figur über eine komplette Reihe hinweg gemeinsam gepflegt werden, während Veränderungen je Band separat dokumentiert werden.
+
+### ✒️ Kontinuität beim Schreiben
+
+- Verknüpfte Story-Bibel-Akten zeigen im Manuskript-Inspector jetzt den für das aktuelle Buch hinterlegten Kontinuitätsstand.
+- Relevante offene Handlungsfäden einer verknüpften Akte werden ebenfalls direkt beim Schreiben sichtbar.
+- Dadurch kann beim Schreiben einer Szene geprüft werden, was eine Figur in diesem Band bereits weiß oder welche offenen Fäden mit ihr verbunden sind.
+
+### ⌂ Hinweise auf der Buchübersicht
+
+- Die Buchübersicht zeigt jetzt dezent die Anzahl offener bzw. in Entwicklung befindlicher Handlungsfäden.
+- Zusätzlich wird angezeigt, wie viele bandspezifische Kontinuitätsnotizen für das aktuelle Buch vorhanden sind.
+- Von diesen Hinweisen kann direkt in die Handlungsfäden bzw. Story-Bibel gewechselt werden.
+
+### 🔎 Globale Suche
+
+- Handlungsfäden sind Bestandteil der globalen Suche.
+- Durchsucht werden Titel, Beschreibung, Typ, Status, Verlaufsnotizen, verknüpfte Bücher und verknüpfte Story-Bibel-Akten.
+- Suchtreffer führen direkt zum entsprechenden Handlungsfaden.
+
+### 💾 Datenmodell & Backup
+
+- IndexedDB wurde um einen eigenen Speicherbereich für Handlungsfäden erweitert.
+- Das Datenbankschema wurde auf Version 6 erweitert.
+- Das vollständige Backupformat wurde auf Version 6 erweitert.
+- v0.40-Backups enthalten Handlungsfäden, deren Verlauf und die bandspezifischen Kontinuitätsstände der Story-Bibel.
+- Ältere v5- und v4-Backups bleiben weiterhin importierbar.
+- Alle Kontinuitäts- und Handlungsfadendaten bleiben lokal im Browser.
+
 ## v0.39.0
 
 ### 🧭 Durchgängiger Buch-Workflow
