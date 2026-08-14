@@ -6,6 +6,23 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.4
+
+### 🗂️ Kategorien wieder direkt anklickbar
+
+- Ein Fehler in der Navigation zwischen Dashboard und Ideenarchiv wurde behoben.
+- Beim Klick auf eine Kategorie wurde zwar intern die Kategorie gewechselt, die Oberfläche blieb jedoch auf dem Dashboard.
+- Dadurch änderten sich Breadcrumbs und Zähler, ohne dass die eigentliche Ideenansicht erschien.
+- Ein Klick auf eine Kategorie wechselt jetzt zuverlässig in das Ideenarchiv und zeigt direkt die gewählte Kategorie.
+- Das Auf- und Zuklappen über den kleinen Pfeil bleibt davon getrennt.
+- Kategorien können zusätzlich per Tastatur mit Enter oder Leertaste geöffnet werden.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Kategorienavigation gezielt auf den Wechsel Dashboard → Ideenarchiv geprüft.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.46.3
 
 ### 🗂️ Massenimport – eindeutige Statusfarben
