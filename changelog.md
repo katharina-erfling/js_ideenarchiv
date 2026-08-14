@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.60.1
+
+### 🗺️ Living World Maps – Ausbau
+
+- Neue ein-/ausblendbare Kartenebenen:
+  - Orte
+  - Szenen
+  - Timeline-Ereignisse
+  - Figuren
+- Szenen werden an ihren verknüpften Story-Bibel-Orten dargestellt.
+- Timeline-Ereignisse können direkt auf der Karte erscheinen.
+- Figurenpositionen werden aus vorhandenen Szenendaten abgeleitet.
+- Story-Datumsfilter ergänzt.
+- Figurenfilter ergänzt.
+- Für ausgewählte Figuren können aus datierten Szenen automatisch Reiserouten dargestellt werden.
+- Karteninhalte sind direkt navigierbar:
+  - Szene → Manuskript
+  - Ereignis → Timeline
+  - Figur → Story-Bibel
+- Orts-Pins können unabhängig von den Story-Ebenen ein-/ausgeblendet werden.
+- Keine doppelten Storydaten: Karte verwendet weiterhin dieselben Orte, Szenen, Figuren und Ereignisse wie die übrige Suite.
+- Maus-, Tastatur-, Drag-&-Drop-, Zoom- und Pin-Bedienung aus v0.60 bleibt erhalten.
+
+### Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionsdefinitionen.
+- Keine Datenmigration notwendig.
+
 ## v0.60.0
 
 ### 🗺️ World & Map Studio
