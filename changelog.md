@@ -6,6 +6,22 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.45.5
+
+### 🛡️ Data Guard & Recovery
+
+- Ein scheinbar leeres Archiv wird nicht mehr automatisch als normaler Zustand akzeptiert.
+- Die Startsequenz lädt Daten zunächst ausschließlich lesend.
+- Ladefehler werden gesammelt und sichtbar gemacht.
+- Ein lokales Datenmanifest merkt sich die zuletzt bekannte Anzahl zentraler Datensätze.
+- Unerwartet leere oder deutlich reduzierte Datenbestände aktivieren eine Schreibsperre.
+- Bei lokaler `file://`-Nutzung wird ausdrücklich auf die mögliche Pfadabhängigkeit des Browser-Speichers hingewiesen.
+- Neue leere lokale Speicherorte müssen bewusst als neues Archiv bestätigt werden.
+- Ein Notfall-Rohdatenexport kann direkt aus dem Schutzdialog erstellt werden.
+- Automatische Bereinigungen und Migrationen laufen erst nach einer erfolgreichen Startprüfung.
+- Verdächtige Ladezustände können nicht per Escape übergangen werden.
+- Datenbank- und reguläres Backupformat bleiben unverändert.
+
 ## v0.45.3
 
 ### 📚 Bücher & Romanprojekte zusammengeführt
