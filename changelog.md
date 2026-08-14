@@ -6,6 +6,30 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.1
+
+### 🧭 UX-/Navigationsrunde I
+
+- Neues Suite-Dashboard als zentrale Startseite.
+- Autoren-Suite-Logo führt jetzt immer zum Dashboard.
+- Große helle Bottom-Navigation vollständig entfernt.
+- Hauptnavigation über Hamburger-Menü, Suite-Sidebar, Dashboard und globale Suche.
+- Navigation außerhalb des Ideenarchivs zentral und robuster gebunden.
+- Schnellregister wieder eindeutig Rosa, Blau, Grün und Flieder.
+- Neue Einstellung für die Standardtiefe des Ideenarchiv-Kategorienbaums.
+- Standard: 2 sichtbare Hierarchiestufen.
+- Buchnavigation in grobe Arbeitsbereiche gruppiert.
+- Nur zum gewählten Bereich passende Unterfunktionen werden angezeigt.
+- Dauerhafte große Workflow-Ribbon ausgeblendet.
+- Manuskriptoberfläche ruhiger und kompakter.
+- Einstellungen um echte UX-Konfiguration erweitert.
+- Responsive Navigation nachgezogen.
+- bestehende Buchmodule und Funktionen bleiben erhalten.
+- JavaScript-Syntax geprüft.
+- keine fehlenden statischen UI-Referenzen.
+- keine doppelten HTML-IDs.
+- keine doppelten Funktionsdefinitionen.
+
 ## v0.80.0
 
 ### 🔬 Feature-Parity & Gap Audit
