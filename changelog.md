@@ -6,6 +6,54 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.24.0
+
+### 🕸️ Beziehungsnetz
+
+- Romanprojekte besitzen jetzt einen eigenen Bereich „Beziehungsnetz“.
+- Figuren können direkt miteinander verbunden werden.
+- Unterstützte Beziehungsarten sind Familie, Freundschaft, Romantik, Bündnis, Konflikt, Macht/Abhängigkeit, geheime Verbindung und freie Beziehungen.
+- Jede Beziehung kann eine eigene Kurzbezeichnung und ausführliche Dynamiknotiz erhalten.
+- Das Beziehungsnetz stellt die Figuren als visuelle Knoten und ihre Beziehungen als Verbindungslinien dar.
+- Unterschiedliche Beziehungstypen werden in der Darstellung visuell voneinander unterschieden.
+- Alle Beziehungen können nachträglich bearbeitet oder wieder entfernt werden.
+
+### 🎭 Sichere Figurenbeziehungen
+
+- Beziehungen werden direkt im jeweiligen Romanprojekt gespeichert.
+- Wird eine Figur gelöscht, werden ausschließlich ihre Beziehungsverknüpfungen entfernt.
+- Andere Figurenakten und deren Inhalte bleiben dabei unverändert.
+- Das bisherige freie Beziehungsfeld in der Figurenakte bleibt zusätzlich erhalten und kann weiterhin für ausführlichere Notizen genutzt werden.
+
+### 🌍 Weltbau
+
+- Romanprojekte besitzen jetzt einen eigenen Bereich „Weltbau“.
+- Ortsakten können hierarchisch miteinander verbunden werden.
+- Beispiele für mögliche Strukturen sind Welt → Land → Region → Stadt → Gebäude oder Königreich → Provinz → Dorf.
+- Jeder Ort kann einen übergeordneten Ort erhalten.
+- Die vorhandenen Ortsakten mit Bildern, Atmosphäre, Beschreibung und Hintergrundinformationen bleiben die Grundlage des Weltbaus.
+
+### 🌳 Ortshierarchie
+
+- Die Weltbauansicht stellt Ortsstrukturen als eingerückten Baum dar.
+- Verschachtelungsebenen werden visuell unterschieden.
+- Direkt aus der Weltbauansicht können neue Hauptorte oder Unterorte angelegt werden.
+- Unterorte übernehmen beim Anlegen automatisch den gewählten übergeordneten Ort als Ausgangspunkt.
+- Vorhandene Orte können jederzeit in der Hierarchie neu zugeordnet werden.
+
+### 🧭 Weltübersicht
+
+- Die Weltbauansicht zeigt die Anzahl aller Orte, oberster Ebenen und die aktuelle maximale Verschachtelung.
+- Bilder sowie Art und Region eines Ortes bleiben direkt in der Baumansicht sichtbar.
+- Ein Klick auf einen Ort öffnet unmittelbar die zugehörige Ortsakte.
+
+### 💾 Datensicherheit
+
+- Beziehungsnetz und Weltbau werden innerhalb der bestehenden Romanprojektdaten gespeichert.
+- Bestehende Figuren- und Ortsakten bleiben mit älteren Projekten kompatibel.
+- Beim Löschen eines übergeordneten Ortes werden dessen direkte Unterorte nicht gelöscht, sondern sicher auf die oberste Ebene verschoben.
+- Alle neuen Beziehungen und Hierarchien sind automatisch Bestandteil der Autoren-Suite-Backups.
+
 ## v0.23.0
 
 ### 🎭 Figurenakten
