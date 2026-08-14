@@ -6,6 +6,19 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.7.0
+
+### 🎲 Zufall & Wiederentdecken
+
+- Die bisherige Zufallsfunktion wurde zu einem eigenen Wiederentdecken-Modus ausgebaut.
+- Es können wahlweise 1, 3, 5 oder 10 zufällige Ideenzettel gleichzeitig gezogen werden.
+- Zufallsziehungen können aus dem gesamten Archiv, nur aus der aktuellen Kategorie oder aus der aktuellen Kategorie inklusive Unterkategorien erfolgen.
+- Favorisierte Ideen können auf Wunsch von der Zufallsauswahl ausgeschlossen werden.
+- Gezogene Ideen werden als eigene papierartige Zettelsammlung präsentiert.
+- Einzelne gezogene Zettel können direkt geöffnet und weiterbearbeitet werden.
+- Mit „Nochmal ziehen“ lässt sich unmittelbar eine neue Auswahl aus demselben Bereich erzeugen.
+- Die bisherige kompakte Stöberansicht bleibt zusätzlich erhalten.
+
 ## v0.6.0
 
 ### 📊 Dashboard & Wachstum
