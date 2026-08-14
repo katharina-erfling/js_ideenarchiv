@@ -6,6 +6,29 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.14
+
+### 🔎 Suche wird bei bewusster Navigation verlassen
+
+Im Ideenarchiv bleibt eine laufende Suche jetzt nicht mehr aktiv, wenn anschließend links bewusst in eine Kategorie gewechselt wird.
+
+Das gilt für:
+
+- Klick auf eine Kategorie im Kategorienbaum
+- Öffnen einer Kategorie per Tastatur
+- Wechsel über ein Schnellregister
+- Wechsel über die Kategorie-Suche
+
+Beim Wechsel wird:
+
+- der Suchbegriff geleert
+- die Suchansicht beendet
+- die Trefferanzeige zurückgesetzt
+- die gewählte Kategorie normal geöffnet
+- eine eventuell offene globale Suchpalette geschlossen
+
+Damit verhält sich die Navigation wieder erwartbar: Wer nach einer Suche links eine Kategorie auswählt, landet direkt in dieser Kategorie und sieht nicht weiterhin die alten Suchtreffer.
+
 ## v0.80.13
 
 ### 🔗 Gemeinsames Freigabe-/Scope-System für Anhänge & Worldbuilding
