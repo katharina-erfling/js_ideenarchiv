@@ -6,6 +6,36 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.7
+
+### ☑ Mehrfachauswahl mit Shift
+
+- Ideen können jetzt wie in einer Dateiliste mit gedrückter Shift-Taste als Bereich markiert werden.
+- Zuerst eine Idee auswählen, anschließend Shift gedrückt halten und eine weiter unten bzw. oben sichtbare Idee anklicken.
+- Alle sichtbaren Ideen zwischen beiden Punkten werden zusätzlich markiert.
+- Shift funktioniert sowohl über den Auswahlkreis als auch beim Klick auf den Zettel selbst.
+- Strg/Cmd-Klick für einzelne zusätzliche Markierungen bleibt erhalten.
+
+### ☑ Alle markieren
+
+- In der unteren Auswahlleiste gibt es jetzt den Button „Alle markieren“.
+- Der Button markiert sämtliche Ideen des aktuell gefilterten Ergebnisses.
+- Das gilt für die aktuell gewählte Kategorie, Suche und aktive Filter.
+- Auch Ideen auf weiteren Pagination-Seiten werden dabei mit markiert.
+- Die Anzahl der aktuell markierbaren Ideen wird direkt im Button angezeigt.
+- Sind bereits alle gefilterten Ideen markiert, zeigt der Button „Alle markiert“.
+
+### 🧹 Auswahl zurücksetzen
+
+- Beim Aufheben der Auswahl wird auch der Shift-Anker zurückgesetzt.
+- Nach Verschieben oder Löschen einer Mehrfachauswahl wird der Auswahlanker ebenfalls sauber geleert.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Auswahl-, Verschiebe-, Favoriten- und Papierkorb-Funktionen bleiben erhalten.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.46.6
 
 ### 🗂️ Kategorie-Drag & Drop repariert
