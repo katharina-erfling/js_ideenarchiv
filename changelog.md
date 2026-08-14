@@ -6,6 +6,42 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.2
+
+### 🔗 Ideen direkt mit Romanen & Büchern verknüpfen
+
+- Im Detailfenster jedes Ideenzettels gibt es jetzt den Bereich „Mit Roman / Buch verknüpfen“.
+- Bücher werden nach Romanprojekt gruppiert angezeigt.
+- Eine Idee kann mit mehreren Büchern verknüpft werden.
+- Durch die Buchzuordnung wird sie automatisch auch im zugehörigen Romanprojekt gesammelt.
+- Bereits verknüpfte Bücher erscheinen direkt am Ideenzettel und können dort wieder gelöst werden.
+- Der ursprüngliche Zettel bleibt immer im Ideenarchiv; es wird keine Kopie erzeugt und keine Kategorie verändert.
+
+### 🖱️ Rechtsklick-Menü für Ideenzettel
+
+- Rechtsklick auf einen Zettel öffnet jetzt ein Kontextmenü.
+- Verfügbar sind:
+  - Öffnen / bearbeiten
+  - Mit Roman / Buch verknüpfen
+  - Favorisieren bzw. Favorit entfernen
+  - Verschieben
+  - Duplizieren
+  - Papierkorb
+- Die Aktionen verwenden die bereits vorhandenen Speicher- und Sicherheitsfunktionen.
+
+### ☰ Burgermenü funktioniert jetzt
+
+- Das bisher funktionslose Burger-Symbol oben links öffnet jetzt ein echtes Hauptmenü.
+- Von dort erreichbar sind Dashboard, Ideenarchiv, Romanideen, Bücher & Projekte, Namenslisten, Recherche, Inspiration, Mindmaps und Einstellungen.
+- Klick außerhalb oder auf das X schließt das Menü wieder.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Buch-/Projekt-Verknüpfungsstruktur wird wiederverwendet.
+- Keine neue Datenbankstruktur notwendig.
+- Bestehende Daten bleiben kompatibel.
+
 ## v0.47.1
 
 ### ✒ Manuskript-UI neu ausbalanciert
