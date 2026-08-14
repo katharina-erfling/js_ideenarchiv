@@ -6,6 +6,75 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.44.0
+
+### ✦ Große Workflow-, UI- & Sicherheitsrunde
+
+Diese Version führt bewusst kein neues großes Inhaltsmodul ein. Stattdessen wurde die inzwischen umfangreiche Autoren-Suite als zusammenhängendes Arbeitsprogramm überprüft, geglättet und insbesondere beim Schreiben weiter abgesichert.
+
+### ⌁ Workflow sichtbar gemacht
+
+- Im Bucharbeitsbereich gibt es jetzt eine kompakte Workflow-Leiste.
+- Sie bildet den Weg von Ideen über Planung und Entwurf bis Story-Bibel und Verfeinerung sichtbar ab.
+- Die Leiste ist ausdrücklich keine Pflichtreihenfolge.
+- Je nach vorhandenem Material zeigt sie einen passenden nächsten Hinweis.
+- Die einzelnen Workflow-Schritte sind direkt anklickbar.
+
+### 🗺️ Zentrale Workflow-Karte
+
+- Über „Workflow“ im Schreibbereich lässt sich eine vollständige Karte der Suite öffnen.
+- Sie zeigt die Verzahnung von Mindmaps, Ideenarchiv, Romanideen, Romanprojekten, Büchern, Planung, Manuskript, Story-Bibel, Handlungsfäden, Timeline und Beziehungen.
+- Von der Karte kann direkt in die jeweiligen Bereiche gesprungen werden.
+
+### ✒️ Schreibsicherheit weiter verstärkt
+
+- Der bestehende Notfallschutz für offene Manuskripttexte wurde erweitert.
+- Der aktuelle Entwurf wird parallel in zwei getrennten Browser-Speichern gespiegelt, soweit beide verfügbar sind.
+- Ein zusätzlicher regulärer Speicherlauf erfolgt während des Schreibens alle 30 Sekunden.
+- Die schnelle Notfallkopie wird ungefähr alle vier Sekunden aktualisiert.
+- Beim Wechsel aus dem Manuskript in einen anderen Buchbereich wird vorsorglich gespeichert.
+- Der Schutz beim Verbergen, Verlassen und Schließen der Seite bleibt aktiv.
+
+### ↶ Versionsstände
+
+- Automatische Sicherheitsversionen werden nun ungefähr alle drei Minuten bei Änderungen angelegt.
+- Vor der Wiederherstellung einer älteren Version wird der aktuelle Stand weiterhin zuerst gesichert.
+
+### ◷ Chronologie-Sicherheitsfix
+
+- Eine Lücke aus dem Timeline-Ausbau wurde geschlossen.
+- Datum, Uhrzeit, relative Story-Zeit, Handlungsstrang und Dauer werden jetzt auch im primären Manuskript-Autosave vollständig berücksichtigt.
+
+### ✓ Schnellzugriff Sicherheit
+
+- Im Schreibbereich gibt es jetzt einen direkten Sicherheitsbutton.
+- Probleme mit dem lokalen Schreibschutz werden dort sichtbar signalisiert.
+
+### ⌨️ Sicherheits-Shortcuts
+
+- `Strg/Cmd + Shift + S` aktualisiert unmittelbar den aktuellen Sicherheitsstand.
+- `Strg/Cmd + Shift + W` öffnet die Workflow-Karte.
+
+### 🎛️ UI-Hierarchie
+
+- Der umfangreiche Buchworkflow wurde visuell neu gegliedert.
+- Die Workflow-Navigation bleibt beim Scrollen leichter erreichbar.
+- Große Arbeitsbereiche besitzen ruhigere maximale Breiten.
+- Dialogaktionen bleiben bei langen Formularen besser erreichbar.
+- Schmale und mobile Ansichten wurden nachgezogen.
+
+### 💾 Backup-Kompatibilität
+
+- Das vollständige Backupformat wurde auf Version 9 erweitert.
+- v0.43/v8-Backups und ältere unterstützte Backupstände bleiben importierbar.
+- Sämtliche bestehenden Inhalte einschließlich Mindmaps, Beziehungsnetzen, Timeline und Story-Bibel bleiben Bestandteil des Backups.
+
+### ✓ Technische Prüfung
+
+- Die Oberfläche wurde auf doppelte IDs, fehlende feste UI-Verweise und doppelte JavaScript-Funktionen geprüft.
+- Die Manuskript-Sicherheitskette wurde gezielt auf Editor, Inspector, Chronologie, Versionsstände und Notfallkopien geprüft.
+- Bestehende Datenmodelle wurden nicht unnötig umgebaut.
+
 ## v0.43.0
 
 ### ⌘ Beziehungen, Netzwerke & Mindmaps
