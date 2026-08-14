@@ -6,6 +6,145 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.70.0
+
+### 🌍 Worldbuilding Studio
+
+- Story-Bibel zu einem modularen Worldbuilding Studio ausgebaut.
+- Neue Story-Bibeln starten bewusst schlank.
+- Kernbereiche:
+  - Figuren
+  - Orte
+  - Welt & Lore
+  - Notizen
+
+### 🧩 Optionale Worldbuilding-Module
+
+Einzeln aktivierbar:
+
+- Kulturen
+- Religionen & Glaube
+- Staat & Herrschaft
+- Organisationen
+- Wirtschaft & Handel
+- Sprachen & Schriften
+- Spezies & Völker
+- Tiere & Kreaturen
+- Magie
+- Technologie
+- Regeln & Systeme
+- Zeitrechnung & Kalender
+- Gegenstände & Artefakte
+- Geschichte & Ereignisse
+
+Deaktivieren blendet Module nur aus und löscht keine Akten.
+
+### ✦ Schnellstart-Profile
+
+- Kompakt
+- Fantasy
+- Science-Fiction
+- Gesellschaft & Politik
+- Deep Worldbuilding
+
+Profile bleiben anschließend vollständig individuell anpassbar.
+
+### 🧬 Eigene Templates
+
+Eigene spezialisierte Templates ergänzt für unter anderem:
+
+- Kultur
+- Religion
+- Herrschaft
+- Wirtschaft
+- Sprache
+- Spezies
+- Magie
+- Technologie
+- Zeitrechnung
+
+Bestehende Templates für Organisationen, Kreaturen, Gegenstände, Systeme und Ereignisse erweitert.
+
+### 🧾 Eigene Weltmodule
+
+Bestehende Funktion für eigene Story-Bibel-Reiter bleibt erhalten.
+
+Pro eigenem Modul:
+
+- Name
+- Symbol
+- Grundtyp
+- eigene Template-Felder
+- eigene Feldreihenfolge
+
+### 🧠 Mindmap → Worldbuilding
+
+Mindmap-Gedanken können jetzt direkt umgewandelt werden in:
+
+- Kultur
+- Religion
+- Staat / Herrschaft
+- Organisation
+- Spezies
+- Magie
+- Technologie
+- Sprache
+- Wirtschaft
+- Zeitrechnung
+- Artefakt
+
+Benötigte Module werden automatisch aktiviert.
+
+### 🕸️ Vernetzung
+
+Neue Worldbuilding-Akten funktionieren automatisch mit:
+
+- Living Knowledge
+- Story Graph
+- globaler Suche
+- Szenen
+- Figuren
+- Orten
+- Timeline
+- Recherche
+- Mindmaps
+- Reihen / Universen
+
+### 🌱 Story Growth
+
+Neue Worldbuilding-Akten zählen als echte Arbeit an Figuren & Welt.
+
+Modul ein-/ausblenden erzeugt keinen künstlichen Fortschritt.
+
+### 🔒 Daten & Kompatibilität
+
+- bestehende Story-Bibeln behalten ihre bisherigen sichtbaren Reiter
+- bestehende Akten werden nicht migriert oder dupliziert
+- alte Organisationen/Gegenstände/Kreaturen/Systeme bleiben erhalten
+- neue Story-Bibeln starten im Kompaktmodus
+- Module ausblenden löscht keine Daten
+- Komplett-Backup übernimmt Module, Templates und Inhalte automatisch
+
+### 🔧 Nebenfix
+
+- Plotting-Reiter in der gespeicherten Workflow-Navigation ergänzt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Worldbuilding-Typen geprüft
+- Module aktiviert/deaktiviert
+- Kompaktmodus geprüft
+- Schnellstart-Profile geprüft
+- bestehende Systemreiter werden wiederverwendet
+- Templates geprüft
+- Mindmap-Konvertierung geprüft
+- Story Growth erweitert
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.69.0
 
 ### 🧩 Plotting Studio
