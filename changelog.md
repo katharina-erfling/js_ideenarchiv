@@ -6,6 +6,36 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.45.2
+
+### 🧭 Hauptnavigation nochmals gehärtet
+
+- Die untere Hauptnavigation verwendet jetzt nur noch eine zentrale Event-Delegation direkt auf der Navigationsleiste.
+- Das Routing wird bereits vor den übrigen Modul-Eventbindungen installiert.
+- Dadurch bleiben Dashboard, Ideenarchiv, Romanideen, Romanprojekte, Bücher, Namenslisten, Recherche, Inspiration, Mindmaps, Statistiken und Einstellungen auch dann anklickbar, wenn in einem später geladenen Modul ein separater Event-Handler fehlschlagen sollte.
+- Die Navigationsleiste besitzt jetzt ausdrücklich eigene Pointer-Events, einen höheren Ebenenwert und eine isolierte Stacking-Ebene, damit Arbeitsbereiche keine Klicks überdecken können.
+
+### × Dialog-Schließen repariert
+
+- Das Schließen-X von Formular-Dialogen ist jetzt technisch kein Submit-Button mehr.
+- Dadurch löst das X keine HTML-Formularvalidierung aus.
+- Insbesondere kann „Neue Idee“ jetzt auch mit leerem Pflichtfeld über das X geschlossen werden.
+- Das X wird zentral über den umgebenden Dialog behandelt und schließt ihn unabhängig von Pflichtfeldern.
+- Der Button „Abbrechen“ im Dialog „Neue Idee“ wurde ebenfalls auf einen echten nicht-validierenden Abbruch umgestellt.
+- Escape bleibt weiterhin verwendbar.
+
+### ⌂ Startansicht
+
+- Das Dashboard bleibt weiterhin die feste Startansicht beim Öffnen der Suite.
+- Mindmaps bleiben sauber als eigener Hauptbereich getrennt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Zentrale Navigation auf genau einen Routingpfad reduziert.
+- Dialog-Schließen unabhängig von Formularvalidierung geprüft.
+- Keine Änderung am Datenbank- oder Backupformat erforderlich.
+
 ## v0.45.1
 
 ### 🧭 Navigation & Startansicht
