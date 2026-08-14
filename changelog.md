@@ -6,6 +6,59 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.50.0
+
+### ⌘ Globale Suche
+
+- Strg+K bzw. Cmd+K öffnet die suiteweite Suche.
+- Durchsucht werden unter anderem:
+  - Ideen
+  - Romanprojekte und Bücher
+  - Figuren und Orte
+  - Kapitel und Szenen inklusive Manuskripttext
+  - Story-Bibel und Anhänge
+  - Handlungsfäden und Timeline
+  - Mindmaps und Mindmap-Knoten
+  - Recherche
+  - Inspiration
+  - Namenslisten
+- Manuskriptabschnitte werden zusätzlich über Notizen, Ziel/Konflikt, Stimmung, Ergebnis und verknüpfte Inhalte gefunden.
+- Treffer bleiben nach Inhaltstyp gruppiert.
+
+### ⌨️ Tastaturbedienung der Suche
+
+- Pfeil hoch/runter bewegt die Auswahl.
+- Enter öffnet den markierten Treffer.
+- Escape schließt die Suchpalette.
+- Mausbedienung bleibt erhalten.
+
+### 🔗 „Wo hängt das dran?“
+
+- Suchtreffer zeigen an, wenn direkte Verknüpfungen vorhanden sind.
+- Ein Klick auf die Verknüpfungszahl öffnet eine eigene Übersicht.
+- Dort wird sichtbar, wo ein Inhalt verwendet bzw. womit er verbunden ist.
+- Unterstützt werden unter anderem:
+  - Idee → Romanprojekt, Buch, Planung, Manuskript, Mindmap
+  - Buch → Projekt, Ideen, Manuskript, Story-Bibel, Handlungsfäden, Timeline, Mindmaps
+  - Story-Bibel-Eintrag → Manuskript, Beziehungen, Timeline, Handlungsfäden, Mindmaps
+  - Kapitel/Szene → Buch, Projekt, Ideen, Story-Bibel, Recherche, Inspiration, Handlungsfäden
+  - Figur/Ort → Projekt und verwendende Manuskriptabschnitte
+  - Recherche/Inspiration → Manuskriptabschnitte und Mindmaps
+  - Mindmap-Knoten → Mindmap, verknüpfter Suite-Inhalt und benachbarte Knoten
+- Alle Einträge der Verknüpfungsübersicht sind direkt anklickbar.
+
+### 🧭 Verknüpfungen statt Datensilos
+
+- Vorhandene Verknüpfungen werden ausgewertet, nicht dupliziert.
+- Das Anzeigen der Verknüpfungen verändert keine Daten.
+- Suchindex und Verknüpfungsanzeige werden nach Änderungen neu aufgebaut.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Bestehende Bücher, Manuskripte, Mindmaps, Anhänge und Ideen bleiben kompatibel.
+
 ## v0.49.0
 
 ### 🎬 Szenenplanung
