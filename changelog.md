@@ -6,6 +6,65 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.6
+
+### 🔗 Navigation – echter Funktionsfix
+
+- Hauptnavigation vollständig auf direkte zentrale Routing-Funktion umgestellt.
+- Explizite Routen für:
+  - Dashboard
+  - Ideenarchiv
+  - Romanideen
+  - Bücher & Projekte
+  - Namenslisten
+  - Recherche
+  - Inspiration
+  - Mindmaps
+  - Statistiken
+  - Einstellungen
+- Seitenleiste und Hamburger-Menü verwenden dieselbe Route.
+- Logo verwendet dieselbe Dashboard-Route.
+- Buttons zusätzlich direkt gebunden.
+- globale Event-Delegation bleibt als Fallback erhalten.
+- Navigation bleibt unabhängig von Fehlern anderer UI-Bindings verfügbar.
+- eigener Navigation-Audit beim Start.
+
+### 🧭 Seitenleiste
+
+Außerhalb des Ideenarchivs:
+
+- Suite-Menü wieder untereinander.
+- nutzt die freie Seitenhöhe.
+- keine zweispaltige Stauchung.
+- keine unnötig abgeschnittenen Menüeinträge.
+
+Im Ideenarchiv:
+
+- kein zusätzliches Suite-Menü in der linken Spalte.
+- linke Fläche gehört vollständig dem Ideenarchiv.
+- Kategorien, Statistik, Papierkorb und Schnellregister bleiben erhalten.
+- globale Navigation weiterhin über Hamburger, Logo und globale Suche.
+
+### 🌳 Kategorien
+
+Weiterhin enthalten:
+
+- Rechtsklick → Kategorie ein-/ausklappen.
+- Rechtsklick → gesamten Unterbaum ein-/ausklappen.
+- Hover-Tooltip bei abgeschnittenem Kategorienamen.
+- globale Ein-/Ausklappsteuerung.
+- gespeicherte Standardtiefe.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- zehn Hauptbereiche besitzen explizite Routing-Fälle.
+- zehn Hauptbereiche besitzen vorhandene Zielansichten.
+- Navigation-Audit integriert.
+- keine fehlenden statischen UI-Referenzen.
+- keine doppelten HTML-IDs.
+- keine doppelten Funktionen.
+
 ## v0.80.4
 
 ### 🌳 Kategorien-Kontextmenü & Lesbarkeit
