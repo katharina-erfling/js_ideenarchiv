@@ -6,6 +6,90 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.43.0
+
+### ⌘ Beziehungen, Netzwerke & Mindmaps
+
+- Die Autoren-Suite besitzt jetzt einen eigenständigen Mindmap-Bereich und ein Story-Bibel-Beziehungsnetz.
+- Beide Systeme verwenden verknüpfbare Knoten, bleiben aber bewusst fachlich getrennt:
+  - Mindmaps dienen dem freien Denken und Sortieren.
+  - Beziehungsnetze visualisieren tatsächliche Zusammenhänge innerhalb einer Geschichte.
+
+### 🧠 Freie Mindmaps
+
+- Es können beliebig viele Mindmaps angelegt werden.
+- Eine Mindmap darf vollständig unabhängig von einem Romanprojekt oder Buch existieren.
+- Optional kann sie später mit einem Romanprojekt und/oder Buch verbunden werden.
+- Dadurch können neue Stoffe zunächst völlig frei entstehen, bevor feststeht, zu welchem Projekt sie gehören.
+- Jede Mindmap besitzt Titel und Beschreibung.
+
+### 🗒️ Frei positionierbare Gedanken
+
+- Neue Gedanken werden als frei verschiebbare Karten auf einer großen Arbeitsfläche angelegt.
+- Karten können per Drag & Drop beliebig positioniert werden.
+- Für visuelle Gruppen stehen mehrere Papierfarben zur Verfügung.
+- Jeder Knoten kann einen Titel und eine ausführlichere Notiz enthalten.
+- Die Mindmap-Arbeitsfläche unterstützt Zoom.
+- Mit „Alles zeigen“ kann die Ansicht auf eine übersichtliche Grundposition zurückgesetzt werden.
+
+### 🔗 Gedanken miteinander verbinden
+
+- Zwei Mindmap-Knoten können direkt miteinander verbunden werden.
+- Verbindungen können frei beschriftet werden.
+- Unterstützt werden normale, gestrichelte und gerichtete Verbindungen.
+- Bestehende Verbindungen können geöffnet, bearbeitet und gelöscht werden.
+
+### ↗ Suite-Inhalte als echte Knoten
+
+- Mindmap-Knoten können direkt auf bestehende Inhalte der Autoren-Suite verweisen.
+- Unterstützt werden Ideen, Romanideen, Romanprojekte, Bücher, Story-Bibel-Akten, Kapitel und Szenen, Handlungsfäden, Timeline-Ereignisse, Recherche und Inspiration.
+- Der Knoten bleibt Bestandteil der Mindmap, verweist aber auf den echten Inhalt statt eine zweite Kopie anzulegen.
+
+### → Vom losen Gedanken zur echten Idee
+
+- Freie Mindmap-Knoten können direkt als Idee ins Ideenarchiv übernommen werden.
+- Titel und Notiz werden dabei zu einem Ideenzettel zusammengeführt.
+- Der ursprüngliche Mindmap-Knoten wird anschließend automatisch mit der neu angelegten Idee verknüpft.
+
+### ↔ Story-Bibel-Beziehungen
+
+- Bücher besitzen jetzt einen eigenen Workflow-Bereich „Beziehungen“.
+- Story-Bibel-Akten eines Buches werden als visuelles Beziehungsnetz dargestellt.
+- Figuren, Orte, Organisationen, Gegenstände, Ereignisse und freie Akten können miteinander verbunden werden.
+- Beziehungen besitzen eine frei definierbare Bezeichnung, Richtung, optionalen Status, optionale Notiz und optionalen Gültigkeitsbezug zu einem bestimmten Buch.
+
+### 🕸️ Visuelles Beziehungsnetz
+
+- Story-Bibel-Akten werden als farblich nach Typ unterscheidbare Knoten dargestellt.
+- Beziehungslinien werden automatisch zwischen den Akten gezeichnet.
+- Beschriftungen erscheinen direkt an den Verbindungen.
+- Gerichtete Beziehungen werden visuell von gegenseitigen Beziehungen unterschieden.
+- Ein Fokusfilter erlaubt es, nur das Umfeld einer bestimmten Figur, eines Ortes oder einer anderen Akte zu betrachten.
+
+### 📚 Beziehungen über Reihen hinweg
+
+- Beziehungen können entweder für die gesamte Story gelten oder auf einen konkreten Band begrenzt werden.
+- Für die Bandauswahl werden die bereits vorhandenen Reihen- und Buchverknüpfungen verwendet.
+
+### 🔎 Globale Suche
+
+- Mindmaps, Mindmap-Knoten und Story-Beziehungen sind Bestandteil der globalen Suche.
+- Treffer führen direkt zum jeweiligen Arbeitsbereich.
+
+### 💾 Datenmodell & Backup
+
+- IndexedDB wurde um Mindmaps, Mindmap-Knoten, Mindmap-Verbindungen und Story-Beziehungen erweitert.
+- Das Datenbankschema wurde auf Version 8 erweitert.
+- Das vollständige Backupformat wurde auf Version 8 erweitert.
+- Ältere unterstützte Backups bleiben importierbar.
+- Sämtliche Daten bleiben vollständig lokal im Browser.
+
+### ✓ Systemcheck
+
+- Der Systemcheck erkennt Mindmap-Verbindungen, deren Knoten nicht mehr vorhanden sind.
+- Story-Beziehungen zu fehlenden Story-Bibel-Akten werden ebenfalls diagnostisch gemeldet.
+- Es werden keine Beziehungen oder Mindmap-Daten automatisch verändert.
+
 ## v0.42.0
 
 ### ◷ Story-Timeline & Chronologie
