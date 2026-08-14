@@ -6,6 +6,106 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.0
+
+### 🔬 Feature-Parity & Gap Audit
+
+Systematischer Vergleich mit:
+
+- Papyrus Autor
+- Scrivener
+- Plottr
+- Campfire
+- Novelcrafter
+- bibisco
+
+### 📊 Audit-Matrix
+
+38 konkrete Funktionsfelder in neun Bereichen geprüft:
+
+- Schreiben & Editor
+- Planung & Plotting
+- Worldbuilding
+- Codex & Wissensnetz
+- Analyse & Kontinuität
+- Überarbeitung
+- Compile & Publishing
+- Serien & Universen
+- UX, Portabilität & Reliability
+
+Bewertung:
+
+- ✦ USP
+- ✓ stark / Parity
+- ◐ teilweise
+- ! echte Lücke
+
+### ✦ Eigene Stärken
+
+Besonders hervorgehoben:
+
+- Story Growth
+- Living Knowledge
+- kontextuelles Arbeiten aus dem Manuskript
+- Continuity Intelligence
+- Living Canon
+- Reliability / Datenintegrität
+
+### ! Wichtigste verbleibende Lücken
+
+- Rechtschreibung / Grammatik / Thesaurus
+- Stilanalyse & Lesbarkeit
+- DOCX-/Markdown-/HTML-Manuskriptimport
+- Cloud-Sync / Kollaboration
+- Mobile / Multi-Device
+
+### ◐ Gezielter Ausbau
+
+- Plot-/Genre-Template-Bibliothek
+- frei konfigurierbarer Outliner
+- Familienstammbaum
+- Printsatz / Buchdesigner
+
+### 🧭 Gap-Closing-Roadmap
+
+- v0.81 – Language & Style Studio
+- v0.82 – Import & Migration Studio
+- v0.83 – Navigator & Outliner 3.0
+- v0.84 – Template Library 2.0
+- v0.85 – Publishing Polish
+- v0.86 – Specialized Relationship Views
+- v0.87 – Portability Decision
+
+### 🧬 Ergebnis
+
+Es fehlt kein weiterer grundlegender Architekturblock für:
+
+- Story-Planung
+- Worldbuilding
+- Wissensnetz
+- Kontinuität
+- Revision
+- Publishing
+- Serienverwaltung
+
+Die nächste Phase ist gezieltes Gap Closing statt allgemeinem Feature-Ausbau.
+
+### ✓ Technische Prüfung
+
+- Audit-Bereich integriert
+- 38 Audit-Felder hinterlegt
+- neun Funktionsbereiche geprüft
+- Gap-Priorisierung integriert
+- Folge-Roadmap integriert
+- Workflow-Routing erweitert
+- Audit-Panel responsiv
+- JavaScript-Syntax geprüft
+- 24 Workflow-Bereiche / 24 Workflow-Buttons
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.79.0
 
 ### 🧩 Integration & Workflow 2.0
