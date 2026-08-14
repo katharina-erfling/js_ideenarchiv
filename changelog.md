@@ -6,6 +6,44 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.48.1
+
+### 🔷 Verschiedene Formen für Mindmap-Knoten
+
+- Jeder Mindmap-Knoten kann jetzt eine eigene Form bekommen.
+- Zur Auswahl stehen:
+  - Karte
+  - abgerundete Karte
+  - Kapsel
+  - Kreis
+  - Raute
+  - Wolke
+  - Notizzettel
+- Die Form wird pro Knoten gespeichert und bleibt beim Verschieben, Verknüpfen und erneuten Öffnen erhalten.
+- Bestehende Knoten verwenden automatisch weiterhin die klassische Kartenform.
+
+### 👁️ Formvorschau
+
+- Im Knoten-Dialog gibt es eine direkte Vorschau der gewählten Form.
+- Ein Wechsel im Auswahlfeld aktualisiert die Vorschau sofort.
+- Farbe und Form bleiben voneinander unabhängig kombinierbar.
+
+### 🧠 Bedeutung durch Form
+
+- Formen können frei verwendet werden, z. B.:
+  - Kreis für Figuren
+  - Raute für Entscheidungen
+  - Wolke für lose Ideen
+  - Kapsel für kurze Stichworte
+  - Notizzettel für offene Gedanken
+- Die Suite erzwingt bewusst keine feste Bedeutung.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Bestehende Mindmaps bleiben kompatibel.
+
 ## v0.48.0
 
 ### 🧠 Mindmaps – intuitive Mausbedienung
