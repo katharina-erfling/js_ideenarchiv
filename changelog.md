@@ -6,6 +6,238 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.79.0
+
+### 🧩 Integration & Workflow 2.0
+
+Diese Version fügt bewusst kein weiteres riesiges Fachmodul hinzu.
+
+Stattdessen wurden die inzwischen vielen Bereiche der Suite enger zu einem gemeinsamen Arbeitsfluss verbunden.
+
+Ziel:
+
+> Weniger „In welchem Modul war das noch?“
+> Mehr „Ich bin gerade hier – was kann ich von hier aus sinnvoll tun?“
+
+### 🧩 Neuer Arbeitskontext im Manuskript
+
+Der Manuskript-Inspector besitzt jetzt einen eigenen Reiter:
+
+- 🧩 Kontext
+
+Direkt sichtbar:
+
+- Codex-/Story-Bibel-Verknüpfungen
+- Handlungsfäden
+- Ideen
+- offene Revisionen
+- weitere globale Verknüpfungen
+
+### ＋ Aus dem Kontext heraus anlegen
+
+Direkt aus dem aktuellen Manuskriptabschnitt:
+
+- Story-Bibel-Akte
+- Handlungsfaden
+- Timeline-Ereignis
+- Idee
+- Recherche
+- Überarbeitungsaufgabe
+
+Direkte Sprünge zu:
+
+- Plotting
+- Kontinuität
+- Story Graph
+- Manuscript Analysis
+
+### 📎 Story-Bibel aus einer Szene
+
+Neue Akten aus dem Arbeitskontext werden nach dem Speichern automatisch mit dem Ausgangsabschnitt verknüpft.
+
+Es entsteht keine zweite Kontextkopie.
+
+Bei Abbruch wird die vorbereitete Verknüpfung verworfen.
+
+### 🧵 Handlungsfaden aus einer Szene
+
+Neue Fäden erhalten direkt:
+
+- aktuelles Buch
+- aktuellen Manuskriptabschnitt als erste Station
+
+### 💡 Gedanken & Recherche
+
+Die Schnellablage wird in den gemeinsamen Kontextworkflow eingebunden.
+
+Neue Ideen und Rechercheeinträge werden direkt mit dem aktuellen Abschnitt verknüpft.
+
+### ✦ Revision aus Kontext
+
+Überarbeitungsaufgaben können unmittelbar am aktuellen Abschnitt angelegt werden.
+
+### ⌘ „Was hängt hier dran?“
+
+Der Arbeitskontext zeigt globale Verknüpfungen des aktuellen Manuskriptabschnitts.
+
+Von dort kann direkt zu verbundenen Objekten gesprungen werden.
+
+### 🖱 Rechtsklick im Manuscript Navigator
+
+Rechtsklick auf:
+
+- Teil
+- Kapitel
+- Szene
+
+öffnet den Arbeitskontext.
+
+Drag & Drop, Split View und normaler Klick bleiben erhalten.
+
+### ⌨ Tastatur
+
+Neuer Shortcut:
+
+- Strg/Cmd + Shift + J → Arbeitskontext
+
+### ⌕ Command Palette
+
+Neue kontextabhängige Schnellaktionen:
+
+- Arbeitskontext öffnen
+- Buch-Integration prüfen
+
+### 🧭 Workflow-Ribbon vervollständigt
+
+Eigene Workflow-Texte jetzt auch für:
+
+- Plotting
+- Szenen
+- Story Growth
+- Continuity
+- Calendar
+- World Map
+- Character Arc
+- Story Graph
+- Analysis
+- Compile
+- Codex
+
+### 🏠 Integration auf dem Buch-Dashboard
+
+Neuer Bereich:
+
+- Integration & Workflow
+
+Er zeigt kontextabhängige nächste Übergänge.
+
+Beispiele:
+
+- Ideen → Planung
+- Planung → Szenen
+- Szenen → Manuskript
+- Manuskript → Story-Bibel
+- Szenen → Handlungsfäden
+- Revision → Revision Studio
+- fertiges Buch → Compile
+
+### ✓ Technischer Integritätscheck
+
+Geprüft werden unter anderem:
+
+#### Manuskript
+
+- tote Ideenverknüpfungen
+- tote Story-Bibel-Verknüpfungen
+- tote Rechercheverknüpfungen
+- tote Inspirationsverknüpfungen
+
+#### Handlungsfäden
+
+- Beats ohne existierenden Manuskriptabschnitt
+- gelöschte Story-Bibel-Referenzen
+
+#### Timeline
+
+- gelöschte Story-Bibel-Referenzen
+
+#### Buchbeziehungen
+
+- Beziehungen zu nicht mehr vorhandenen Büchern
+
+#### Compile
+
+- Regeln für gelöschte Manuskriptabschnitte
+
+#### Revision
+
+- Snapshot-Zuordnungen zu nicht mehr vorhandenen Dokumenten oder Versionen
+
+### 🧹 Sichere Bereinigung
+
+Bereinigt werden ausschließlich tote technische Referenzen.
+
+Nicht gelöscht werden:
+
+- Manuskript
+- Ideen
+- Story-Bibel
+- Recherche
+- Snapshots
+
+Vorher erfolgt eine Rückfrage.
+
+### 🔧 Workflow-Routing
+
+- Compile in fehlender Workflow-Whitelist nachgetragen.
+- Initiale Panel-Steuerung für Analysis und Compile nachgezogen.
+
+### 🔗 Einheitliche Navigation
+
+Arbeitskontext, globale Suche, Command Palette und Living Knowledge verwenden stärker dieselbe Navigationslogik.
+
+### 🧬 Produktprinzip
+
+Ein Objekt ist der Kontext.
+
+Von einer Szene aus kann ich:
+
+- Wissen anlegen
+- einen Faden eröffnen
+- Revision markieren
+- recherchieren
+- Chronologie ergänzen
+- in Plotting oder Analyse springen
+
+ohne erst das passende Modul suchen zu müssen.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Inspector-Kontext geprüft
+- Kontext-Routing geprüft
+- Story-Bibel-Anlage aus Manuskriptkontext geprüft
+- automatische Kontextverknüpfung geprüft
+- Abbruch abgesichert
+- Handlungsfaden mit erster Manuskriptstation geprüft
+- Schnellablage eingebunden
+- Revision aus Kontext integriert
+- globale Verknüpfungsnavigation integriert
+- Navigator-Rechtsklick integriert
+- Tastaturshortcut integriert
+- Command Palette erweitert
+- Dashboard-Workflowempfehlungen integriert
+- Integritätscheck integriert
+- sichere Dead-Link-Bereinigung integriert
+- Compile-Workflow-Whitelist korrigiert
+- Workflow-Ribbon vervollständigt
+- 23 Workflow-Bereiche / 23 Workflow-Buttons
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
+
 ## v0.78.0
 
 ### 🧬 Living Canon & Bandvarianten
