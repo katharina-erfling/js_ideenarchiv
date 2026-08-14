@@ -6,6 +6,34 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.9
+
+### ✒ Lesbarere Ideenzettel
+
+- Schreibmaschinen-/Monospace-Schrift der Ideenzettel entfernt.
+- Ideeninhalte verwenden jetzt Georgia.
+- Schriftgröße und Zeilenhöhe für längere Notizen verbessert.
+- Metadaten und Bedienelemente bleiben in der klaren UI-Schrift.
+- Papier-, Tape- und Zettelkastenoptik bleiben erhalten.
+
+### 🌳 Kategorien schneller ein- und ausklappen
+
+- Normaler Klick auf eine Kategorie klappt vorhandene Unterkategorien direkt auf.
+- Ein weiterer Klick klappt sie wieder zu.
+- Die angeklickte Kategorie bleibt gleichzeitig als Filter ausgewählt.
+- Rechtsklick behält das Kategorien-Kontextmenü.
+- Drag & Drop und •••-Bearbeiten bleiben unverändert.
+- Enter/Leertaste verhalten sich entsprechend.
+- Pfeiltasten rechts/links öffnen bzw. schließen weiterhin gezielt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Kategorie-Drag-&-Drop erhalten.
+- Rechtsklick-Handler erhalten.
+- Masonry-Layout bleibt erhalten.
+- keine Datenmigration notwendig.
+
 ## v0.80.8
 
 ### 🛠 Reliability Rebuild – Kernfunktionen repariert
