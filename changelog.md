@@ -6,6 +6,109 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.35.0
+
+### 📚 Buchzentrierter Workflow
+
+- Bücher sind jetzt nicht mehr nur der Endpunkt für fertige Planung, sondern können ganz am Anfang des Schreibprozesses stehen.
+- Ein Buch kann als unfertiges „Entwurfsbuch“ angelegt werden, obwohl weder Plot noch Kapitelstruktur feststehen.
+- Innerhalb eines geöffneten Buches gibt es jetzt einen durchgängigen Arbeitsweg:
+  - Ideen
+  - Planung
+  - Manuskript
+- Das Buch bleibt während aller drei Phasen mit seinem übergeordneten Romanprojekt verbunden.
+
+### 🌱 Direkt mit einem Entwurfsbuch beginnen
+
+- Ein neues Buch benötigt nicht mehr zwingend ein vorher manuell angelegtes Romanprojekt.
+- Im Buchdialog steht die Option „Neues Romanprojekt automatisch aus diesem Buch“ zur Verfügung.
+- Wird diese Option verwendet, legt die Suite im Hintergrund automatisch das passende Romanprojekt als gemeinsame Welt- und Planungsebene an.
+- Das Buch selbst bleibt der sichtbare Arbeitscontainer.
+- Der neue Status „Entwurfsbuch“ kennzeichnet Bücher, die sich noch ganz am Anfang befinden.
+
+### 💡 Ideen direkt am Buch
+
+- Jedes Buch besitzt jetzt eine eigene Liste verknüpfter Ideenzettel.
+- Ideenzettel können direkt innerhalb des geöffneten Buches im gesamten Ideenarchiv gesucht werden.
+- Die Suche berücksichtigt auch Textstücke aus längeren Notizen.
+- Ein Klick verknüpft einen Zettel mit genau diesem Buch.
+- Der ursprüngliche Zettel bleibt unverändert im zentralen Ideenarchiv erhalten.
+- Buchbezogene Ideen werden zusätzlich in den projektweiten Ideenpool aufgenommen, damit sie auch in anderen verknüpften Bereichen wie dem Szenen-Inspector erreichbar bleiben.
+- Eine Buchverknüpfung kann wieder gelöst werden, ohne den ursprünglichen Ideenzettel zu löschen.
+
+### 🔗 Bestehende Projektideen übernehmen
+
+- Bereits auf Romanprojekt-Ebene gesammelte Ideen können mit einem Klick in ein konkretes Buch übernommen werden.
+- Dadurch müssen bestehende Projekte aus älteren Versionen nicht neu sortiert oder manuell nachgebaut werden.
+- Die projektweite Zuordnung bleibt parallel bestehen.
+
+### 🧩 Eigene Planungswand pro Buch
+
+- Jedes Buch besitzt jetzt eine eigene Planungswand.
+- Buchplanung und projektweite Planung bleiben bewusst getrennte Ebenen.
+- Verknüpfte Ideenzettel können einzeln auf die Planungswand gelegt werden.
+- Eigene freie Textblöcke können zwischen Ideen ergänzt werden.
+- Kapiteltrenner können jederzeit eingefügt werden.
+- Ideenzettel können innerhalb der Buchplanung um zusätzliche buchbezogene Planungstexte erweitert werden.
+- Alle Planungsblöcke können per Drag & Drop frei sortiert werden.
+- Über „Kapitel davor beginnen“ kann aus einer zunächst groben Abfolge später schrittweise eine Kapitelstruktur entstehen.
+
+### 🔄 Projektplanung in ein Buch übernehmen
+
+- Bereits vorhandene projektweite Planungswände können bewusst in ein konkretes Buch kopiert werden.
+- Die kopierten Planungsblöcke erhalten eigene Buch-IDs und können danach unabhängig weiterentwickelt werden.
+- Ideenzettel aus der übernommenen Projektplanung werden automatisch auch mit dem Buch verknüpft.
+- Damit bleibt der bisherige Projekt-Workflow vollständig nutzbar und kann schrittweise in den neuen Buch-Workflow überführt werden.
+
+### ✒️ Planung → Manuskript
+
+- Die eigene Buchplanung kann direkt in das Manuskript desselben Buches übergeben werden.
+- Kapiteltrenner bestimmen dabei die entstehenden Manuskriptabschnitte.
+- Gibt es noch keine Kapiteltrenner, kann die grobe Planung zunächst als ein Entwurfsabschnitt übernommen werden.
+- Bereits vorhandener Manuskripttext wird niemals überschrieben.
+- Bei späteren Übergaben werden nur Planungsblöcke übernommen, die noch nicht im Manuskript angekommen sind.
+- Dadurch kann die Planung weiter wachsen, während bereits an früheren Kapiteln geschrieben wird.
+- Bereits übertragene Planungsblöcke werden auf der Planungswand mit „✓ im Manuskript“ markiert.
+
+### ✍️ Manuskript
+
+- Der dritte Schritt des Buch-Workflows öffnet den bereits vorhandenen vollständigen Schreibeditor.
+- Kapitel, Szenen, Rich-Text-Editor, Inspector, Wortzählung, Autosave, Recovery, Versionsverlauf, Teilen und Zusammenführen bleiben erhalten.
+- Ein leeres Manuskript bietet einen direkten Rücksprung zur Buchplanung.
+- Beim Öffnen des Manuskript-Schritts wird der zuletzt verwendete Abschnitt des jeweiligen Buches wiederhergestellt, sofern vorhanden.
+
+### 🔎 Szenen & Buchideen
+
+- Der Szenen-Inspector berücksichtigt jetzt sowohl projektweite als auch buchbezogene Ideenzettel.
+- Dadurch können Ideen zunächst nur an einem konkreten Band gesammelt und später direkt mit einzelnen Szenen verknüpft werden.
+- Planungsverknüpfungen im Inspector erkennen sowohl projektweite als auch buchbezogene Planungsblöcke.
+
+### 🗂️ Klarer Arbeitsfluss
+
+- Direkt im geöffneten Buch stehen jetzt die Schritte „1 · Ideen“, „2 · Planung“ und „3 · Manuskript“ zur Verfügung.
+- Der Wechsel zwischen den Phasen erfolgt ohne den Buchkontext zu verlassen.
+- Das zugehörige Romanprojekt bleibt über einen eigenen Sprung erreichbar.
+- Beim Verlassen des Manuskript-Schritts werden laufende Speicher- und Schreibsession-Vorgänge zuerst sauber abgeschlossen.
+
+### 🔍 Suche
+
+- Die globale Suche eines Buches berücksichtigt jetzt zusätzlich die Texte seiner verknüpften Ideenzettel.
+- Dadurch kann ein Buch auch über eine darin gesammelte Idee wiedergefunden werden.
+
+### ✓ Systemcheck
+
+- Der Systemcheck prüft jetzt zusätzlich Buchverknüpfungen auf fehlende Ideenzettel.
+- Auch Planungsblöcke eines Buches mit fehlenden Ideenzetteln werden erkannt.
+- Die Prüfung bleibt rein diagnostisch und verändert keine Daten automatisch.
+
+### 💾 Datensicherheit
+
+- Buchbezogene Ideen und Planungswände werden direkt im vorhandenen Buchdatensatz gespeichert und sind Bestandteil des regulären Backups.
+- Die ursprünglichen Ideenzettel werden beim Verknüpfen, Sortieren oder Entfernen aus einem Buch nicht verändert.
+- Wiederholte Übergaben aus der Buchplanung überschreiben keine bereits geschriebenen Manuskriptabschnitte.
+- Bücher mit vorhandenem Manuskript bleiben weiterhin gegen versehentliches Löschen geschützt.
+- Die bestehende Autosave-, Notfallentwurf-, Versions- und Backup-Architektur bleibt vollständig erhalten.
+
 ## v0.34.0
 
 ### 🧪 Gründliche Stabilitätsrunde
