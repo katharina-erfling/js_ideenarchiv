@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.45.3
+
+### 📚 Bücher & Romanprojekte zusammengeführt
+
+- „Romanprojekte“ und „Bücher“ sind in der sichtbaren Hauptnavigation jetzt ein gemeinsamer Bereich.
+- Der neue Menüpunkt heißt „Bücher & Projekte“.
+- Die interne Datenstruktur bleibt bewusst getrennt:
+  - Romanprojekt = übergeordnete Welt, Planung und gemeinsame Daten
+  - Buch = einzelner Band mit eigenem Manuskript
+- Dadurch bleibt die saubere Architektur erhalten, ohne dass sich die Benutzeroberfläche wie zwei getrennte Verwaltungsbereiche anfühlt.
+
+### 🗂️ Projekte direkt im Bücherregal
+
+- Bücher werden weiterhin nach Romanprojekt gruppiert.
+- Der Projektname in jeder Gruppe ist jetzt direkt anklickbar und öffnet den vollständigen Projektarbeitsbereich.
+- Direkt an jeder Projektgruppe stehen Aktionen zum Bearbeiten des Projekts und zum Anlegen eines neuen Buches innerhalb dieses Projekts bereit.
+- Ein neues Romanprojekt kann direkt aus „Bücher & Projekte“ angelegt werden.
+- Nach dem Anlegen eines Projekts bleibt die Nutzerin im gemeinsamen Bücher-/Projektbereich.
+
+### 🧭 Navigation
+
+- Frühere interne Verweise auf den separaten Romanprojekt-Hauptbereich führen jetzt in „Bücher & Projekte“.
+- Es gibt dadurch keinen doppelten Hauptnavigationspunkt mehr.
+- Projekt-Workspaces selbst bleiben vollständig erhalten und können direkt aus dem Bücherregal geöffnet werden.
+
+### ✓ Architektur
+
+- Keine Datenmigration notwendig.
+- Projekt- und Buchdatensätze bleiben intern getrennt und sauber referenziert.
+- Backup- und Datenbankformat bleiben unverändert.
+
 ## v0.45.2
 
 ### 🧭 Hauptnavigation nochmals gehärtet
