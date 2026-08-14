@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.10.0
+
+### ✒️ Autoren-Suite
+
+- Das bisherige Ideenarchiv wurde technisch als erster Bestandteil einer größeren Autoren-Suite eingeordnet.
+- Die Hauptnavigation wurde um die zentralen zukünftigen Arbeitsbereiche erweitert.
+- Romanideen, Romanprojekte, Schreiben, Namenslisten, Recherche, Inspiration, Statistiken und Einstellungen besitzen jetzt eigene vorbereitete Modulansichten.
+- Zusätzlich wurden „Romanprojekte“ und „Schreiben“ als feste Hauptbereiche in die Navigation aufgenommen.
+- Beim Wechsel in einen Suite-Bereich passt sich die linke Navigation an den jeweiligen Arbeitskontext an.
+
+### 🧩 Modulstruktur
+
+- Für jeden zukünftigen Bereich wurde eine eigene technische Modulgrundlage vorbereitet.
+- Die Modulansichten zeigen bereits Zweck, geplante Verknüpfungen, Datengrundlage und den vorgesehenen nächsten Ausbau.
+- Die grundlegende Verbindung `Idee → Romanidee → Romanprojekt → Manuskript → Statistik` ist jetzt als Architekturprinzip in der Anwendung sichtbar.
+- Die einzelnen Module werden bewusst nicht als voneinander getrennte Programme aufgebaut, sondern sollen Daten untereinander verknüpfen können.
+
+### 💾 Datenarchitektur
+
+- Die lokale IndexedDB-Struktur wurde für die zukünftigen Suite-Bereiche erweitert.
+- Separate Datenspeicher für Romanideen, Projekte, Dokumente, Namenslisten, Recherche, Inspiration, Schreibsessions und Medien wurden vorbereitet.
+- Bestehende Ideen bleiben unverändert im bisherigen Ideenspeicher erhalten.
+- Die Datenbank wird beim Wechsel auf v0.10.0 automatisch erweitert, ohne bestehende Zettel zu löschen.
+
+### 🔐 Backup
+
+- Backups sind jetzt auf die gesamte zukünftige Autoren-Suite vorbereitet.
+- Neben Ideen, Kategorien und Schnellregistern werden auch Daten der neuen Modulbereiche gemeinsam gesichert.
+- Bestehende ältere Ideenarchiv-Backups bleiben weiterhin importierbar.
+- Neue Sicherungen werden als Autoren-Suite-Backup gekennzeichnet.
+
 ## v0.9.0
 
 ### ⚙️ Technische Aufräumrunde
