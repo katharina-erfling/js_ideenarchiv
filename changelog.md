@@ -6,6 +6,134 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.59.0
+
+### 🧭 Continuity Intelligence 2.0
+
+- Neuer eigener Buch-Reiter „Kontinuität“.
+- Regelbasierte Prüfung ausschließlich auf Basis explizit vorhandener Storydaten.
+- Ruhige Prüfhinweise statt Fehlerampeln.
+
+### ◷ Chronologieprüfung erweitert
+
+- Datierte Manuskriptszenen werden gegen ihre Manuskriptreihenfolge geprüft.
+- Zeitliche Rücksprünge werden als mögliche Prüfstelle sichtbar.
+- Gemeinsame Timeline-Aufbereitung für Manuskript, Ereignisse und Story-Bibel ergänzt.
+
+### ⌖ Figuren an mehreren Orten
+
+- Datum + Uhrzeit + Ort + Figurenbezug können gegeneinander geprüft werden.
+- Dieselbe Figur zur gleichen Uhrzeit an unterschiedlichen Orten erzeugt einen Hinweis.
+
+### 📌 Kontinuitäts-Checkpoints
+
+Checkpoints können jetzt enthalten:
+
+- Buch
+- Kategorie
+- Bezeichnung
+- Wert
+- Story-Datum
+- Story-Uhrzeit
+- verknüpfte Szene
+- Zusatznotiz
+
+Kategorien:
+
+- Aufenthaltsort
+- Wissensstand
+- Zustand
+- Besitz
+- Beziehung
+- Alter
+- freie Notiz
+
+### ◇ Widersprüchliche Zustände
+
+- Unterschiedliche Angaben derselben Kategorie zum selben Zeitpunkt werden erkannt.
+- Gilt bereits für Ort, Wissen, Zustand, Besitz, Beziehungen, Alter und freie Kategorien.
+
+### ⌖ Szene ↔ Aufenthaltsort
+
+- Aufenthalts-Checkpoints können Szenen zugeordnet werden.
+- Abweichende Ortsangaben werden als Prüfhinweis angezeigt.
+
+### ◷ Checkpoint ↔ Szenendatum
+
+- Eigenes Checkpoint-Datum und Datum einer verknüpften Szene werden verglichen.
+- Abweichungen werden sichtbar gemacht.
+
+### 🎂 Altersprüfung
+
+- Charakterakten mit echtem Geburtsdatum können gegen datierte Alters-Checkpoints geprüft werden.
+- Abweichungen werden nur angezeigt, wenn ausreichend eindeutige Daten vorhanden sind.
+
+### 📊 Kontinuitäts-Center
+
+Zeigt:
+
+- mögliche Prüfstellen
+- datierte Szenen
+- Szenen mit Ort
+- Szenen mit Figuren
+- Checkpoints
+- Story-Akten mit Verlauf
+
+Filter:
+
+- Chronologie
+- Aufenthaltsort
+- Wissensstand
+- Zustand
+- Besitz
+- Beziehung
+- Alter
+
+### ↗ Direkte Navigation
+
+- Prüfhinweise führen zur betroffenen Szene oder Story-Bibel-Akte.
+- Checkpoints öffnen direkt die zugehörige Akte.
+- Schnellzugriff auf die Timeline.
+
+### 🧠 Story Intelligence integriert
+
+- Kontinuitäts-Prüfstellen werden in Story Intelligence berücksichtigt.
+- Direkter Wechsel zum ausführlichen Kontinuitäts-Center.
+- Direkter Zugang auch aus dem Buch-Dashboard.
+
+### 🌱 Story Growth integriert
+
+- Neue Kontinuitäts-Checkpoints zählen als Planungsarbeit.
+- Sie werden automatisch als Strukturarbeit in Story Growth erfasst.
+
+### 🧬 Vorbereitung späterer Systeme
+
+Die Version legt bereits die Grundlage für:
+
+- Character Knowledge
+- State Tracking
+- Besitzverläufe
+- Beziehungsverläufe
+- tiefere Kontinuitätsprüfung
+
+Die großen Knowledge-/State-Systeme bleiben aber bewusst ihren späteren Roadmap-Versionen vorbehalten.
+
+### 🔒 Kompatibilität
+
+- Alte Kontinuitätsnotizen bleiben gültig.
+- Sie werden automatisch als „freie Notiz“ behandelt.
+- Neue Felder sind optional.
+- Keine destruktive Migration.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionsdefinitionen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+- Fehlende gemeinsame Timeline-Aufbereitung aus älteren Versionen ergänzt.
+
 ## v0.58.0
 
 ### 🌱 Story Growth
