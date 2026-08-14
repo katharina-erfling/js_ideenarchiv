@@ -6,6 +6,79 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.45.0
+
+### ⚙ Architecture & Reliability
+
+Diese Version konzentriert sich ausschließlich auf den technischen Unterbau der Autoren-Suite. Es wurden keine neuen Schreibfunktionen ergänzt. Ziel ist ein belastbarerer Sockel für den langfristigen Einsatz und spätere Erweiterungen.
+
+### 💾 Zuverlässigere IndexedDB-Schreibvorgänge
+
+- Die zentralen Schreiboperationen der Suite wurden gehärtet.
+- Speichern, Anlegen und Löschen warten jetzt auf den erfolgreichen Abschluss der vollständigen IndexedDB-Transaktion und nicht nur auf die Antwort des einzelnen Requests.
+- Zentrale Schreibvorgänge laufen über eine gemeinsame Schreibwarteschlange.
+- Dadurch werden konkurrierende Schreiboperationen kontrollierter nacheinander abgearbeitet.
+- Fehler und abgebrochene Transaktionen werden zentral an die vorhandene Speicherfehlerbehandlung weitergereicht.
+- Auch das Ideenarchiv wurde in diese zuverlässigere Schreibkette aufgenommen.
+
+### 🧱 Datenbank-Lebenszyklus
+
+- Die IndexedDB-Verbindung reagiert jetzt explizit auf Versionswechsel aus einem anderen Browser-Tab.
+- Veraltete Datenbankverbindungen werden geschlossen.
+- Die Oberfläche weist anschließend auf das notwendige Neuladen hin.
+- Blockierte Datenbank-Upgrades werden sichtbar gemeldet.
+
+### 🛟 Sichererer Backup-Import
+
+- Vor einer vollständigen Wiederherstellung wird intern zuerst ein Snapshot des aktuellen Archivs erzeugt.
+- Schlägt die Wiederherstellung nach dem Löschen des bisherigen Datenbestands fehl, versucht die Suite automatisch, den vorherigen Zustand zurückzuspielen.
+- Diese automatische Rücksicherung ist eine zusätzliche Schutzschicht und ersetzt kein externes Backup.
+- Relationale IDs bleiben bei einer vollständigen Wiederherstellung erhalten.
+
+### 🔍 Strengere Backup-Prüfung
+
+- Die Backup-Prüfung kontrolliert doppelte IDs jetzt in sämtlichen relationalen Modulbereichen.
+- Beschädigte oder unvollständige Datenbereiche werden vor dem eigentlichen Import abgewiesen.
+- Das Backupformat wurde auf Version 10 erweitert.
+- Ältere unterstützte Backupstände bleiben importierbar.
+
+### 🧪 Tiefenprüfung
+
+- Der Sicherheitsbereich besitzt jetzt eine zusätzliche technische Tiefenprüfung.
+- Dabei wird ein echter kurzer IndexedDB-Schreib-/Löschzyklus durchgeführt.
+- Zusätzlich wird die Grundstruktur der geladenen Daten geprüft.
+- Speicherverbrauch und verfügbares Speicherkontingent werden angezeigt, sofern der Browser diese Informationen bereitstellt.
+- Der Testeintrag wird unmittelbar wieder entfernt.
+
+### ⌂ Dauerhafter Browser-Speicher
+
+- Die Suite kann den Browser jetzt um persistenten lokalen Speicher bitten.
+- Wird dies gewährt, sinkt das Risiko einer automatischen Bereinigung der lokalen Anwendungsdaten.
+- Die Entscheidung darüber liegt beim Browser.
+- Externe Backups bleiben weiterhin wichtig.
+
+### 🧩 Erweiterter Systemcheck
+
+- Zusätzlich geprüft werden:
+  - Mindmap-Knoten ohne vorhandene Mindmap
+  - Mindmap-Verbindungen ohne vorhandene Mindmap
+  - Mindmap-Knoten mit fehlenden verknüpften Suite-Inhalten
+  - Handlungsfäden mit fehlenden Buchverknüpfungen
+  - Handlungsfaden-Stationen mit fehlenden Manuskriptabschnitten
+
+### 🧭 Architekturentscheidung
+
+- Das IndexedDB-Datenmodell bleibt auf Schema-Version 8.
+- Für diese Zuverlässigkeitsrunde war keine unnötige Datenmigration erforderlich.
+- Neue Schutzschichten wurden um die bestehenden Stores gelegt, statt funktionierende Datenstrukturen ohne fachlichen Grund umzubauen.
+- Die Suite bleibt vollständig lokal und benötigt keinen Server oder Account.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax, feste UI-Verweise, HTML-IDs und Funktionsnamen wurden erneut statisch geprüft.
+- Die Reliability-Funktionen wurden in die bestehende Sicherheitsoberfläche integriert.
+- Die Backup-Abwärtskompatibilität bleibt erhalten.
+
 ## v0.44.0
 
 ### ✦ Große Workflow-, UI- & Sicherheitsrunde
