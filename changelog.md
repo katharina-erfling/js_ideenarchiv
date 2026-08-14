@@ -6,6 +6,61 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.32.0
+
+### ✨ UI-/UX-Polish
+
+- Die Autoren-Suite wurde visuell und in der Bedienung vereinheitlicht, ohne neue Datenlogik einzuführen.
+- Buttons, Eingabefelder und Fokuszustände verhalten sich konsistenter über alle Module hinweg.
+- Hover-, Aktiv- und Deaktiviert-Zustände wurden vereinheitlicht.
+- Texte in Karten und Übersichten brechen robuster um und laufen seltener aus ihren Bereichen heraus.
+- Leere Zustände wirken ruhiger und konsistenter.
+
+### 🪟 Dialoge & Formulare
+
+- Große Dialoge sind jetzt konsequenter auf die verfügbare Fensterhöhe begrenzt.
+- Dialoginhalte können intern scrollen, ohne dass die gesamte Seite unkontrolliert springt.
+- Aktionsleisten bleiben beim Scrollen langer Dialoge besser erreichbar.
+- Formularfelder und Textbereiche besitzen einheitlichere Mindesthöhen und Abstände.
+- Auf kleinen Fenstern werden mehrspaltige Formulare automatisch auf eine Spalte reduziert.
+
+### ⌨️ Tastatur & Fokus
+
+- Interaktive Elemente besitzen deutlichere `focus-visible`-Zustände.
+- Die Bedienung per Tab-Taste wird dadurch nachvollziehbarer.
+- Buttons und Eingabefelder erhalten konsistentere Fokusrahmen.
+- Der Toast-/Statusbereich ist für unterstützende Technologien als Live-Status ausgezeichnet.
+- Nutzer mit aktivierter Einstellung „Bewegung reduzieren“ erhalten stark reduzierte Animationen und Übergänge.
+
+### 📚 Navigation bei vielen Bereichen
+
+- Die Projekt-Tabs können bei schmalen Fenstern horizontal gescrollt werden, statt unkontrolliert umzubrechen.
+- Auch die Hauptnavigation bleibt bei begrenzter Breite erreichbar.
+- Große Dashboard- und Statistikbereiche passen sich auf kleineren Fenstern ruhiger an.
+- Lange Titel, Notizen und Metadaten können besser umbrechen.
+
+### ✒️ Schreibeditor
+
+- Der Manuskripteditor besitzt robusteres Scrollverhalten und mehr Platzreserve für die Editorleiste.
+- Fließtext bleibt auf eine angenehm lesbare Zeilenbreite begrenzt.
+- Suchen-&-Ersetzen-Leiste und Inspector verhalten sich bei kleineren Fensterbreiten flexibler.
+- Scrollbare Schreib- und Inspectorbereiche reservieren stabilen Platz für Scrollleisten, damit Layoutsprünge reduziert werden.
+
+### ⚡ Start- & Laufzeitperformance
+
+- Die automatische Integritätsprüfung beim Start blockiert den ersten sichtbaren Aufbau der Suite nicht mehr.
+- Unterstützte Browser führen den Systemcheck bevorzugt in einer Leerlaufphase aus.
+- Als Fallback wird die Prüfung leicht verzögert gestartet.
+- Die bereits vorhandene verzögerte Archivsuche bleibt erhalten und verhindert unnötige Renderläufe bei schneller Eingabe.
+- Bestehende Paginierung, Suchindex-Cache und modulbezogene Ansichten bleiben unverändert erhalten.
+
+### 🛡️ Datensicherheit
+
+- Der Systemcheck wird beim Öffnen des Bereichs „Datensicherheit“ frisch berechnet.
+- Die UI-/UX-Runde verändert keine bestehenden Manuskript-, Ideen-, Projekt- oder Mediendaten.
+- Es wurden keine automatischen Datenreparaturen eingeführt.
+- Backupformat und bestehende lokale Speicherstruktur bleiben kompatibel.
+
 ## v0.31.0
 
 ### ⚙️ Performance & technische Härtung
