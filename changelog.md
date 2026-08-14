@@ -6,6 +6,79 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.13
+
+### 🔗 Gemeinsames Freigabe-/Scope-System für Anhänge & Worldbuilding
+
+Anhänge und strukturierte Story-Bibel-/Worldbuilding-Einträge bleiben unterschiedliche Inhaltstypen, verwenden jetzt aber dieselbe Logik dafür, wo sie verfügbar sind.
+
+### 📎 Anhänge
+
+Beim Anlegen oder Bearbeiten eines Anhangs:
+
+- Dieses Buch
+- Mehrere Bücher
+- Ganze Reihe
+- Universum
+
+Standard:
+- Dieses Buch
+
+### 🌍 Worldbuilding-/Story-Bibel-Einträge
+
+Dieselbe Freigabelogik gilt jetzt auch für:
+
+- Charaktere
+- Orte
+- Weltwissen
+- weitere strukturierte Einträge
+
+Ein Charakter muss damit nicht pro Band neu angelegt werden.
+
+### 🧬 Gemeinsame Akte statt Dubletten
+
+Ein Eintrag bleibt ein einzelner Datensatz und kann mehreren Büchern, einer Reihe oder dem Universum zur Verfügung stehen.
+
+Bandabhängige Änderungen bleiben separat über:
+
+- Kontinuitätsstände
+- Character Arc
+- Living Canon / Bandvarianten
+
+abbildbar.
+
+### 📚 Reihenlogik
+
+- „Ganze Reihe“ nutzt den Reihenbezug des Ausgangsbuchs.
+- Ohne eigenen Reihennamen dient das Romanprojekt als gemeinsamer Kontext.
+
+### 🌌 Universum
+
+- Eintrag bzw. Anhang wird in allen vorhandenen Büchern verfügbar.
+
+### 🧩 Unterschiedliche Reichweite möglich
+
+Ein einzelner Eintrag darf weiter geteilt sein als sein Anhang.
+
+Der Anhang wird dann in den betreffenden Büchern automatisch als Container sichtbar, ohne dass alle übrigen Inhalte mitgeteilt werden.
+
+### 🔄 Bestehende Daten
+
+- bestehende Anhänge bleiben erhalten
+- bestehende Mehrfachzuweisungen bleiben erhalten
+- bestehendes Reihen-/Universumswissen wird übernommen
+- keine destruktive Migration
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Scope-Modell für Anhänge ergänzt
+- Scope-Modell für Story-Bibel-Einträge ergänzt
+- bestehende bookIds bleiben kompatibel
+- dynamische Reihen-/Universums-Sichtbarkeit ergänzt
+- Container-Sichtbarkeit bei weiter geteilten Einträgen ergänzt
+- keine doppelten HTML-IDs
+
 ## v0.80.12
 
 ### 🌳 Kategorien per Drag & Drop sortieren und verschachteln
