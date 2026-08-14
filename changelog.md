@@ -6,6 +6,56 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.20.0
+
+### 📊 Schreibstatistiken
+
+- „Statistiken“ ist jetzt als eigener vollständig nutzbarer Bereich der Autoren-Suite verfügbar.
+- Automatisch erfasste Schreibsessions und manuelle Wortzahl-Einträge werden gemeinsam ausgewertet.
+- Die Statistik kann projektübergreifend oder für ein einzelnes Romanprojekt betrachtet werden.
+- Auswertungszeiträume von 7, 30, 90 und 365 Tagen sowie der gesamte erfasste Zeitraum stehen zur Verfügung.
+
+### ✍️ Wortfortschritt
+
+- Geschriebene Wörter für heute und die letzten sieben Tage werden direkt hervorgehoben.
+- Der Wortfortschritt des gewählten Zeitraums wird als Tagesverlauf visualisiert.
+- Manuelle Einträge und automatisch erfasste Editor-Sessions bleiben unterscheidbar.
+- Tage mit beiden Arten von Einträgen werden gemeinsam ausgewertet.
+- Negative Nettoänderungen durch Überarbeitung bleiben in den zugrunde liegenden Daten erhalten.
+
+### ⏱️ Schreibzeit & Rhythmus
+
+- Die im Editor erfasste Schreibzeit wird für den gewählten Zeitraum summiert.
+- Anzahl der Schreibsessions und Schreibtage werden ausgewertet.
+- Der durchschnittliche Wortfortschritt pro aktivem Schreibtag wird berechnet.
+- Der beste Schreibtag im gewählten Zeitraum wird angezeigt.
+- Eine aktuelle Schreibserie zeigt aufeinanderfolgende Tage mit Schreibaktivität.
+
+### 📚 Projekte
+
+- Die aktuelle Manuskriptwortzahl aller Romanprojekte wird miteinander verglichen.
+- Wortstände werden projektbezogen als Fortschrittsbalken dargestellt.
+- Die gesamte aktuelle Manuskriptwortzahl ist unabhängig von den historischen Schreibaktivitäten sichtbar.
+
+### 🗓️ Schreibkalender
+
+- Ein Monatskalender macht sichtbar, an welchen Tagen geschrieben wurde.
+- Die Intensität eines Tages richtet sich nach der geschriebenen Wortmenge.
+- Dadurch wird der persönliche Schreibrhythmus zusätzlich visuell erkennbar.
+
+### 🕘 Aktivitätsverlauf
+
+- Die letzten Schreibaktivitäten werden mit Datum, Wortveränderung und Romanprojekt aufgelistet.
+- Automatische Schreibsessions zeigen zusätzlich den betroffenen Manuskriptabschnitt und die erfasste Schreibdauer.
+- Manuelle Wortzahl-Einträge werden separat gekennzeichnet und zeigen vorhandene Notizen.
+- Damit lässt sich nachvollziehen, was wann und an welchem Projekt geschrieben wurde.
+
+### ➕ Manuelle Einträge
+
+- Die bereits vorhandene NaNoWriMo-artige Wortzahl-Eingabe ist direkt aus der Statistik erreichbar.
+- Neue manuelle Einträge aktualisieren die Statistik unmittelbar.
+- Auch außerhalb der Autoren-Suite geschriebene Wörter können dadurch in der persönlichen Schreibchronik berücksichtigt werden.
+
 ## v0.19.0
 
 ### ♧ Inspiration & Moodboards
