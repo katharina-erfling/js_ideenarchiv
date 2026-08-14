@@ -6,6 +6,151 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.58.0
+
+### 🌱 Story Growth
+
+- Jedes Buch besitzt jetzt einen eigenen Workflow-Reiter „Story Growth“.
+- Planung wird damit als eigenständige kreative Arbeitsphase sichtbar gemacht.
+- Keine künstliche Anzeige wie „Roman zu 63 % geplant“.
+- Stattdessen wird sichtbar, wie die Geschichte tatsächlich wächst und konkreter wird.
+
+### ✦ Automatisches Planungs-Tracking
+
+Story Growth protokolliert ab dieser Version automatisch unter anderem:
+
+- mit dem Buch verknüpfte Ideen
+- auf die Planungswand übernommene Ideen
+- neu angelegte Szenen
+- konkretisierte Szenen
+- neue Planungsbausteine
+- neue Figurenakten
+- neue Ortsakten
+- neues Weltwissen / Story-Bibel-Wissen
+- neue Handlungsfäden
+- Timeline-Ergänzungen
+- neue Mindmap-Gedanken
+- neue Wissensverknüpfungen
+- geklärte Planungsfragen
+
+### 🎬 Szenen-Konkretisierung
+
+- Planungsszenen erhalten intern einen einfachen Konkretisierungswert.
+- Berücksichtigt werden:
+  - Kurzinhalt
+  - POV
+  - Ort
+  - Zeit
+  - Figuren
+  - Ziel / Konflikt
+  - Ergebnis
+  - Stimmung
+  - Handlungsstrang
+  - Ideen-/Story-Bibel-Verknüpfungen
+- Neue ausgefüllte Dimensionen werden als Wachstumsschritt erfasst.
+- Änderungen aus Planung und Manuskript-Inspector werden berücksichtigt.
+- Der Wert ist ausdrücklich keine Fertig-Prozentzahl.
+
+### 📊 Eigener Story-Growth-Bereich
+
+- Wachstumsschritte der letzten 7 Tage
+- aktive Planungstage der letzten 30 Tage
+- Szenen im Entstehen
+- Wissensverknüpfungen
+- Kategorien:
+  - Ideen
+  - Szenen
+  - Figuren & Welt
+  - Struktur
+  - Vernetzung
+  - geklärte Fragen
+- 14-Tage-Verlauf
+- aktueller Projektstand
+- letzte Wachstumsschritte
+
+### 🌿 Planungsrhythmus statt Streak-Druck
+
+- Aktive Planungstage werden sichtbar.
+- Keine „Serie verloren“-Mechanik.
+- Pausentage werden nicht negativ bewertet.
+
+### 🧠 Aktueller Story-Stand
+
+Zusätzlich sichtbar:
+
+- verknüpfte Ideen
+- Szenen
+- Figurenakten
+- Ortsakten
+- Handlungsfäden
+- durchschnittliche Szenen-Kontur
+- Wissensverknüpfungen
+
+Bestehende Inhalte werden angezeigt, ohne rückwirkend Aktivitätsdaten zu erfinden.
+
+### ❓ Offene Planungsfragen
+
+- Planungsfragen pro Buch festhalten.
+- Direkt in Story Growth anlegen.
+- Als geklärt markieren oder wieder öffnen.
+- Geklärte Fragen zählen als Story-Growth-Schritt.
+- Fragen können unabhängig von anderen Storydaten entfernt werden.
+
+### 📚 Dashboard-Integration
+
+- Direkter Story-Growth-Zugang im Buch-Dashboard.
+- Nach Aktivität erscheint ein kleiner Wochen-Puls.
+- Er zeigt Zahl und Kurzfassung der aktuellen Wachstumsschritte.
+
+### 🔄 Integration
+
+Story Growth hängt direkt an bestehenden Funktionen:
+
+- Ideenarchiv
+- Planungswand
+- Szenenplanung
+- Manuskript
+- Story-Bibel
+- Handlungsfäden
+- Timeline
+- Mindmaps
+- Living Knowledge
+
+Kein paralleles Planungssystem.
+
+### 🔒 Datenmodell & Portabilität
+
+- Story-Growth-Ereignisse werden direkt beim Buch gespeichert.
+- Planungsfragen ebenfalls.
+- Bestehende Bücher bleiben kompatibel.
+- Backups übernehmen die neuen Daten automatisch.
+- Keine destruktive Migration.
+- Pro Buch werden maximal die letzten 2.500 Wachstumsschritte gespeichert.
+
+### 🧬 Produktprinzip
+
+Story Growth bewertet nicht, ob eine Geschichte gut oder fertig geplant ist.
+
+Es beantwortet nur:
+
+> Was ist an meiner Geschichte in letzter Zeit gewachsen?
+
+Damit entstehen langfristig:
+
+- 🌱 Story Growth – Planen
+- ✒ Writing Progress – Schreiben
+- ✓ Revision Growth – Überarbeiten
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Story-Growth-Routing geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+- Bestehende Bücher und Planungsdaten bleiben kompatibel.
+
 ## v0.57.0
 
 ### 🕸️ Living Knowledge / Wissensnetz 2.0
