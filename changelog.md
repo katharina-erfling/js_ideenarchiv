@@ -6,6 +6,36 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.45.1
+
+### 🧭 Navigation & Startansicht
+
+- Die untere Hauptnavigation wurde zentralisiert und repariert.
+- Dashboard, Ideenarchiv, Romanideen, Romanprojekte, Bücher, Namenslisten, Recherche, Inspiration, Mindmaps, Statistiken und Einstellungen wechseln jetzt wieder eindeutig zwischen den jeweiligen Arbeitsbereichen.
+- Doppelte Mindmap-Routen in der Navigation wurden entfernt.
+- Die kleine Suite-Navigation verwendet jetzt dieselbe zentrale Routing-Logik wie die untere Hauptnavigation.
+
+### ⌂ Dashboard als Start
+
+- Beim frischen Öffnen der Autoren-Suite erscheint jetzt immer zuerst das Dashboard.
+- Die zuletzt verwendete Mindmap oder das Ideenarchiv wird nicht mehr automatisch direkt beim Programmstart geöffnet.
+- Von dort kann wie gewohnt in jeden Arbeitsbereich gewechselt werden.
+
+### ⌘ Mindmaps sauber getrennt
+
+- Mindmaps werden nicht mehr unterhalb des Ideenarchivs sichtbar.
+- Ursache war eine CSS-Regel des Mindmap-Arbeitsbereichs, die das HTML-Attribut `hidden` optisch überschreiben konnte.
+- Ausgeblendete Arbeitsbereiche werden jetzt global zuverlässig mit `display: none` verborgen.
+- Dadurch kann immer nur der aktuell gewählte Hauptbereich sichtbar sein.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Zentrale Navigationsziele geprüft.
+- Startlogik auf Dashboard umgestellt.
+- Sichtbarkeitslogik für Arbeitsbereiche gehärtet.
+- Datenbank- und Backupformat bleiben unverändert; es handelt sich um einen reinen UI-/Navigationsfix.
+
 ## v0.45.0
 
 ### ⚙ Architecture & Reliability
