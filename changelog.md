@@ -6,6 +6,34 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.6
+
+### 🗂️ Kategorie-Drag & Drop repariert
+
+- Die erste Drag-&-Drop-Umsetzung für Kategorien wurde ersetzt, weil sie im Browser zwar einen Greif-Cursor zeigte, das eigentliche Ziehen aber nicht zuverlässig auslöste.
+- Kategorien verwenden jetzt einen eigenen Pointer-basierten Drag-Mechanismus.
+- Eine Kategorie kann direkt am Namen bzw. an der gesamten Kategoriezeile angefasst und gezogen werden.
+- Zusätzlich zeigt jede Kategorie einen kleinen Griff als visuelle Hilfe.
+- Erst nach einer echten Mausbewegung wird der Drag-Modus aktiviert; ein normaler Klick öffnet die Kategorie weiterhin wie gewohnt.
+
+### 🎯 Zielerkennung
+
+- Beim Ziehen wird die Kategorie unter dem Mauszeiger als Ziel erkannt und sichtbar hervorgehoben.
+- Beim Loslassen wird die gezogene Kategorie zu einer Unterkategorie des markierten Ziels.
+- Die Dropzone „Auf Hauptebene verschieben“ bleibt erhalten.
+- Nach dem Verschieben wird die Zielkategorie automatisch aufgeklappt.
+
+### 🛡️ Schutz & bestehendes Ideen-Drag
+
+- Eine Kategorie kann weiterhin weder auf sich selbst noch in einen eigenen Unterordner verschoben werden.
+- Das Drag & Drop von Ideenzetteln auf Kategorien bleibt technisch getrennt erhalten.
+- Ein unmittelbar nach dem Ziehen ausgelöster Klick wird unterdrückt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.46.5
 
 ### 🗂️ Kategorien per Drag & Drop verschieben
