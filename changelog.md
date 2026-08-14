@@ -6,6 +6,30 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.3
+
+### 🗂️ Massenimport – eindeutige Statusfarben
+
+- Zufällig wechselnde Zettelfarben aus der Importvorschau entfernt.
+- Farben besitzen jetzt ausschließlich eine inhaltliche Bedeutung.
+- Grün/neutral = neue Idee.
+- Gelb/Ocker = möglicherweise ähnliche Idee.
+- Rosa/Rot = exakt vorhandenes Duplikat.
+- Textstatus bleibt zusätzlich sichtbar.
+
+### 🔤 Bessere Lesbarkeit beim Import
+
+- Schreibmaschinen-/Courier-Schrift aus der Importvorschau entfernt.
+- Klarere Sans-Serif-Schrift für längere Ideentexte.
+- Zeilenabstand verbessert.
+- Eingabefeld und Vorschau typografisch vereinheitlicht.
+- Duplikaterkennungslogik unverändert.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.46.2
 
 ### 📚 Hoverkarte am Bücherregal korrigiert
