@@ -6,6 +6,168 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.77.0
+
+### ✦ Serien & Universen 2.0
+
+- Universumsbereich zu einer echten Ebene oberhalb einzelner Bücher ausgebaut.
+- Universumsname und Beschreibung ergänzt.
+- Universumsweite Kanon-Notizen ergänzt.
+
+### 📚 Reihenstruktur
+
+Automatische Gruppierung nach:
+
+- Reihe
+- Bandnummer
+- Buchstatus
+
+Zusätzlich sichtbar:
+
+- Wortzahl
+- offene Fäden
+- Kontinuitätsstände
+
+Bücher ohne Reihe werden separat dargestellt.
+
+### ↔ Buchbeziehungen
+
+Weiterhin unterstützt:
+
+- Vorgänger / Nachfolger
+- Prequel
+- Fortsetzung
+- Spin-off
+- Parallelgeschichte
+- gleiches Universum
+- freie Beziehung
+
+### 🧠 Wissens-Scope
+
+Story-Bibel-Akten besitzen jetzt:
+
+- Buch / ausgewählte Bände
+- Reihenwissen
+- Universumswissen
+
+Die konkrete Bandzuordnung bleibt zusätzlich erhalten.
+
+### 🕸 Living-Knowledge-Matrix
+
+Neue Übersicht:
+
+Story-Bibel-Akten × Bücher
+
+Damit wird sichtbar:
+
+- welche Figuren in welchen Bänden gelten
+- welche Orte geteilt werden
+- welches Weltwissen universumsweit gilt
+- welche Akten nur lokal verwendet werden
+
+### 📜 Universums-Kanon
+
+Eigene universumsweite Kanon-Notizen.
+
+Geeignet für:
+
+- Weltregeln
+- Magiegesetze
+- historische Fixpunkte
+- politische Grundordnung
+- Serienkonventionen
+- unveränderliche Fakten
+
+### ◷ Master-Timeline
+
+Timeline-Ereignisse aller Bücher werden zu einer gemeinsamen Chronologie zusammengeführt.
+
+### 🧵 Bandübergreifende Story-Arcs
+
+Mehrbändige Handlungsfäden werden im Universumsbereich gebündelt.
+
+Geeignet für:
+
+- Foreshadowing
+- Geheimnisse
+- Konflikte
+- Beziehungen
+- Versprechen
+- Hinweise
+
+### 🧭 Serien-Kontinuität
+
+Neue Prüfungen unter anderem für:
+
+- widersprüchliche Kontinuitätswerte
+- mehrfach vergebene Bandnummern
+- aufgelöste Reihenfäden ohne Auflösungsstation
+
+Hinweise bleiben bewusst ruhig und nicht blockierend.
+
+### 📊 Universums-Dashboard
+
+Zeigt:
+
+- Bücher
+- Reihen
+- geteilte Akten
+- Reihenfäden
+- Kontinuitäts-Prüfstellen
+
+### 🧠 Codex
+
+Scopes jetzt sauberer getrennt:
+
+- Buch
+- Reihe
+- Universum / Romanprojekt
+
+### 💾 Datenmodell
+
+Neu:
+
+- universeStudio
+- Universumsname
+- Universumsbeschreibung
+- Kanon-Notizen
+- Universums-Einstellungen
+- universeScope pro Story-Bibel-Akte
+- vorbereitete bookVariants
+
+### 🔒 Kompatibilität
+
+Bestehende:
+
+- Bücher
+- Reihen
+- Buchbeziehungen
+- Story-Bibel-Akten
+- Timeline-Ereignisse
+- Handlungsfäden
+- Kontinuitätsdaten
+
+bleiben erhalten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Universums-Datenmodell geprüft
+- Migration bestehender Projekte geprüft
+- Wissens-Scope integriert
+- Reihen-Gruppierung geprüft
+- Buchbeziehungen integriert
+- Living-Knowledge-Matrix integriert
+- Master-Timeline integriert
+- Reihenfäden integriert
+- Kanon-Notizen integriert
+- bandübergreifende Kontinuitätsprüfung integriert
+- doppelte Bandnummern werden erkannt
+- Codex-Scope angepasst
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionsdefinitionen
+
 ## v0.76.0
 
 ### 📦 Compile & Publishing Studio 2.0
