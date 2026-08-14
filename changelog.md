@@ -6,6 +6,67 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.2
+
+### 🎨 Schnellregister & Kategorienbaum
+
+- Farbige Schnellregister können jetzt in den Einstellungen vollständig ein- oder ausgeblendet werden.
+- Jedes der vier Register kann zusätzlich einzeln sichtbar oder unsichtbar geschaltet werden.
+- Die Zuteilung der Register zu Kategorien kann jetzt direkt in den Einstellungen vorgenommen werden.
+- Registerzuweisungen bleiben lokal gespeichert.
+- Die bisherige Schnellzuweisung durch Klick auf ein leeres Register bleibt zusätzlich erhalten.
+
+### 🌳 Kategorienbaum – globale Steuerung
+
+Direkt über dem Kategorienbaum gibt es jetzt Schnellaktionen für:
+
+- alle Kategorien einklappen
+- alle Kategorien ausklappen
+- gespeicherte Standardtiefe anwenden
+
+Die individuelle Steuerung einzelner Kategorien bleibt bestehen.
+
+### ⌨ Kategorien per Tastatur
+
+Wenn eine Kategorie fokussiert ist:
+
+- Pfeil rechts → aufklappen
+- Pfeil links → einklappen
+- Enter / Leertaste → Kategorie öffnen
+
+### ⚙ Einstellungen
+
+Neu steuerbar:
+
+- Standardtiefe des Kategorienbaums
+- alle Kategorien sofort einklappen
+- alle Kategorien sofort ausklappen
+- Standardtiefe sofort anwenden
+- komplette Schnellregister-Leiste anzeigen / ausblenden
+- Sichtbarkeit jedes einzelnen Registers
+- Kategorie-Zuteilung für Rosa, Blau, Grün und Flieder
+
+### 🔒 Verhalten
+
+- Ausblenden eines Registers löscht seine Zuteilung nicht.
+- Beim Wiedereinblenden ist die bisherige Zuteilung wieder vorhanden.
+- Ungültige Registerzuweisungen werden weiterhin automatisch bereinigt.
+- Bestehende Zuordnungen bleiben kompatibel.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Register-Sichtbarkeit persistent
+- individuelle Register-Sichtbarkeit geprüft
+- Register-Zuteilung über Einstellungen integriert
+- globale Kategoriensteuerung integriert
+- individuelle Kategoriensteuerung erhalten
+- Tastatursteuerung ergänzt
+- Standardtiefe erhalten
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionsdefinitionen
+
 ## v0.80.1
 
 ### 🧭 UX-/Navigationsrunde I
