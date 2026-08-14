@@ -6,6 +6,47 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.26.0
+
+### 🔎 Globale Suche
+
+- Die Autoren-Suite besitzt jetzt eine zentrale Suche über alle wichtigen Inhaltsbereiche.
+- Durchsucht werden Ideenzettel, Romanprojekte, Figurenakten, Ortsakten, Manuskriptabschnitte, Recherche, Inspiration und Namenslisten.
+- Die Suche berücksichtigt nicht nur Titel, sondern auch wichtige Inhalte wie Notizen, Beschreibungen, Tags, Figurenentwicklung, Recherchetexte und Manuskripttext.
+- Treffer werden nach Inhaltsart gruppiert und nach Relevanz sortiert.
+- Exakte Titelübereinstimmungen und Treffer am Titelanfang werden stärker gewichtet als Treffer tief im Inhalt.
+- Auch längere Textstücke aus einer Notiz oder einem Manuskript können als Suchbegriff verwendet werden.
+
+### ⌨️ Command Palette
+
+- Mit `Strg + K` bzw. `Cmd + K` öffnet sich jetzt von überall die zentrale Command Palette.
+- Die Palette kann alternativ über den neuen Button „Alles“ in der oberen Leiste geöffnet werden.
+- Ohne Suchbegriff zeigt sie wichtige Schnellaktionen.
+- Von dort lassen sich unter anderem Ideenarchiv, Romanprojekte, Schreibprogramm, Recherche und Namenslisten direkt öffnen.
+
+### ↗️ Direkte Navigation
+
+- Suchtreffer sind direkt anklickbar.
+- Ideentreffer öffnen unmittelbar den betreffenden Zettel.
+- Figuren- und Ortstreffer öffnen die passende Akte im zugehörigen Romanprojekt.
+- Manuskripttreffer führen direkt in den betreffenden Abschnitt des Schreibprogramms.
+- Recherche-, Inspirations- und Namenseinträge öffnen direkt ihren jeweiligen Bearbeitungsbereich.
+- Romanprojekte können unmittelbar aus der Suche geöffnet werden.
+
+### ⚡ Suche für große Archive
+
+- Die globale Suche arbeitet auf einem kompakten, zur Laufzeit erzeugten Suchindex.
+- Ergebnisse werden auf die relevantesten Treffer begrenzt, damit die Oberfläche auch bei sehr großen Archiven übersichtlich bleibt.
+- Mehrteilige Suchbegriffe können auch dann Treffer finden, wenn die einzelnen Wörter an unterschiedlichen Stellen eines Datensatzes vorkommen.
+- Die bestehende Spezialsuche des Ideenarchivs bleibt unverändert erhalten und kann weiterhin für besonders genaue Archivabfragen genutzt werden.
+
+### 💾 Datensicherheit
+
+- Die globale Suche ist vollständig lesend und verändert keine Inhalte.
+- Es werden keine zusätzlichen Kopien der Manuskript- oder Archivdaten dauerhaft gespeichert.
+- Die Command Palette greift direkt auf die bereits lokal gespeicherten Daten der Autoren-Suite zu.
+- Bestehende Backups und Datenstrukturen bleiben unverändert kompatibel.
+
 ## v0.25.0
 
 ### 🕘 Timeline & Chronologie
