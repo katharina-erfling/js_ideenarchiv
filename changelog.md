@@ -6,6 +6,47 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.4
+
+### 🌳 Kategorien-Kontextmenü & Lesbarkeit
+
+- Rechtsklick auf Kategorien im Ideenarchiv erweitert.
+- Kategorie direkt ein-/ausklappen.
+- Gesamten Unterbaum ein-/ausklappen.
+- Baumaktionen nur bei Kategorien mit Unterkategorien sichtbar.
+
+### 🖱 Lange Kategorienamen
+
+- Lange Namen bleiben sauber gekürzt.
+- Vollständiger Name erscheint beim Hover, wenn der Text abgeschnitten ist.
+
+### 🔎 Schriftgrößen korrigiert
+
+Deutlich angehoben wurden insbesondere:
+
+- Autoren-Suite-Logo
+- linke Hauptnavigation
+- Ideenarchiv-Kontextnavigation
+- Kategoriennamen und Zähler
+- Kategorien-Rechtsklickmenü
+- Dashboard-Untertexte
+- Buchkarten und Metadaten
+- Schnellaktionen
+- Buchnavigation und Subtabs
+- Einstellungen
+- Hilfstexte und Kicker
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Kategorie-Rechtsklickmenü erweitert
+- Einzelkategorie ein-/ausklappen geprüft
+- Unterbaum ein-/ausklappen integriert
+- Tooltip für abgeschnittene Kategorienamen integriert
+- Schriftgrößen korrigiert
+- keine doppelten HTML-IDs
+- keine fehlenden statischen UI-Referenzen
+
 ## v0.80.3
 
 ### 🧭 Navigation Hotfix & konstante Seitenleiste
