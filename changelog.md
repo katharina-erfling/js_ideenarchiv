@@ -6,6 +6,124 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.38.0
+
+### 📎 Verknüpfbare Anhänge & Story-Bibeln
+
+- Bücher können jetzt eigene Anhänge bzw. Story-Bibeln besitzen.
+- Ein Anhang ist kein fest eingebauter Bestandteil nur eines Buches, sondern ein eigenständiger Wissensbereich.
+- Derselbe Anhang kann mit beliebig vielen Büchern verknüpft werden.
+- Dadurch können beispielsweise mehrere Bände einer Reihe dieselben Figuren-, Orts- und Weltinformationen gemeinsam verwenden.
+- Ein Buch kann gleichzeitig mehrere unterschiedliche Anhänge besitzen, etwa eine gemeinsame Reihen-Bibel und einen zusätzlichen bandspezifischen Anhang.
+
+### 📚 Mehrere Bücher pro Anhang
+
+- Beim Anlegen oder Bearbeiten eines Anhangs können mehrere Bücher ausgewählt werden.
+- Bestehende Anhänge können direkt aus einem anderen Buch heraus zusätzlich verknüpft werden.
+- Eine Verknüpfung kann wieder von einem einzelnen Buch gelöst werden, ohne den Anhang oder seine Inhalte für die übrigen Bücher zu löschen.
+- Wird ein Buch aus der Bibliothek entfernt, bleiben gemeinsam genutzte Anhänge erhalten; lediglich die Verknüpfung zum gelöschten Buch wird entfernt.
+
+### 👤 Figurenakten
+
+- Story-Bibeln können ausführliche Figurenakten enthalten.
+- Figuren besitzen Titel/Name, Rolle bzw. Untertitel, Kurzbeschreibung, freie Notizen, Bilder und einen individuell konfigurierbaren Steckbrief.
+- Für neue Figuren wird eine bearbeitbare Ausgangsvorlage angeboten, unter anderem mit Alter, Geburtstag, Größe, Aussehen, Augen, Haaren, Beruf/Rolle, Stärken, Schwächen, Ängsten, Wünschen und Geheimnissen.
+- Sämtliche Felder können gelöscht, umbenannt oder durch eigene Felder ersetzt werden.
+- Die Figurenakte ist dadurch nicht auf ein bestimmtes Genre oder Figurenmodell festgelegt.
+
+### 🏞️ Orte, Weltwissen & weitere Eintragstypen
+
+- Neben Figuren können folgende Arten von Story-Bibel-Einträgen angelegt werden:
+  - Orte
+  - Welt & Lore
+  - Organisationen
+  - Gegenstände
+  - Tiere / Kreaturen
+  - Regeln / Systeme
+  - Ereignisse
+  - freie Notizen
+- Jeder Eintrag verwendet dieselbe flexible Grundstruktur.
+- Für verschiedene Typen stehen passende, vollständig veränderbare Steckbriefvorlagen als Ausgangspunkt bereit.
+- Damit können sowohl kleine Einzelnotizen als auch ausführliche Weltbau-Akten aufgebaut werden.
+
+### 🧩 Frei anpassbare Steckbriefe
+
+- Jeder Story-Bibel-Eintrag kann beliebig viele eigene Steckbrieffelder besitzen.
+- Ein Feld besteht aus frei benennbarer Bezeichnung, Feldtyp und Inhalt.
+- Unterstützte Feldtypen sind:
+  - Text
+  - Langtext
+  - Zahl
+  - Datum
+  - Link
+- Felder können jederzeit hinzugefügt oder wieder entfernt werden.
+- Ein Wechsel des Eintragstyps kann bei neuen Einträgen eine passende neue Vorlage erzeugen.
+- Bereits eingetragene Werte werden dabei nicht ohne Rückfrage verworfen.
+
+### 🖼️ Bilder & Galerien
+
+- Jeder Eintrag kann mehrere Bilder besitzen.
+- Bilder werden vor dem lokalen Speichern automatisch verkleinert.
+- Ein Bild kann als Hauptbild markiert werden.
+- Jedes Bild kann eine eigene Bildnotiz erhalten.
+- Dadurch lassen sich bei Figuren beispielsweise Portrait und weitere Referenzen, bei Orten Karten und Moodbilder oder bei Weltbau-Einträgen mehrere visuelle Referenzen gemeinsam speichern.
+- Das Hauptbild wird direkt auf der Karte des Story-Bibel-Eintrags angezeigt.
+
+### 🎯 Buchabhängige Einträge
+
+- Ein Eintrag kann für alle Bücher seines Anhangs gelten.
+- Alternativ kann festgelegt werden, dass eine Figur, ein Ort oder eine Weltinformation nur für einzelne verknüpfte Bände gilt.
+- Beim Öffnen des Anhangs innerhalb eines Buches werden nur die für dieses Buch relevanten Einträge angezeigt.
+- Dadurch kann eine gemeinsame Reihen-Bibel sowohl allgemeine Informationen als auch bandspezifische Inhalte enthalten, ohne Akten duplizieren zu müssen.
+
+### 📖 Anhang direkt im Buch
+
+- Jedes geöffnete Buch besitzt jetzt einen eigenen Workflow-Tab „📎 Anhang“.
+- Dort werden alle mit dem Buch verknüpften Story-Bibeln angezeigt.
+- Zwischen mehreren Anhängen kann direkt gewechselt werden.
+- Neue Anhänge und Einträge können angelegt werden, ohne den Buchkontext zu verlassen.
+- Der Buchdetailbereich zeigt jetzt zusätzlich, wie viele Anhänge mit dem Buch verbunden sind, und bietet einen direkten Sprung in die Story-Bibel.
+
+### ✒️ Verbindung zum Schreibeditor
+
+- Relevante Story-Bibel-Einträge werden während des Schreibens zusätzlich im Kontextbereich des aktuellen Buches angezeigt.
+- Figuren, Orte und andere Wissenseinträge können dadurch als Referenz direkt beim Manuskript sichtbar bleiben.
+- Ein Klick auf einen Story-Bibel-Eintrag öffnet dessen vollständige Akte.
+- Vom Schreibeditor kann direkt in den Anhang des aktuellen Buches gewechselt werden.
+
+### 🔎 Globale Suche
+
+- Anhänge und Story-Bibel-Einträge sind jetzt Bestandteil der globalen Suche.
+- Durchsucht werden unter anderem:
+  - Titel und Namen
+  - Untertitel / Rolle
+  - Kurzbeschreibung
+  - freie Notizen
+  - sämtliche individuellen Steckbrieffelder
+  - Werte der Steckbrieffelder
+  - Bildnotizen
+  - Name des Anhangs
+  - verknüpfte Bücher
+- Dadurch kann auch ein exakter Textbestandteil aus einer Charakter-, Orts- oder Weltnotiz wiedergefunden werden.
+- Suchtreffer führen direkt zum passenden Anhang bzw. Eintrag.
+
+### 💾 Datenmodell & Backup
+
+- IndexedDB wurde um eigene Speicherbereiche für Anhänge und Story-Bibel-Einträge erweitert.
+- Das Backupformat wurde auf Version 5 erweitert.
+- Neue vollständige Backups enthalten Anhänge, flexible Steckbriefe, Bilder und Buchzuordnungen.
+- Backups aus älteren v4-Versionen bleiben weiterhin importierbar, auch wenn sie noch keine Story-Bibel-Daten besitzen.
+- Anhänge und ihre Einträge bleiben vollständig lokal und benötigen keinen Account oder externen Server.
+
+### ✓ Systemcheck
+
+- Der Systemcheck prüft jetzt zusätzlich Story-Bibel-Daten.
+- Er erkennt Anhänge, die auf nicht mehr vorhandene Bücher verweisen.
+- Story-Bibel-Einträge ohne vorhandenen Anhang werden als kritische Auffälligkeit erkannt.
+- Einträge mit Verweisen auf nicht mehr vorhandene Bücher werden gemeldet.
+- Auch bandspezifische Einträge, deren Buch nicht mehr zum übergeordneten Anhang gehört, werden sichtbar gemacht.
+- Die Prüfung bleibt rein diagnostisch und verändert keine Story-Bibel-Inhalte automatisch.
+
 ## v0.37.0
 
 ### 🔗 Buchverknüpfungen
