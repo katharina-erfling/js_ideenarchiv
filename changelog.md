@@ -6,6 +6,98 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.33.0
+
+### 📚 Bücher & Bibliothek
+
+- Die Autoren-Suite besitzt jetzt eine eigene Bibliothek für echte Buchobjekte.
+- Bücher werden nicht als Dateien oder lose Dokumente behandelt, sondern als eigenständige Bestandteile der Schreibumgebung.
+- Jedes Buch gehört zu einem Romanprojekt und besitzt ein eigenes Manuskript.
+- Ein Romanprojekt kann beliebig viele Bücher bzw. Bände enthalten.
+- Dadurch können Einzelromane, Reihen und größere gemeinsame Universen mit mehreren Bänden sauber getrennt organisiert werden.
+
+### 📖 Digitales Bücherregal
+
+- Der bisherige Hauptbereich „Schreiben“ wurde in der Hauptnavigation durch „Bücher“ ersetzt.
+- Bücher erscheinen in einem visuellen Bücherregal mit echten Buchrücken.
+- Titel werden direkt auf dem Buchrücken dargestellt.
+- Reihe und Bandnummer können ebenfalls auf dem Rücken erscheinen.
+- Die Dicke eines Buchrückens reagiert dezent auf den aktuellen Manuskriptumfang.
+- Bücher mit eigenem Coverbild können alternativ als Coverkarte im Regal erscheinen.
+- Ein Klick auf ein Buch öffnet direkt dessen eigenen Schreibarbeitsplatz.
+
+### 🎨 Buchgestaltung
+
+- Jedes Buch kann einen eigenen Titel und Untertitel erhalten.
+- Reihenname und Bandnummer werden separat gespeichert.
+- Für Bücher kann eine eigene Buchrückenfarbe gewählt werden.
+- Ein eigenes Coverbild kann hochgeladen werden.
+- Coverbilder werden wie andere lokale Bilddaten vor dem Speichern verkleinert.
+- Status, Wortziel, Deadline und freie Buchnotizen werden direkt am Buch gepflegt.
+
+### ✒️ Eigener Schreibeditor pro Buch
+
+- Jedes Buch besitzt ein eigenes Manuskript mit Kapiteln und Szenen.
+- Die bestehende Rich-Text-Schreibumgebung, Autosave-, Recovery- und Versionslogik bleibt vollständig erhalten.
+- Kapitel und Szenen werden jetzt zusätzlich eindeutig einem Buch zugeordnet.
+- Ein Buch zeigt ausschließlich seine eigenen Manuskriptabschnitte im Binder.
+- Wortstand und Wortziel im Editor beziehen sich auf das aktuell geöffnete Buch.
+- Zwischen mehreren Büchern desselben Romanprojekts kann direkt im Schreibbereich gewechselt werden.
+- Über „Regal“ gelangt man jederzeit zurück zur Bibliothek.
+- Über „Buch“ können Metadaten und Gestaltung des aktuell geöffneten Bandes bearbeitet werden.
+
+### 🔗 Romanprojekt & Buch
+
+- Die neue Struktur lautet jetzt:
+  - Romanprojekt
+  - Buch / Band
+  - Kapitel
+  - Szene
+- Figuren, Orte, Beziehungsnetz, Weltbau, Recherche, Inspiration und projektweite Ideenzettel bleiben beim Romanprojekt angesiedelt.
+- Das konkrete Manuskript liegt dagegen im jeweiligen Buch.
+- Dadurch können mehrere Bände dieselben Figuren- und Weltdaten verwenden, ohne Manuskripte miteinander zu vermischen.
+- Der Projektwortstand bleibt weiterhin als Summe aller zugehörigen Buchmanuskripte verfügbar.
+
+### 🧩 Planung → Buch
+
+- Die Planungswand übergibt neue Kapitel jetzt gezielt an ein Buch.
+- Gibt es im Romanprojekt noch kein Buch, kann für die bestehende Planung automatisch ein erstes Buch angelegt werden.
+- Existiert genau ein Buch, wird dieses direkt als Ziel verwendet.
+- Bei mehreren Büchern wird keine beliebige Zuordnung geraten: Die Bibliothek wird geöffnet und das Zielbuch muss zuerst bewusst gewählt werden.
+- Bereits vorhandener Manuskripttext wird bei der Übergabe weiterhin nicht überschrieben.
+
+### 🔎 Suche & Navigation
+
+- Bücher sind jetzt Bestandteil der globalen `Strg/Cmd + K`-Suche.
+- Suchtreffer zeigen neben dem Buchtitel auch Reihe, Band und Romanprojekt.
+- Manuskripttreffer öffnen jetzt direkt das Buch, zu dem die gefundene Szene oder das Kapitel gehört.
+- Das Romanprojekt-Dashboard zeigt die Anzahl seiner Bücher und besitzt direkte Sprungpunkte ins Bücherregal bzw. zum Anlegen eines neuen Buches.
+
+### 🔄 Migration vorhandener Manuskripte
+
+- Bestehende Manuskripte aus v0.32.0 und älteren Versionen bleiben erhalten.
+- Für vorhandene Projekt-Manuskripte ohne Buchzuordnung wird beim ersten Start automatisch ein passendes Buch angelegt.
+- Der bisherige Romanprojekt-Titel wird dabei als Ausgangstitel des migrierten Buches verwendet.
+- Zielwortzahl und Deadline des Projekts werden als Ausgangswerte übernommen.
+- Bestehende Kapitel und Szenen werden diesem Buch zugeordnet, ohne ihren Inhalt zu verändern.
+- Vorhandene Schreibsessions werden soweit möglich ebenfalls dem migrierten Buch zugeordnet.
+
+### 🛡️ Schutz vor Datenverlust
+
+- Ein Buch, das Manuskriptabschnitte enthält, kann nicht einfach gelöscht werden.
+- Der Text muss zuerst bewusst bearbeitet bzw. entfernt werden; ein Buchlöschen vernichtet niemals automatisch Manuskripttext.
+- Ein Buch mit Manuskript kann nicht unbemerkt in ein anderes Romanprojekt verschoben werden.
+- Romanprojekte mit vorhandenen Büchern können ebenfalls nicht einfach gelöscht werden.
+- Der Systemcheck erkennt Manuskriptabschnitte mit fehlender Buchzuordnung oder ungültigen Buchverknüpfungen.
+- Bücher sind Bestandteil des regulären Backupformats.
+
+### 💾 Datenmodell
+
+- IndexedDB wurde um einen eigenen Speicherbereich für Bücher erweitert.
+- Das Datenmodell bleibt lokal und benötigt weiterhin keinen Account oder Server.
+- Dokumente besitzen zusätzlich eine `bookId`, während ihre Verbindung zum Romanprojekt bestehen bleibt.
+- Die bestehende Sicherheitsarchitektur mit Notfallentwurf, Autosave und Versionsständen bleibt kompatibel.
+
 ## v0.32.0
 
 ### ✨ UI-/UX-Polish
