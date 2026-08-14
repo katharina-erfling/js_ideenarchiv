@@ -6,6 +6,63 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.29.0
+
+### 📊 Erweiterte Schreibstatistiken
+
+- Der Statistikbereich wurde zu einer ausführlichen Schreibauswertung ausgebaut.
+- Bestehende Filter nach Romanprojekt und Zeitraum gelten jetzt auch für die neuen Detailauswertungen.
+- Automatische Schreibsessions und manuelle Wortzahl-Einträge bleiben weiterhin getrennt erfassbar und werden gemeinsam sinnvoll ausgewertet.
+
+### 🏆 Persönliche Rekorde
+
+- Die Statistik zeigt jetzt den bisher besten Schreibtag.
+- Die wortstärkste einzelne Schreibsession wird als eigener Rekord geführt.
+- Die längste Schreibsession wird anhand der tatsächlich gespeicherten Sessiondauer ermittelt.
+- Die aktuelle Schreibserie bleibt direkt bei den persönlichen Bestwerten sichtbar.
+
+### 📅 Produktive Wochentage
+
+- Schreibaktivität wird nach Wochentagen ausgewertet.
+- Montag bis Sonntag werden als vergleichbare Balken dargestellt.
+- Dadurch wird sichtbar, an welchen Tagen im gewählten Zeitraum besonders viel geschrieben wurde.
+- Die Auswertung basiert auf den tatsächlich erfassten Wortzahlen und nicht nur auf der Anzahl der geöffneten Sessions.
+
+### 🕰️ Produktive Uhrzeiten
+
+- Automatisch erfasste Schreibsessions werden nach Tageszeit ausgewertet.
+- Die Tageszeiten sind in vier übersichtliche Zeitfenster gegliedert.
+- So lässt sich erkennen, ob der eigene Schreibrhythmus eher morgens, mittags, abends oder nachts liegt.
+- Manuelle historische Wordcounts werden bewusst nicht künstlich einer Uhrzeit zugeordnet.
+
+### ⏱️ Session-Auswertung
+
+- Für den gewählten Zeitraum werden durchschnittliche Wörter pro Session berechnet.
+- Die durchschnittliche Sessiondauer wird angezeigt.
+- Aus Wortzahl und tatsächlicher Schreibzeit wird ein durchschnittliches Schreibtempo in Wörtern pro Stunde berechnet.
+- Die Anzahl der Sessions im aktuellen Filterzeitraum bleibt direkt vergleichbar.
+
+### 🟩 365-Tage-Heatmap
+
+- Eine neue Schreib-Heatmap zeigt die vergangenen 365 Tage auf einen Blick.
+- Tage mit Schreibaktivität werden abhängig von ihrer Wortmenge unterschiedlich stark hervorgehoben.
+- Beim Überfahren eines Tages werden Datum und Wortzahl angezeigt.
+- Die Heatmap reagiert auf den gewählten Projektfilter und kann dadurch auch den Schreibverlauf eines einzelnen Romans zeigen.
+
+### 🔎 Bestehende Statistiken
+
+- Tages-, 7-Tage- und Zeitraum-Wortzahlen bleiben erhalten.
+- Schreibzeit, aktuelle Serie, durchschnittlicher Schreibtag und bester Tag bleiben Bestandteil der Übersicht.
+- Projektvergleich, Aktivitätsverlauf, Monatskalender und die Liste letzter Schreibaktivitäten bleiben vollständig erhalten.
+- Die neuen Auswertungen ergänzen den bestehenden Statistikbereich statt ihn zu ersetzen.
+
+### 💾 Datensicherheit
+
+- Alle neuen Statistiken werden ausschließlich aus bereits vorhandenen Schreibdaten berechnet.
+- Rekorde, Heatmap und Rhythmus-Auswertungen erzeugen keine zusätzlichen Kopien des Manuskripts.
+- Es werden keine Schreibdaten verändert, wenn Filter oder Statistikzeiträume gewechselt werden.
+- Bestehende Backups bleiben vollständig kompatibel.
+
 ## v0.28.0
 
 ### 🎯 Schreibziele & Challenges
