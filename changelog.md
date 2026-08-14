@@ -6,6 +6,64 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.30.0
+
+### 🛡️ Sicherheits- & Stabilitätsrunde
+
+- Diese Version konzentriert sich bewusst auf den Schutz von Manuskripttexten und vorhandenen Projektdaten.
+- Es wurden keine neuen großen Inhaltsmodule ergänzt.
+- Die bestehende Autosave-, Recovery- und Versionslogik wurde zusammengeführt und verstärkt.
+
+### 💾 Mehrstufiges Autosave
+
+- Änderungen im Schreibeditor werden weiterhin sehr schnell automatisch gespeichert.
+- Noch bevor der reguläre Datenbank-Speichervorgang läuft, wird der aktuelle Editorstand zusätzlich als lokaler Notfallentwurf geschützt.
+- Während eines geöffneten Manuskriptabschnitts wird der Notfallentwurf regelmäßig erneuert.
+- Beim Wechsel in einen anderen Browser-Tab oder beim Minimieren wird zusätzlich ein Sicherheits-Speichervorgang angestoßen.
+- Beim Schließen oder Verlassen der Seite wird der aktuell sichtbare Text noch einmal in den lokalen Notfallschutz geschrieben.
+
+### 🚑 Crash-Recovery
+
+- Für jeden Manuskriptabschnitt kann ein unabhängiger lokaler Notfallentwurf bestehen.
+- Wird nach einem unerwarteten Abbruch ein neuerer Notfallstand als die regulär gespeicherte Version gefunden, bietet die Suite dessen Wiederherstellung an.
+- Ein Notfallentwurf wird erst entfernt, nachdem der reguläre Speichervorgang erfolgreich abgeschlossen wurde.
+- Dadurch bleibt der kurzfristige Schutz von der normalen IndexedDB-Speicherung getrennt.
+
+### ↶ Versionsverlauf
+
+- Der Schreibbereich besitzt jetzt einen direkt erreichbaren Button „Versionen“.
+- Automatische Sicherheitsstände eines Manuskriptabschnitts können dort eingesehen werden.
+- Pro Manuskriptabschnitt werden jetzt bis zu 50 ältere Sicherheitsstände aufbewahrt.
+- Die Versionen zeigen Zeitpunkt, Grund der Sicherung und Wortstand.
+- Rich-Text-Inhalte behalten beim Versionsstand ihr Inhaltsformat.
+
+### ♻️ Sichere Wiederherstellung
+
+- Ältere Manuskriptversionen können direkt aus dem Versionsverlauf wiederhergestellt werden.
+- Vor jeder Wiederherstellung wird automatisch noch einmal der aktuelle Manuskriptstand gespeichert.
+- Erst danach wird die ausgewählte ältere Version eingesetzt.
+- Dadurch kann eine versehentliche Wiederherstellung selbst wieder rückgängig gemacht werden.
+- Der Projektwortstand wird nach einer Wiederherstellung automatisch neu berechnet.
+
+### 🗑️ Schutz vor Löschen
+
+- Die bereits vorhandene Sicherheitskopie vor dem Löschen eines Manuskriptabschnitts bleibt erhalten.
+- Gelöschte Manuskripttexte besitzen dadurch weiterhin einen Versionsstand, auch wenn der eigentliche Abschnitt entfernt wurde.
+- Kapitelunterstrukturen werden beim Löschen weiterhin nicht unbemerkt mitgelöscht.
+
+### 🔒 Schutz vor Überschreiben
+
+- Periodische Versionsstände werden jetzt zuverlässig abgeschlossen, bevor ein neuer Manuskriptstand den vorherigen überschreibt.
+- Ein Versionsstand enthält neben Text, Titel und Notiz nun auch das gespeicherte Inhaltsformat.
+- Das reduziert das Risiko, dass bei schnell aufeinanderfolgenden Speichervorgängen ein vorgesehener Sicherheitsstand noch nicht vollständig angelegt wurde.
+
+### 🧱 Lokale Architektur
+
+- Manuskript, Versionsstände und Notfallentwürfe bleiben vollständig lokal.
+- Notfallentwürfe und reguläre Manuskriptdaten liegen bewusst in unterschiedlichen Browser-Speichermechanismen.
+- Die Sicherheitsfunktionen benötigen weiterhin keinen Account, Server oder externen Cloud-Dienst.
+- Bestehende Backup- und Exportfunktionen bleiben erhalten.
+
 ## v0.29.0
 
 ### 📊 Erweiterte Schreibstatistiken
