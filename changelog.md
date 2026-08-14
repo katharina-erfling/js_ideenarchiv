@@ -6,6 +6,71 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.51.0
+
+### ✦ Überarbeitungsmodus
+
+- Bücher besitzen jetzt einen eigenen Workflow-Tab „Überarbeitung“.
+- Bücher mit Status „Überarbeitung“ öffnen standardmäßig direkt diesen Bereich.
+- Die Überarbeitung ist als Kanban-Board aufgebaut:
+  - Offen
+  - In Arbeit
+  - Erledigt
+- Jede Aufgabe bleibt mit dem konkreten Kapitel bzw. der konkreten Szene verbunden.
+
+### 📝 Überarbeitungsnotizen direkt am Manuskript
+
+- Im Editor gibt es jetzt „✦ Überarbeiten“.
+- Eine Notiz kann allgemein für den aktuellen Abschnitt angelegt werden.
+- Markierter Manuskripttext kann direkt mit einer Überarbeitungsnotiz verknüpft werden.
+- Rechtsklick im Manuskript öffnet dafür ein eigenes Aktionsmenü.
+- Der ausgewählte Text wird als Zitat an der Aufgabe gespeichert, ohne den Manuskripttext zu verändern.
+- „Im Text“ führt zurück in den passenden Manuskriptabschnitt und sucht die gespeicherte Passage.
+
+### 🗂️ Kategorien
+
+- Plot
+- Figuren
+- Logik
+- Stil
+- Recherche
+- Kontinuität
+- Kürzen
+- Ausbauen
+
+### 🧭 Überarbeitung im Inspector
+
+- Eigener Inspector-Tab „Überarbeitung“.
+- Alle Aufgaben des aktuellen Kapitels bzw. der aktuellen Szene sichtbar.
+- Neue Aufgaben direkt dort anlegen.
+- Vorhandene Aufgaben öffnen und bearbeiten.
+
+### 📚 Kapitel-/Szenenstatus
+
+- Die Manuskript-Navigation zeigt die Zahl offener Überarbeitungsaufgaben.
+- Erledigte Aufgaben zählen dort nicht mehr mit.
+- Der normale Manuskriptstatus bleibt davon unabhängig.
+
+### 🔄 Aufgabenworkflow
+
+- Aufgaben zwischen Offen, In Arbeit und Erledigt wechseln.
+- Aufgaben bearbeiten oder löschen.
+- Löschen einer Aufgabe verändert niemals den Manuskripttext.
+
+### 🔒 Daten & Sicherheit
+
+- Überarbeitungsnotizen werden direkt beim jeweiligen Manuskriptabschnitt gespeichert.
+- Bestehende Kapitel und Szenen erhalten automatisch eine leere Überarbeitungsliste.
+- Keine destruktive Datenmigration.
+- Autosave, Sicherheitsversionen und Manuskripttext bleiben unangetastet.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Alle neuen Dialog- und UI-Referenzen geprüft.
+- Keine doppelten IDs oder Funktionen gefunden.
+- Bestehende Bücher und Manuskripte bleiben kompatibel.
+
 ## v0.50.0
 
 ### ⌘ Globale Suche
