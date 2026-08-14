@@ -6,6 +6,71 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.20
+
+### 🛠 Story-Bibel – „Charaktere anlegen“ repariert
+
+Der Button zum Anlegen eines Charakters war nach der Vereinfachung
+der Buchfreigabe tatsächlich kaputt.
+
+Ursache:
+
+- die Freigabe pro Eintrag war aus der Oberfläche entfernt worden
+- openAppendixEntryDialog() griff aber weiterhin auf die inzwischen
+  nicht mehr vorhandenen Elemente appendixEntryBooks und
+  appendixEntryScope zu
+- dadurch brach das Öffnen des Eintragsdialogs mit einem
+  Laufzeitfehler ab
+
+Die veralteten Referenzen wurden vollständig entfernt.
+
+Betroffen waren potenziell:
+
+- Charaktere
+- Orte
+- Welt & Lore
+- Notizen
+- eigene Reiter / Grundtypen
+
+### ⚙ Story-Bibel-Freigabe ebenfalls repariert
+
+Eine alte Referenz auf den bereits entfernten deleteAppendixBtn
+wurde ebenfalls entfernt.
+
+### 🔎 Gründlicher Aktions-Audit
+
+Nach der Reparatur geprüft:
+
+- keine statisch referenzierten HTML-IDs ohne vorhandenes Element
+- keine direkt gebundenen Event-Handler ohne implementierte Funktion
+- keine statischen data-*-Aktionsattribute ohne JavaScript-Verwendung
+- keine doppelten HTML-IDs
+- JavaScript-Syntax gültig
+
+### 🛡 Story-Bibel-Bindings robuster
+
+Die wichtigsten dynamischen Story-Bibel-Buttons werden jetzt
+null-sicher gebunden.
+
+Ein fehlendes optionales Bedienelement soll dadurch nicht mehr
+nachfolgende Aktionen mitreißen.
+
+### 🧪 Systemtest erweitert
+
+Der vollständige Systemtest prüft jetzt zusätzlich:
+
+- Story-Bibel-Dialoge
+- Story-Bibel-Formulare
+- Kernfunktionen zum Anlegen und Speichern
+
+### 🗂 Kleine UX-Korrektur
+
+Im Eintragsdialog heißt die leere Ordnerauswahl jetzt:
+
+— Kein Ordner —
+
+statt „Reiter-Wurzel“.
+
 ## v0.80.18
 
 ### 🔗 Buchzuordnung nur noch für die gesamte Story-Bibel
