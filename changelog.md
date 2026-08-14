@@ -6,6 +6,50 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.23.0
+
+### 🎭 Figurenakten
+
+- Figuren im Romanprojekt wurden von einfachen Planungsnotizen zu ausführlichen Figurenakten erweitert.
+- Jede Figur kann jetzt ein eigenes Portraitbild erhalten.
+- Alter bzw. Lebensphase, Pronomen, Rolle im Roman und Beruf/Funktion können separat gepflegt werden.
+- Aussehen und Persönlichkeit besitzen eigene ausführliche Felder.
+- Motivation, Angst bzw. Schwäche und ein mögliches Geheimnis können strukturiert festgehalten werden.
+- Die geplante Figurenentwicklung erhält mit „Entwicklung / Arc“ einen eigenen Bereich.
+- Beziehungen und Dynamiken zu anderen Figuren können frei beschrieben werden.
+- Die bereits vorhandenen Verknüpfungen zu Namenslisten, Ideenzetteln, Recherche und Inspiration bleiben vollständig erhalten.
+
+### 🖼️ Figurenbilder
+
+- Portraitbilder können direkt in der Figurenakte hochgeladen werden.
+- Bilder werden vor der lokalen Speicherung automatisch verkleinert.
+- Figuren werden in der Projektübersicht jetzt mit Portrait und wichtigen Akteninformationen dargestellt.
+- Fehlt ein Bild, bleibt eine neutrale visuelle Platzhalterdarstellung erhalten.
+
+### ⌖ Ortsakten
+
+- Orte wurden ebenfalls zu ausführlicheren Ortsakten erweitert.
+- Jeder Ort kann ein eigenes Referenzbild erhalten.
+- Art des Ortes und Region bzw. Welt werden separat erfasst.
+- Atmosphäre und ausführliche Beschreibung besitzen eigene Felder.
+- Die Bedeutung eines Ortes für die Geschichte kann unabhängig von seiner allgemeinen Beschreibung notiert werden.
+- Sinneseindrücke wie Geräusche, Gerüche, Licht oder Temperatur können gesammelt werden.
+- Geschichte, Regeln und besondere Eigenschaften eines Ortes erhalten einen eigenen freien Bereich.
+
+### 🗂️ Projektübersicht
+
+- Die bisherigen Tabs „Figuren“ und „Orte“ heißen jetzt „Figurenakten“ und „Ortsakten“.
+- Figuren- und Ortskarten zeigen Bilder sowie zentrale Informationen direkt in der Übersicht.
+- Verknüpfungszahlen zu Ideen, Recherche und Inspiration bleiben bei Figuren sichtbar.
+- Damit lassen sich auch umfangreichere Casts und Welten übersichtlicher verwalten.
+
+### 💾 Datensicherheit
+
+- Figuren- und Ortsakten werden weiterhin direkt im jeweiligen Romanprojekt in IndexedDB gespeichert.
+- Hochgeladene Bilder werden vor dem Speichern verkleinert, um die lokale Datenmenge zu begrenzen.
+- Bestehende ältere Figuren und Orte bleiben kompatibel und können nach und nach um die neuen Felder ergänzt werden.
+- Alle neuen Aktenfelder und Bilder sind automatisch Bestandteil der Autoren-Suite-Backups.
+
 ## v0.22.0
 
 ### 🔗 Modulübergreifende Verknüpfungen
