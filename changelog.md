@@ -6,6 +6,93 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.52.0
+
+### ✦ Story Intelligence
+
+- Jedes Buch besitzt jetzt einen eigenen Workflow-Tab „Story Intelligence“.
+- Der Bereich wertet ausschließlich bereits vorhandene Daten der Suite aus:
+  - Handlungsfäden
+  - Manuskriptabschnitte
+  - Timeline
+  - Story-Bibel
+  - Kontinuitätsnotizen
+  - Figurenverknüpfungen
+  - Überarbeitungsnotizen
+- Die Hinweise sind bewusst als Unterstützung formuliert und nicht als automatische Fehlerbewertung.
+
+### 🧵 Story-Radar für offene Fäden
+
+- Handlungsfäden werden jetzt zusätzlich als Story-Radar ausgewertet.
+- Die Suite erkennt unter anderem:
+  - offene Fäden ohne Manuskriptstation
+  - Fäden, die über viele Abschnitte nicht mehr aufgegriffen wurden
+  - als aufgelöst markierte Fäden mit nur einer einzigen Station
+- Der Fadenstatus wurde erweitert:
+  - angelegt
+  - entwickelt
+  - zugespitzt
+  - aufgelöst
+  - fallengelassen
+- Bestehende Statuswerte bleiben kompatibel.
+- Story-Intelligence-Karten führen direkt zum jeweiligen Handlungsfaden.
+
+### ♙ Figurenentwicklung
+
+- Charakterakten in der Story-Bibel können jetzt Entwicklungsstationen enthalten.
+- Pro Station können festgehalten werden:
+  - Buch
+  - konkrete Szene / konkretes Kapitel
+  - Station / Wendepunkt
+  - was die Figur glaubt
+  - was sie will
+  - was sie weiß
+  - emotionaler Zustand
+  - freie Notiz
+- Entwicklungsstationen werden als horizontale Figurenbogen-Leiste dargestellt.
+- Sie können direkt aus Story Intelligence angelegt, bearbeitet und gelöscht werden.
+- Die Suite weist dezent darauf hin, wenn eine häufig auftretende Figur noch keine Entwicklungsstation besitzt.
+
+### ◷ Chronologie-Hinweise
+
+- Die bereits vorhandene Timeline-Prüfung ist jetzt zusätzlich in Story Intelligence eingebunden.
+- Mögliche gleichzeitige Aufenthalte derselben Figur an unterschiedlichen Orten werden als Hinweis angezeigt.
+- Zusätzlich werden auffällige Sprünge zwischen Story-Chronologie und Manuskriptreihenfolge sichtbar gemacht.
+- Die Timeline selbst bleibt weiterhin die Quelle für chronologische Daten.
+
+### 📌 Kontinuitäts- & Strukturhinweise
+
+- Story Intelligence weist unter anderem auf folgende Situationen hin:
+  - häufig auftretende Figur ohne Entwicklungsstation
+  - Entwicklungsstationen ohne Szenenverknüpfung
+  - vorhandene bandspezifische Kontinuitätsnotizen
+  - längere Szene ohne Kurzinhalt
+  - als fertig markierte Szene mit noch offenen Überarbeitungsnotizen
+- Hinweise öffnen – sofern möglich – direkt die betreffende Szene, Figur oder den betreffenden Faden.
+
+### 📊 Story-Übersicht
+
+- Der neue Bereich zeigt kompakt:
+  - offene Fäden
+  - Figurenakten
+  - Chronologie-Hinweise
+  - offene Überarbeitungsaufgaben
+- Das Buch-Dashboard zeigt jetzt zusätzlich die Zahl der aktuellen Story-Hinweise und verlinkt direkt zu Story Intelligence.
+
+### 🔒 Datenmodell & Sicherheit
+
+- Figurenentwicklungsstationen werden direkt in der jeweiligen Story-Bibel-Charakterakte gespeichert.
+- Bestehende Charakterakten erhalten automatisch eine leere Entwicklungsstruktur.
+- Bestehende Handlungsfäden, Timeline-Daten und Manuskripte werden nicht verändert.
+- Keine destruktive Datenmigration erforderlich.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Neue Dialog-, Panel- und Workflow-Referenzen geprüft.
+- Keine doppelten IDs oder Funktionen gefunden.
+- Bestehende Bücher und Story-Daten bleiben kompatibel.
+
 ## v0.51.0
 
 ### ✦ Überarbeitungsmodus
