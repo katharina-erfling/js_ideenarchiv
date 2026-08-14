@@ -6,6 +6,131 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.61.0
+
+### 👤 Character Arc Studio
+
+- Neuer eigener Buch-Reiter „Figurenbogen“.
+- Figurenentwicklung basiert direkt auf den bestehenden Story-Bibel-Figuren.
+- Kein paralleles Figurenmodell.
+
+### 🧭 Entwicklungsstationen
+
+Eine Station kann enthalten:
+
+- Buch
+- Szene / Kapitel
+- Story-Datum
+- Story-Zeit
+- Station / Wendepunkt
+- Glaube / Überzeugung
+- Wunsch
+- Wissen
+- emotionaler Zustand
+- Beziehungen / Nähe
+- Konflikt
+- Entscheidung
+- Veränderung
+- freie Notiz
+
+### ➝ Visuelle Entwicklungsachse
+
+- Stationen werden entlang des Figurenbogens visualisiert.
+- Szenenverknüpfte Stationen orientieren sich an der Manuskriptreihenfolge.
+- Frei eingeordnete Stationen bleiben möglich.
+- Stationen sind direkt anklick- und bearbeitbar.
+
+### 🔁 Anfang ↔ aktueller Stand
+
+Automatischer Vergleich zwischen erster und letzter Entwicklungsstation:
+
+- Glaube
+- Wunsch
+- Wissen
+- Emotion
+- Beziehungen
+
+### 🎬 Story-Kontext
+
+- Manuskriptabschnitte mit Figurenbezug werden direkt angezeigt.
+- Story-Datum, Uhrzeit, Ort und Handlungsstrang werden soweit vorhanden eingeblendet.
+- Direkter Sprung zur Szene.
+- Szene kann direkt mit einer Entwicklungsstation verbunden werden.
+
+### ◷ Timeline-Integration
+
+- Datierte Entwicklungsstationen erscheinen in der Story-Timeline.
+- Mit datierten Szenen verknüpfte Stationen können ebenfalls dort erscheinen.
+- Neuer Timeline-Typ „Figurenentwicklung“.
+- Keine doppelten Timeline-Daten.
+- Klick führt zurück zur jeweiligen Arc-Station.
+
+### 🧠 Entwicklungsdimensionen
+
+Pro Station werden acht Dimensionen betrachtet:
+
+- Glaube
+- Wunsch
+- Wissen
+- Emotion
+- Beziehungen
+- Konflikt
+- Entscheidung
+- Veränderung
+
+Die Anzeige x / 8 beschreibt nur vorhandene Tiefe und ist keine Fertig-Prozentzahl.
+
+### 🔎 Figuren-Navigation
+
+- Eigene Figuren-Seitenleiste.
+- Figurensuche.
+- Anzahl von Entwicklungsstationen.
+- Manuskriptvorkommen.
+- letzter dokumentierter emotionaler Zustand.
+
+### 🕸️ Living Knowledge
+
+- Szenen, die über Entwicklungsstationen verbunden sind, werden als Wissenszusammenhang erkannt.
+- Szenen erkennen umgekehrt die zugehörige Figurenakte.
+
+### 🔎 Globale Suche
+
+Durchsuchbar sind jetzt zusätzlich:
+
+- Stationsname
+- Glaube
+- Wunsch
+- Wissen
+- Emotion
+- Beziehungen
+- Konflikt
+- Entscheidung
+- Veränderung
+- Arc-Notizen
+
+### 🌱 Story Growth
+
+- Neue Entwicklungsstationen zählen als Planungsarbeit.
+- Kategorie: Figuren & Welt.
+- Bearbeiten einer bestehenden Station erzeugt keinen künstlichen neuen Wachstumsschritt.
+
+### 🔧 Timeline-Nebenfix
+
+- Timeline-Navigation akzeptiert jetzt sowohl die bestehenden `:`-IDs als auch ältere Kurzformen.
+- Dadurch werden Timeline-Sprünge robuster.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Character-Arc-Routing geprüft.
+- Dialogfelder und Formbindungen geprüft.
+- Timeline-Integration geprüft.
+- Story-Growth- und Living-Knowledge-Integration geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+
 ## v0.60.1
 
 ### 🗺️ Living World Maps – Ausbau
