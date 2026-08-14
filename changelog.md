@@ -6,6 +6,39 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.66.0
+
+### ✒ Writing Studio 2.0
+
+- Manuskript-Schreibumgebung gezielt in Richtung professioneller Editor ausgebaut, ohne Ribbon-Überladung.
+- Neuer kompakter Studio-Dialog bündelt Schreibansicht, Sessionziel und Textwerkzeuge.
+- Typewriter-Modus ergänzt.
+- Bestehender Fokusmodus in die buchbezogenen Studio-Einstellungen integriert.
+- Sessionziel in Wörtern ergänzt.
+- Live-Fortschritt direkt in der Editor-Statusleiste.
+- Neue Inline-Werkzeuge:
+  - Kommentar
+  - Fußnote
+  - Textmarkierung
+  - Formatierung lösen
+- Kommentare und Fußnoten bleiben im Manuskript erhalten.
+- Studio-Einstellungen werden pro Buch lokal gespeichert.
+- Bestehende Funktionen bleiben integriert:
+  - Absatzformate
+  - Zeichenformatierung
+  - Listen
+  - Szenentrenner
+  - Suchen/Ersetzen
+  - Überarbeitungsnotizen
+  - Dokumentnotizen
+  - Autosave
+  - Recovery
+  - Versionen
+  - Schreibsessions
+- JavaScript-Syntax nach Umsetzung geprüft.
+
+> Split View / mehrere Dokumente parallel wird gemeinsam mit dem kommenden Manuscript Navigator weiter vertieft, weil dafür Dokumentnavigation und Hierarchie zusammengehören.
+
 ## v0.65.0
 
 ### 🛠️ UX & Stability Pass
