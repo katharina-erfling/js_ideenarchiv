@@ -6,6 +6,32 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.9.0
+
+### ⚙️ Technische Aufräumrunde
+
+- Die interne Verarbeitung großer Ideensammlungen wurde für deutlich höhere Datenmengen vorbereitet.
+- Kategorien werden intern schneller aufgelöst und Kategorie-Zähler effizienter berechnet.
+- Suchtexte werden zwischengespeichert, damit wiederholte Suchen in umfangreichen Archiven weniger Arbeit verursachen.
+- Die Texteingabe in der Suche wird leicht verzögert ausgewertet, um unnötige Neuberechnungen während schnellen Tippens zu vermeiden.
+- Die Dashboard-Navigation und -Auswertung wurden stabilisiert.
+
+### ⌨️ Bedienung
+
+- Tastenkürzel für häufige Aktionen ergänzt.
+- `Strg + K` fokussiert die globale Suche.
+- `Strg + N` öffnet eine neue Idee.
+- `Strg + Shift + N` öffnet den Übertragungsmodus.
+- `Strg + B` erstellt direkt ein Backup.
+- Eine kleine Übersicht der verfügbaren Tastenkürzel ist direkt in der Anwendung erreichbar.
+
+### 🎨 Oberfläche
+
+- Leere Such- und Kategorienansichten wurden überarbeitet und bieten jetzt direkt eine Aktion zum Anlegen einer neuen Idee.
+- Fokuszustände für Tastaturbedienung wurden deutlicher sichtbar gemacht.
+- Das responsive Verhalten für schmalere Browserfenster wurde verbessert.
+- Zettelansicht, Werkzeugleiste und untere Navigation passen sich besser an unterschiedliche Fensterbreiten an.
+
 ## v0.8.0
 
 ### 💾 Datensicherheit & Backup
