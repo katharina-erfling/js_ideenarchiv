@@ -6,6 +6,92 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.57.0
+
+### 🕸️ Living Knowledge / Wissensnetz 2.0
+
+- Story-Bibel-Akten besitzen jetzt direkt in ihrer Bearbeitungsansicht den Bereich „Living Knowledge – Was hängt hier dran?“.
+- Die Ansicht wird automatisch aus den bereits vorhandenen Verknüpfungen der Suite aufgebaut.
+- Inhalte werden nicht kopiert und es entsteht kein zweites Wissenssystem.
+
+### 🔎 Automatische Kontextansicht
+
+Für eine Story-Bibel-Akte werden – soweit vorhanden – automatisch zusammengeführt:
+
+- Szenen und Kapitel
+- Ideen
+- Handlungsfäden
+- Timeline-Ereignisse
+- Recherche
+- andere Story-Bibel-Akten
+- Mindmap-Knoten
+- Beziehungen
+
+Die Bereiche werden gruppiert dargestellt und zeigen jeweils ihre Trefferzahl.
+
+### ↗ Direkte Navigation
+
+- Jeder Eintrag im Wissensnetz ist direkt anklickbar.
+- Ein Klick führt zum tatsächlichen Originalinhalt in der Suite.
+- Damit wird die Story-Bibel stärker zum Index der Geschichte statt zu einer isolierten Ablage.
+
+### ＋ Verknüpfungen direkt anlegen
+
+Über „＋ Verknüpfen“ können Story-Bibel-Akten jetzt direkt verbunden werden mit:
+
+- Szene / Kapitel
+- Idee
+- Handlungsfaden
+- Timeline-Ereignis
+- Recherche
+- anderer Story-Bibel-Akte
+- freiem Mindmap-Knoten
+
+### ↔ Bidirektionales Wissensnetz
+
+- Neue Wissensverknüpfungen werden an der jeweils fachlich passenden Stelle des vorhandenen Datenmodells gespeichert.
+- Bestehende Dokument-, Faden-, Timeline- und Mindmap-Verknüpfungen werden weiterverwendet.
+- Ideen und Recherche können ergänzend direkt mit Story-Bibel-Akten verbunden werden.
+- Story-Bibel-Akten können sich gegenseitig direkt verknüpfen.
+
+### × Verknüpfungen lösen
+
+- Verknüpfungen können direkt aus der Living-Knowledge-Ansicht wieder gelöst werden.
+- Das Lösen löscht niemals den verknüpften Inhalt selbst.
+- Gegenseitige Aktenverknüpfungen werden auf beiden Seiten sauber entfernt.
+- Mindmap-Knoten bleiben erhalten und werden wieder zu freien Knoten.
+
+### ◇ Isolierte Inhalte sichtbar
+
+- Story-Bibel-Karten zeigen die Anzahl ihrer Wissensverknüpfungen.
+- Eine unverknüpfte Akte wird dezent als „isoliert“ gekennzeichnet.
+- Das ist ausdrücklich kein Fehlerstatus.
+
+### 🧭 Globale „Was hängt hier dran?“-Ansicht verbessert
+
+- Verknüpfungen werden nach Inhaltstyp gruppiert.
+- Pro Gruppe wird die Trefferzahl angezeigt.
+- Isolierte Inhalte erhalten einen verständlichen leeren Zustand.
+
+### 🧹 Sauberes Löschverhalten
+
+Beim Löschen einer Story-Bibel-Akte werden ihre Referenzen gezielt bereinigt, ohne die verknüpften Inhalte zu löschen.
+
+### 🧬 Produktprinzip
+
+- Living Knowledge verwendet vorhandene Storydaten als gemeinsame Quelle.
+- Kein neues Informationssilo.
+- Das Wissensnetz ist eine Sicht auf reale Verknüpfungen – keine parallele Kopie derselben Information.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionsdefinitionen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+- Bestehende Daten bleiben kompatibel.
+
 ## v0.56.0
 
 ### 🎬 Szenenworkflow 2.0
