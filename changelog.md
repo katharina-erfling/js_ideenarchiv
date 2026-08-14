@@ -6,6 +6,118 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.68.0
+
+### 📸 Versioning & Snapshots
+
+- Einfachen Sicherheitsverlauf zum vollständigen Snapshot-Studio ausgebaut.
+- Kapitel und Szenen besitzen jeweils ihren eigenen Versionsverlauf.
+
+### 📸 Manuelle Snapshots
+
+- jederzeit manuell anlegbar
+- eigene Versionsnotiz
+- manuelle Versionen unabhängig von Auto-Retention
+- einzelne Snapshots mit ★ dauerhaft fixierbar
+
+### ◷ Automatische Snapshots
+
+Pro Buch konfigurierbar:
+
+- an / aus
+- 3 / 5 / 10 / 15 Minuten
+- 20 / 50 / 100 automatische Stände behalten
+
+Automatische Snapshots entstehen nur bei echten Änderungen.
+
+### 🛡 Sicherheits-Snapshots
+
+Automatische Sicherung vor unter anderem:
+
+- Wiederherstellung
+- Löschen
+- Zusammenführen
+- Teilen
+- Strukturverschiebungen
+- relevanten Metadaten-/Strukturänderungen
+
+### 🗂 Snapshot-Filter
+
+- Alle
+- Manuell
+- Sicherheit
+- Automatisch
+
+Anzeige je Snapshot:
+
+- Typ
+- Versionsnotiz
+- Datum / Uhrzeit
+- Wortzahl
+- Kapitel oder Szene
+- Differenz zum aktuellen Stand
+- Fixierungsstatus
+
+### 🔀 Versionsvergleich
+
+- Snapshot ↔ aktueller Stand
+- damalige Wortzahl
+- aktuelle Wortzahl
+- Wortdifferenz
+- neue Absätze
+- entfallene Absätze
+- unveränderte Passagen
+- ruhige visuelle Hervorhebung
+
+### ↶ Historie
+
+- direkt zur nächstälteren Version wechseln
+- mehrere Fassungen nacheinander prüfen
+
+### ♻ Wiederherstellung
+
+- direkt aus Liste oder Vergleich
+- aktueller Stand wird vorher automatisch gesichert
+- versehentliche Wiederherstellung bleibt dadurch rückgängig machbar
+
+### 🧬 Vollständiger Dokumentzustand
+
+Neue Snapshots sichern zusätzlich zum Text unter anderem:
+
+- Dokumenttyp
+- Status
+- Szenenmetadaten
+- POV
+- Ort
+- Story-Zeit
+- Handlungsstrang
+- Konflikt / Ziel
+- Figuren
+- Ideen
+- Story-Bibel
+- Rechercheverknüpfungen
+
+### 🧹 Retention
+
+- automatische Versionen nach Buch-Einstellung begrenzt
+- manuelle und Sicherheitsstände separat geschützt
+- fixierte Versionen bleiben erhalten
+
+### 💾 Pro Buch
+
+- Snapshot-Einstellungen direkt im Buchmodell
+- automatisch Bestandteil vollständiger Backups
+- kein separates Versionssilo
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+- ältere `documentVersions` bleiben kompatibel
+
 ## v0.66.0
 
 ### ✒ Writing Studio 2.0
