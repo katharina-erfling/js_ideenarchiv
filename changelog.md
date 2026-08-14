@@ -6,6 +6,122 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.36.0
+
+### 📚 Bücher in jedem Stadium
+
+- Bücher können jetzt direkt in dem Stadium angelegt werden, in dem sie sich tatsächlich befinden.
+- Verfügbare Einstiege sind:
+  - Entwurfsbuch
+  - direkt schreiben
+  - Überarbeitung
+  - fertig
+  - veröffentlicht
+- Der bisherige normale Status „Planung“ und „Pausiert“ bleiben zusätzlich verfügbar.
+- Dadurch können zukünftige Buchideen, aktuelle Schreibprojekte und bereits abgeschlossene Werke gemeinsam im selben Bücherregal liegen.
+
+### 🌱 Entwurfsbuch
+
+- Entwurfsbücher öffnen weiterhin direkt den buchzentrierten Ideenbereich.
+- Von dort führt der bestehende Workflow über Ideen → Planung → Manuskript.
+- Ein Entwurfsbuch kann weiterhin bereits angelegt werden, bevor Plot, Kapitel oder vollständiges Romanprojekt ausgearbeitet sind.
+
+### ✍️ Direkt schreiben
+
+- Wird ein Buch als „Schreiben“ angelegt, öffnet sich unmittelbar sein Manuskript.
+- Ideen- und Planungsbereich bleiben trotzdem jederzeit erreichbar.
+- Damit muss ein Buch nicht zwingend zuerst durch die Planungsphasen laufen, wenn bereits direkt geschrieben werden soll.
+
+### 📝 Überarbeitung
+
+- Bücher im Status „Überarbeitung“ öffnen ebenfalls direkt im Manuskript.
+- Der vollständige Schreibeditor, Inspector, Versionsverlauf, Autosave und Recovery bleiben verfügbar.
+- Ideen, Planung und Romanprojekt bleiben parallel als Referenz erreichbar.
+
+### 📕 Fertige Bücher
+
+- Bereits fertige Bücher können direkt in die Bibliothek aufgenommen werden, auch wenn ihr Manuskript nicht innerhalb der Autoren-Suite geschrieben wurde.
+- Fertige Bücher öffnen standardmäßig eine eigene Buchdetailseite statt direkt den Schreibeditor.
+- Ein Cover kann direkt beim Anlegen hinterlegt werden.
+- Eine endgültige Wortzahl und Seitenzahl können unabhängig von einem vorhandenen Manuskript gespeichert werden.
+- Das Manuskript kann bei Bedarf trotzdem später geöffnet oder ergänzt werden.
+
+### ✨ Veröffentlichte Bücher
+
+- „Veröffentlicht“ ist jetzt ein eigener Buchstatus.
+- Veröffentlichte Bücher erhalten eine eigene Buchdetailansicht.
+- Folgende Publikationsdaten können hinterlegt werden:
+  - Veröffentlichungsdatum
+  - ISBN
+  - Veröffentlichungsart
+  - Verlag / Imprint
+  - Seitenzahl
+  - endgültige Wortzahl
+  - Ausgabe / Format
+  - Link zum Buch
+  - freie Veröffentlichungsnotiz
+- Unterstützte Veröffentlichungsarten sind Selfpublishing, Verlag, Klein-/Independent-Verlag und private Veröffentlichung.
+
+### 🖼️ Cover im Bücherregal
+
+- Fertige und veröffentlichte Bücher mit vorhandenem Cover können im Bücherregal mit sichtbarer Coverfront dargestellt werden.
+- Dadurch heben sich bereits existierende Werke optisch von zukünftigen Entwurfs- und Schreibbänden ab.
+- Bücher ohne Cover bleiben weiterhin als klassische Buchrücken sichtbar.
+- Veröffentlichte Bücher erhalten zusätzlich eine dezente Veröffentlichungskennzeichnung.
+
+### 📖 Buchdetailseite
+
+- Jedes Buch besitzt jetzt zusätzlich zu Ideen, Planung und Manuskript einen Bereich „Buchdetails“.
+- Die Detailseite zeigt Cover, Status, Reihe/Band, Untertitel und freie Buchnotizen.
+- Publikationsdaten werden als eigene Buchakte dargestellt.
+- Manuskriptwortzahl und endgültige Wortzahl können unabhängig voneinander sichtbar sein.
+- Ideen, Planungsstand, Manuskriptumfang und das zugehörige Romanprojekt werden ebenfalls zusammengefasst.
+- Von der Buchdetailseite kann direkt zu Ideen, Planung, Manuskript oder Romanprojekt gewechselt werden.
+
+### 📚 Reihen & vorhandene Bände
+
+- Die Buchdetailseite zeigt die weiteren Bücher derselben Reihe bzw. desselben Romanprojekts.
+- Bereits veröffentlichte Bände, aktuelle Schreibbände und zukünftige Entwürfe können dadurch nebeneinander betrachtet werden.
+- Reihe und Bandnummer bleiben die Sortiergrundlage im Bücherregal.
+- Ein Klick auf einen anderen Band öffnet dessen eigene Buchakte bzw. Arbeitsumgebung.
+- Über „Nächsten Band“ kann direkt ein neues Entwurfsbuch im selben Romanprojekt vorbereitet werden.
+- Reihenname und nächste Bandnummer werden dabei automatisch als Ausgangspunkt übernommen.
+
+### 🗂️ Bibliotheksfilter
+
+- Das Bücherregal kann jetzt zusätzlich nach dem Entwicklungsstand gefiltert werden.
+- Verfügbare Filter sind veröffentlicht, fertig, Überarbeitung, Schreiben, Planung, Entwurfsbuch und pausiert.
+- Pro Romanprojekt zeigt das Regal eine kleine Zusammenfassung der vorhandenen Buchstadien.
+- Suche und Projektfilter bleiben parallel nutzbar.
+- Die Buchsuche berücksichtigt zusätzlich ISBN, Verlag, Ausgabe und Veröffentlichungsnotizen.
+
+### 🔢 Wortzahlen
+
+- Fertige und veröffentlichte Bücher können eine endgültige Wortzahl besitzen, auch wenn kein Manuskript in der Suite hinterlegt ist.
+- Existiert bereits ein vollständiges Manuskript und wird ein Buch auf „Fertig“ oder „Veröffentlicht“ gesetzt, kann dessen aktueller Wortstand als Ausgangswert verwendet werden.
+- Im Bücherregal wird bei abgeschlossenen Büchern bevorzugt die hinterlegte endgültige Wortzahl dargestellt.
+- Manuskriptwortzahl und endgültige Wortzahl bleiben auf der Detailseite getrennt nachvollziehbar.
+
+### 🔗 Romanprojekt & Reihenlogik
+
+- Fertige, veröffentlichte und zukünftige Bücher können weiterhin zum selben Romanprojekt gehören.
+- Dadurch teilen sich mehrere Bände weiterhin Figuren, Orte, Weltbau, Recherche, Inspiration und projektweite Daten.
+- Das einzelne Buch behält gleichzeitig seinen eigenen Status, sein Cover, seine Buchdaten, seine Planung und sein Manuskript.
+- Damit können beispielsweise drei veröffentlichte Bände und ein zukünftiges Entwurfsbuch derselben Reihe gemeinsam verwaltet werden.
+
+### 🔎 Globale Suche
+
+- Buchtreffer berücksichtigen jetzt zusätzlich ISBN, Verlag, Ausgabe und Veröffentlichungsnotizen.
+- Bereits veröffentlichte Bücher können dadurch auch über ihre bibliografischen Daten wiedergefunden werden.
+
+### 🛡️ Datensicherheit
+
+- Publikationsdaten werden direkt im vorhandenen Buchdatensatz gespeichert.
+- Sie sind Bestandteil des regulären vollständigen Backups.
+- Ein veröffentlichtes oder fertiges Buch ohne Manuskript kann bewusst gelöscht werden, erhält davor aber eine deutlichere Warnung, dass Cover und Buchdaten entfernt werden.
+- Bücher mit Manuskript bleiben weiterhin gegen versehentliches Löschen geschützt.
+- Die bestehende Autosave-, Recovery-, Versions- und Backup-Architektur bleibt unverändert erhalten.
+
 ## v0.35.0
 
 ### 📚 Buchzentrierter Workflow
