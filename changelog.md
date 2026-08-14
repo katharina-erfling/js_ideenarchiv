@@ -6,6 +6,51 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.25.0
+
+### 🕘 Timeline & Chronologie
+
+- Romanprojekte besitzen jetzt einen eigenen Bereich „Timeline“.
+- Ereignisse können unabhängig von der Manuskriptreihenfolge chronologisch angeordnet werden.
+- Dadurch lassen sich Vorgeschichte, Haupthandlung, Rückblenden und parallele Ereignisse gemeinsam überblicken.
+- Ereignisse können per Drag & Drop innerhalb der Timeline neu sortiert werden.
+
+### 📅 Zeitliche Einordnung
+
+- Timeline-Ereignisse können ein konkretes Datum erhalten.
+- Zusätzlich steht eine freie Zeitangabe für fiktionale oder relative Zeit zur Verfügung.
+- Beispiele sind „Tag 3“, „drei Jahre zuvor“, „in derselben Nacht“ oder „zwei Wochen später“.
+- Eine eigene chronologische Positionsnummer erlaubt auch dann eine klare Reihenfolge, wenn keine exakten Daten verwendet werden.
+
+### ✒️ Verbindung mit dem Manuskript
+
+- Timeline-Ereignisse können direkt mit einem Kapitel oder einer Szene verknüpft werden.
+- Die Position des verknüpften Abschnitts im Manuskript wird direkt auf der Timeline angezeigt.
+- Szenen mit Zeitangaben oder Kurzinhalt können automatisch aus dem Schreibeditor in die Timeline übernommen werden.
+- Bereits automatisch übernommene Szenen werden beim erneuten Synchronisieren aktualisiert statt dupliziert.
+- Ort und auftretende Figuren aus dem Szenen-Inspector werden bei der Übernahme mitgenommen.
+
+### 🎭 Figuren & Orte
+
+- Timeline-Ereignisse können mit beliebig vielen Figuren verknüpft werden.
+- Ein Ort aus den bestehenden Ortsakten kann direkt zugeordnet werden.
+- Dadurch lassen sich Handlungsstränge, Reisen und parallele Figurenverläufe zeitlich besser nachvollziehen.
+
+### 🧭 Chronologie-Check
+
+- Die Timeline besitzt einen eigenen Chronologie-Überblick.
+- Ereignisse ohne zeitliche Einordnung werden sichtbar gemacht.
+- Die Anwendung erkennt mögliche Rückblenden, wenn chronologische Reihenfolge und Manuskriptreihenfolge voneinander abweichen.
+- Mehrere Ereignisse am selben Datum werden als möglicher Hinweis auf parallele Handlungen ausgewertet.
+- Die Prüfung verändert keine Daten, sondern dient ausschließlich als Orientierung.
+
+### 💾 Datensicherheit
+
+- Timeline-Ereignisse werden direkt im jeweiligen Romanprojekt gespeichert.
+- Die Synchronisierung mit Manuskriptszenen überschreibt keine Manuskripttexte.
+- Manuell ergänzte Timeline-Notizen bleiben beim erneuten Szenenabgleich erhalten.
+- Alle Timeline-Daten und Verknüpfungen sind automatisch Bestandteil der Autoren-Suite-Backups.
+
 ## v0.24.0
 
 ### 🕸️ Beziehungsnetz
