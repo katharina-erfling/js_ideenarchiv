@@ -6,6 +6,40 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.11
+
+### 🔎 Suchbare Kategorieauswahl bei „Neue Idee“
+
+- Lange native Kategorienliste ersetzt.
+- Kategorie direkt eintippen.
+- Treffer werden während der Eingabe vervollständigt.
+- Suche über Kategorienamen und vollständigen Kategoriepfad.
+- Treffer zeigen Name + Hierarchiepfad.
+- sinnvolle Trefferreihenfolge.
+- Vorschlagsliste scrollbar.
+- maximal 80 sichtbare Treffer.
+
+### ⌨ Tastaturbedienung
+
+- Pfeil runter / hoch → navigieren
+- Enter → übernehmen
+- Escape → schließen
+- Dropdown-Pfeil → alle Kategorien anzeigen
+
+### 🧭 Eindeutige Auswahl
+
+- vollständiger Kategoriepfad nach Auswahl sichtbar.
+- eindeutige exakte Texteingabe wird akzeptiert.
+- unbekannte oder mehrdeutige Eingabe wird nicht versehentlich einer alten Kategorie zugeordnet.
+- stattdessen Hinweis zur Auswahl eines Vorschlags.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- bestehende Ideen-Speicherlogik erhalten.
+- Kategoriehierarchie vollständig durchsuchbar.
+- keine Datenmigration notwendig.
+
 ## v0.80.10
 
 ### ↻ F5 / Reload – letzte Unterseite wiederherstellen
