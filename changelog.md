@@ -6,6 +6,144 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.60.0
+
+### 🗺️ World & Map Studio
+
+- Neuer eigener Buch-Reiter „Weltkarte“.
+- Eigene Kartenbilder als PNG, JPG oder WEBP hochladen.
+- Mehrere Karten pro Buch möglich.
+- Karten können umbenannt und gelöscht werden.
+- Karten und Pins werden vollständig lokal gespeichert.
+
+### ⌖ Echte Story-Bibel-Orte als Kartenpins
+
+- Jeder Pin verweist auf eine echte Ortsakte.
+- Keine losen Textmarker.
+- Ein Ort kann pro Karte nur einmal verankert werden.
+- Erneutes Platzieren verschiebt den vorhandenen Pin.
+- Pin löschen löscht niemals die Ortsakte.
+
+### 🖱️ Mausbedienung
+
+- Ort anklicken → Platzierungsmodus.
+- Danach auf die gewünschte Kartenposition klicken.
+- Alternativ Drag & Drop aus der Ortsliste.
+- Pins frei mit der Maus verschieben.
+- Doppelklick auf Pin → Ortsakte öffnen.
+- Freie Kartenfläche ziehen → Karte verschieben.
+- Mausrad → Zoom.
+
+### ⌨️ Tastaturbedienung
+
+Bei ausgewähltem Pin:
+
+- Pfeiltasten → fein bewegen
+- Shift + Pfeil → größere Schritte
+- Enter → Ortsakte öffnen
+- Entf / Backspace → Pin entfernen
+
+Allgemein:
+
+- + → hineinzoomen
+- - → herauszoomen
+- 0 → Ansicht zurücksetzen
+- Enter → ausgewählten neuen Ort in Kartenmitte setzen
+- Escape → Platzierung abbrechen
+
+### 🧲 Drag & Drop
+
+- Ortskarten sind echte Drag-&-Drop-Quellen.
+- Ablegen auf der Karte speichert die konkrete Position.
+- Relative Prozentpositionen halten Pins auch bei anderen Bildschirmgrößen stabil.
+
+### 🔍 Zoom & Navigation
+
+- Zoom von 35 % bis 400 %.
+- Mausrad, Buttons und Tastatur unterstützt.
+- Kartenansicht kann frei verschoben werden.
+- „Ansicht“ setzt Zoom und Verschiebung zurück.
+
+### 🗂️ Mehrere Karten
+
+Zum Beispiel:
+
+- Weltkarte
+- Kontinent
+- Stadt
+- Palast
+- Gebäude
+- Dungeon
+
+### 📎 Story-Bibel-Integration
+
+- Ortsliste verwendet die bestehenden Ortsakten des Buches.
+- Hierarchische Orte zeigen ihren übergeordneten Ort.
+- „＋ Ort“ führt direkt zur Ortsanlage.
+- Falls nötig, kann automatisch eine Story-Bibel für das Buch entstehen.
+
+### 🕸️ Living Knowledge
+
+- Kartenpins zählen als echte Wissensverknüpfung.
+- Bei einem Ort erscheint die zugehörige Weltkarte unter „Was hängt hier dran?“.
+- Von dort kann direkt zur Karte gesprungen werden.
+- Lösen der Kartenverknüpfung entfernt nur den Pin.
+
+### 🔎 Globale Suche
+
+- Weltkarten sind global auffindbar.
+- Suchindex berücksichtigt Kartenname, Buch und darauf platzierte Orte.
+- Treffer öffnen direkt das betreffende Buch und die Karte.
+
+### 🌱 Story Growth
+
+Neue Wachstumsereignisse:
+
+- Weltkarte angelegt
+- Ort auf Karte verankert
+
+Reines Verschieben eines Pins erzeugt bewusst keinen künstlichen Wachstumsschritt.
+
+### 📦 Export & Backup
+
+- Kartenbilder sind Bestandteil des Buch-Datenmodells.
+- Komplett-Backups enthalten Karten und Pins automatisch.
+- Backup-Inhaltsprüfung zählt Kartenbilder mit.
+- Projektdossiers führen Karten und verknüpfte Orte auf.
+
+### 📐 Kartenpositionen
+
+- Pinpositionen werden relativ in Prozent gespeichert.
+- Stabil bei:
+  - anderen Monitorgrößen
+  - responsive Layout
+  - Zoom
+  - erneutem Öffnen
+
+### 🧬 Produktprinzip
+
+Die Karte ist kein Informationssilo.
+
+Ein Kartenpunkt bleibt derselbe Ort, der auch in Story-Bibel, Szenen, Timeline, Living Knowledge und späterer Continuity-/Knowledge-Logik verwendet wird.
+
+### 🔒 Kompatibilität
+
+- Bestehende Bücher erhalten automatisch eine leere Kartenliste.
+- Alte Projekte bleiben nutzbar.
+- Keine destruktive Datenmigration.
+- Löschen von Karte oder Pin löscht keine Ortsakten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Workflow-/Routing geprüft.
+- Datei-Upload geprüft.
+- Maus-, Tastatur- und Drag-&-Drop-Handler statisch geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+
 ## v0.59.0
 
 ### 🧭 Continuity Intelligence 2.0
