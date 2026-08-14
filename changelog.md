@@ -6,6 +6,52 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.48.0
+
+### 🧠 Mindmaps – intuitive Mausbedienung
+
+- Rechtsklick auf einen Mindmap-Knoten öffnet jetzt ein eigenes Aktionsmenü.
+- Verfügbar sind:
+  - Bearbeiten
+  - verbundenen Gedanken erstellen
+  - Verbindung herstellen
+  - Suite-Inhalt verknüpfen
+  - Löschen
+- „Verbundenen Gedanken erstellen“ legt einen neuen Knoten in der Nähe des Ausgangsknotens an und verbindet beide automatisch.
+- „Verbindung herstellen“ startet einen klaren Verbindungsmodus; anschließend genügt ein Klick auf den zweiten Knoten.
+- Doppelklick auf eine freie Stelle der Mindmap legt dort direkt einen neuen Gedanken an.
+- Ein Klick auf einen Knoten markiert ihn sichtbar.
+- Ein Klick auf die freie Fläche hebt die Auswahl wieder auf.
+
+### ⌨️ Mindmaps – Tastatursteuerung
+
+- Enter öffnet den markierten Knoten zum Bearbeiten.
+- Entf/Backspace löscht den markierten Knoten nach Sicherheitsabfrage.
+- Pfeiltasten verschieben den markierten Knoten fein.
+- Shift + Pfeiltasten verschiebt ihn in größeren Schritten.
+- Strg/Cmd + Enter legt einen neuen, automatisch verbundenen Gedanken an.
+- Escape beendet den Verbindungsmodus und hebt die Auswahl auf.
+- Die Mindmap-Leiste enthält einen dezenten Hinweis auf Maus- und Tastaturbedienung.
+
+### 🔗 Verbindungen
+
+- Der bestehende Verbindungsdialog bleibt erhalten und kann jetzt zusätzlich über das Rechtsklick-Menü gestartet werden.
+- Beim Löschen eines Knotens werden seine Verbindungen sauber mit entfernt.
+- Neu verbundene Gedanken verwenden weiterhin das bestehende Mindmap-Datenmodell.
+
+### 🎛️ Scrollbars im Suite-Design
+
+- Die grauen Standard-Browser-Scrollbars wurden durch schmalere, abgerundete Scrollbars in warmen Braun-/Papierfarben ersetzt.
+- Vertikale und horizontale Scrollbars verwenden dieselbe Designsprache.
+- Hoverzustände sind dunkler, ohne wie Fehler- oder Warnfarben zu wirken.
+- Die Mindmap-Scrollfläche verwendet eine passend abgestimmte Variante.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Bestehende Mindmaps, Knoten und Verbindungen bleiben kompatibel.
+
 ## v0.47.9
 
 ### 📚 Lebendiges Bücherregal
