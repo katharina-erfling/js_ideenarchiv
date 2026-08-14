@@ -6,6 +6,22 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.6
+
+### 🐛 Planungswand – eigentliche Render-Ursache behoben
+
+- Fehler behoben, durch den die Planungswand genau dann abstürzte, wenn ein Ideenzettel auf ihr lag.
+- Eine lokale Darstellungsvariable überschrieb versehentlich den globalen App-Zustand beim Rendern eines Ideenblocks.
+- Ideenzettel auf der Planungswand werden jetzt wieder korrekt aus dem Ideenarchiv geladen.
+- Ältere Zahl-/Text-IDs werden auch innerhalb der Planungsblöcke robust erkannt.
+- Die Sicherheitsmeldung aus v0.47.5 bleibt als Schutz bestehen, sollte künftig aber nicht mehr durch diesen Fehler ausgelöst werden.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Vorhandene Planungsblöcke und Ideen bleiben erhalten.
+
 ## v0.47.5
 
 ### 🧩 Planungswand – Ideenübernahme repariert
