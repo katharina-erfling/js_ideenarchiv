@@ -6,6 +6,169 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.71.0
+
+### 📅 Calendar & Timekeeping Studio
+
+- Neuer eigener Buch-Reiter „Kalender“.
+- Eigene Story-Zeit funktioniert parallel zum normalen Kalender.
+- Szenen, Timeline und Kontinuität verwenden dieselbe Zeitrechnung.
+
+### ⚙ Eigene Kalenderdefinition
+
+Konfigurierbar:
+
+- Kalendername
+- Ära / Jahreszusatz
+- Stunden pro Tag
+- Minuten pro Stunde
+- eigene Wochentage
+- beliebig viele Monate
+- eigene Tageszahl je Monat
+- Monatsreihenfolge
+- beliebig viele Jahreszeiten
+- Start-/Endmonat je Jahreszeit
+
+### ✦ Schnellstart
+
+- 12 bekannte Monate
+- 12 × 30 Tage
+- 13 × 28 Tage
+
+Danach vollständig editierbar.
+
+### 📆 Monatsansicht
+
+- eigenes Story-Jahr
+- eigener Monat
+- eigene Wochenstruktur
+- Ereignisse direkt auf Kalendertagen
+- Jahreszeit sichtbar
+- Navigation durch Monate und Jahre
+
+### ✍ Direkt planen
+
+- Klick auf einen Tag → neues Timeline-Ereignis
+- Story-Datum automatisch vorausgefüllt
+
+### 🎬 Szenen integriert
+
+Neue Felder im Manuskript-Inspector:
+
+- Story-Jahr
+- Story-Monat
+- Story-Tag
+- Story-Stunde
+- Story-Minute
+
+### ◷ Timeline integriert
+
+Timeline-Ereignisse können zusätzlich besitzen:
+
+- eigenes Kalenderdatum
+- eigene Story-Zeit
+
+Die Timeline zeigt bei aktivem Kalender:
+
+- Wochentag
+- Tag
+- Monatsname
+- Jahr
+- Ära
+- Uhrzeit
+
+### 🧭 Continuity Intelligence
+
+Berücksichtigt jetzt auch eigene Story-Zeit bei:
+
+- chronologisch rückwärts laufenden Szenen
+- derselben Figur zur selben Zeit an verschiedenen Orten
+- widersprüchlichen Kontinuitäts-Checkpoints
+
+### 📌 Kontinuitäts-Checkpoints
+
+Eigene Zeitrechnung auch für:
+
+- Jahr
+- Monat
+- Tag
+- Stunde
+- Minute
+
+### 🗂 Story-Agenda
+
+Chronologische Übersicht über datierte:
+
+- Szenen
+- Timeline-Ereignisse
+- Story-Bibel-Inhalte
+- Figurenentwicklungsstationen
+
+### 🧮 Zeitrechner
+
+Eigene Kalenderarithmetik:
+
+- Ausgangsdatum
+- Tage addieren
+- Tage abziehen
+- Ziel-Datum automatisch berechnen
+
+Dabei werden die tatsächlich definierten Monatslängen verwendet.
+
+### 🗓 Eigene Wochen
+
+- frei benennbare Wochentage
+- Länge der Woche ergibt sich aus deren Anzahl
+- automatische Wochentagsberechnung
+
+Damit funktionieren auch z. B. 5-, 6- oder 8-Tage-Wochen.
+
+### 🕰 Eigene Tageslänge
+
+- Tag muss nicht 24 Stunden haben
+- Stunde muss nicht 60 Minuten haben
+
+### 📸 Snapshots & Backup
+
+- Story-Kalenderdaten der Szenen werden automatisch mit Snapshots gesichert.
+- Kalenderdefinition und Datierungen sind Bestandteil des bestehenden Komplett-Backups.
+- Keine zusätzliche Datenbank.
+
+### 🌍 Worldbuilding Studio
+
+„Zeitrechnung & Kalender“ bleibt als Worldbuilding-/Referenzmodul bestehen.
+
+Calendar & Timekeeping Studio übernimmt die funktionale Ebene:
+
+- Berechnung
+- Kalenderansicht
+- Datierung
+- Timeline
+- Szenen
+- Kontinuität
+
+### 🔧 Nebenfix
+
+- UI-Health-Audit zählt „Romanprojekt ↗“ nicht mehr fälschlich als normalen Workflow-Reiter.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Kalender-Routing geprüft
+- Monatseditor geprüft
+- Jahreszeiten geprüft
+- eigene Wochenlänge geprüft
+- eigene Tages-/Stundenlänge geprüft
+- Datumsrechnung geprüft
+- Szenen integriert
+- Timeline integriert
+- Kontinuität integriert
+- Snapshot-Kompatibilität geprüft
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.70.0
 
 ### 🌍 Worldbuilding Studio
