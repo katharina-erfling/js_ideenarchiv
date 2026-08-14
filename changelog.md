@@ -6,6 +6,89 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.55.0
+
+### 📦 Exportzentrum
+
+- Zentrales Exportzentrum für Manuskripte, Projekte und Komplett-Backups.
+- Erreichbar aus Buchwerkzeugen und Datensicherheit.
+- Klare Trennung zwischen weitergebbaren Dokumenten und internen Projektdaten.
+
+### ✒ Manuskript-Export
+
+- TXT
+- Markdown
+- HTML
+- DOCX
+- RTF
+- PDF
+- Exportiert nur Buchtitel, Untertitel, Kapitel-/Szenentitel und Manuskripttext.
+
+### 📄 DOCX
+
+- Echtes DOCX direkt im Browser erzeugt.
+- Keine externe Bibliothek oder Cloud erforderlich.
+- In Word und LibreOffice weiterbearbeitbar.
+
+### PDF
+
+- Mehrseitige lokale PDF-Ausgabe.
+- Kapitel und Szenen typografisch unterschieden.
+- Als saubere Lese-/Kontrollfassung gedacht.
+
+### ▤ Projektdossier
+
+- Markdown
+- HTML
+- JSON
+- Enthält u. a. Bücher, Story-Bibel, Figuren, Orte, Weltwissen, Handlungsfäden, Timeline, Recherche und relevante Ideen.
+
+### 🔗 Maschinenlesbares Projektpaket
+
+- JSON enthält zusätzlich Manuskript, Beziehungen, Mindmaps, Knoten, Verbindungen und weitere relationale Projektdaten.
+- Für vollständige Wiederherstellung bleibt das Komplett-Backup das maßgebliche Format.
+
+### 🔒 Geprüftes Komplett-Backup
+
+- Bestehende vollständige Sicherung direkt ins Exportzentrum integriert.
+- Vorhandene Validierung und Rollback-Mechanismen bleiben erhalten.
+
+### ✓ Backup-Inhaltsbericht
+
+- Zeigt vor dem Backup:
+  - Ideen
+  - Kategorien
+  - Projekte
+  - Bücher
+  - Manuskriptabschnitte
+  - Anhänge
+  - Story-Bibel-Akten
+  - Mindmaps
+  - Bilder
+  - geprüfte Datenbereiche
+- Separat als JSON exportierbar.
+
+### 🖼️ Bilder & Portabilität
+
+- Buchcover, Story-Bibel-Bilder und Inspirationsbilder werden im Backup-Bericht berücksichtigt.
+- Eingebettete Bilder bleiben im vollständigen Backup erhalten.
+- Manuskript-Ausgaben bleiben bewusst frei von internen Story-Bibel-Bildern.
+
+### 🔒 Lokale Verarbeitung
+
+- Alle Exportformate werden vollständig lokal erzeugt.
+- Keine Datenübertragung an Server oder Cloud-Dienste.
+- Keine zusätzlichen externen Exportbibliotheken.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+- Backup-/Importformat bleibt kompatibel.
+
 ## v0.54.0
 
 ### 🧪 Vorab-Audit: Navigation, Links & neue Workflows
