@@ -6,6 +6,128 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.62.0
+
+### 📚 Living Bookshelf 2.0
+
+- Das bestehende realistische Bücherregal wurde zum visuellen Projektcockpit ausgebaut.
+- Bücher stehen weiterhin direkt nebeneinander.
+- Zusätzliche Informationen erscheinen erst bei Hover oder Tastaturfokus.
+- Klick öffnet weiterhin das Buch selbst.
+
+### ✨ Erweiterte Hover-Karte
+
+Phaseabhängige Informationen.
+
+Beim Schreiben:
+
+- Wortzahl
+- Kapitel
+- Szenen
+- offene Handlungsfäden
+
+In der Planung:
+
+- Story-Growth-Schritte der letzten 7 Tage
+- Szenen im Entstehen
+- verknüpfte Ideen
+- offene Planungsfragen
+
+In der Überarbeitung:
+
+- Wortzahl
+- offene Überarbeitungsnotizen
+- offene Handlungsfäden
+- Kontinuitäts-Prüfstellen
+
+### 🌱 Story Growth am Regal
+
+- Planungsbücher zeigen ihre aktuelle Story-Growth-Aktivität.
+- Aktive Planungstage und Wachstumsschritte stammen direkt aus Story Growth.
+- Keine künstliche Planungs-Prozentzahl.
+
+### 🧵 Offene Story-Arbeit
+
+Berücksichtigt werden:
+
+- offene Handlungsfäden
+- offene Überarbeitungsnotizen
+- offene Planungsfragen
+- Kontinuitäts-Prüfstellen
+
+Ein dezenter grüner Punkt am Buchrücken kann vorhandenen Arbeitskontext anzeigen.
+
+### ◷ Letzte Aktivität
+
+Anzeige beispielsweise:
+
+- zuletzt geschrieben: heute
+- zuletzt geschrieben: gestern
+- zuletzt geplant: vor 3 Tagen
+- letzte Änderung: 04.08.2026
+
+### 📊 Living-Bookshelf-Puls
+
+Kompakte Übersicht für die aktuell sichtbaren Bücher:
+
+- aktive Bücher
+- Manuskriptwörter
+- Story Growth · 7 Tage
+- offene Fäden
+- offene Revisionen
+
+### 📕 Visuelle Projektphase bleibt erhalten
+
+- Entwurf → Notizbuch
+- Planung → Planner / Ringbuch
+- Schreiben → Buch
+- Überarbeitung → Revisionsbuch
+- fertig / veröffentlicht → fertiges Buch
+
+Auch die dynamische Buchdicke bleibt erhalten.
+
+### 🧘 Ruhiges Regal
+
+- Keine dauerhaften Kennzahlen auf den Buchrücken.
+- Keine Dashboard-Karten zwischen den Büchern.
+- Bücher bleiben direkt aneinander.
+- Details erst bei bewusster Interaktion.
+
+### ⌨️ Tastatur
+
+- Buchrücken bleiben fokussierbare Buttons.
+- Fokus zeigt dieselbe Infokarte wie Hover.
+- Enter / Leertaste öffnet das Buch.
+
+### 🧬 Produktprinzip
+
+Living Bookshelf erzeugt keine neuen Daten.
+
+Es verwendet:
+
+- Manuskript
+- Story Growth
+- Szenen
+- Fäden
+- Revision
+- Continuity Intelligence
+- Schreibsessions
+- Buchmetadaten
+
+Das Regal wird zur visuellen Eingangstür in das bestehende Storymodell, nicht zu einem neuen Informationssilo.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Living-Bookshelf-Puls geprüft.
+- Phaseabhängige Hover-Kennzahlen geprüft.
+- Letzte-Aktivität-Ermittlung geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+- Bestehende Buchrücken-, Cover-, Status- und Buchdickenlogik bleibt erhalten.
+
 ## v0.61.0
 
 ### 👤 Character Arc Studio
