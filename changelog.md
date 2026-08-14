@@ -6,6 +6,19 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.6.0
+
+### 📊 Dashboard & Wachstum
+
+- Das Ideenarchiv besitzt jetzt ein eigenes Dashboard.
+- Die Gesamtzahl aller aktiven Ideen wird dort prominent dargestellt.
+- Neue Zettel werden für heute, die letzten 7 Tage, die letzten 30 Tage und das laufende Jahr ausgewertet.
+- Eine Wachstumsgrafik zeigt die Aktivität der vergangenen 30 Tage.
+- Der nächste Archiv-Meilenstein wird automatisch berechnet und mit Fortschrittsanzeige dargestellt.
+- Die größten Hauptkategorien werden inklusive Unterkategorien ausgewertet.
+- Die zuletzt hinzugefügten Zettel erscheinen direkt im Dashboard und können von dort geöffnet werden.
+- Das Dashboard übernimmt die bestehende Papier-, Pastell- und Schreibtischästhetik des Ideenarchivs.****
+
 ## v0.5.0
 
 ### 📥 Archiv übertragen
