@@ -6,6 +6,45 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.10
+
+### ↻ F5 / Reload – letzte Unterseite wiederherstellen
+
+- Nach F5 wird nicht mehr grundsätzlich das Dashboard geöffnet.
+- Gespeichert werden Hauptbereich und wichtiger Unterkontext.
+- Wiederhergestellt werden nach Möglichkeit:
+  - Ideenarchiv-Kategorie
+  - geöffnetes Romanprojekt und Projektreiter
+  - geöffnetes Buch
+  - Buch-Workflow-Reiter
+  - aktiver Manuskriptabschnitt
+  - aktive Mindmap
+  - wichtige Bereichsfilter
+- Existiert ein gespeichertes Objekt nicht mehr, wird sicher auf einen passenden Hauptbereich zurückgefallen.
+
+### 📥 Mehrfachimport – manuelle Auswahl gewinnt
+
+- Automatisches Überspringen exakter Dubletten steuert nur noch die Vorauswahl.
+- Das Häkchen jeder Vorschauzeile ist die endgültige Entscheidung.
+- Manuell wieder angehakte Dubletten werden übernommen.
+- Nicht angehakte Zeilen werden übersprungen.
+- Ohne ausgewählte Zeilen wird nichts importiert.
+
+### ⚠ Dublettenwarnung – Fundort beim Hover
+
+- Kategoriepfad vorhandener exakter Dubletten wird beim Mouse-over angezeigt.
+- Bei mehreren Treffern werden alle Fundorte angezeigt.
+- Fundorte sind anklickbar und öffnen direkt die vorhandene Idee.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Reload-Kontext gespeichert.
+- F5-Restore integriert.
+- Mehrfachimport respektiert manuelle Häkchen.
+- Dubletten-Fundorte verknüpft.
+- keine Datenmigration notwendig.
+
 ## v0.80.9
 
 ### ✒ Lesbarere Ideenzettel
