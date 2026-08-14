@@ -6,6 +6,29 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.3.0
+
+### 📑 Schnellregister
+
+- Die farbigen Papierregister am linken Rand sind jetzt funktionale Schnellzugriffe.
+- Jede Registerfarbe kann frei mit einer Kategorie belegt werden.
+- Ein Klick auf ein belegtes Register öffnet direkt die zugewiesene Kategorie und klappt ihren Pfad im Kategorienbaum auf.
+- Ein noch unbelegtes Register kann durch Anklicken direkt mit der aktuell geöffneten Kategorie verknüpft werden.
+- Registerbelegungen können im Kategorie-Dialog geändert oder wieder entfernt werden.
+- Das aktuell geöffnete Register wird visuell hervorgehoben.
+
+### 📚 Kategorien
+
+- Kategorien können innerhalb derselben Hierarchieebene nach oben oder unten verschoben werden.
+- Die individuelle Reihenfolge wird dauerhaft gespeichert.
+- Beim Verschieben einer Kategorie in eine andere übergeordnete Kategorie wird die Reihenfolge automatisch sauber angepasst.
+- Beim Löschen einer Kategorie werden eventuell vorhandene Register-Verknüpfungen automatisch entfernt.
+
+### 💾 Backup
+
+- Schnellregister und individuelle Kategorienreihenfolge werden jetzt im Backup berücksichtigt.
+- Vorhandene Archive und Ideen bleiben beim Wechsel auf v0.3.0 erhalten.
+
 ## v0.2.4
 
 ### 🎨 Zettelansicht
