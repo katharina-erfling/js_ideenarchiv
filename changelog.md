@@ -6,6 +6,308 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.75.0
+
+### 📦 Compile & Publishing Studio
+
+- Neuer eigener Buch-Reiter „Compile“.
+- Gemeinsames Compile-System für alle Manuskriptausgaben.
+- EPUB, DOCX, PDF, HTML, RTF, Markdown und TXT verwenden denselben Veröffentlichungsaufbau.
+
+### 🗂 Exportprofile
+
+Beliebig viele Profile pro Buch.
+
+Profilabhängig:
+
+- Cover
+- Titelseite
+- Impressum / Rechte
+- Inhaltsverzeichnis
+- Kapitelnummerierung
+- Teilnummerierung
+- Szenentitel
+- Szenentrenner
+- Kapitelbeginn
+- Seitengröße
+- Schrift
+- Schriftgröße
+- Zeilenhöhe
+- Erstzeileneinzug
+
+Profile können:
+
+- dupliziert
+- umbenannt
+- gelöscht
+- aus Vorlagen erzeugt
+
+werden.
+
+### ✦ Schnellstart-Profile
+
+- Roman · Standard
+- Manuskript · Lektorat
+- E-Book · Kompakt
+
+Alle anschließend vollständig anpassbar.
+
+### ♻ Projektvorlagen
+
+Eigene Compile-Profile können im Romanprojekt gespeichert und in anderen Büchern desselben Projekts wiederverwendet werden.
+
+Projektvorlagen werden vom normalen Backup erfasst.
+
+### ↤ Frontmatter
+
+Eigene Bestandteile vor dem Manuskript:
+
+- Widmung
+- Epigraph / Motto
+- Vorwort
+- freier Bestandteil
+
+Automatisch erzeugbar:
+
+- Titelseite
+- Impressum / Rechte
+- Inhaltsverzeichnis
+
+Bestandteile können:
+
+- sortiert
+- bearbeitet
+- ausgeblendet
+- gelöscht
+
+werden.
+
+### ↦ Backmatter
+
+Unter anderem:
+
+- Nachwort
+- Danksagung
+- Über die Autorin / den Autor
+- Weitere Bücher
+- freie Bestandteile
+
+### 🪪 Titelseite
+
+Automatisch aus Buchdaten:
+
+- Titel
+- Untertitel
+- Autor:in
+- Reihe
+- Bandnummer
+
+### © Rechte / Impressum
+
+Automatisch aus:
+
+- Rechteangabe
+- Autor:in
+- Verlag / Imprint
+- ISBN
+- Ausgabe
+
+### ≡ Inhaltsverzeichnis
+
+Optional sichtbares Inhaltsverzeichnis.
+
+EPUB erhält unabhängig davon immer seine technische Navigation.
+
+### # Nummerierung
+
+Optional beim Compile erzeugt:
+
+- Teil 1 …
+- Kapitel 1 …
+
+Die echten Manuskripttitel bleiben unverändert.
+
+### 🎬 Szenentitel
+
+Pro Profil:
+
+- sichtbar
+- verborgen
+
+### ⁂ Szenentrenner
+
+- * * *
+- Linie
+- nur Abstand
+
+### 📄 Kapitelbeginn
+
+- neue Seite
+- fortlaufend
+
+### 📐 Seitengröße
+
+- A5 / Roman
+- A4 / Manuskript
+- US Letter
+
+### Aa Satz
+
+- Serif
+- Sans Serif
+- Schriftgröße
+- Zeilenhöhe
+- Erstzeileneinzug
+
+### 👁 Compile-Vorschau
+
+Zeigt strukturell:
+
+- Titelseite
+- Frontmatter
+- Inhaltsverzeichnis
+- Teile
+- Kapitel
+- Backmatter
+
+Zusätzlich:
+
+- Ausgabeabschnitte
+- Compile-Wortzahl
+- Frontmatter
+- Backmatter
+- Validierungsstatus
+
+### ✓ Compile-Prüfung
+
+Prüft unter anderem:
+
+- Titel
+- Manuskriptstruktur
+- Autor:in
+- Cover
+- Rechteangaben
+
+Optionale Lücken erzeugen Hinweise statt harter Fehler.
+
+### 📖 EPUB 3
+
+Jetzt über den gemeinsamen Compile-Plan.
+
+Unterstützt:
+
+- Cover
+- Frontmatter
+- Backmatter
+- Titelseite
+- Impressum
+- sichtbares Inhaltsverzeichnis
+- EPUB-Navigation
+- Teile / Kapitel
+- Szenentitel
+- Szenentrenner
+- Manuskriptbilder
+- Metadaten
+- Reihe / Band
+- Sprache
+- Verlag
+- Rechte
+- Kennung / ISBN
+
+### 📝 DOCX
+
+Übernimmt unter anderem:
+
+- Compile-Reihenfolge
+- Front-/Backmatter
+- Seitenumbrüche
+- Seitengröße
+- Schrift
+- Schriftgröße
+- Zeilenhöhe
+- Einzug
+- Kapitelstruktur
+
+### 📄 PDF
+
+Übernimmt denselben Compile-Aufbau inklusive:
+
+- Front-/Backmatter
+- Kapitel
+- Inhaltsverzeichnis
+- Seitenformat
+- Satz-Grundeinstellungen
+- Szenentrenner
+
+### ▤ HTML
+
+Vollständige Compile-Struktur mit druckfähigem CSS.
+
+### RTF / Markdown / TXT
+
+Nutzen ebenfalls die identische Inhaltsreihenfolge.
+
+### 📦 Exportzentrum
+
+Zeigt jetzt:
+
+- aktives Compile-Profil
+- Frontmatter
+- Backmatter
+- Szenentitelstatus
+- Compile-Prüfung
+
+Direkter Sprung ins Compile Studio.
+
+### 💾 Backup
+
+Gesichert werden:
+
+- Buchprofile
+- Einstellungen
+- Frontmatter
+- Backmatter
+- Projektvorlagen
+- Reihenfolge
+- Aktivierungsstatus
+
+### 🧬 Manuskript bleibt unverändert
+
+Compile verändert keine:
+
+- Manuskripttitel
+- Szenentitel
+- Textinhalte
+- interne Struktur
+- Verknüpfungen
+
+Alle Publishing-Anpassungen entstehen ausschließlich beim Export.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Compile-Routing geprüft
+- Profil-Datenmodell geprüft
+- Schnellstart-Profile geprüft
+- Projektvorlagen geprüft
+- Frontmatter-CRUD geprüft
+- Backmatter-CRUD geprüft
+- Reihenfolge geprüft
+- Compile-Validierung geprüft
+- Nummerierung geprüft
+- EPUB umgestellt
+- DOCX umgestellt
+- PDF umgestellt
+- HTML umgestellt
+- RTF umgestellt
+- Markdown umgestellt
+- TXT umgestellt
+- Exportzentrum integriert
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.74.0
 
 ### 🔄 Revision Studio 2.0
