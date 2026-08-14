@@ -6,6 +6,14 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.2.4
+
+### 🎨 Zettelansicht
+
+- Ein Layoutfehler behoben, durch den freie Höhe im Ideenbereich als zusätzlicher vertikaler Abstand zwischen den Zettelreihen verteilt wurde.
+- Die Zettelreihen werden jetzt konsequent von oben nach unten kompakt angeordnet.
+- Der gewünschte kleine Abstand zwischen den Papierstreifen bleibt unabhängig von der Fensterhöhe erhalten.
+
 ## v0.2.3
 
 ### 🎨 Zettelansicht
