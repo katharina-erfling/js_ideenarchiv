@@ -6,6 +6,227 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.72.0
+
+### 🧠 Codex / Wissensnetz 3.0
+
+- Neuer eigener Buch-Reiter „Codex“.
+- Story-Bibel wird zur zentralen Wissensquelle für Manuskript, Reihe und Romanprojekt.
+- Titel und Aliase können automatisch im Manuskript erkannt werden.
+- Automatische Erkennung verändert den Text niemals.
+- Eindeutige Erwähnungen können bewusst in echte Verknüpfungen übernommen werden.
+
+### 🏷 Aliase / alternative Namen
+
+Jede Story-Bibel-Akte kann beliebig viele alternative Namen besitzen.
+
+Aliase werden verwendet in:
+
+- Codex
+- globaler Suche
+- Manuskripterkennung
+- Living Knowledge
+- Story Graph
+- Inspector
+
+Der eigentliche Titel bleibt der kanonische Anzeigename.
+
+### 🛑 Automatische Erkennung pro Akte abschaltbar
+
+Neue Option:
+
+- „Automatische Erwähnungen erkennen“
+
+Für allgemeine Begriffe kann die Erkennung bewusst deaktiviert werden.
+
+### 🔎 Automatische Manuskript-Erwähnungen
+
+Erkannt werden:
+
+- kanonischer Titel
+- Aliase
+- Anzahl der Erwähnungen
+- verwendete Bezeichnungen
+- betroffene Manuskriptabschnitte
+- bereits explizit verknüpfte Abschnitte
+- unverknüpfte eindeutige Erwähnungen
+- mehrdeutige Bezeichnungen
+
+### 🧠 Codex im Manuskript-Inspector
+
+Neuer Bereich:
+
+- 🧠 Erkannte Codex-Erwähnungen
+
+Je Fundstelle sichtbar:
+
+- Akte
+- Typ
+- Trefferzahl
+- erkannter Name / Alias
+- verknüpft / erkannt / mehrdeutig
+
+Eindeutige Erwähnungen können:
+
+- einzeln verknüpft
+- gesammelt verknüpft
+
+werden.
+
+### ⚠ Alias-Kollisionen
+
+Wenn derselbe Alias zu mehreren Akten gehört:
+
+- keine automatische Entscheidung
+- deutliche Mehrdeutigkeitsanzeige
+- keine stillen falschen Links
+
+### ✎ Alias-Editor
+
+Aliase bearbeitbar:
+
+- direkt in der Story-Bibel-Akte
+- direkt aus dem Codex
+
+Live-Prüfung auf mögliche Kollisionen.
+
+### 📚 Wissensräume
+
+Codex-Scope:
+
+- Dieses Buch
+- Reihe
+- Romanprojekt
+
+### 📖 Serienwissen
+
+Der Codex zeigt:
+
+- bandbezogenes Wissen
+- Wissen für mehrere Bücher
+- gemeinsam verwendete Story-Bibel-Akten
+
+Keine Kopie pro Band nötig.
+
+### 📊 Codex-Dashboard
+
+Angezeigt werden:
+
+- Anzahl Akten
+- Manuskript-Erwähnungen
+- explizite Links
+- Alias-Mehrdeutigkeiten
+
+Je Akte:
+
+- Typ
+- Titel
+- Untertitel
+- Aliase
+- Wissens-Scope
+- Erwähnungen
+- betroffene Abschnitte
+- explizite Verknüpfungen
+- weitere Wissenslinks
+
+### ＋ Erkannte Erwähnungen übernehmen
+
+Pro Akte können eindeutige unverknüpfte Manuskript-Fundstellen gesammelt in echte Links umgewandelt werden.
+
+Mehrdeutige Treffer bleiben unangetastet.
+
+### 🕸 Living Knowledge 3.0
+
+Living Knowledge zeigt jetzt auch automatische Manuskript-Referenzen.
+
+Unterschied:
+
+- normaler Link → gespeichert
+- automatische Erwähnung → aus Manuskripttext abgeleitet
+
+Automatische Referenzen sind sichtbar gekennzeichnet.
+
+### 🕸 Story Graph
+
+Eindeutige Codex-Erwähnungen erzeugen abgeleitete Verbindungen:
+
+- Codex-Akte ↔ Manuskriptabschnitt
+
+Diese werden visuell anders dargestellt als gespeicherte Beziehungen.
+
+### 🔎 Globale Suche
+
+Aliase sind vollständig durchsuchbar.
+
+Beispiel:
+
+- Suche: Ravi
+- Ergebnis: Ravith
+
+### 📎 Story-Bibel-Suche
+
+Auch die Story-Bibel-Suche im Manuskript-Inspector versteht Aliase.
+
+### 📇 Story-Bibel-Karten
+
+Alternative Namen werden direkt auf den normalen Story-Bibel-Karten angezeigt.
+
+### 🧬 Eine Wissensquelle
+
+Keine getrennte Codex-Datenbank.
+
+Dieselben Story-Bibel-Akten werden verwendet von:
+
+- Manuskript
+- Codex
+- Reihe
+- Suche
+- Living Knowledge
+- Story Graph
+
+### 📸 Snapshots
+
+Explizite Verknüpfungen bleiben Bestandteil des Dokumentzustands.
+
+Automatische Referenzen werden aus dem jeweiligen Textstand neu berechnet und müssen deshalb nicht separat versioniert werden.
+
+### 💾 Backup
+
+Gesichert werden automatisch:
+
+- Aliase
+- Auto-Erkennungs-Einstellung
+- Story-Bibel-Akten
+- Buch-/Serienzuordnung
+- explizite Verknüpfungen
+
+Automatische Referenzen entstehen nach einem Import wieder direkt aus dem Manuskript.
+
+### ⚡ Performance
+
+- Codex-Statistiken werden pro Ansicht gesammelt.
+- Story Graph scannt Manuskriptabschnitte nur einmal.
+- Inspector-Erkennung läuft verzögert nach Texteingaben statt bei jedem Tastendruck.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Codex-Routing geprüft
+- Alias-Datenmodell geprüft
+- Alias-Editor geprüft
+- Kollisionsprüfung geprüft
+- globale Suche erweitert
+- automatische Manuskripterkennung geprüft
+- Inspector integriert
+- Living Knowledge integriert
+- Story Graph integriert
+- Buch-/Reihen-/Projekt-Scope geprüft
+- Auto-Erkennung pro Akte deaktivierbar
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.71.0
 
 ### 📅 Calendar & Timekeeping Studio
