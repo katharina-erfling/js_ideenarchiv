@@ -6,6 +6,91 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.37.0
+
+### 🔗 Buchverknüpfungen
+
+- Bücher können jetzt direkt miteinander verknüpft werden.
+- Die Verknüpfung ist nicht auf Bücher desselben Romanprojekts oder derselben Reihe beschränkt.
+- Dadurch können auch Spin-offs, Prequels oder Bücher aus einem gemeinsamen Universum über mehrere Projekte hinweg verbunden werden.
+- Jede Verknüpfung kann eine freie Notiz erhalten, beispielsweise „spielt sechs Monate später“ oder „Nebenfigur wird hier Hauptfigur“.
+
+### ↔️ Beziehungstypen
+
+- Unterstützte Buchbeziehungen sind:
+  - Vorgänger von
+  - Nachfolger von
+  - Prequel zu
+  - Hat Prequel
+  - Fortsetzung von
+  - Hat Fortsetzung
+  - Spin-off von
+  - Ursprungsbuch eines Spin-offs
+  - Parallelgeschichte zu
+  - Gleiches Universum
+  - Inhaltlich verbunden
+- Beziehungen können jederzeit bearbeitet oder wieder gelöst werden.
+
+### 🔄 Automatische Gegenverknüpfungen
+
+- Gerichtete Beziehungen erzeugen automatisch die passende Gegenbeziehung im anderen Buch.
+- Beispiel:
+  - Band 3 ist „Vorgänger von“ Band 4.
+  - Band 4 erhält automatisch „Nachfolger von“ Band 3.
+- Prequel-, Fortsetzungs- und Spin-off-Beziehungen erzeugen ebenfalls passende Gegenverknüpfungen.
+- Symmetrische Beziehungen wie „Parallelgeschichte“, „Gleiches Universum“ oder „Inhaltlich verbunden“ werden auf beiden Seiten gleich dargestellt.
+- Beim Bearbeiten einer Beziehung wird die Gegenverknüpfung automatisch aktualisiert.
+- Beim Löschen einer Beziehung wird auch die zugehörige Gegenverknüpfung entfernt.
+
+### 📖 Buchdetailseite
+
+- Die Buchdetailseite besitzt jetzt einen eigenen Bereich „Verbundene Bücher“.
+- Verknüpfte Bücher werden mit Cover bzw. Buchrückenfarbe, Titel, Beziehungstyp und optionaler Verbindungsnotiz angezeigt.
+- Das zugehörige Romanprojekt des anderen Buches wird ebenfalls sichtbar.
+- Ein Klick auf ein verbundenes Buch öffnet direkt dessen Buchakte bzw. Arbeitsbereich.
+- Verknüpfungen können direkt aus der Buchdetailseite angelegt und bearbeitet werden.
+- Eine kleine Zusammenfassung zeigt, welche Beziehungstypen am aktuellen Buch vorhanden sind.
+
+### 📚 Reihen & Folgebände
+
+- „Nächsten Band“ erzeugt jetzt nicht nur ein neues Entwurfsbuch im selben Romanprojekt.
+- Der neue Band wird zusätzlich automatisch als Nachfolger des bisherigen Buches verknüpft.
+- Das bisherige Buch erhält entsprechend automatisch die Gegenbeziehung als Vorgänger.
+- Dadurch entsteht beim Ausbau einer Reihe schrittweise ein echtes Buchnetz statt nur einer losen Bandnummerierung.
+
+### 🌍 Projektübergreifende Verbindungen
+
+- Bücher können mit Büchern aus anderen Romanprojekten verknüpft werden.
+- Das ermöglicht gemeinsame Universen, Crossover, Spin-offs oder andere inhaltliche Beziehungen auch dann, wenn die Bücher unterschiedliche Projektwelten besitzen.
+- Die Auswahl im Verknüpfungsdialog ist nach Romanprojekten gruppiert, damit auch große Bibliotheken übersichtlich bleiben.
+
+### 🔎 Globale Suche
+
+- Die globale Buchsuche berücksichtigt jetzt zusätzlich Titel verbundener Bücher.
+- Auch Beziehungstypen und freie Verbindungsnotizen fließen in die Suche ein.
+- Dadurch kann ein Buch beispielsweise über den Namen seines Spin-offs oder eine notierte Verbindung wiedergefunden werden.
+
+### 🗑️ Löschen & Aufräumen
+
+- Wird ein leeres Buch aus der Bibliothek gelöscht, werden direkte Buchverknüpfungen zu diesem Buch auch aus den übrigen Büchern entfernt.
+- Dadurch bleiben keine absichtlich erzeugten toten Verbindungen zurück.
+- Bücher mit Manuskript bleiben weiterhin gegen versehentliches Löschen geschützt.
+
+### ✓ Systemcheck
+
+- Der Systemcheck prüft jetzt zusätzlich das Buchnetz.
+- Er erkennt Verknüpfungen zu nicht mehr vorhandenen Büchern.
+- Fehlende automatische Gegenverknüpfungen werden sichtbar gemacht.
+- Selbstverknüpfungen eines Buches werden als Auffälligkeit gemeldet.
+- Der Systemcheck bleibt rein diagnostisch und repariert oder löscht keine Beziehungen automatisch.
+
+### 💾 Datensicherheit
+
+- Buchverknüpfungen werden direkt im jeweiligen Buchdatensatz gespeichert.
+- Beziehungen und Gegenbeziehungen sind Bestandteil des regulären vollständigen Backups.
+- Das Verknüpfen oder Lösen von Büchern verändert keine Manuskript-, Ideen-, Figuren- oder Weltdaten.
+- Die bestehende Autosave-, Recovery-, Versions- und Backup-Architektur bleibt vollständig erhalten.
+
 ## v0.36.0
 
 ### 📚 Bücher in jedem Stadium
