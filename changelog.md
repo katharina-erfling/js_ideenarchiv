@@ -6,6 +6,41 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.48.2
+
+### 📚 Hierarchische Roman-/Buchauswahl
+
+- Der Statistikfilter zeigt Romanprojekte und ihre Bücher jetzt hierarchisch statt als flache Liste.
+- Die Reihe steht als übergeordnete Gruppe.
+- Darunter erscheinen die einzelnen Bücher eingerückt.
+- Zusätzlich kann weiterhin die gesamte Reihe ausgewählt werden.
+- Einzelne Bücher können jetzt direkt als Statistikfilter gewählt werden.
+- Lange Auswahllisten bleiben als Dropdown kompakt und werden scrollbar dargestellt.
+
+### 🏷️ Anzeigename einzelner Bücher
+
+- In den Buchdaten gibt es jetzt den Bereich „Anzeige in Buchlisten“.
+- Für jedes Buch kann festgelegt werden, wie es unter seiner Reihe in kompakten Auswahllisten erscheint:
+  - automatisch – Untertitel wird bevorzugt
+  - Untertitel
+  - Bandnummer + Untertitel
+  - Titel
+  - eigener Anzeigename
+- Bei „Eigener Anzeigename“ erscheint ein zusätzliches Eingabefeld.
+- Bestehende Bücher verwenden automatisch die neue intelligente Anzeige.
+- Wenn mehrere Bücher denselben Haupttitel tragen, kann der Reihentitel einmal übergeordnet und darunter nur der unterscheidende Untertitel angezeigt werden.
+
+### 📊 Statistikfilter
+
+- Die Statistik kann nun auf alle Romanprojekte, eine gesamte Reihe/ein Romanprojekt oder ein einzelnes Buch eingegrenzt werden.
+- Buchbezogene Wortzahlen und Schreibsessions berücksichtigen weiterhin die bestehende Einstellung zum Schreibtracking.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Bestehende Bücher und Statistikdaten bleiben kompatibel.
+
 ## v0.48.1
 
 ### 🔷 Verschiedene Formen für Mindmap-Knoten
