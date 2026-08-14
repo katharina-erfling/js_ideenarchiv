@@ -6,6 +6,61 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.22.0
+
+### 🔗 Modulübergreifende Verknüpfungen
+
+- Die bisher getrennten Bereiche der Autoren-Suite wurden deutlich stärker miteinander verbunden.
+- Figuren, Namenslisten, Ideenzettel, Recherche, Inspiration und Manuskriptszenen können jetzt direkt aufeinander verweisen.
+- Verknüpfungen verändern die ursprünglichen Inhalte nicht und bleiben als eigenständige Datensätze erhalten.
+
+### 🎭 Figuren & Namenslisten
+
+- Figuren im Romanprojekt können direkt mit einem Eintrag aus den Namenslisten verknüpft werden.
+- Bei einer neuen Figur kann der verknüpfte Name automatisch als Figurenname übernommen werden.
+- Ein verwendeter Namenseintrag wird automatisch als „verwendet“ markiert.
+- Projektübergreifende Namen können beim Verknüpfen automatisch dem betreffenden Romanprojekt zugeordnet werden.
+- Wird die letzte Figurenverknüpfung eines Namens entfernt, kann der Eintrag wieder als frei geführt werden.
+
+### 💡 Figuren & Ideen
+
+- Figuren können direkt mit beliebig vielen Ideenzetteln verbunden werden.
+- Das Ideenarchiv wird dafür innerhalb des Figurendialogs durchsucht.
+- Verknüpfte Zettel bleiben weiterhin vollständig im zentralen Ideenarchiv erhalten.
+
+### ◉ Figuren & Recherche
+
+- Rechercheeinträge können einzelnen Figuren zugeordnet werden.
+- Projektbezogene und projektübergreifende Recherche steht dabei zur Verfügung.
+- Dadurch können beispielsweise historische Quellen, Kleidungsreferenzen oder Hintergrundmaterial direkt bei der Figur gebündelt werden.
+
+### ♧ Figuren & Inspiration
+
+- Figuren können mit Bildern, Musik, Farben und anderen Inspirationseinträgen verknüpft werden.
+- Die Inspiration bleibt eigenständig im Moodboard erhalten.
+- Figurenspezifische Inspirationssammlungen können damit aufgebaut werden, ohne Inhalte zu duplizieren.
+
+### ✒️ Szenen & Inspiration
+
+- Der Szenen-Inspector unterstützt jetzt neben Ideenzetteln und Recherche auch Inspiration.
+- Projektbezogene und projektübergreifende Inspiration kann direkt im Inspector gesucht und einer Szene zugeordnet werden.
+- Verknüpfte Bilder und andere Inspirationsinhalte bleiben direkt neben dem Manuskript sichtbar.
+- Beim Zusammenführen von Manuskriptabschnitten werden Inspirationsverknüpfungen mit übernommen.
+
+### 🕸️ Verknüpfungsübersicht im Romanprojekt
+
+- Romanprojekte besitzen jetzt einen eigenen Tab „Verknüpfungen“.
+- Dort wird sichtbar, welche Figuren mit Namen, Ideen, Recherche und Inspiration verbunden sind.
+- Zusätzlich zeigt die Übersicht für Manuskriptabschnitte die Anzahl verknüpfter Ideen, Rechercheeinträge, Inspirationen und Figuren.
+- Damit lässt sich die wachsende Struktur eines Romans zentral überblicken.
+
+### 💾 Datensicherheit
+
+- Alle neuen Verknüpfungen werden in den bestehenden Projekt- und Manuskriptdatensätzen gespeichert.
+- Es werden keine Inhalte durch Verknüpfungen verschoben oder gelöscht.
+- Beim Zusammenführen von Szenen bleiben bestehende Verknüpfungen erhalten.
+- Die neuen Beziehungen sind automatisch Bestandteil der Autoren-Suite-Backups.
+
 ## v0.21.0
 
 ### ☷ Namenslisten
