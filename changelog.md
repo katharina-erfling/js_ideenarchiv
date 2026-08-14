@@ -6,6 +6,55 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.16
+
+### 📚 Bucheinstieg öffnet immer das Buch-Dashboard
+
+Wenn ein Buch bewusst geöffnet wird, startet es jetzt immer auf seiner eigenen Übersicht.
+
+Das gilt für:
+
+- Klick auf ein Buch im Bücherregal
+- Klick auf ein Buch auf dem Suite-Dashboard
+- Wechsel auf ein anderes Buch über die Buchauswahl
+- automatischer Einstieg in das einzige Buch eines Romanprojekts
+
+Nicht mehr verwendet wird beim normalen Bucheinstieg:
+
+- der zuletzt geöffnete Buch-Reiter
+- der zuletzt gespeicherte Workflow-Reiter
+- eine automatisch aus dem Buchstatus gewählte Unteransicht
+
+Damit ist der Einstieg eindeutig:
+
+> Buch anklicken → Buch-Dashboard
+
+### 🧭 Gezielte Tiefenlinks bleiben erhalten
+
+Direkte Sprünge aus anderen Funktionen bleiben weiterhin möglich.
+
+Beispiele:
+
+- Suchtreffer → konkrete Manuskriptszene
+- Timeline → Ereignis
+- Weltkarte → Ort
+- Story Graph → verknüpfter Inhalt
+- Codex → Eintrag
+
+### ↻ F5 bleibt davon getrennt
+
+- Buch bewusst neu öffnen → Dashboard
+- F5 innerhalb eines bereits geöffneten Buchbereichs → möglichst dort bleiben
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Bücherregal verwendet Dashboard-Einstieg
+- Dashboard-Buchkarten verwenden denselben Einstieg
+- Buchwechsel setzt Workflow auf Dashboard
+- Tiefenlinks bleiben erhalten
+- F5-Restore bleibt erhalten
+
 ## v0.80.15
 
 ### 📖 Eine Story-Bibel pro Buch
