@@ -6,6 +6,68 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.31.0
+
+### ⚙️ Performance & technische Härtung
+
+- Diese Version konzentriert sich auf Stabilität, große Datenbestände und die langfristige Wartbarkeit der Autoren-Suite.
+- Es wurden bewusst keine neuen großen Inhaltsmodule ergänzt.
+- Besonders Suchfunktionen und Datenprüfungen wurden für umfangreiche Archive vorbereitet.
+
+### ⚡ Globale Suche für große Archive
+
+- Der Suchindex der globalen `Strg/Cmd + K`-Suche wird jetzt zwischengespeichert, statt bei jedem einzelnen Tastendruck vollständig neu aufgebaut zu werden.
+- Normalisierte Suchwerte werden direkt im Suchindex vorbereitet und bei Folgeabfragen wiederverwendet.
+- Die Suche wird leicht verzögert ausgelöst, damit schnelle Tastatureingaben nicht unnötig viele vollständige Suchläufe erzeugen.
+- Änderungen an Ideen, Projekten, Manuskripten, Recherche, Inspiration oder Namenslisten invalidieren den Suchindex automatisch.
+- Dadurch bleibt die Suche aktuell, ohne bei unveränderten Daten wiederholt dieselbe Vorarbeit zu leisten.
+- Die bestehende Paginierung des Ideenarchivs bleibt erhalten und verhindert weiterhin, dass tausende Zettel gleichzeitig als DOM-Elemente gerendert werden.
+
+### ✓ Systemcheck
+
+- Der Bereich „Datensicherheit“ besitzt jetzt einen eigenen Systemcheck.
+- Geprüft werden unter anderem doppelte Ideen-, Projekt- und Manuskript-IDs.
+- Manuskriptabschnitte ohne vorhandenes Romanprojekt werden als kritische Auffälligkeit erkannt.
+- Fehlende Kategorien, verwaiste Ideenverknüpfungen und ungültige Orts- oder Figurenbeziehungen werden als Hinweise sichtbar gemacht.
+- Sicherheitsversionen gelöschter Manuskriptabschnitte werden erkannt, aber bewusst nicht als Fehler behandelt, da sie weiterhin als Rettungskopie dienen können.
+- Der Systemcheck verändert oder löscht keine Daten.
+- Beim Start wird zusätzlich automatisch eine stille Integritätsprüfung durchgeführt; kritische Auffälligkeiten werden gemeldet.
+
+### 🌍 Schutz der Weltstruktur
+
+- Beim Verschieben eines Ortes wird jetzt verhindert, dass ein Ort unter einen eigenen Unterort verschoben wird.
+- Dadurch können keine neuen kreisförmigen Weltbau-Hierarchien angelegt werden.
+- Der Systemcheck erkennt zusätzlich bereits vorhandene kreisförmige Ortshierarchien als Hinweis.
+
+### 💾 Sicherere Datenbankfehler
+
+- Schreibfehler in IndexedDB werden jetzt zentraler abgefangen und sichtbar gemeldet.
+- Ein voller lokaler Browserspeicher wird ausdrücklich als solcher erkannt.
+- Im Schreibeditor wird ein Speicherproblem zusätzlich direkt am Speicherstatus sichtbar.
+- Unbehandelte Speicherfehler können dadurch nicht mehr so leicht unbemerkt bleiben.
+
+### 📦 Backup-Prüfung
+
+- Ein neu erzeugtes Backup wird vor dem Download noch einmal strukturell geprüft.
+- Bei aktuellen Backupformaten müssen alle erwarteten Modulbereiche als gültige Datenlisten vorhanden sein.
+- Doppelte Ideen-IDs innerhalb eines Backups werden erkannt.
+- Ein Backup mit erkannten Strukturfehlern wird nicht als erfolgreich exportiert.
+- Mehrfaches gleichzeitiges Starten eines Backup-Exports wird verhindert.
+- Erfolgreiche Exporte werden ausdrücklich als geprüftes Backup bestätigt.
+
+### 🔁 Datenänderungen & Suchindex
+
+- Zentrale Schreib-, Aktualisierungs- und Löschoperationen invalidieren den globalen Suchindex automatisch.
+- Dadurch erscheinen Änderungen nach dem nächsten Suchaufruf aktuell, ohne dauerhaft mehrere Suchkopien der Daten zu speichern.
+- Manuskript-Autosave kann den Suchindex aktualisieren, ohne die eigentlichen Suchdaten permanent zu duplizieren.
+
+### 🧱 Langfristige Stabilität
+
+- Bestehende Datenmodelle und Backupformate bleiben kompatibel.
+- Es wurden keine automatischen Reparaturen eingebaut, die im Zweifel Nutzerdaten verändern könnten.
+- Auffälligkeiten werden zuerst diagnostiziert und sichtbar gemacht.
+- Die technischen Änderungen dienen damit als Grundlage für den bevorstehenden großen Praxistest der Suite.
+
 ## v0.30.0
 
 ### 🛡️ Sicherheits- & Stabilitätsrunde
