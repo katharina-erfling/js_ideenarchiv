@@ -6,6 +6,49 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.1
+
+### ✒ Manuskript-UI neu ausbalanciert
+
+- Die stabile Scrolllogik aus v0.47.0 bleibt erhalten.
+- Der Schreibbereich nutzt die verfügbare Fensterbreite besser.
+- Unnötiges horizontales Seiten-Scrolling wurde entfernt.
+- Kapitelspalte und Inspector wurden schmaler.
+- Der eigentliche Schreibbereich wurde deutlich verbreitert.
+
+### 🧭 Kopfbereich beruhigt
+
+- Buchauswahl, Wortfortschritt und Aktionen wurden kompakter angeordnet.
+- Aktionsbuttons dürfen sauber umbrechen.
+- Wortzahl und Fortschritt sind visuell weniger dominant.
+
+### 🪜 Workflow kompakter
+
+- Workflow-Hinweis deutlich flacher gestaltet.
+- Schritte bleiben sichtbar, wirken aber nur noch als dezente Orientierung.
+- Buch-Reiter ebenfalls kompakter gestaltet.
+
+### 📄 Schreibblatt im Mittelpunkt
+
+- Manuskripteditor stärker als ruhiges Schreibblatt gestaltet.
+- Titelbereich und Formatierungsleiste verkleinert.
+- Mehr horizontaler Platz für den eigentlichen Text.
+- Zurückhaltendere Scrollbars.
+- Kompaktere Statusleiste.
+
+### 🗂️ Kapitel & Inspector
+
+- Kapitel und Szenen bleiben kompakt und schnell anklickbar.
+- Inspector optisch leichter und schmaler.
+- Bei mittleren Bildschirmbreiten wird er weiter reduziert.
+- Bei sehr engen Desktopbreiten wird er ausgeblendet, statt horizontalen Scroll zu erzeugen.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Autosave, Versionsschutz und Manuskriptinhalte unverändert.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.47.0
 
 ### ✒ Stabiles Scrollen im Manuskript
