@@ -6,6 +6,185 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.78.0
+
+### 🧬 Living Canon & Bandvarianten
+
+Die in v0.77 vorbereiteten `bookVariants` sind jetzt ein vollständiges Arbeitswerkzeug.
+
+Ziel:
+
+> Eine gemeinsame kanonische Akte – aber nachvollziehbare Zustände je Band.
+
+Dadurch müssen Figuren, Orte, Organisationen oder Gegenstände nicht pro Buch dupliziert werden.
+
+### 📚 Bandzustände pro Story-Bibel-Akte
+
+Für jede Story-Bibel-Akte können jetzt je Buch eigene Zustände hinterlegt werden.
+
+Mögliche Angaben:
+
+- Status / Zustand
+- Rolle in diesem Band
+- bandbezogene Kurzfassung
+- Ort / Aufenthaltsort
+- Wissensstand
+- Beziehungen / Zugehörigkeiten
+- freie Notizen
+
+Die gemeinsame Hauptakte bleibt unverändert der kanonische Kern.
+
+### 🧠 Vererbung statt Duplikation
+
+Existiert für einen Band kein eigener Zustand, gilt weiterhin die gemeinsame Hauptakte.
+
+Prinzip:
+
+> gemeinsamer Kanon + nur die Abweichungen je Band
+
+statt:
+
+> dieselbe Figur mehrfach kopieren und getrennt pflegen.
+
+### ✎ Bandzustand-Editor
+
+Im Universumsbereich kann für jede Akte und jeden Band direkt ein Bandzustand angelegt oder bearbeitet werden.
+
+Ein Bandzustand kann gelöscht werden, ohne die Hauptakte zu entfernen.
+
+### 🕸 Living Canon Detailansicht
+
+Für eine ausgewählte Akte wird pro Band angezeigt:
+
+- Gültigkeit
+- Bandzustand
+- Status
+- Rolle
+- Ort
+- Wissen
+- Bandnotiz
+- Figurenentwicklungsstand
+- Kontinuitätswerte
+- Beziehungen
+
+### ↔ Veränderungen zwischen Bänden
+
+Verglichen werden unter anderem:
+
+- Status
+- Rolle
+- Ort
+- Wissensstand
+
+Veränderungen werden als Übergänge zwischen den Bänden sichtbar gemacht.
+
+### 👤 Character Arc Integration
+
+Vorhandene Character-Arc-Stationen werden direkt in den Bandzustand eingeblendet.
+
+Damit gilt:
+
+- Bandzustand = grober Zustand im Buch
+- Character Arc = konkrete Entwicklung innerhalb des Buchs
+
+### ⌘ Beziehungsintegration
+
+Bandbezogene Beziehungen werden in der Living-Canon-Ansicht berücksichtigt.
+
+### 📌 Kontinuitätsintegration
+
+Gemeinsamer Kanon, Bandzustände und bestehende Kontinuitätswerte werden zusammengeführt.
+
+### 🧭 Canon Intelligence
+
+Neue Hinweise unter anderem für:
+
+- abweichenden Aufenthaltsort zwischen Bandzustand und Kontinuitätswert
+- mehrere gleichzeitige Kernänderungen zwischen zwei Bänden
+
+Hinweise bleiben bewusst nicht blockierend.
+
+### 🧠 Codex
+
+Der Codex zeigt jetzt vorhandene Bandzustände des aktuell geöffneten Buchs.
+
+Bandzustände können direkt aus dem Codex bearbeitet werden.
+
+### 🔎 Suche
+
+Bandvarianten werden durchsucht.
+
+Zusätzlich durchsuchbar:
+
+- Status
+- Rolle
+- Bandzusammenfassung
+- Ort
+- Wissensstand
+- Beziehungen
+- Bandnotizen
+
+### 🌌 Universums-Matrix
+
+Ein Klick auf eine Akte öffnet jetzt zunächst ihre Living-Canon-Ansicht.
+
+Von dort kann weiterhin die vollständige kanonische Hauptakte geöffnet werden.
+
+### 💾 Datenmodell
+
+`bookVariants` wird jetzt aktiv genutzt.
+
+Je Akte:
+
+bookVariants
+  └─ Buch-ID
+       ├─ status
+       ├─ role
+       ├─ summary
+       ├─ location
+       ├─ knowledge
+       ├─ relationships
+       ├─ notes
+       └─ updatedAt
+
+### 🔒 Kompatibilität
+
+Bestehende Akten ohne Bandvarianten funktionieren unverändert.
+
+Fehlt eine Variante, gilt automatisch der gemeinsame Kanon.
+
+Bestehende:
+
+- Kontinuitätswerte
+- Character Arcs
+- Beziehungen
+- Codex-Daten
+- Buchzuordnungen
+- Reihen-/Universums-Scope
+
+bleiben erhalten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Bandvarianten-Datenmodell geprüft
+- Bandzustand-Editor integriert
+- Speichern und Löschen geprüft
+- Living-Canon-Detailansicht integriert
+- Band-zu-Band-Übergänge integriert
+- Character-Arc-Integration geprüft
+- Beziehungsintegration geprüft
+- Kontinuitätsintegration geprüft
+- Canon-Intelligence-Hinweise integriert
+- Codex-Bandzustände integriert
+- Bandvarianten in Suche integriert
+- Living-Knowledge-Matrix erweitert
+- bestehende Daten bleiben kompatibel
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionsdefinitionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.77.0
 
 ### ✦ Serien & Universen 2.0
