@@ -6,6 +6,53 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.18.0
+
+### ◉ Recherche & Medien
+
+- „Recherche“ ist jetzt als eigener nutzbarer Bereich der Autoren-Suite verfügbar.
+- Quellen, Bilder, Links, Musik, Videos und freie Recherche-Notizen können zentral gesammelt werden.
+- Rechercheeinträge können projektübergreifend oder direkt einem Romanprojekt zugeordnet werden.
+- Suche sowie Filter nach Typ und Romanprojekt erleichtern die Arbeit mit wachsenden Recherchesammlungen.
+- Recherche wird in einer visuellen Kartenansicht dargestellt, die sich in die bestehende Papier- und Schreibtischästhetik einfügt.
+
+### 🖼️ Bilder
+
+- Eigene Bilder können direkt in einen Rechercheeintrag geladen werden.
+- Hochgeladene Bilder werden vor der lokalen Speicherung automatisch auf eine sinnvolle Maximalgröße verkleinert.
+- Dadurch bleibt die lokale Datenmenge auch bei umfangreicheren Bildsammlungen besser kontrollierbar.
+- Bilder werden in der Kartenübersicht und in einer größeren Detailansicht dargestellt.
+- Bilddaten werden gemeinsam mit dem Rechercheeintrag in IndexedDB gespeichert und in Backups übernommen.
+
+### 🔗 Links, Musik & Videos
+
+- Weblinks können als eigene Rechercheeinträge gespeichert werden.
+- Musik- und Videoquellen besitzen eigene Inhaltstypen.
+- YouTube-Links können in der Detailansicht direkt als eingebettetes Video angezeigt werden.
+- Andere externe Quellen bleiben als sicher öffnende Links erhalten.
+- Notizen und Schlagwörter können unabhängig vom Medientyp ergänzt werden.
+
+### 🧭 Verbindung mit Romanprojekten
+
+- Recherche kann einem konkreten Romanprojekt zugeordnet werden.
+- Projektübergreifende Recherche bleibt zusätzlich möglich und kann für mehrere Bücher relevant sein.
+- Der Recherchebereich zeigt auf jeder Karte die jeweilige Projektzuordnung.
+
+### ✒️ Recherche im Szenen-Inspector
+
+- Rechercheeinträge können direkt mit einem einzelnen Kapitel oder einer Szene verknüpft werden.
+- Der Inspector durchsucht projektbezogene und projektübergreifende Recherche.
+- Verknüpfte Recherche wird direkt neben dem Manuskript angezeigt.
+- Verknüpfungen können hinzugefügt und wieder entfernt werden, ohne den Rechercheeintrag selbst zu verändern.
+- Beim Zusammenführen von Manuskriptabschnitten werden Recherche-Verknüpfungen mit übernommen.
+
+### 💾 Datensicherheit
+
+- Rechercheeinträge werden im bereits vorbereiteten eigenen IndexedDB-Speicher abgelegt.
+- Bilddaten werden lokal gespeichert und verlassen für die Grundfunktion nicht den Browser.
+- Gelöschte Recherche-Verknüpfungen werden automatisch aus betroffenen Manuskriptabschnitten entfernt.
+- Recherche und Medien sind Bestandteil der bestehenden Autoren-Suite-Backups.
+
 ## v0.17.0
 
 ### 🧭 Szenen-Inspector
