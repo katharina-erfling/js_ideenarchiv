@@ -6,6 +6,30 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.4
+
+### 🔗 Verknüpfungen auf Ideenzetteln sichtbar korrigiert
+
+- Roman-/Buchkennzeichnungen auf den Zetteln deutlich sichtbarer gestaltet.
+- Anzeige jetzt z. B. als „↗ Roman: Diener des Himmels“.
+- Projektverknüpfungen erscheinen entsprechend als „↗ Projekt: …“.
+- Kategorie und Romanverknüpfung werden sauber getrennt dargestellt.
+- Lange Bezeichnungen werden platzsparend gekürzt.
+- Hover zeigt die vollständige Zuordnung.
+- Klick öffnet direkt Buch bzw. Projekt.
+
+### 🧰 Kompatibilitätsfix für bestehende Verknüpfungen
+
+- Bestehende/importierte Verknüpfungs-IDs werden unabhängig davon erkannt, ob sie als Zahl oder Text gespeichert wurden.
+- Dadurch werden auch ältere vorhandene Roman-/Buchverknüpfungen zuverlässig in der Ideenübersicht erkannt.
+- Der Filter „Verknüpft mit“ verwendet dieselbe robuste Erkennung.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration erforderlich.
+- Bestehende Daten werden nicht verändert.
+
 ## v0.47.3
 
 ### 🔗 Roman-/Buchverknüpfungen direkt auf Ideenzetteln sichtbar
