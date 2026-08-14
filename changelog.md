@@ -6,6 +6,98 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.53.0
+
+### 📎 Story-Bibel mit eigenen Reitern
+
+- „Welt & Orte“ wurde direkt in den bestehenden Anhang / die Story-Bibel integriert.
+- Jeder Anhang besitzt jetzt eine Reiterleiste.
+- Standardmäßig stehen bereit:
+  - Charaktere
+  - Orte
+  - Welt & Lore
+  - Organisationen
+  - Gegenstände
+  - Kreaturen
+  - Regeln & Systeme
+  - Ereignisse
+  - Notizen
+- Eigene Reiter können zusätzlich frei angelegt werden.
+- Reiter können einen eigenen Namen und ein eigenes Symbol erhalten.
+- Lange Reiterleisten scrollen horizontal.
+
+### 🧩 Eigene Templates pro Reiter
+
+- Jeder Story-Bibel-Reiter besitzt ein eigenes Template.
+- Pro Reiter kann ein Grundtyp gewählt werden.
+- Template-Felder können individuell:
+  - angelegt
+  - benannt
+  - typisiert
+  - entfernt
+  - sortiert
+  werden.
+- Unterstützt werden Text, Langtext, Zahl, Datum und Link.
+- Neue Einträge übernehmen automatisch das Template des aktuellen Reiters.
+- Einzelne Steckbriefe bleiben danach weiterhin individuell anpassbar.
+- Bestehende Einträge werden nicht überschrieben.
+
+### 👤 Charaktere
+
+- Charaktere liegen standardmäßig in einem eigenen Reiter.
+- Die Figurenentwicklungsstationen aus v0.52 bleiben vollständig erhalten.
+- Charakter-Templates können pro Anhang angepasst werden.
+
+### ⌖ Welt & Orte
+
+- Orte sind als eigener Story-Bibel-Bereich organisiert.
+- Neue Standardfelder:
+  - Art des Ortes
+  - Region / Land
+  - Klima / Jahreszeiten
+  - Atmosphäre
+  - Sinneseindrücke
+  - Bewohner
+  - Kultur / Alltag
+  - Gefahren / Besonderheiten
+  - Bedeutung für die Handlung
+- „Welt & Lore“ besitzt ebenfalls ein erweitertes Weltbau-Template.
+
+### 🗺️ Hierarchische Orte
+
+- Ortsakten können einen übergeordneten Ort besitzen.
+- Möglich sind z. B.:
+  - Welt
+  - Land
+  - Region
+  - Stadt
+  - Gebäude
+  - Raum
+- Im Orte-Reiter erscheint automatisch eine kompakte Ortshierarchie.
+- Klick auf einen Ort öffnet direkt seine Akte.
+- Nachfahren werden als möglicher übergeordneter Ort ausgeschlossen, um Kreisverknüpfungen zu vermeiden.
+
+### 📁 Ordner innerhalb der Reiter
+
+- Ordner und Unterordner bleiben erhalten.
+- Neu angelegte Ordner gehören zum aktuell geöffneten Reiter.
+- Ältere vorhandene Ordner bleiben kompatibel.
+
+### 🔄 Bestehende Story-Bibeln
+
+- Vorhandene Einträge werden anhand ihres bisherigen Typs automatisch passenden Standardreitern zugeordnet.
+- Keine manuelle Migration nötig.
+- Eigene Reiter können entfernt werden, ohne darin liegende Einträge zu löschen.
+- Standardreiter können angepasst, aber nicht versehentlich gelöscht werden.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine fehlenden UI-Referenzen gefunden.
+- Keine doppelten IDs oder Funktionen gefunden.
+- Keine destruktive Datenmigration erforderlich.
+- Bestehende Anhänge, Bilder, Ordner, Figurenentwicklungen und Verknüpfungen bleiben erhalten.
+
 ## v0.52.0
 
 ### ✦ Story Intelligence
