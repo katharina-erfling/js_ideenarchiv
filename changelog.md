@@ -6,6 +6,29 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.8.0
+
+### 💾 Datensicherheit & Backup
+
+- Der Backup-Bereich wurde zu einer eigenen Datensicherheitsfunktion ausgebaut.
+- Das Archiv zeigt jetzt an, wann zuletzt ein Backup erstellt wurde.
+- Bei fehlenden oder älteren Sicherungen wird dezent auf ein neues Backup hingewiesen.
+- Backups enthalten Ideen, Kategorien, Kategorienreihenfolge und Schnellregister gemeinsam.
+- Backup-Dateien enthalten zusätzlich Versions- und Exportinformationen.
+
+### 🔎 Backup-Prüfung
+
+- Backup-Dateien werden vor dem Import auf grundlegende Struktur und Vollständigkeit geprüft.
+- Beschädigte oder unpassende Dateien werden nicht ungeprüft in das Archiv übernommen.
+- Vor der Wiederherstellung werden Datum und Anzahl der enthaltenen Ideen angezeigt.
+
+### ♻️ Wiederherstellung
+
+- Backups können jetzt als vollständige Wiederherstellung verwendet werden.
+- Bei einer vollständigen Wiederherstellung ersetzt das Backup bewusst den aktuellen lokalen Archivstand.
+- Alternativ bleibt der bisherige ergänzende Import erhalten, bei dem Daten zum vorhandenen Archiv hinzugefügt werden.
+- Beide Varianten verlangen vor der Übernahme eine ausdrückliche Bestätigung.
+
 ## v0.7.0
 
 ### 🎲 Zufall & Wiederentdecken
