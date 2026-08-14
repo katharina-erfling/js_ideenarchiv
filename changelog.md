@@ -6,6 +6,49 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.21.0
+
+### ☷ Namenslisten
+
+- „Namenslisten“ ist jetzt als eigener vollständig nutzbarer Bereich der Autoren-Suite verfügbar.
+- Vor-, Nach-, Orts-, Fantasie- und sonstige Namen können getrennt gesammelt werden.
+- Jeder Name kann Herkunft, Bedeutung, Notizen, Schlagwörter und eine eigene Sammlung erhalten.
+- Namen können projektübergreifend bleiben oder direkt einem Romanprojekt zugeordnet werden.
+
+### ⌕ Suche & Filter
+
+- Die Namenssuche berücksichtigt Name, Herkunft, Bedeutung, Notizen, Sammlung und Schlagwörter.
+- Nach Namensart und Romanprojekt kann gefiltert werden.
+- Schnellfilter zeigen alle Namen, Favoriten, noch freie Namen oder bereits verwendete Namen.
+- Die Ergebnisliste wird alphabetisch sortiert.
+
+### ♡ Favoriten & Verwendung
+
+- Namen können direkt in der Übersicht als Favorit markiert werden.
+- Bereits verwendete Namen können gekennzeichnet werden.
+- Dadurch lässt sich schnell erkennen, welche Namen noch für neue Figuren, Orte oder Projekte frei sind.
+
+### ⚄ Zufallsname
+
+- Aus der aktuell gefilterten Namensmenge kann ein Zufallsname gezogen werden.
+- Typ, Herkunft, Sammlung und Projektbezug bleiben beim Zufallsfund sichtbar.
+- Mit „Nochmal“ kann direkt ein weiterer passender Name gezogen werden.
+- Der gezogene Name kann unmittelbar geöffnet und bearbeitet werden.
+
+### ≡ Schnelleingabe
+
+- Ganze Namenslisten können auf einmal eingefügt werden.
+- Ein Name pro Zeile wird automatisch als eigener Datensatz angelegt.
+- Art, Sammlung und Romanprojekt können für die gesamte eingefügte Liste vorgegeben werden.
+- Leere Zeilen und bereits vorhandene Namen werden beim Import übersprungen.
+- Dadurch können bestehende Namenssammlungen deutlich schneller übernommen werden.
+
+### 💾 Datensicherheit
+
+- Namen werden im bereits vorbereiteten eigenen IndexedDB-Speicher abgelegt.
+- Namensdaten sind Bestandteil der bestehenden Autoren-Suite-Backups.
+- Bestehende Ideen-, Projekt-, Manuskript-, Recherche-, Inspirations- und Statistikdaten bleiben unverändert erhalten.
+
 ## v0.20.0
 
 ### 📊 Schreibstatistiken
