@@ -6,6 +6,136 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.65.0
+
+### 🛠️ UX & Stability Pass
+
+- Gezielte Stabilitäts- und Bedienbarkeitsrunde nach dem großen Vernetzungsblock.
+- Fokus auf Routing, Datensicherheit, Navigation, Fehlerabfang und Performance.
+
+### 🧭 Workflow-Navigation repariert
+
+- Interne Liste gültiger Buchbereiche vervollständigt.
+- Neuere Bereiche werden beim Wiederherstellen korrekt akzeptiert:
+  - Szenenboard
+  - Story Growth
+  - Continuity Intelligence
+  - Weltkarte
+  - Character Arc Studio
+  - Story Graph
+- Kein stilles Zurückfallen auf ältere Standard-Reiter mehr.
+
+### 🧹 Sauberes Panel-Routing
+
+- Beim Öffnen/Neurendern werden jetzt konsequent alle Workflow-Panels zurückgesetzt.
+- Verhindert mögliche Überlagerungen nach Routing- oder Renderproblemen.
+
+### 🛟 Fehlerabfang pro Buchbereich
+
+- Jeder Buchbereich läuft jetzt innerhalb einer sicheren Rendergrenze.
+- Scheitert ein einzelner Bereich:
+  - restliche Suite bleibt bedienbar
+  - keine Storydaten werden gelöscht
+  - Fehler wird protokolliert
+  - ruhige Wiederherstellungsansicht erscheint
+- Von dort:
+  - zurück zur Übersicht
+  - erneut versuchen
+
+### 💾 Manuskript-Speicherung stabilisiert
+
+- Keine konkurrierenden parallelen Saves mehr.
+- Neue Single-Flight-Save-Queue.
+- Änderungen während eines laufenden Saves werden nachgereicht.
+- Bei Speicherfehler:
+  - Notfallkopie bleibt erhalten
+  - Speichestatus zeigt Problem
+  - verständliche Meldung
+
+### 🧯 Safety-Handler bereinigt
+
+- doppelte `beforeunload`-Handler entfernt
+- doppelte `visibilitychange`-Handler entfernt
+- redundante Speicherintervalle entfernt
+- klare Zuständigkeiten für:
+  - Notfall-Draft
+  - Hintergrund-Save
+  - Safety Flush
+
+### 🕸️ Story-Graph-Fix: Weltkarten
+
+- Weltkarte ↔ Ort wird jetzt zuverlässig aus vorhandenen Kartenpins erzeugt.
+- Kein Unterschied mehr zwischen Pin-ID in Living Knowledge und Karten-Knoten im Story Graph.
+
+### ⚡ Story-Graph-Performance
+
+- Beim Knotenziehen wird nicht mehr bei jeder Mausbewegung das komplette Storynetz neu berechnet.
+- Nur vorhandene Kanten werden neu gezeichnet.
+- Deutlich bessere Grundlage für große Storynetze.
+
+### ⌨️ Workflow-Tastaturnavigation
+
+- ← / → → vorheriger/nächster Reiter
+- Home → erster Reiter
+- End → letzter Reiter
+- Enter / Leertaste → öffnen
+
+### ↔ Lange Buchnavigation verbessert
+
+- horizontales Scrollen bleibt erhalten
+- Mausrad scrollt bei Bedarf horizontal
+- aktiver Reiter wird automatisch sichtbar gemacht
+- ruhigere Scrollbar
+- bessere Bedienbarkeit auf kleineren Bildschirmen
+
+### ♿ Accessibility-Basis
+
+- Workflow-Leiste als `tablist`
+- Reiter mit `role="tab"`
+- `aria-selected`
+- `aria-current`
+- korrekter Tastaturfokus
+- Panels als `tabpanel`
+- Save-Status und Toast mit `aria-live="polite"`
+- verbesserte sichtbare Fokusringe
+
+### 🩺 Interner UX-Systemcheck
+
+Beim Start geprüft:
+
+- alle Workflow-Reiter vorhanden
+- alle Workflow-Panels vorhanden
+- Navigation und Panels konsistent
+- keine doppelten IDs
+- zentrale UI-Elemente vorhanden
+
+Nur bei echten Auffälligkeiten erscheint eine Meldung.
+
+### 🧹 Release-Bereinigung
+
+- altes internes Test-Cover aus dem Release entfernt
+- Paket enthält nur noch:
+  - index.html
+  - app.js
+  - styles.css
+  - README.md
+  - CHANGELOG.md
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- alle Workflow-Reiter gegen Panels abgeglichen
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen statischen Buttons/Formulare
+- `beforeunload` nur einmal gebunden
+- `visibilitychange` nur einmal gebunden
+- Story-Graph-Weltkartenkante geprüft
+- Story-Graph-Pointermove optimiert
+- Save-Queue geprüft
+- bestehende Datenmodelle kompatibel
+
 ## v0.64.0
 
 ### 🕸️ Story Graph
