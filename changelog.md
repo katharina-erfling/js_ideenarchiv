@@ -6,6 +6,36 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.0
+
+### ✒ Stabiles Scrollen im Manuskript
+
+- Das Scrollverhalten des Schreibeditors wurde grundlegend beruhigt.
+- Beim Scrollen eines längeren Kapitels können Buchkopf, Workflow-Leiste, Manuskript-Navigation und Editorwerkzeuge nicht mehr übereinander springen.
+- Die Ursache waren mehrere gleichzeitig aktive `sticky`-Ebenen mit unterschiedlichen Höhen und Z-Indizes.
+- Diese gestapelten Sticky-Bereiche wurden im Manuskript entfernt.
+
+### 📄 Eigene Scrollfläche für den Kapiteltext
+
+- Der eigentliche Kapiteltext scrollt jetzt innerhalb des Editors.
+- Kapitel-/Szenenliste links und Inspector rechts bleiben dadurch stabil an ihrer Position.
+- Editorüberschrift, Statusauswahl und Formatierungsleiste bleiben sauber oberhalb des Textes, ohne ihn zu überdecken.
+- Die Statusleiste bleibt unterhalb des Editors erreichbar.
+- Scrollbars erhalten stabilen Platz, damit sich die Breite beim Scrollen nicht verschiebt.
+
+### 🧭 Manuskript-Arbeitsfläche
+
+- Die dreispaltige Manuskriptansicht besitzt auf Desktop jetzt eine definierte, an die Fensterhöhe angepasste Arbeitsfläche.
+- Lange Kapitel vergrößern nicht mehr die komplette Seite.
+- Seitenleiste, Editor und Inspector verwenden innerhalb dieser Arbeitsfläche jeweils ihre passende eigene Scrolllogik.
+- Auf kleinen Bildschirmbreiten fällt die Ansicht weiterhin auf normales Seiten-Scrolling zurück.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Änderung an Manuskriptinhalten, Autosave, Versionierung oder Sicherheitskopien.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.46.9
 
 ### ✒ Kompaktere Kapitel im Manuskript
