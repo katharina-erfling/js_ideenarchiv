@@ -6,6 +6,57 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.14.0
+
+### 🗂️ Kapitel & Szenen
+
+- Manuskripte können jetzt hierarchisch aus Kapiteln und untergeordneten Szenen aufgebaut werden.
+- Szenen können einem Kapitel zugeordnet oder ohne Kapitel geführt werden.
+- Kapitel und Szenen werden in der Manuskriptleiste entsprechend eingerückt dargestellt.
+- Manuskriptabschnitte können per Drag & Drop neu sortiert werden.
+- Szenen können per Drag & Drop direkt einem Kapitel zugeordnet werden.
+- Die Reihenfolge und Zuordnung werden dauerhaft im jeweiligen Romanprojekt gespeichert.
+
+### 🚦 Szenenstatus
+
+- Kapitel und Szenen besitzen jetzt einen eigenen Arbeitsstatus.
+- Verfügbare Status: „Idee“, „Geplant“, „Rohfassung“, „Überarbeiten“ und „Fertig“.
+- Der Status ist direkt in der Manuskriptleiste sichtbar.
+- Im Schreibeditor kann der Status ohne Öffnen eines zusätzlichen Dialogs geändert werden.
+
+### 📝 Szenennotizen
+
+- Jeder Manuskriptabschnitt besitzt weiterhin eine eigene Notiz.
+- Die Notiz ist jetzt direkt während des Schreibens in der rechten Kontextleiste verfügbar.
+- Änderungen an Szenennotizen werden automatisch gespeichert.
+- Szenennotizen werden gemeinsam mit dem Manuskriptabschnitt gesichert.
+
+### ✍️ Manuelle Wortzahlen
+
+- Schreibfortschritt kann jetzt zusätzlich manuell eingetragen werden.
+- Unterstützt werden „Heute geschrieben“ und „Manuskript steht jetzt bei“.
+- Einträge können einem Romanprojekt und einem Datum zugeordnet werden.
+- Optionale Notizen ermöglichen beispielsweise Hinweise auf abgeschlossene Kapitel oder externe Schreibsessions.
+- Die manuellen Einträge werden separat gespeichert und stehen für die kommenden Schreibstatistiken zur Verfügung.
+
+### 🛡️ Schutz vor Textverlust
+
+- Der Schreibeditor besitzt jetzt eine zusätzliche sofortige lokale Notfallsicherung.
+- Während des Tippens wird der aktuelle Text synchron als lokaler Sicherheitsentwurf gespeichert, noch bevor das reguläre Autosave abgeschlossen ist.
+- Das reguläre Autosave wurde beschleunigt und speichert nach kurzer Schreibpause in IndexedDB.
+- Zusätzlich erfolgt während des Schreibens regelmäßig eine automatische Sicherung.
+- Beim Wechseln von Abschnitten, beim Verlassen des Tabs und vor dem Schließen der Seite wird eine zusätzliche Speicherung angestoßen.
+- Wird nach einem unerwarteten Abbruch ein neuerer lokaler Entwurf gefunden, bietet die Anwendung beim nächsten Öffnen die Wiederherstellung an.
+- Nach erfolgreicher dauerhafter Speicherung wird die Notfallsicherung automatisch bereinigt.
+
+### 🕘 Sicherheitsversionen
+
+- Manuskriptabschnitte erhalten im Hintergrund zusätzliche Sicherheitsversionen.
+- Während längerer Schreibphasen werden in regelmäßigen Abständen ältere Textstände aufbewahrt.
+- Vor dem Löschen eines Manuskriptabschnitts wird automatisch eine Sicherheitsversion erstellt.
+- Pro Abschnitt werden die jüngsten Sicherheitsstände begrenzt aufbewahrt, damit die lokale Datenbank nicht unbegrenzt wächst.
+- Sicherheitsversionen werden zusammen mit der restlichen Autoren-Suite im Backup berücksichtigt.
+
 ## v0.13.0
 
 ### ✎ Schreibeditor
