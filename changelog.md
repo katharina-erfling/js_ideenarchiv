@@ -6,6 +6,35 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.18
+
+### 🔗 Buchzuordnung nur noch für die gesamte Story-Bibel
+
+Die Auswahl „Verfügbar in“ wurde aus jedem einzelnen
+Story-Bibel-Eintrag entfernt.
+
+Charaktere, Orte, Weltwissen und Notizen erben jetzt automatisch
+die Buchzuordnung ihrer Story-Bibel.
+
+### 📚 Direkte Mehrfachauswahl
+
+Unter „Freigabe“ der Story-Bibel wird nur noch festgelegt,
+zu welchen konkreten Büchern sie gehört.
+
+- direkte Mehrfachauswahl der Bücher
+- mindestens ein Buch erforderlich
+- keine Modi „Dieses Buch“, „Ganze Reihe“ oder „Universum“ mehr
+- Änderung der Story-Bibel-Zuordnung synchronisiert vorhandene
+  Einträge automatisch
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- keine Eintrags-Freigabe mehr im Eintragsdialog
+- Buch-Mehrfachauswahl auf Story-Bibel-Ebene
+- bestehende Einträge werden bei Änderungen synchronisiert
+- Ordner, Reiter und Inhalte bleiben erhalten
+
 ## v0.80.17
 
 ### 📁 Story-Bibel – Ordnernavigation vereinfacht
