@@ -6,6 +6,34 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.12
+
+### 🌳 Kategorien per Drag & Drop sortieren und verschachteln
+
+- Kategorien können direkt per Maus neu sortiert werden.
+- Drop oberhalb einer Kategorie → davor einsortieren.
+- Drop mittig → als Unterkategorie verschachteln.
+- Drop unterhalb → dahinter einsortieren.
+- Verschieben funktioniert auch über Hierarchieebenen hinweg.
+- Alte und neue Reihenfolge werden automatisch normalisiert.
+- Zielordner wird beim Verschachteln automatisch aufgeklappt.
+- zyklische oder ungültige Verschachtelungen werden verhindert.
+
+### 🎯 Visuelles Drop-Feedback
+
+- Linie oben → davor
+- grünliche Hervorhebung → darunter
+- Linie unten → dahinter
+- gezogene Kategorie leicht transparent
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- bestehendes Verschieben auf Hauptebene erhalten.
+- Ideen-Drag-&-Drop bleibt unberührt.
+- Reihenfolge persistent gespeichert.
+- keine Datenmigration notwendig.
+
 ## v0.80.11
 
 ### 🔎 Suchbare Kategorieauswahl bei „Neue Idee“
