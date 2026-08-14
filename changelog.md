@@ -6,6 +6,121 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.39.0
+
+### 🧭 Durchgängiger Buch-Workflow
+
+- Der Arbeitsweg innerhalb eines Buches wurde noch einmal als zusammenhängender Prozess überarbeitet.
+- Neben Ideen, Planung, Manuskript, Anhang und Buchdetails besitzt jedes Buch jetzt eine eigene Übersicht.
+- Die einzelnen Bereiche bleiben jederzeit frei erreichbar; der Workflow zwingt nicht zu einer starren linearen Reihenfolge.
+- Bereits geschriebene Kapitel können parallel zu noch groben Ideen und unfertigen Planungsblöcken existieren.
+
+### ⌂ Buchübersicht
+
+- Bücher besitzen jetzt einen eigenen Bereich „Übersicht“.
+- Die Übersicht zeigt den aktuellen Entwicklungsstand von Ideen über Planung und Schreiben bis zur Fertigstellung.
+- Sichtbar sind:
+  - Anzahl der buchbezogenen Ideen
+  - Anzahl der Planungsblöcke
+  - Anzahl der Kapitel und Szenen
+  - aktueller Wortstand
+  - zuletzt bearbeitete Manuskriptabschnitte
+  - Anzahl der verknüpften Story-Bibeln
+  - Anzahl direkter Buchverknüpfungen
+- Über „Weiterschreiben“ bzw. „Weiterarbeiten“ gelangt man direkt an die sinnvollste nächste Stelle.
+- Zuletzt bearbeitete Kapitel und Szenen können direkt aus der Übersicht geöffnet werden.
+
+### 📌 Nächster Schritt
+
+- Jedes Buch besitzt jetzt eine freie Notiz „Wo mache ich weiter?“.
+- Dort kann beispielsweise notiert werden, welcher Dialog als Nächstes geschrieben, welche Kontinuitätsfrage geprüft oder welcher Handlungsfaden weitergeführt werden soll.
+- Die Notiz wird automatisch lokal gespeichert.
+- Sie ist zusätzlich über die globale Buchsuche auffindbar.
+
+### 🧩 Planung wird feiner
+
+- Die Buchplanung unterstützt jetzt neben Kapiteltrennern auch eigene Szenentrenner.
+- Szenentrenner können frei auf der Planungswand eingefügt und per Drag & Drop verschoben werden.
+- Vor einzelnen Ideen oder Textblöcken kann direkt ein neuer Kapitel- oder Szenenbeginn eingesetzt werden.
+- Dadurch kann eine zunächst grobe Reihenfolge schrittweise in Kapitel und anschließend in Szenen verfeinert werden.
+
+### 🔄 Planung → Kapitel → Szenen → Manuskript
+
+- Die Übergabe der Buchplanung erzeugt jetzt eine echte Kapitel-/Szenenstruktur.
+- Kapiteltrenner werden zu Kapitelobjekten.
+- Darunter liegende Planungsbereiche werden als Szenen angelegt.
+- Szenentrenner bestimmen zusätzliche Szenengrenzen.
+- Auch eine noch sehr grobe Planung ohne manuell gesetzte Trenner kann weiterhin übergeben werden.
+- Bereits übertragene Planungsinhalte werden nicht erneut dupliziert.
+- Werden später neue Planungsblöcke ergänzt, können ausschließlich diese neuen Inhalte nachgereicht werden.
+- Bereits geschriebener Manuskripttext wird dabei nicht verändert.
+
+### 🚦 Status der Planungsblöcke
+
+- Jeder Planungsblock zeigt jetzt, wo er sich im Schreibprozess befindet.
+- Mögliche Anzeigen sind unter anderem:
+  - eingeplant
+  - im Manuskript
+  - Rohfassung
+  - überarbeiten
+  - geschrieben
+- Der Status wird aus den tatsächlich mit dem Planungsblock verbundenen Manuskriptabschnitten abgeleitet.
+- Dadurch ist auf der Planungswand direkt sichtbar, welche Ideen bereits im Text angekommen sind.
+
+### 📎 Story-Bibel direkt an Szenen
+
+- Manuskriptabschnitte können jetzt direkt mit Einträgen aus verknüpften Story-Bibeln verbunden werden.
+- Im Inspector steht dafür ein eigener Bereich „Story-Bibel“ zur Verfügung.
+- Durchsucht werden die für das aktuelle Buch relevanten Figuren, Orte, Weltinformationen und sonstigen Story-Bibel-Einträge.
+- Einträge können mit einem Klick an die aktuelle Szene bzw. das aktuelle Kapitel angehängt werden.
+- Verknüpfte Akten lassen sich direkt aus dem Inspector öffnen.
+- Verknüpfungen können wieder gelöst werden, ohne den Story-Bibel-Eintrag selbst zu verändern.
+- Beim Zusammenführen zweier Manuskriptabschnitte werden ihre Story-Bibel-Verknüpfungen zusammengeführt.
+
+### 📍 Schreibposition merken
+
+- Der Schreibeditor merkt jetzt zusätzlich die Cursorposition innerhalb jedes Manuskriptabschnitts.
+- Beim erneuten Öffnen eines Kapitels oder einer Szene versucht die Suite, an die zuletzt verwendete Textstelle zurückzukehren.
+- Die Position wird lokal gespeichert und ergänzt die bereits vorhandene Erinnerung an den zuletzt geöffneten Manuskriptabschnitt.
+- Dadurch kann nicht nur das richtige Kapitel, sondern auch die ungefähre Stelle innerhalb des Textes wiedergefunden werden.
+
+### 🛡️ Sicherere Strukturänderungen
+
+- Vor dem Verschieben eines Manuskriptabschnitts in der Kapitel-/Szenenstruktur wird jetzt automatisch ein Sicherheitsstand des betroffenen Abschnitts angelegt.
+- Die bereits vorhandenen Sicherheitsstände vor Teilen, Zusammenführen, Löschen und Wiederherstellen bleiben bestehen.
+- Dadurch sind nun auch Drag-&-Drop-Strukturänderungen besser abgesichert.
+
+### 🔎 Buchweite Suche
+
+- Zusätzlich zur Suche im aktuell geöffneten Abschnitt gibt es jetzt eine Suche über das gesamte Manuskript eines Buches.
+- Treffer werden nach Kapitel bzw. Szene gruppiert angezeigt.
+- Die Trefferanzeige zeigt einen Textausschnitt und die Anzahl der Fundstellen pro Manuskriptabschnitt.
+- Von einem Treffer kann direkt in den entsprechenden Abschnitt gesprungen werden.
+
+### 🔁 Buchweites Ersetzen
+
+- Suchbegriffe können jetzt über das gesamte Manuskript eines Buches hinweg ersetzt werden.
+- Vor einer solchen Massenänderung wird eine Bestätigung mit der Anzahl der betroffenen Treffer und Abschnitte angezeigt.
+- Vor jedem tatsächlich veränderten Manuskriptabschnitt wird automatisch ein eigener Sicherheitsstand erzeugt.
+- Erst danach erfolgt das Ersetzen.
+- Wortstände von Buch und Romanprojekt werden anschließend neu berechnet.
+
+### 📤 Manuskript-Export
+
+- Das komplette Buchmanuskript kann jetzt als TXT exportiert werden.
+- Zusätzlich steht ein HTML-Export mit grundlegender Kapitel- und Szenenstruktur zur Verfügung.
+- Exportiert werden ausschließlich Manuskriptüberschriften und Manuskripttext.
+- Interne Planungsdaten, Story-Bibel-Akten, Inspector-Notizen und andere Arbeitsinformationen werden nicht in das eigentliche Lesemanuskript geschrieben.
+- Der Export verändert keine gespeicherten Daten.
+
+### 🧱 Freier statt starrer Workflow
+
+- Die Suite behandelt Ideen, Planung und Manuskript weiterhin nicht als abgeschlossene Pflichtphasen.
+- Ein Buch kann bereits Manuskripttext enthalten, während andere Abschnitte noch als lose Idee existieren.
+- Planungsblöcke dürfen nach der ersten Manuskriptübergabe weiterwachsen.
+- Story-Bibel, Planung und Text bleiben parallel bearbeitbar.
+- Damit unterstützt die Autoren-Suite ausdrücklich einen Schreibprozess, der vom Groben immer weiter ins Feine geht.
+
 ## v0.38.0
 
 ### 📎 Verknüpfbare Anhänge & Story-Bibeln
