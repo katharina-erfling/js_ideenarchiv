@@ -6,6 +6,50 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.41.0
+
+### ✦ Reihen- & Universumskarte
+
+- Jedes Buch besitzt jetzt einen eigenen Bereich „Universum“.
+- Die Ansicht führt verbundene Bücher, Reiheninformationen, gemeinsame Story-Bibel-Akten und bandübergreifende Handlungsfäden an einer Stelle zusammen.
+- Bereits vorhandene Buchverknüpfungen werden automatisch für die Karte verwendet.
+- Bücher mit demselben Reihennamen werden zusätzlich gemeinsam dargestellt, auch wenn noch nicht jede Verbindung einzeln angelegt wurde.
+
+### 📚 Visuelle Buchkarte
+
+- Verbundene Bücher werden als horizontale Buchkarte dargestellt.
+- Vorhandene Cover werden direkt verwendet.
+- Das aktuell geöffnete Buch ist optisch hervorgehoben.
+- Zu jedem Buch werden Status, Reihe sowie Hinweise auf offene Handlungsfäden und Kontinuitätsnotizen angezeigt.
+- Ein Klick auf ein Buch öffnet direkt dessen Arbeitsbereich.
+- Neue Buchverknüpfungen können direkt aus der Universumskarte angelegt werden.
+
+### 🔗 Buchbeziehungen
+
+- Die Universumskarte besitzt eine eigene Übersicht aller direkten Verbindungen zwischen den dargestellten Büchern.
+- Beziehungstyp und vorhandene Notizen werden kompakt angezeigt.
+- Bestehende Verbindungen können direkt aus der Karte geöffnet und bearbeitet werden.
+
+### 📎 Gemeinsame Story-Bibel
+
+- Die Karte erkennt Story-Bibel-Einträge, die für mehrere Bücher des dargestellten Universums gelten.
+- Figuren, Orte, Weltwissen und andere gemeinsame Akten werden gesammelt angezeigt.
+- Angezeigt wird, für welche Bücher eine Akte gilt.
+- Ein Klick öffnet direkt die vollständige Story-Bibel-Akte.
+
+### 🧵 Bandübergreifende Handlungsfäden
+
+- Handlungsfäden, die mehrere Bücher verbinden, werden in einer eigenen Reihenansicht dargestellt.
+- Sichtbar sind Typ, Titel, beteiligte Bücher und aktueller Status.
+- Dadurch werden beispielsweise Geheimnisse oder Foreshadowing sichtbar, die in Band 1 beginnen und erst in einem späteren Band aufgelöst werden.
+- Ein Klick öffnet den vollständigen Handlungsfaden.
+
+### ⌂ Integration in den Buch-Workflow
+
+- Die Universumskarte ist als eigener Workflow-Tab direkt in jedem Buch erreichbar.
+- Zusätzlich besitzt die Buchübersicht einen direkten Sprung in den Universumsbereich.
+- Die Ansicht verwendet die bereits vorhandenen Daten und erzeugt keine getrennte zweite Reihenverwaltung.
+
 ## v0.40.0
 
 ### 🧵 Kontinuität & Handlungsfäden
