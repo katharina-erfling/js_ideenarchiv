@@ -6,6 +6,39 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.9
+
+### ✒ Kompaktere Kapitel im Manuskript
+
+- Kapitel und Szenen in der linken Manuskript-Navigation wachsen nicht mehr unnötig auf die verfügbare Höhe.
+- Die Dokumentliste richtet ihre Zeilen jetzt am tatsächlichen Inhalt aus.
+- Kapitel bleiben bewusst schmal und kompakt, damit man schnell durch viele Kapitel klicken kann.
+- Wortzahl und Status bleiben weiterhin sichtbar.
+- Szenen verwenden ebenfalls kompaktere Abstände.
+
+### 🗂️ Rechtsklick-Menü für Kategorien
+
+- Ein Rechtsklick auf eine Kategorie öffnet jetzt ein eigenes Kontextmenü.
+- Verfügbar sind:
+  - „Umbenennen“
+  - „Neue Unterkategorie“
+  - „Löschen“
+- „Umbenennen“ verändert nur den Namen der Kategorie.
+- „Neue Unterkategorie“ übernimmt die angeklickte Kategorie automatisch als übergeordneten Bereich.
+- „Löschen“ verwendet weiterhin die bestehenden Sicherheitsregeln.
+- Kategorie-Drag-&-Drop bleibt erhalten.
+
+### 🎛️ Kontextmenü
+
+- Das Menü öffnet sich an der Mausposition.
+- Am Bildschirmrand bleibt es automatisch innerhalb des sichtbaren Bereichs.
+- Klick außerhalb schließt das Menü wieder.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.46.8
 
 ### 🎨 Ruhigeres Farbsystem
