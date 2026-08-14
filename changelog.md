@@ -6,6 +6,62 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.16.0
+
+### ✒️ Romaneditor
+
+- Der bisherige einfache Schreibbereich wurde zu einem Rich-Text-Romaneditor erweitert.
+- Manuskripttexte können jetzt direkt formatiert werden.
+- Vorhandene reine Textabschnitte werden beim Öffnen automatisch editorfreundlich dargestellt und beim nächsten Speichern sicher in das neue Format überführt.
+- Die bestehende mehrstufige Autosave- und Notfallsicherung bleibt erhalten.
+
+### 🎨 Textformatierung
+
+- Fließtext, Kapitelüberschriften, Zwischenüberschriften und Zitate stehen als Absatzformate zur Verfügung.
+- Fett, Kursiv und Unterstrichen können direkt über die Editorleiste gesetzt werden.
+- Aufzählungen und nummerierte Listen werden unterstützt.
+- Szenentrenner können mit einer eigenen Aktion direkt in den Text eingefügt werden.
+- Der Fokusmodus bleibt auch mit der neuen Editorleiste nutzbar.
+
+### ⌕ Suchen & Ersetzen
+
+- Der Manuskripteditor besitzt jetzt eine eigene Suche.
+- `Strg/Cmd + F` öffnet die interne Suchen-und-Ersetzen-Leiste.
+- Alle Treffer im aktuellen Manuskriptabschnitt werden markiert.
+- Zwischen Treffern kann vor- und zurückgesprungen werden.
+- Einzelne Treffer oder alle Treffer können ersetzt werden.
+- Die Wort- und Zeichenzählung wird nach Änderungen direkt aktualisiert.
+
+### ✂️ Manuskript teilen
+
+- Kapitel und Szenen können direkt an der aktuellen Cursorposition geteilt werden.
+- Der Text vor der Cursorposition bleibt im bisherigen Abschnitt.
+- Der Text danach wird in einen neuen Manuskriptabschnitt übernommen.
+- Titel und Typ des neuen Abschnitts können beim Teilen festgelegt werden.
+- Vor dem Teilen wird automatisch eine Sicherheitsversion des ursprünglichen Textes erstellt.
+
+### 🔗 Abschnitte zusammenführen
+
+- Der aktuelle Manuskriptabschnitt kann mit dem vorherigen Abschnitt zusammengeführt werden.
+- Die Texte werden in ihrer Reihenfolge sicher kombiniert.
+- Szenennotizen und Verknüpfungen zur Planungswand werden beim Zusammenführen mitgenommen.
+- Vor dem Zusammenführen werden Sicherheitsversionen beider Ausgangstexte angelegt.
+- Erst nach erfolgreicher Sicherung wird der nicht mehr benötigte Ausgangsabschnitt entfernt.
+
+### 🗂️ Binder & Workflow
+
+- Der vorhandene Kapitel-/Szenen-Binder bleibt vollständig mit dem neuen Romaneditor verbunden.
+- Kapitel und Szenen können weiterhin hierarchisch organisiert und per Drag & Drop sortiert werden.
+- Teilen und Zusammenführen ermöglichen jetzt eine immer feinere Manuskriptstruktur direkt während des Schreibprozesses.
+- Die Verbindung zwischen Planungswand, Manuskriptstruktur und Schreibeditor bleibt erhalten.
+
+### 🛡️ Schreibsicherheit
+
+- Rich-Text-Inhalte werden ebenfalls von Notfallsicherung, Autosave und Sicherheitsversionen erfasst.
+- `Strg/Cmd + S` kann zusätzlich jederzeit eine sofortige Speicherung anstoßen.
+- Teilen und Zusammenführen sind bewusst nicht-destruktiv vorbereitet: Vor strukturellen Änderungen werden ältere Textstände gesichert.
+- Bestehende Manuskripte werden nicht automatisch überschrieben oder neu aufgebaut.
+
 ## v0.15.0
 
 ### 🧩 Planungswand
