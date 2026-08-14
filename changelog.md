@@ -6,6 +6,108 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.34.0
+
+### 🧪 Gründliche Stabilitätsrunde
+
+- Die komplette Autoren-Suite wurde nach Einführung der neuen Buch-Ebene noch einmal statisch auf Laufzeitfehler, fehlende UI-Ziele, doppelte IDs, doppelte Funktionen und veraltete Manuskriptpfade geprüft.
+- JavaScript-Syntax, permanente DOM-Referenzen und zentrale Navigationswege wurden erneut validiert.
+- Mehrere konkrete Fehler und Inkonsistenzen aus der neuen Buchintegration wurden behoben.
+- Diese Version ergänzt bewusst keine neue große Modulebene, sondern stabilisiert den Arbeitsfluss von Bibliothek, Romanprojekt und Schreibeditor.
+
+### ✒️ Schreibeditor
+
+- Ein fehlendes UI-Ziel für die Szenennotiz wurde ergänzt; dadurch kann das Öffnen eines Manuskriptabschnitts nicht mehr an der Szenennotiz-Darstellung scheitern.
+- Beim Wechsel zwischen Kapiteln und Szenen wird jetzt auf das vollständige Speichern des vorherigen Abschnitts gewartet.
+- Dadurch werden besonders schnelle Abschnittswechsel besser gegen konkurrierende Autosave-Vorgänge abgesichert.
+- Das zuletzt geöffnete Kapitel bzw. die zuletzt geöffnete Szene wird pro Buch gespeichert.
+- Beim erneuten Öffnen eines Buches landet man dadurch wieder im zuletzt verwendeten Manuskriptabschnitt.
+- Gibt es noch keinen gespeicherten letzten Abschnitt, wird der zuletzt bearbeitete Manuskriptabschnitt als Ausgangspunkt verwendet.
+- Die leere Schreibansicht spricht jetzt konsequent von Büchern statt von einem allgemeinen Romanprojekt.
+
+### 🚑 Crash-Recovery
+
+- Die Wiederherstellung eines lokalen Notfallentwurfs wurde korrigiert.
+- Wiederhergestellte Inspector-Daten wie Kurzinhalt, POV, Ort, Zeit, Konflikt, Figuren und Szenennotiz werden jetzt zuerst in das aktive Dokumentmodell übernommen.
+- Dadurch können diese Daten beim anschließenden Inspector-Aufbau nicht mehr versehentlich durch den älteren Datenbankstand überschrieben werden.
+- Der Speicherstatus bleibt während einer wiederhergestellten Fassung korrekt auf dem laufenden Autosave-Zustand, statt vorschnell wieder „Gespeichert“ anzuzeigen.
+
+### 📚 Bücherregal
+
+- Das Bücherregal wurde optisch stärker wie ein echtes Regal aufgebaut.
+- Bücher werden nach ihrem Romanprojekt gruppiert.
+- Bei vielen Büchern entstehen mehrere eigene Regalreihen statt eines unübersichtlichen Umbruchs auf einer einzigen Regalfläche.
+- Jedes Romanprojekt erhält im Regal einen kleinen Beschriftungsstreifen.
+- Buchstatus, Wortstand, Reihe und Band können direkt am Buchrücken erkennbar sein.
+- Kürzlich bearbeitete Bücher werden dezent hervorgehoben.
+- Die Buchrückenbreite reagiert weiterhin auf den Manuskriptumfang.
+- Die Schriftfarbe auf individuell gewählten Buchrückenfarben wird automatisch an helle bzw. dunkle Farben angepasst.
+
+### 🖼️ Cover & Buchgestaltung
+
+- Ein bereits gewähltes Cover kann jetzt wieder bewusst entfernt werden.
+- Das Dateifeld für Coverbilder wird beim erneuten Öffnen des Buchdialogs sauber zurückgesetzt.
+- Ein vorhandenes Cover bleibt weiterhin Bestandteil der Buchakte, ohne die konsistente Buchrücken-Darstellung im Regal aufzubrechen.
+
+### 📖 Buch-Schreibarbeitsplatz
+
+- Der aktuell geöffnete Band zeigt im Manuskript-Binder zusätzlich Reihe, Band, Untertitel und Status als Kontext.
+- Das Bücherregal und die Buchbearbeitung bleiben direkt aus dem Schreibeditor erreichbar.
+- Die Editor-Kopfzeile und Werkzeugleiste wurden für längere Schreibsitzungen stabiler angeheftet.
+- Auf kleineren Fenstern fällt die Oberfläche weiterhin auf eine flexiblere Darstellung zurück.
+
+### 🧩 Planungswand → Buch
+
+- Bei Romanprojekten mit mehreren Büchern wird das Zielbuch jetzt niemals stillschweigend geraten.
+- Stattdessen öffnet sich ein eigener Auswahl-Dialog.
+- Erst nach einer bewussten Auswahl werden die Planungsabschnitte in das Manuskript des gewünschten Bandes übertragen.
+- Bei genau einem vorhandenen Buch bleibt die direkte Übergabe erhalten.
+- Gibt es noch kein Buch, kann weiterhin automatisch ein erstes Buch für die Planung angelegt werden.
+- Vorhandener Manuskripttext wird bei der Übergabe weiterhin nicht überschrieben.
+
+### 🕘 Timeline bei mehreren Büchern
+
+- Die projektweite Timeline ist jetzt explizit buchbewusst.
+- Verknüpfte Szenen zeigen zusätzlich, aus welchem Buch sie stammen.
+- Die Position eines Manuskriptabschnitts wird innerhalb seines eigenen Buches berechnet.
+- Die Auswahl eines Manuskriptabschnitts in einem Timeline-Ereignis ist nach Büchern gruppiert.
+- Der Chronologie-Check vergleicht Manuskriptreihenfolgen jetzt innerhalb desselben Buches.
+- Dadurch entstehen bei Romanprojekten mit mehreren Bänden keine falschen Rückblenden-Warnungen nur aufgrund des Bandwechsels.
+
+### 📖 Romanprojekt-Dashboard
+
+- Offene Punkte berücksichtigen jetzt die neue Buch-Ebene.
+- Fehlt noch ein Buch, wird gezielt das Anlegen des ersten Bandes vorgeschlagen.
+- Existiert bereits ein Buch ohne Manuskript, führt der Hinweis direkt in das Bücherregal bzw. den Bucharbeitsbereich.
+- Zuletzt bearbeitete Manuskriptabschnitte zeigen jetzt auch ihren Buchtitel.
+- Auch Schreibaktivitäten werden mit dem zugehörigen Buchkontext verständlicher dargestellt.
+
+### 📦 Backup & Wiederherstellung
+
+- Die vollständige Backup-Wiederherstellung wurde für relationale Buch-, Projekt- und Manuskriptdaten gehärtet.
+- Bei einer vollständigen Wiederherstellung bleiben die ursprünglichen IDs erhalten.
+- Dadurch bleiben Verknüpfungen zwischen Ideen, Romanprojekten, Büchern, Manuskriptabschnitten und weiteren Modulen intakt.
+- Nach einer Wiederherstellung werden alle Suite-Daten vollständig neu aus IndexedDB geladen.
+- Alte aktive Projekt-, Buch- und Dokumentzeiger werden dabei zurückgesetzt, damit sie nicht auf nicht mehr vorhandene Datensätze zeigen.
+- Beim Zusammenführen eines Backups mit einem bestehenden Archiv werden verknüpfte Projekt-/Buchdaten nicht mehr mit neuen IDs importiert und dadurch unbemerkt beschädigt.
+- Im Zusammenführen-Modus werden stattdessen nur Ideen, Kategorien und Register ergänzt; für eine vollständige Suite-Wiederherstellung wird ausdrücklich der Ersetzen-Modus verwendet.
+
+### ✓ Systemcheck
+
+- Doppelte Buch-IDs werden jetzt zusätzlich erkannt.
+- Manuskriptabschnitte ohne Buchzuordnung werden als kritische Auffälligkeit gemeldet.
+- Manuskriptabschnitte mit nicht vorhandenem Buch werden erkannt.
+- Widersprüchliche Zuordnungen zwischen Buch und Romanprojekt werden erkannt.
+- Auch auffällige Buch-/Projektzuordnungen von Schreibsessions werden sichtbar gemacht.
+- Der Systemcheck bleibt rein diagnostisch und verändert keine Daten automatisch.
+
+### 🛡️ Datensicherheit
+
+- Bücher mit Manuskript bleiben weiterhin gegen versehentliches Löschen geschützt.
+- Romanprojekte mit vorhandenen Büchern bleiben ebenfalls vor unbemerktem Mitlöschen geschützt.
+- Teilen, Zusammenführen und Löschen von Manuskriptabschnitten aktualisieren weiterhin Buch- und Projektwortstände.
+- Die bestehende mehrstufige Autosave-, Notfallentwurf- und Versionsarchitektur bleibt vollständig erhalten.
+
 ## v0.33.0
 
 ### 📚 Bücher & Bibliothek
