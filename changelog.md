@@ -6,6 +6,43 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.7
+
+### 📊 Schreibstatistik pro Buch steuerbar
+
+- Jedes Buch besitzt jetzt die Einstellung „Schreibstatistik aufzeichnen“.
+- In „Entwurf“ und „Planung“ ist Tracking grundsätzlich deaktiviert.
+- Neue Bücher im Status „Schreiben“ oder „Überarbeitung“ aktivieren das Tracking standardmäßig.
+- Fertige bzw. veröffentlichte Bücher sind standardmäßig vom Tracking ausgeschlossen.
+- Der Schalter kann bei Schreib- und Überarbeitungsbüchern jederzeit ein- oder ausgeschaltet werden.
+- Ausgeschlossene Bücher erzeugen keine neuen Schreibsessions.
+- Bereits vorhandene Sessions ausgeschlossener Bücher werden in Statistiken nicht mehr mitgerechnet, aber nicht gelöscht.
+- Gesamtwortzahl, Projektaufschlüsselung, Schreibzeit, Serien, Tages-/Wochenwerte und Diagramme respektieren die Einstellung.
+- Der Statistikbereich zeigt an, wie viele Bücher vom Tracking ausgeschlossen sind.
+
+### ✍️ Manuelle Wortzahl-Einträge
+
+- Manuelle Wortzahl-Einträge können jetzt einem konkreten Buch zugeordnet werden.
+- Bücher mit deaktiviertem Tracking werden entsprechend gekennzeichnet.
+- Für ausgeschlossene Bücher können keine versehentlichen Statistik-Einträge erzeugt werden.
+- Projektweite Einträge ohne konkretes Buch bleiben möglich.
+
+### 📁 Ordner & Unterordner im Anhang
+
+- Story-Bibeln unterstützen frei benannte Ordner und verschachtelte Unterordner.
+- Neue Einträge können direkt einem Ordner zugeordnet werden.
+- Ordner können umbenannt und gelöscht werden.
+- Beim Löschen werden Einträge und Unterordner sicher eine Ebene nach oben verschoben.
+- Inhalte werden nicht mit dem Ordner gelöscht.
+- Geteilte Anhänge teilen automatisch auch ihre komplette Ordnerstruktur.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Bücher erhalten anhand ihres Status eine sinnvolle Tracking-Voreinstellung.
+- Keine Datenmigration erforderlich.
+- Vorhandene Schreibsessions und Anhang-Einträge werden nicht gelöscht.
+
 ## v0.47.6
 
 ### 🐛 Planungswand – eigentliche Render-Ursache behoben
