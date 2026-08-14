@@ -6,6 +6,40 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.5
+
+### 🗂️ Kategorien per Drag & Drop verschieben
+
+- Kategorien können jetzt direkt im Kategorienbaum per Drag & Drop verschoben werden.
+- Wird eine Kategorie auf eine andere Kategorie gezogen, wird sie zu deren Unterkategorie.
+- Beispiel: „Glaube & Religion“ kann direkt auf „Gesellschaft“ gezogen werden.
+- Enthaltene Ideen und Unterkategorien bleiben vollständig erhalten.
+- Die Zielkategorie wird nach dem Verschieben automatisch aufgeklappt.
+
+### ↥ Zurück auf die Hauptebene
+
+- Während eine Kategorie gezogen wird, erscheint die Dropzone „Auf Hauptebene verschieben“.
+- Eine Unterkategorie kann dort abgelegt werden, um wieder zu einer Hauptkategorie zu werden.
+
+### 🛡️ Schutzregeln
+
+- Keine Kategorie kann auf sich selbst gezogen werden.
+- Keine Kategorie kann in einen ihrer eigenen Unterordner verschoben werden.
+- Ungültige Dropziele werden nicht akzeptiert.
+- Das Drag & Drop von Ideenzetteln bleibt unverändert erhalten.
+
+### 🎛️ Bedienung
+
+- Gezogene Kategorien werden optisch abgeschwächt.
+- Gültige Zielkategorien werden hervorgehoben.
+- Kategoriezeilen zeigen einen Greif-Cursor.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Kategoriehierarchie und Reihenfolge werden nach dem Verschieben gespeichert.
+- Keine Datenbank- oder Backupänderung notwendig.
+
 ## v0.46.4
 
 ### 🗂️ Kategorien wieder direkt anklickbar
