@@ -6,6 +6,32 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.46.8
+
+### 🎨 Ruhigeres Farbsystem
+
+- Dekorative Rot-/Rosatöne aus normalen Ideen- und Auswahlzuständen entfernt.
+- Normale Zettel verwenden Creme, Salbei, Petrolblau und Flieder.
+- Aktive Auswahl wird mit Petrol/Salbei hervorgehoben.
+- Aktive Kategorien verwenden einen ruhigen Salbeiton.
+- Dekorative Badges und UI-Akzente wurden entsprechend angepasst.
+- Rot/Rosa bleibt für echte Warnungen, Fehler, Löschen und exakte Duplikate reserviert.
+- Gelb/Ocker bleibt für „prüfen / möglicherweise ähnlich“.
+
+### 🗂️ Kategorien bearbeiten & löschen besser auffindbar
+
+- Jede Kategorie besitzt jetzt rechts einen Drei-Punkte-Button.
+- Darüber kann die Kategorie direkt bearbeitet werden.
+- Im Bearbeitungsdialog ist „🗑 Kategorie löschen“ klar sichtbar.
+- Enthaltene Ideen werden beim Löschen weiterhin geschützt.
+- Kategorien mit Unterkategorien müssen zunächst umsortiert werden, damit kein ganzer Zweig versehentlich verloren geht.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenbank- oder Backupänderung notwendig.
+- Gefahren-/Fehlerfarben wurden absichtlich nicht überschrieben.
+
 ## v0.46.7
 
 ### ☑ Mehrfachauswahl mit Shift
