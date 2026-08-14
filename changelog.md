@@ -6,6 +6,228 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.73.0
+
+### 📊 Manuscript Analysis Studio
+
+- Neuer eigener Buch-Reiter „Analyse“.
+- Strukturelle Manuskriptanalyse auf Basis vorhandener Daten.
+- Keine Qualitätsbewertung oder vorgeschriebenen Idealwerte.
+
+### ⌂ Analyse-Übersicht
+
+Kennzahlen:
+
+- Szenenanzahl
+- Szenenwörter
+- durchschnittliche Szenenlänge
+- Szenenmedian
+- Kapitelanzahl
+- Dialog-Näherung
+
+Direkte Übersichten für:
+
+- POV
+- Figuren
+- Orte
+- strukturelle Hinweise
+
+### 📏 Szenenlängen
+
+Je Szene:
+
+- Titel
+- Wortzahl
+- POV
+- Ort
+- Status
+- relative Länge
+
+Beschreibende Einordnung anhand des eigenen Szenenmedians:
+
+- leer
+- kurz
+- typisch
+- lang
+
+### ▤ Kapitelanalyse
+
+Je Kapitel:
+
+- Wortumfang
+- enthaltene Szenen
+- unterschiedliche POVs
+- unterschiedliche Orte
+
+### 👁 POV-Analyse
+
+Je POV:
+
+- Szenen
+- Szenenanteil
+- Wortumfang
+- längste Abwesenheit
+
+Szenen ohne POV bleiben sichtbar.
+
+### 👤 Figurenpräsenz
+
+Je Figur:
+
+- Anzahl Auftritte
+- Szenenanteil
+- Wortumfang
+- längste Pause zwischen Auftritten
+
+### ⌖ Ortsverteilung
+
+Je Schauplatz:
+
+- Szenen
+- Anteil
+- Wörter
+- längste Pause
+
+### 🧩 Plotlinienanalyse
+
+Je Plotlinie:
+
+- Szenenzahl
+- Verteilung über das Manuskript
+- längste Pause
+- Typ
+- Status
+
+Mit visuellem Sequenzband.
+
+### 🧵 Handlungsfäden
+
+Je Faden:
+
+- Szenenbeats
+- Positionen im Manuskript
+- längste Pause
+- Typ
+- Status
+
+### 〰 Pacing-Proxy
+
+Strukturelle Näherung aus:
+
+- Szenenlänge
+- Dialoganteil
+- Satzlänge
+- Figuren
+- Plotlinien
+- Handlungsfäden
+
+Anzeige:
+
+- bewegter
+- mittel
+- ruhiger
+
+Keine Qualitätsbewertung.
+
+### 📈 Pacing-Verlauf
+
+- visueller Rhythmusstreifen über alle Szenen
+- direkte Navigation zur Szene
+- detaillierte Szenentabelle
+
+### 💬 Dialog-Näherung
+
+- technische Erkennung über typische Anführungszeichen
+- ausdrücklich als Näherungswert gekennzeichnet
+
+### ◇ Struktur-Check
+
+Hinweise unter anderem für:
+
+- leere Szene
+- POV offen
+- Ort offen
+- starke Längenausschläge
+- sehr kurze Szenen
+- lange POV-Pausen
+- Fäden ohne Beats
+- lange Fadenpausen
+- Plotlinien ohne Szenen
+- starke Kapitel-Längenausschläge
+
+### 🔎 Filter
+
+- Teil
+- Szenenstatus
+- leere Szenen ein/aus
+
+Alle Analysen reagieren auf den aktuellen Filter.
+
+### § Teilanalyse
+
+Unterstützt:
+
+- alle Teile
+- einzelner Teil
+- Szenen ohne Teil
+
+### ⇩ CSV-Export
+
+Exportiert unter anderem:
+
+- Szene
+- Kapitel
+- Teil
+- Status
+- Wörter
+- POV
+- Ort
+- Figuren
+- Plotlinien
+- Fäden
+- Satzlänge
+- Dialoganteil
+- offene Revisionen
+
+### ↗ Navigation
+
+Direkt aus der Analyse erreichbar:
+
+- Manuskriptabschnitte
+- Plotting Studio
+- Handlungsfäden
+- Manuskript
+
+### 🔧 Reliability
+
+Workflow-Steuerung vereinheitlicht für:
+
+- Plotting
+- Calendar
+- Codex
+- Analysis
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Analysis-Routing geprüft
+- Szenenlängenanalyse geprüft
+- Kapitelaggregation geprüft
+- POV-Verteilung geprüft
+- Figurenpräsenz geprüft
+- Ortsverteilung geprüft
+- Plotlinienanalyse geprüft
+- Fadenanalyse geprüft
+- Pacing-Proxy geprüft
+- Strukturhinweise geprüft
+- Filter geprüft
+- CSV-Export geprüft
+- direkte Navigation geprüft
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen statischen Buttons/Formulare
+
 ## v0.72.0
 
 ### 🧠 Codex / Wissensnetz 3.0
