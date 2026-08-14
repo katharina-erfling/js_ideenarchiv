@@ -6,6 +6,54 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.13.0
+
+### ✎ Schreibeditor
+
+- „Schreiben“ ist jetzt als echter Arbeitsbereich der Autoren-Suite nutzbar.
+- Der Schreibbereich arbeitet direkt mit den vorhandenen Romanprojekten zusammen.
+- Zwischen Romanprojekten kann direkt im Editor gewechselt werden.
+- Jedes Projekt besitzt ein eigenes Manuskript mit beliebig vielen Kapiteln und Szenen.
+- Manuskriptabschnitte können angelegt, benannt, bearbeitet und wieder gelöscht werden.
+- Titel und Text eines Abschnitts werden direkt im Schreibbereich bearbeitet.
+
+### 💾 Autosave
+
+- Änderungen am Manuskript werden automatisch nach kurzer Schreibpause gespeichert.
+- Der aktuelle Speicherstatus wird direkt im Editor angezeigt.
+- Wortzahlen der einzelnen Abschnitte werden mitgespeichert.
+- Der Gesamtwortstand eines Romanprojekts wird automatisch aus allen Manuskriptabschnitten berechnet.
+- Der aktuelle Wortstand wird gleichzeitig in das zugehörige Romanprojekt übernommen.
+
+### 📊 Wortzahlen & Schreibsessions
+
+- Wort- und Zeichenzahl des aktuellen Abschnitts werden live angezeigt.
+- Die Gesamtwortzahl des Manuskripts ist jederzeit sichtbar.
+- Ein vorhandenes Projekt-Wortziel wird als Fortschrittsanzeige im Schreibbereich dargestellt.
+- Beim Schreiben wird im Hintergrund eine Schreibsession begonnen.
+- Schreibsessions speichern Start- und Endwortzahl, Nettoveränderung und Dauer als Grundlage für die späteren ausführlichen Schreibstatistiken.
+- Die Nettoveränderung der aktuellen Session wird bereits während des Schreibens angezeigt.
+
+### 🗂️ Manuskriptnavigation
+
+- Kapitel und Szenen erscheinen in einer eigenen linken Manuskriptleiste.
+- Zu jedem Abschnitt werden Typ und aktuelle Wortzahl angezeigt.
+- Ein Klick wechselt direkt zwischen den Manuskriptabschnitten.
+- Die Manuskriptleiste zeigt zusätzlich die Gesamtwortzahl des Projekts.
+
+### 📝 Projektkontext
+
+- Während des Schreibens bleibt das zugehörige Romanprojekt in einer eigenen Kontextleiste sichtbar.
+- Prämisse, Stimmung, Figuren, Orte und Planungsnotizen können beim Schreiben überblickt werden.
+- Dadurch muss für zentrale Planungsinformationen nicht ständig in die Projektverwaltung zurückgewechselt werden.
+
+### ◫ Fokusmodus
+
+- Der Schreibeditor besitzt einen eigenen Fokusmodus.
+- Im Fokusmodus werden Manuskriptnavigation und Projektkontext ausgeblendet.
+- Der eigentliche Textbereich wird verbreitert und ruhiger dargestellt.
+- Der Fokusmodus kann jederzeit wieder verlassen werden.
+
 ## v0.12.0
 
 ### ▤ Romanprojekte
