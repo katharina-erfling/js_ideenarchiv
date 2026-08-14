@@ -6,6 +6,43 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.12.0
+
+### ▤ Romanprojekte
+
+- „Romanprojekte“ ist jetzt als eigene Planungszentrale für konkrete Bücher nutzbar.
+- Projekte können direkt angelegt oder aus einer bestehenden Romanidee erzeugt werden.
+- Arbeitstitel, Status, Genre, Prämisse, Stimmung und Zielwortzahl werden zentral im Projekt verwaltet.
+- Projekte besitzen die Status „Planung“, „Schreiben“, „Überarbeitung“, „Pausiert“ und „Abgeschlossen“.
+- Eine eigene Projektübersicht zeigt alle Bücher als papierartige Projektkarten mit Planungsstand und Wortziel.
+
+### 🗂️ Projektzentrale
+
+- Jedes Romanprojekt besitzt einen eigenen Arbeitsbereich.
+- Die Projektzentrale gliedert sich in Übersicht, Kapitel & Szenen, Figuren, Orte, Planungsnotizen und Ideenzettel.
+- Die Übersicht zeigt zentrale Projektdaten und den aktuellen Umfang der einzelnen Planungsbereiche.
+- Zielwortzahl und aktueller Wortstand sind bereits als Grundlage für den kommenden Schreibbereich vorbereitet.
+
+### 🧱 Planung
+
+- Kapitel und Szenen können als erste Strukturelemente angelegt und bearbeitet werden.
+- Figuren erhalten einen eigenen Planungsbereich mit Rolle und freien Notizen.
+- Orte können separat mit Bedeutung und Detailnotizen gesammelt werden.
+- Freie Planungsnotizen lassen sich unabhängig von Figuren und Struktur verwalten.
+- Alle Planungselemente werden direkt innerhalb des jeweiligen Romanprojekts gespeichert.
+
+### 🔗 Verknüpfungen
+
+- Beim Überführen einer Romanidee werden Prämisse, Genre, Stimmung und verknüpfte Ideenzettel übernommen.
+- Die Verbindung zwischen ursprünglicher Romanidee und Romanprojekt bleibt erhalten.
+- Übernommene Ideenzettel werden in der Projektzentrale gemeinsam angezeigt.
+- Wird ein Projekt gelöscht, kann die ursprüngliche Romanidee später erneut in ein Projekt überführt werden.
+
+### ✎ Vorbereitung Schreiben
+
+- Romanprojekte besitzen bereits eine direkte Aktion zum zukünftigen Schreibbereich.
+- Projekt-ID, Wortziel, Struktur und Planungsdaten bilden die Grundlage für Manuskript, Kapitel, Szenen und Schreibstatistiken der nächsten Ausbaustufe.
+
 ## v0.11.0
 
 ### ▱ Romanideen
