@@ -6,6 +6,38 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.3
+
+### 🔗 Roman-/Buchverknüpfungen direkt auf Ideenzetteln sichtbar
+
+- Verknüpfte Bücher bzw. Romanprojekte werden jetzt direkt in der Ideenübersicht angezeigt.
+- Ein Buch erscheint als dezentes Badge mit Buchtitel.
+- Bei mehreren Büchern wird das erste Buch plus Anzahl weiterer Verknüpfungen angezeigt.
+- Nur auf Projektebene verknüpfte Ideen erhalten ein Projekt-Badge.
+- Hover zeigt die vollständigen Verknüpfungen.
+- Klick auf ein Badge öffnet direkt Buch oder Romanprojekt.
+- Verknüpfungsfarben verwenden Petrol/Salbei bzw. Blau statt Warnfarben.
+
+### 🔎 Nach Romanprojekt oder Buch filtern
+
+- Im Filterdialog gibt es jetzt „Verknüpft mit“.
+- Romanprojekte und einzelne Bücher können gewählt werden.
+- Der Filter lässt sich mit Kategorie, Suche, Favoriten und weiteren Filtern kombinieren.
+- Projektfilter berücksichtigen auch Ideen, die über ein Buch des Projekts verknüpft sind.
+- Die Trefferanzeige nennt den aktiven Projekt-/Buchfilter.
+
+### 🖱️ Rechtsklick auf Ideenzettel korrigiert
+
+- Konflikt zwischen zwei gleichzeitig gesetzten Rechtsklick-Handlern behoben.
+- Rechtsklick öffnet jetzt zuverlässig das Aktionsmenü.
+- Mehrfachauswahl über Shift/Strg und Auswahlkreis bleibt erhalten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Bestehende Projekt- und Buchverknüpfungen werden direkt weiterverwendet.
+
 ## v0.47.2
 
 ### 🔗 Ideen direkt mit Romanen & Büchern verknüpfen
