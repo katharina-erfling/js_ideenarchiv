@@ -6,6 +6,27 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.3
+
+### 🧭 Navigation Hotfix & konstante Seitenleiste
+
+- Hauptnavigation mit fester zentraler Routing-Tabelle neu abgesichert.
+- Alle Hauptbereiche besitzen eine definierte Route.
+- Seitenleiste und Hamburger-Menü verwenden dieselbe Navigation.
+- Navigationsbuttons zusätzlich direkt gebunden.
+- Globale Event-Delegation bleibt als Fallback bestehen.
+- Logo/Home verwendet dieselbe Dashboard-Route.
+- Aktiver Bereich wird in der Navigation hervorgehoben.
+- Ideenarchiv ersetzt die Suite-Navigation nicht mehr.
+- Suite-Navigation bleibt dauerhaft sichtbar.
+- Ideenarchiv erhält darunter eine eigene Kontextnavigation.
+- Kategorien, Statistik, Papierkorb und Schnellregister bleiben vollständig erhalten.
+- Suite-Navigation kompakter gestaltet.
+- JavaScript-Syntax geprüft.
+- keine fehlenden statischen UI-Referenzen.
+- keine doppelten HTML-IDs.
+- keine doppelten Funktionsdefinitionen.
+
 ## v0.80.2
 
 ### 🎨 Schnellregister & Kategorienbaum
