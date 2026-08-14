@@ -6,6 +6,161 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.76.0
+
+### 📦 Compile & Publishing Studio 2.0
+
+Der Compile-Bereich wurde deutlich erweitert.
+
+### 🧩 Publikationsstruktur pro Profil
+
+Für jedes Compile-Profil kann jetzt einzeln festgelegt werden, welche Manuskriptbestandteile tatsächlich veröffentlicht werden.
+
+Pro Teil, Kapitel und Szene:
+
+- im Export enthalten / ausgeschlossen
+- eigener Exporttitel
+- Manuskripttitel bleibt unverändert
+- für Teile und Kapitel kann ein Seitenumbruch erzwungen werden
+
+Damit können beispielsweise:
+
+- Bonuskapitel nur in einer Sonderausgabe erscheinen
+- interne Szenen aus der Veröffentlichung ausgeschlossen werden
+- Arbeitsüberschriften intern erhalten bleiben
+- schönere Kapitelüberschriften nur im Export verwendet werden
+
+### Aa Exporttitel
+
+Jeder Manuskriptbestandteil kann einen profilabhängigen Exporttitel erhalten.
+
+Beispiel:
+
+Interner Szenentitel:
+
+`Konfrontation mit Ardan – Version 3`
+
+Exporttitel:
+
+`Der Schwur`
+
+Die Änderung betrifft ausschließlich die Ausgabe.
+
+### 👁 Erweiterte Compile-Vorschau
+
+Neu ist eine echte Textvorschau der zusammengeführten Ausgabe.
+
+Sie zeigt die ersten Zeilen in der Reihenfolge, in der Frontmatter, Manuskript und Backmatter zusammengeführt werden.
+
+Die Vorschau kann direkt kopiert werden.
+
+### 🎛 Format-Overrides
+
+Ein Compile-Profil kann einzelne Abweichungen je Ausgabeformat besitzen.
+
+Unterstützt werden:
+
+- EPUB
+- DOCX
+- PDF
+- HTML
+- RTF
+- Markdown
+- TXT
+
+Je Format können insbesondere überschrieben werden:
+
+- Seitengröße
+- Schrift-Grundtyp
+
+Wenn keine Abweichung gesetzt ist, gilt der gemeinsame Profilstandard.
+
+### ↵ Individuelle Seitenumbrüche
+
+Teile und Kapitel können unabhängig von der allgemeinen Profileinstellung einen Seitenumbruch erzwingen.
+
+### 🚫 Selektiver Export
+
+Ausgeschlossene Manuskriptbestandteile werden vom Compile-Plan entfernt.
+
+Ist ein übergeordnetes Kapitel ausgeschlossen, werden dessen Szenen ebenfalls nicht veröffentlicht.
+
+Das eigentliche Manuskript bleibt vollständig erhalten.
+
+### 📋 Exportverlauf
+
+Das Compile Studio protokolliert lokal die letzten Exporte eines Buchs.
+
+Gespeichert werden:
+
+- Format
+- Dateiname
+- verwendetes Compile-Profil
+- Wortzahl
+- Zeitpunkt
+
+Der Verlauf wird vom bestehenden Backup erfasst.
+
+### 📖 EPUB
+
+Berücksichtigt jetzt zusätzlich:
+
+- selektive Publikationsstruktur
+- Exporttitel
+- profilabhängige Szenentitel
+- Format-Overrides
+
+### 📝 DOCX
+
+Berücksichtigt zusätzlich:
+
+- ausgeschlossene Kapitel/Szenen
+- Exporttitel
+- individuelle Seitenumbrüche
+- Format-Overrides
+
+### 📄 PDF
+
+Berücksichtigt zusätzlich:
+
+- Publikationsstruktur
+- Exporttitel
+- individuelle Seitenumbrüche
+- formatabhängige Seitengröße und Schrift
+
+### HTML / RTF / Markdown / TXT
+
+Auch diese Formate greifen auf die erweiterte Compile-Struktur zurück.
+
+### 💾 Datenmodell
+
+Compile-Profile enthalten jetzt zusätzlich:
+
+- `documentRules`
+- `formatOverrides`
+
+Das Compile Studio enthält zusätzlich:
+
+- `exportHistory`
+
+Bestehende v0.75.0-Profile werden automatisch ergänzt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Migration bestehender Compile-Profile geprüft
+- selektive Dokumentregeln integriert
+- Eltern-/Szenen-Ausschlusslogik integriert
+- Exporttitel integriert
+- individuelle Seitenumbrüche integriert
+- Format-Overrides integriert
+- Textvorschau integriert
+- Exportverlauf integriert
+- EPUB/DOCX/PDF/HTML/RTF/Markdown/TXT-Routing geprüft
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionsdefinitionen
+
 ## v0.75.0
 
 ### 📦 Compile & Publishing Studio
