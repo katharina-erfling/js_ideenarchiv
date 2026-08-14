@@ -6,6 +6,164 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.68.1 – Roadmap v0.67 nachgeholt
+
+### 🗂️ Manuscript Navigator
+
+- Roadmap-Punkt v0.67 nach v0.68 nachgeholt.
+- Technische Versionsnummer v0.68.1, damit Versioning & Snapshots vollständig erhalten bleiben.
+
+### 🌳 Neue Manuskripthierarchie
+
+- Buch
+  - Teil
+    - Kapitel
+      - Szene
+
+Weiterhin möglich:
+
+- Kapitel ohne Teil
+- Szenen ohne Kapitel
+
+### § Neuer Dokumenttyp „Teil“
+
+- Teile können Kapitel enthalten.
+- Kapitel können weiterhin frei stehen.
+- Teile können eigenen Text besitzen, müssen aber nicht.
+
+### 🧲 Drag & Drop
+
+Unterstützt:
+
+- Szene → Kapitel
+- Kapitel → Teil
+- Teile sortieren
+- Kapitel innerhalb ihrer Ebene sortieren
+- Szenen innerhalb eines Kapitels sortieren
+
+Ungültige Verschachtelungen werden verhindert.
+
+### ▾ Ein-/Ausklappen
+
+- Teile und Kapitel einklappbar.
+- Zustand pro Buch gespeichert.
+- Suche/Filter zeigen Treffer trotzdem vollständig.
+
+### 🔎 Navigator-Suche
+
+Durchsucht unter anderem:
+
+- Titel
+- Notizen
+- Kurzinhalt
+- Ziel / Konflikt
+- Ergebnis
+- Stimmung
+- POV
+- Ort
+- Faden
+- Zeit
+- Status
+- Figuren
+
+### ⌕ Filter
+
+- Typ
+- Status
+- POV
+- Ort
+- Handlungsstrang
+- nur offene Revisionen
+
+### ☰ Strukturansicht
+
+- echte Baumstruktur
+- Hierarchieeinrückung
+- Wortzahl
+- Status
+- Revisionen
+- POV
+- Ort
+- Faden
+- Story-Datum
+
+### ▦ Kartenansicht
+
+- visuelle Manuskriptkarten
+- Kurzinhalt / Notiz / Vorschau
+- Status
+- Wortzahl
+- POV
+- Ort
+- Faden
+- Revisionen
+
+### ⌘ Meta-Ansicht
+
+Kompakte Übersicht über:
+
+- Abschnitt
+- Status
+- POV
+- Ort
+- Faden
+- Revisionen
+- Wortzahl
+
+### ↔ Referenz-/Split-Ansicht
+
+- zweiten Abschnitt parallel öffnen
+- per ↔ oder Ctrl/Cmd/Alt + Klick
+- Haupteditor bleibt editierbar
+- Referenzansicht zunächst bewusst read-only
+- Grundlage für späteren echten Multi-Editor-Split
+
+### ✂ Teilen & Zusammenführen
+
+- Split kennt jetzt auch „Teil“.
+- Elternstruktur bleibt sinnvoll erhalten.
+- Zusammenführen nur noch mit gleichartigen Geschwisterabschnitten derselben Ebene.
+
+### 🗑 Löschen
+
+- Kinder werden beim Löschen eines Elternabschnitts nicht gelöscht.
+- Sie werden freigestellt.
+- tiefere Unterstruktur bleibt erhalten.
+
+### 📦 Export
+
+Neue Teil-Ebene berücksichtigt bei:
+
+- Markdown
+- Text
+- HTML
+- DOCX
+- RTF
+- PDF
+- EPUB
+
+### 📸 Snapshot-Kompatibilität
+
+- v0.68 bleibt vollständig enthalten.
+- Snapshots erkennen jetzt auch „Teil“.
+- Strukturänderungen bleiben durch Sicherheits-Snapshots geschützt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Teil → Kapitel → Szene geprüft
+- rekursive Reihenfolge geprüft
+- Parent-Auswahl geprüft
+- Drag-&-Drop-Regeln geprüft
+- Suche und Filter geprüft
+- Struktur-, Karten- und Meta-Ansicht geprüft
+- Split-/Referenzansicht geprüft
+- Snapshot-Kompatibilität geprüft
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.68.0
 
 ### 📸 Versioning & Snapshots
