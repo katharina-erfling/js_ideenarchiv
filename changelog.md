@@ -6,6 +6,54 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.17
+
+### 📁 Story-Bibel – Ordnernavigation vereinfacht
+
+Die bisher sichtbare „Wurzelebene“ wurde entfernt.
+
+Jetzt gilt:
+
+- ein neuer Reiter startet ohne vorgegebenen Ordner
+- links steht zunächst nur „Ordner“ und „+ Ordner“
+- solange kein Ordner angelegt wurde, erscheint nur ein dezenter Hinweis
+- Einträge ohne Ordner werden direkt im Reiter angezeigt
+- erst selbst angelegte Ordner erscheinen in der Liste
+
+### ↩ Rückkehr aus einem Ordner
+
+Wenn ein Ordner geöffnet ist, erscheint:
+
+> ← Alle [Reitername]
+
+Damit gelangt man wieder zur normalen Ansicht des jeweiligen Reiters.
+
+### 🔤 Lesbarkeit verbessert
+
+Vergrößert wurden unter anderem:
+
+- Überschrift „Ordner“
+- Ordnernamen
+- Eintragszahlen
+- Ordneraktionen
+- Breadcrumb
+- Bereichs-/Template-Hinweise
+
+Die Ordnerspalte wurde außerdem etwas breiter.
+
+### 🧭 Reiterbezogene Ordner
+
+Ordner auf oberster Ebene werden sauber dem jeweiligen Story-Bibel-Reiter zugeordnet.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- bestehende Ordner und Unterordner bleiben erhalten
+- Einträge ohne Ordner bleiben erhalten
+- Umbenennen/Löschen bestehender Ordner bleibt möglich
+- Unterordner bleiben möglich
+- keine Datenmigration notwendig
+
 ## v0.80.16
 
 ### 📚 Bucheinstieg öffnet immer das Buch-Dashboard
