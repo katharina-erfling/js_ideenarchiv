@@ -6,6 +6,24 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.5
+
+### 🧩 Planungswand – Ideenübernahme repariert
+
+- „Auf Planungswand“ legt die gewählte Idee jetzt zuverlässig in die Buchplanung.
+- Nach der Übernahme wird die Planungsansicht explizit geöffnet und gerendert.
+- Bestehende Verknüpfungen mit älteren Zahl-/Text-IDs werden robust erkannt.
+- Bereits geplante Ideen werden unabhängig vom internen ID-Typ erkannt.
+- Die Planungswand erzwingt bei aktivem Planungstab eine sichtbare Arbeitsfläche.
+- Falls das Rendern scheitert, erscheint statt einer leeren braunen Fläche eine Fehlermeldung mit „Planung erneut laden“.
+- Gespeicherte Planungsdaten werden bei einem Darstellungsfehler nicht verändert.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Bestehende Buch-, Projekt- und Ideenverknüpfungen bleiben erhalten.
+
 ## v0.47.4
 
 ### 🔗 Verknüpfungen auf Ideenzetteln sichtbar korrigiert
