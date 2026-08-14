@@ -6,6 +6,58 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.27.0
+
+### 📖 Romanprojekt-Dashboard
+
+- Die bisherige schlichte Projektübersicht wurde zu einer echten Roman-Zentrale ausgebaut.
+- Beim Öffnen eines Romanprojekts ist jetzt sofort sichtbar, wie weit Planung, Manuskript, Figuren, Orte und Verknüpfungen gewachsen sind.
+- Prämisse, Stimmung und Herkunft aus einer Romanidee bleiben direkt im Dashboard sichtbar.
+- Der aktuelle Manuskriptwortstand wird automatisch aus den vorhandenen Kapiteln und Szenen berechnet.
+- Ein vorhandenes Wortziel wird als große Fortschrittsanzeige dargestellt.
+- Bereits heute geschriebene Wörter werden direkt beim Projektfortschritt angezeigt.
+
+### ⚡ Schnellzugriffe
+
+- Vom Dashboard aus kann direkt weitergeschrieben werden.
+- Planungswand, Figurenakten und Timeline sind mit einem Klick erreichbar.
+- Projekteinstellungen können unmittelbar geöffnet werden.
+- Recherche und Inspiration des aktuellen Projekts lassen sich direkt aus den Kennzahlen öffnen.
+- Zuletzt bearbeitete Manuskriptabschnitte führen direkt zurück in den Schreibeditor.
+
+### 📊 Projekt auf einen Blick
+
+- Zentrale Kennzahlen zeigen Planungsblöcke, Figuren, Orte, Ideenzettel, Recherche und Inspiration.
+- Figuren werden als kleine visuelle Cast-Übersicht mit Portrait und Rolle dargestellt.
+- Die zuletzt bearbeiteten Manuskriptabschnitte zeigen Typ, Wortzahl und aktuellen Arbeitsstatus.
+- Letzte Schreibaktivitäten zeigen Wortveränderung, Datum, betroffenen Abschnitt und – sofern vorhanden – die Schreibdauer.
+
+### 🧭 Offene Punkte
+
+- Das Dashboard erkennt einige offensichtliche noch offene Bereiche eines Romanprojekts.
+- Hinweise erscheinen beispielsweise bei fehlender Prämisse, leerer Planungswand, fehlenden Figuren oder Orten und noch nicht begonnenem Manuskript.
+- Manuskriptabschnitte ohne Kurzinhalt oder noch im Status „Idee/Geplant“ werden ebenfalls sichtbar gemacht.
+- Bei vorhandenen Manuskriptabschnitten ohne Timeline wird der Aufbau der Chronologie vorgeschlagen.
+- Die Hinweise sind direkte Sprungpunkte in den jeweiligen Arbeitsbereich.
+
+### 🕘 Timeline & Projektverbindungen
+
+- Die ersten Timeline-Ereignisse werden direkt im Dashboard als Vorschau angezeigt.
+- Timeline-Einträge können aus der Vorschau unmittelbar geöffnet werden.
+- Eine eigene Projekt-Netz-Karte zeigt Figurenbeziehungen, Ortsverknüpfungen und Szenenlinks zu Ideen, Recherche und Inspiration.
+
+### 🧭 Navigation
+
+- Die Projekt-Tabs „Beziehungsnetz“, „Weltbau“ und „Timeline“ sind wieder vollständig in die zentrale Projekt-Navigation eingebunden.
+- Alle Dashboard-Sprungpunkte verwenden dieselben bestehenden Projektbereiche und erzeugen keine doppelten Daten.
+
+### 💾 Datensicherheit
+
+- Das Romanprojekt-Dashboard ist vollständig lesend und wertet nur bereits vorhandene Projektdaten aus.
+- Schnellzugriffe verändern keine Manuskript- oder Planungsdaten.
+- Wortstand, Aktivitäten und Verknüpfungen werden aus den bestehenden lokalen Daten berechnet.
+- Die Daten- und Backup-Struktur bleibt mit v0.26.0 kompatibel.
+
 ## v0.26.0
 
 ### 🔎 Globale Suche
