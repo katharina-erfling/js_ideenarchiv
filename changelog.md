@@ -6,6 +6,36 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.4.0
+
+### 🗃️ Zettelverwaltung
+
+- Ideenzettel können jetzt direkt in der Übersicht bearbeitet werden.
+- Ein Doppelklick auf den Text oder der neue Bearbeiten-Button startet die Direktbearbeitung.
+- Änderungen können ohne zusätzlichen Dialog gespeichert werden.
+- Einzelne Ideen können jetzt direkt aus der Detailansicht dupliziert werden.
+- Favoriten lassen sich direkt auf dem Zettel setzen oder entfernen.
+
+### ☑️ Mehrfachauswahl
+
+- Jeder Zettel besitzt jetzt eine sichtbare Auswahlmöglichkeit.
+- Mehrere ausgewählte Ideen können gemeinsam in eine andere Kategorie verschoben werden.
+- Ausgewählte Ideen können gemeinsam als Favoriten markiert werden.
+- Mehrere Ideen können gesammelt in den Papierkorb verschoben werden.
+- Die aktuelle Auswahl kann mit einer Aktion vollständig aufgehoben werden.
+- Strg-Klick und Rechtsklick bleiben zusätzlich als schnelle Auswahlmöglichkeiten erhalten.
+
+### ↪️ Drag & Drop
+
+- Ideenzettel können per Drag & Drop direkt auf eine Kategorie in der linken Navigation gezogen werden.
+- Ist der gezogene Zettel Teil einer Mehrfachauswahl, wird die gesamte Auswahl gemeinsam verschoben.
+- Die Zielkategorie wird während des Ziehens visuell hervorgehoben.
+
+### 📚 Kategorien
+
+- Die in v0.3.0 eingeführte Register- und Reihenfolgenverwaltung ist jetzt vollständig im Kategorie-Dialog verfügbar.
+- Kategorien können dort einem Schnellregister zugewiesen und innerhalb ihrer Ebene nach oben oder unten verschoben werden.
+
 ## v0.3.0
 
 ### 📑 Schnellregister
