@@ -6,6 +6,86 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.56.0
+
+### 🎬 Szenenworkflow 2.0
+
+- Neuer eigener Reiter „Szenenboard“ innerhalb eines Buches.
+- Vier Workflow-Stufen:
+  - Idee & geplant
+  - geschrieben
+  - überarbeiten
+  - fertig
+- Manuskriptszenen können per Drag & Drop zwischen den Statusstufen verschoben werden.
+- Noch nicht übertragene Planungsszenen erscheinen bereits im Szenenboard.
+
+### 🧩 Erweiterte Szenenplanung
+
+Planungsszenen können jetzt speichern:
+
+- Szenentitel
+- Kurzinhalt
+- POV
+- Ort
+- Zeit / Einordnung
+- beteiligte Figuren
+- Ziel / Konflikt
+- Ergebnis / Veränderung
+- Handlungsstrang
+- Stimmung
+- verknüpfte Ideen
+- verknüpfte Story-Bibel-Einträge
+
+### 🔄 Planung und Manuskript verbunden
+
+- Szenenmetadaten werden vollständig ins Manuskript übernommen.
+- Die Manuskriptszene merkt sich ihren ursprünglichen Planungsbaustein.
+- Änderungen an der Planung werden auf die bestehende Manuskriptszene übertragen.
+- Änderungen im Manuskript-Inspektor werden zurück in die Planung gespiegelt.
+- Eine bereits übertragene Szene wird bei erneuter Übergabe nicht dupliziert.
+- Damit entwickelt sich derselbe Szenenbaustein durch den gesamten Workflow.
+
+### ↗ Szenenboard → Manuskript
+
+- Manuskriptszenen können direkt aus dem Szenenboard geöffnet werden.
+- „Details“ führt direkt zum Szenen-Inspektor.
+- Planungsszenen lassen sich direkt aus dem Board bearbeiten.
+
+### 🏷️ Einheitlicher Status
+
+- geplant → Idee & geplant
+- Rohfassung → geschrieben
+- überarbeiten → überarbeiten
+- fertig → fertig
+
+Es wurde bewusst kein paralleles zweites Statussystem eingeführt.
+
+### 🔗 Bestehendes Datenmodell
+
+- Figuren
+- Orte
+- Ideen
+- Story-Bibel
+- Handlungsstränge
+
+verwenden die bereits vorhandenen Verknüpfungen der Suite.
+
+### 🔒 Kompatibilität
+
+- Bestehende Manuskriptszenen bleiben nutzbar.
+- Alte Planungsszenen bleiben gültig.
+- Neue Felder sind ergänzend.
+- Keine destruktive Datenmigration erforderlich.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Szenenboard- und Planungsreferenzen geprüft.
+- Keine fehlenden statischen UI-Referenzen.
+- Keine doppelten HTML-IDs.
+- Keine doppelten Funktionsdefinitionen.
+- Keine ungebundenen statischen Buttons oder Formulare.
+
 ## v0.55.0
 
 ### 📦 Exportzentrum
