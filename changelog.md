@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.9
+
+### 📚 Lebendiges Bücherregal
+
+- Alle Bücher einer Regalebene besitzen jetzt dieselbe optische Höhe.
+- Entwicklungsstände verändern Buchtyp und Dicke statt die Buchhöhe.
+- Entwurf/Konzept erscheint als weiches Notizbuch.
+- Planung erscheint als Ringbuch/Projektplaner mit sichtbarer Spiralbindung.
+- Schreiben erscheint als klassisches gebundenes Buch.
+- Überarbeitung erhält ein dezentes Leseband.
+- Fertige/veröffentlichte Bücher wirken massiver und abgeschlossen.
+
+### 📏 Buchdicke nach Inhalt
+
+- Entwurfsbücher orientieren sich an gesammelten Ideen und Planung.
+- Planungsbücher orientieren sich an Ideen, Planungsblöcken und Kapitelmarkern.
+- Schreib- und Überarbeitungsbücher orientieren sich an der aktuellen Manuskript-Wortzahl.
+- Fertige/veröffentlichte Bücher verwenden bevorzugt die hinterlegte Seitenzahl.
+- Fehlt die Seitenzahl, wird sie aus endgültiger Wortzahl bzw. Manuskriptumfang angenähert.
+- Mindest- und Maximalbreite verhindern unsichtbar dünne oder absurd breite Bücher.
+
+### 🖱️ Hoverinformationen
+
+- Die Hoverkarte zeigt die für die Dicke relevante Größe: Ideen/Planungsblöcke, Wörter oder Seiten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Bestehende Coverfarben, Reihendaten und Buchverknüpfungen bleiben erhalten.
+
 ## v0.47.8
 
 ### 📚 Ein durchgehendes Bücherregal
