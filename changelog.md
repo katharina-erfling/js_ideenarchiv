@@ -6,6 +6,35 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.47.8
+
+### 📚 Ein durchgehendes Bücherregal
+
+- Die Bücherübersicht ist jetzt ein echtes, zusammenhängendes Regal statt einzelner Projektblöcke.
+- Projekttitel und Status-Zwischenüberschriften unterbrechen das Regal nicht mehr.
+- Alle sichtbaren Bücher stehen direkt nebeneinander.
+- Weitere Bücher laufen auf der nächsten Regalebene weiter.
+- Projekt, Status, Wortzahl und weitere Informationen bleiben über die Hover-/Fokuskarte erreichbar.
+- Projekt- und Statusfilter funktionieren weiterhin, ohne die Regaloptik aufzuteilen.
+
+### ✨ Reihen beim Buchanlegen schneller auswählen
+
+- Das Feld „Reihe“ schlägt beim Tippen bereits vorhandene Reihennamen vor.
+- Existiert die gewünschte Reihe noch nicht, kann der neue Name einfach eingetippt werden.
+- Beim Speichern wird der neue Reihenname direkt verwendet.
+- Vorhandene Reihen werden alphabetisch in der Vorschlagsliste geführt.
+
+### 🗂️ Ideenarchiv – neue Unterkategorien alphabetisch
+
+- Neu über das Kontextmenü angelegte Unterkategorien werden sofort alphabetisch zwischen ihren Geschwistern einsortiert.
+- Sie erscheinen nicht mehr pauschal ganz oben bzw. an einer unpassenden Position.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration notwendig.
+- Bestehende Bücher, Projekte, Reihen und Kategorien bleiben erhalten.
+
 ## v0.47.7
 
 ### 📊 Schreibstatistik pro Buch steuerbar
