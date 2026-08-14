@@ -6,6 +6,29 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.5.0
+
+### 📥 Archiv übertragen
+
+- Die bisherige Massenerfassung wurde zu einem eigenen Übertragungsmodus ausgebaut.
+- Mehrere alte Notizen können gesammelt eingefügt und vor dem Speichern als einzelne Zettel geprüft werden.
+- Aufzählungszeichen und nummerierte Listen werden beim Einfügen automatisch bereinigt.
+- Eine Vorschau zeigt vor der Übernahme, wie viele Zettel erkannt wurden.
+- Einzelne erkannte Ideen können vor dem Speichern gezielt abgewählt werden.
+
+### 🔄 Duplikatkontrolle
+
+- Exakt bereits vorhandene Ideen werden im Übertragungsmodus direkt gekennzeichnet.
+- Möglicherweise ähnliche vorhandene Zettel werden separat hervorgehoben und zum Vergleich angezeigt.
+- Exakte Duplikate können beim Übernehmen automatisch übersprungen werden.
+- Die Duplikatkontrolle verhindert keine bewusste Mehrfachspeicherung und bleibt vollständig kontrollierbar.
+
+### ✍️ Digitalisierung
+
+- Die Zielkategorie wird weiterhin nur einmal für einen Übertragungsvorgang ausgewählt.
+- Der Modus ist speziell auf das schrittweise Übertragen umfangreicher bestehender Notizsammlungen ausgelegt.
+- Die Anzahl der erkannten, neuen und möglicherweise bereits vorhandenen Zettel wird vor dem Speichern sichtbar gemacht.
+
 ## v0.4.0
 
 ### 🗃️ Zettelverwaltung
