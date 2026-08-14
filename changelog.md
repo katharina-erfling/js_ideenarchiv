@@ -6,6 +6,55 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.28.0
+
+### 🎯 Schreibziele & Challenges
+
+- Romanprojekte können jetzt neben der Zielwortzahl auch eine Deadline erhalten.
+- Ein eigenes Tagesziel kann unabhängig vom Gesamtziel festgelegt werden.
+- Optional kann ein Challenge-Startdatum gespeichert werden.
+- Damit lassen sich klassische Monats-Challenges ebenso abbilden wie individuelle Schreibphasen für einen Roman.
+- Die Einstellungen befinden sich direkt in den bestehenden Projekteinstellungen.
+
+### 📈 Dynamischer Schreibplan
+
+- Das Projekt-Dashboard berechnet automatisch die noch fehlenden Wörter bis zum Gesamtziel.
+- Bei gesetzter Deadline wird angezeigt, wie viele Wörter pro verbleibendem Tag aktuell nötig sind.
+- Bei vorhandenem Challenge-Start erkennt die Suite zusätzlich, ob der aktuelle Wortstand vor oder hinter einem gleichmäßig verteilten Schreibplan liegt.
+- Sobald das Gesamtziel erreicht ist, wird die Challenge entsprechend als erreicht dargestellt.
+- Die Berechnung passt sich automatisch an den aktuellen Manuskriptstand an.
+
+### ✍️ Tagesziel
+
+- Das aktuelle Tagesziel wird direkt im Projekt-Dashboard angezeigt.
+- Ein Fortschrittsbalken zeigt, wie viel des heutigen Ziels bereits geschafft wurde.
+- Tatsächlich geschriebene Wörter und das Tagesziel bleiben getrennt vom Gesamtwortziel sichtbar.
+- Tagesziele können jederzeit geändert werden, ohne vorhandene Schreibdaten zu verändern.
+
+### 🔢 Manuelle Wortzahlen
+
+- Wortzahlen können jetzt direkt im Romanprojekt schnell und unkompliziert manuell eingetragen werden.
+- Zu jedem Eintrag wird ein Datum gewählt.
+- Positive Werte können für neu geschriebene Wörter und negative Werte für Kürzungen verwendet werden.
+- Dadurch können auch Schreibarbeit außerhalb des integrierten Editors und ältere Wordcount-Daten erfasst werden.
+- Manuelle Einträge werden im bestehenden separaten Wordcount-Speicher abgelegt und verändern den Manuskripttext nicht.
+
+### 🗓️ Schreibkalender
+
+- Das Projekt-Dashboard zeigt einen kompakten Kalender für den aktuellen Monat.
+- Tage mit erfasster Schreibaktivität werden hervorgehoben.
+- Die jeweilige Wortzahl wird direkt im Kalendertag angezeigt.
+- Wurde das festgelegte Tagesziel erreicht, erhält der Tag eine zusätzliche Markierung.
+- Für die Challenge kann festgelegt werden, ob manuell eingetragene Wortzahlen in den Fortschritt einbezogen werden.
+
+### 💾 Datensicherheit
+
+- Schreibziele werden als Projekteinstellungen gespeichert und verändern keine Manuskriptinhalte.
+- Manuelle Wordcounts bleiben getrennt von den eigentlichen Manuskriptständen.
+- Änderungen an Zielwortzahl, Deadline oder Tagesziel löschen keine vorhandenen Statistikdaten.
+- Bestehende Projekte ohne Schreibziele bleiben vollständig kompatibel und erhalten neutrale Standardwerte.
+- Alle neuen Ziel- und Wordcount-Daten sind Bestandteil der bestehenden lokalen Datenspeicherung und Backups.
+
 ## v0.27.0
 
 ### 📖 Romanprojekt-Dashboard
