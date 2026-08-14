@@ -6,6 +6,53 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.15.0
+
+### 🧩 Planungswand
+
+- Romanprojekte besitzen jetzt eine eigene Planungswand zwischen Ideenarchiv und Manuskript.
+- Projektspezifische Ideenzettel können direkt aus dem gesamten Ideenarchiv gesucht und auf die Planungswand gelegt werden.
+- Ein verwendeter Zettel bleibt weiterhin vollständig im zentralen Ideenarchiv erhalten.
+- Beim Hinzufügen wird der Zettel gleichzeitig mit dem jeweiligen Romanprojekt verknüpft.
+- Bereits verknüpfte Zettel werden bei der Suche entsprechend gekennzeichnet.
+
+### ↕️ Freie Reihenfolge
+
+- Ideenzettel und eigene Planungsblöcke können per Drag & Drop in eine beliebige Reihenfolge gebracht werden.
+- Die Reihenfolge wird dauerhaft innerhalb des Romanprojekts gespeichert.
+- Die Planung kann dadurch zunächst vollständig ohne Kapitelstruktur entstehen und schrittweise feiner werden.
+
+### 📝 Eigene Textblöcke
+
+- Zwischen vorhandenen Ideenzetteln können beliebig viele freie Textblöcke eingefügt werden.
+- Textblöcke können Überschrift und ausführlichen Planungstext enthalten.
+- Ideenzettel können für das konkrete Romanprojekt um zusätzliche Planung ergänzt werden.
+- Diese projektspezifische Erweiterung verändert den ursprünglichen Zettel im Ideenarchiv nicht.
+
+### ✂️ Kapitel slicen & zusammenführen
+
+- Kapiteltrenner können an beliebigen Stellen der Planungswand eingefügt werden.
+- Direkt an einem Planungsblock kann mit der Slice-Aktion ein neues Kapitel davor begonnen werden.
+- Kapiteltrenner lassen sich frei verschieben und umbenennen.
+- Wird ein Kapiteltrenner entfernt, werden die angrenzenden Planungsabschnitte wieder zusammengeführt.
+- Dadurch muss die Kapitelaufteilung nicht früh feststehen und kann jederzeit verfeinert oder wieder gröber gemacht werden.
+
+### ✎ Übergabe an den Schreibeditor
+
+- Die aktuelle Planungswand kann direkt in das Manuskript übergeben werden.
+- Kapiteltrenner bestimmen dabei die entstehenden Manuskriptkapitel.
+- Ideenzettel, projektspezifische Erweiterungen und freie Textblöcke werden in der festgelegten Reihenfolge als Ausgangstext übernommen.
+- Die verwendeten Planungsblöcke bleiben mit den erzeugten Manuskriptabschnitten technisch verknüpft.
+- Bereits vorhandene Manuskriptabschnitte werden nicht überschrieben; neue Inhalte werden sicher ergänzt.
+- Nach der Übergabe öffnet sich direkt der Schreibeditor des betreffenden Romanprojekts.
+
+### 🛡️ Datensicherheit
+
+- Die Planungswand wird direkt im jeweiligen Romanprojekt in IndexedDB gespeichert.
+- Die Übergabe an den Editor überschreibt keine vorhandenen Manuskripttexte.
+- Planungsdaten werden weiterhin vollständig von den Autoren-Suite-Backups erfasst.
+- Die mehrstufige Textsicherung des Schreibeditors bleibt unverändert erhalten.
+
 ## v0.14.0
 
 ### 🗂️ Kapitel & Szenen
