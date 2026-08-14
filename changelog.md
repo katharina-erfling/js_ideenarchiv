@@ -6,6 +6,15 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.2.3
+
+### 🎨 Zettelansicht
+
+- Der vertikale Abstand zwischen den Ideenzetteln wurde deutlich reduziert.
+- Die Papierstreifen wurden leicht kompakter gestaltet.
+- Innenabstände und Abstand zwischen Ideentext und Kategorieangabe wurden angepasst.
+- Dadurch können mehr Ideen gleichzeitig überblickt werden, ohne die papierartige Zettelkasten-Optik zu verlieren.
+
 ## v0.2.2
 
 ### 🔎 Suche
