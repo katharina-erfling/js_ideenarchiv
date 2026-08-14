@@ -6,6 +6,226 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.74.0
+
+### 🔄 Revision Studio 2.0
+
+- Bestehenden Überarbeitungsmodus zu einem vollständigen Revision Studio ausgebaut.
+- Überarbeitung kann jetzt in getrennten Revisionsdurchgängen organisiert werden.
+- Ausgangs- und Abschlussfassungen pro Durchgang.
+- Snapshot-gegen-Snapshot-Vergleich ergänzt.
+
+### 🧭 Revisionsdurchgänge
+
+Beliebig viele Durchgänge pro Buch.
+
+Je Durchgang:
+
+- Name
+- Schwerpunkt
+- Ziel
+- Notiz
+- Status
+- Start
+- Abschluss
+- Ausgangsfassung
+- Abschlussfassung
+
+Schwerpunkte:
+
+- Plot & Struktur
+- Figuren
+- Logik & Kontinuität
+- Stil & Sprache
+- Pacing & Szenenlänge
+- Recherche
+- eigener Schwerpunkt
+
+### ◇ Status
+
+- Geplant
+- Aktiv
+- Abgeschlossen
+
+### 🎯 Revisionsziele
+
+Prominent sichtbar:
+
+- Ziel
+- Schwerpunkt
+- Status
+- Start
+- Abschluss
+- eigene Arbeitsnotiz
+
+### 📸 Ausgangsfassung
+
+Beim Start optional automatisch komplette Manuskriptbasis sichern.
+
+- ein Snapshot pro Manuskriptabschnitt
+- fixiert
+- einem Durchgang zugeordnet
+- dauerhaft erhalten
+
+### ✓ Abschlussfassung
+
+Beim Abschluss wird ebenfalls eine fixierte Fassung gespeichert.
+
+Dadurch möglich:
+
+- Anfang Durchgang ↔ Ende Durchgang
+- Durchgang 1 ↔ Durchgang 2
+- spätere Änderungen verfälschen ältere Revisionsvergleiche nicht
+
+### ↔ Fassungsvergleich
+
+Je Durchgang:
+
+- Wörter am Start
+- Wörter aktuell bzw. am Abschluss
+- Wortdifferenz
+- veränderte Abschnitte
+- neue Absätze
+- entfernte Absätze
+
+Je Abschnitt:
+
+- Start-Wortzahl
+- Ziel-/Aktuell-Wortzahl
+- Differenz
+- Absatzänderungen
+
+### 🔀 Snapshot ↔ Snapshot
+
+Vergleich jetzt möglich zwischen:
+
+- Snapshot ↔ aktuell
+- Snapshot ↔ Snapshot
+- Ausgangsfassung ↔ Abschlussfassung
+- beliebigen Revisionsständen
+
+### 📝 Überarbeitungsaufgaben
+
+Überarbeitungsnotizen können einem Revisionsdurchgang zugeordnet werden.
+
+Der aktive Durchgang wird automatisch vorausgewählt.
+
+Bestehende Notizen bleiben erhalten.
+
+### 🗂 Aufgabenfilter
+
+- aktueller / ausgewählter Durchgang
+- alle Aufgaben
+- ohne Durchgang
+
+### 📌 Kanban
+
+Weiterhin:
+
+- Offen
+- In Arbeit
+- Erledigt
+
+### ✦ Durchgang auf Karten sichtbar
+
+Revisionskarten zeigen zusätzlich:
+
+- Durchgang
+- Schwerpunkt
+- direkten Vorher/Nachher-Vergleich, wenn eine Ausgangsfassung vorhanden ist
+
+### 🧩 Revisionsplan
+
+Je Durchgang sichtbar:
+
+- Reihenfolge
+- Schwerpunkt
+- Status
+- Aufgabenfortschritt
+- Basisstände
+
+Aktionen:
+
+- ansehen
+- bearbeiten
+- aktivieren
+- abschließen
+
+### 📊 Fortschritt
+
+Pro Durchgang:
+
+- offen
+- in Arbeit
+- erledigt
+- Gesamtzahl
+- Fortschrittsprozent
+
+### 🛡 Sicheres Abschließen
+
+Bei offenen Aufgaben erfolgt eine Rückfrage.
+
+Aufgaben werden nicht automatisch verändert.
+
+### 🗑 Sicheres Löschen
+
+Beim Löschen eines Durchgangs:
+
+- Manuskript bleibt
+- Aufgaben bleiben
+- Snapshots bleiben
+- nur Durchgangszuordnung wird entfernt
+
+### 📊 Manuscript Analysis
+
+Direkter Wechsel zwischen:
+
+- Analyse
+- Revision
+- Manuskript
+
+### 📸 Snapshot-System
+
+Revisionsfassungen verwenden das bestehende vollständige Versioning-System.
+
+### 💾 Backup
+
+Automatisch enthalten:
+
+- Durchgänge
+- Ziele
+- Status
+- Aufgaben-Zuordnungen
+- Ausgangsfassungen
+- Abschlussfassungen
+- Snapshots
+
+### 🔒 Kompatibilität
+
+- bestehende Revisionsnotizen bleiben erhalten
+- alte Notizen erscheinen als „ohne Durchgang“
+- bestehende Snapshots bleiben vollständig nutzbar
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Revisionsdurchgang-Modell geprüft
+- Ausgangsfassungen geprüft
+- Abschlussfassungen geprüft
+- Snapshot-Zuordnung geprüft
+- Aufgaben-Zuordnung geprüft
+- Durchgangsfortschritt geprüft
+- Aufgabenfilter geprüft
+- Ausgang ↔ aktuell geprüft
+- Ausgang ↔ Abschluss geprüft
+- Snapshot ↔ Snapshot geprüft
+- sicheres Abschließen geprüft
+- sicheres Löschen geprüft
+- keine fehlenden statischen UI-Referenzen
+- keine doppelten HTML-IDs
+- keine doppelten Funktionen
+- keine ungebundenen Buttons/Formulare
+
 ## v0.73.0
 
 ### 📊 Manuscript Analysis Studio
