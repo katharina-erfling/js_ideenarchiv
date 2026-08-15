@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.78
+
+### 📖 Buch bearbeiten – direkter Fehler behoben
+
+- Der tatsächliche Auslöser für den wirkungslosen `Buch bearbeiten`-Button wurde behoben: Die gemeinsame Funktion zum Befüllen von Buch-/Projekt-Auswahlen fehlte vollständig.
+- `populateBookProjects()` wurde wieder als zentrale, robuste Funktion ergänzt.
+- Der obere `✎ Buch`-Button, der Dashboard-Button und das anklickbare Cover öffnen dadurch wieder denselben vorhandenen Buchdialog.
+- Die Bibliotheksauswahl verwendet dabei weiterhin die zusammengefasste Reihen-/Story-Logik statt mehrfacher Einzelbuch-Einträge.
+
+### 📎 Romanideen – Dateien statt nur Bilder/PDF
+
+- Der Medienbereich einer Romanidee heißt jetzt `Dateien`.
+- `＋ Bilder` wurde zu `＋ Dateien`.
+- Es können grundsätzlich beliebige Dateien an einer Romanidee gespeichert werden.
+- Bilder erhalten weiterhin eine Bildvorschau.
+- PDFs erhalten – wenn PDF.js verfügbar ist – eine Vorschau der ersten Seite.
+- Dokumente, Audio, Video und sonstige Dateien werden als klare Dateikarten mit Dateityp und Dateinamen dargestellt.
+- Das erste tatsächlich darstellbare Bild/PDF wird für die Romanideen-Karte verwendet; ein normaler Dateianhang ohne Vorschau verdrängt das Kartenbild nicht.
+
+### 🔍 Große Medienvorschau
+
+- Bild- und PDF-Vorschauen einer Romanidee können angeklickt und in einer großen Vorschau geöffnet werden.
+- Die große Ansicht ist scrollbar und eignet sich damit auch für Scans, handschriftliche Notizen und hochauflösende Referenzen.
+- Aus der Vorschau kann zusätzlich die gespeicherte Originaldatei geöffnet werden.
+- Normale Dateianhänge öffnen denselben Dateidialog mit Dateiname und Aktion zum Öffnen des Originals.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende `images`-Daten alter Romanideen bleiben kompatibel; der bisherige Speicher wird nur um generische Dateiobjekte erweitert.
+
 ## v0.80.77
 
 ### 📖 Buch bearbeiten – Direktfix
