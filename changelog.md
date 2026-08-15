@@ -6,6 +6,41 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.93.0 – Heute im Schreibzimmer
+
+### 🕰️ Persönliche Tageskarte
+
+- Das globale Dashboard besitzt jetzt einen eigenen Bereich `Heute im Schreibzimmer`.
+- Die Karte fasst den aktuellen Schreibtisch-Tag bewusst ruhig zusammen statt ihn wie einen Produktivitätstracker zu bewerten.
+- Sichtbar sind heutige Schreibsessions, aktive Schreibzeit, Wortveränderung, neu gesammelte Ideen und heute fertig bearbeitete Szenen.
+- Ideenzettel und neu angelegte Romanideen werden gemeinsam als heutige Ideenaktivität gezählt; bei Romanideen zeigt die Karte zusätzlich eine kleine Aufschlüsselung.
+- Eine aktuell laufende Schreibsession fließt bereits in die Tageswerte ein und wird zusätzlich als laufend gekennzeichnet.
+
+### ✒ Zuletzt am Schreibtisch
+
+- Der zuletzt bearbeitete Manuskriptabschnitt wird mit Buch, Abschnittstyp und Uhrzeit angezeigt.
+- Ein Klick führt direkt zurück in genau diesen Manuskriptabschnitt.
+- Ohne vorhandenes Manuskript bleibt der Bereich als ruhiger leerer Zustand sichtbar.
+
+### 🎯 Heutiges Schreibziel
+
+- Die Tageskarte greift auf die in v0.92 eingeführten Writing Goals zurück.
+- Für das zuletzt aktive Romanprojekt werden Tagesfortschritt, Ziel, Prozentwert und verbleibende Wörter angezeigt.
+- Ist kein Tagesziel gesetzt, zeigt die Karte nur den heutigen Wortstand und weist neutral darauf hin, dass Ziele optional sind.
+- Die Anzeige verwendet dieselbe Wordcount-Basis wie die bestehenden Schreibziele und Statistiken.
+
+### 📊 Gemeinsame Datenbasis
+
+- Wortfortschritt und Schreibzeit verwenden dieselbe Session-/Wordcount-Basis wie die Statistikansicht.
+- Damit entstehen keine separaten Dashboard-Zähler, die von den eigentlichen Schreibstatistiken abweichen können.
+- Der bestehende Wochenfortschritt auf dem Dashboard verwendet nun ebenfalls die gemeinsame Aktivitätsbasis aus Schreibsessions und manuellen Wordcounts.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration erforderlich.
+- Bestehende Schreibsessions, Ziele, Ideen und Manuskriptdaten bleiben unverändert kompatibel.
+
 ## v0.92.0 – Writing Goals 2.0
 
 ### 🎯 Tages-, Wochen- und Monatsziele
