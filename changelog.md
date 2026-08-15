@@ -6,6 +6,59 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.34
+
+### 👤 Charaktere – optionale Ordner & Gruppen
+
+Charaktere können jetzt optional in Ordnern organisiert werden.
+
+Ohne angelegte Ordner bleibt die bisherige flache Charakterliste erhalten.
+
+### 📁 Ordner
+
+Im Charakterbereich können jetzt:
+
+- Ordner angelegt werden
+- Unterordner angelegt werden
+- Ordner umbenannt werden
+- Ordner gelöscht werden
+- beliebig verschachtelte Gruppen aufgebaut werden
+
+Die Ordner verwenden die bestehende Wissen-&-Welt-Ordnerstruktur
+der Charaktereinträge.
+
+### ↕ Drag & Drop
+
+Charakterkarten sind jetzt verschiebbar.
+
+Per Drag & Drop können Charaktere:
+
+- in einen Ordner gezogen werden
+- in einen Unterordner gezogen werden
+- zurück auf „Alle Charaktere“ gezogen werden
+
+Auch Ordner selbst können per Drag & Drop unter andere Ordner
+verschoben oder wieder auf die Hauptebene gezogen werden.
+
+Zirkuläre Verschachtelungen werden verhindert.
+
+### 🗑 Löschen eines Ordners
+
+Beim Löschen eines Ordners werden die enthaltenen Charaktere nicht gelöscht.
+
+Sie werden eine Ebene nach oben verschoben. Unterordner bleiben ebenfalls
+erhalten und werden entsprechend nach oben gehängt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- bestehende folderId-Struktur wiederverwendet
+- optionale flache Darstellung bleibt erhalten
+- Charakter-Drag-&-Drop gebunden
+- Ordner-Drag-&-Drop gebunden
+- Unterordner unterstützt
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.33
 
 ### ♧ Inspiration Studio ausgebaut
