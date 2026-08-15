@@ -6,6 +6,22 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.35
+
+### ♧ Inspirationssammlungen – Plus-Button repariert
+
+- Das `+` bei Sammlungen öffnet den Dialog zum Anlegen eines Ordners
+  jetzt zuverlässig.
+- Die Aktion ist zusätzlich über die zentrale, robuste Event-Delegation
+  abgesichert.
+- Das Speichern des Sammlungs-/Ordnerdialogs ist ebenfalls zentral
+  abgesichert.
+- Unterordner anlegen, Ordner öffnen und Ordner bearbeiten laufen über
+  dieselbe robuste Ereignisbehandlung.
+- „Alle Inspirationen“ und „Inspiration hier anlegen“ wurden ebenfalls
+  abgesichert.
+- JavaScript-Syntax geprüft.
+
 ## v0.80.34
 
 ### 👤 Charaktere – optionale Ordner & Gruppen
