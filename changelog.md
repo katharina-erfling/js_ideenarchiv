@@ -6,6 +6,88 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.44
+
+### 🎬 Videos im Inspiration Board
+
+Inspiration unterstützt jetzt neben Bildern auch lokale Videodateien.
+
+Videos können genau wie Bilder:
+
+- über `＋ Medien` ausgewählt werden
+- direkt auf das Inspirationsboard gezogen werden
+- direkt auf einen Inspirationsordner gezogen werden
+- zwischen Ordnern verschoben werden
+- mit einer optionalen Caption versehen werden
+- gelöscht werden
+
+### ▶ Direkt im Masonry abspielen
+
+Videos fügen sich als normale Kacheln in das bestehende Masonry-Raster ein.
+
+Sie besitzen direkt auf dem Board den nativen Browser-Player mit:
+
+- Play / Pause
+- Zeitleiste
+- Lautstärke
+- Vollbild, sofern der Browser es unterstützt
+
+Das Video muss zum Abspielen nicht erst in einem separaten Fenster
+geöffnet werden.
+
+Die Kachelhöhe wird nach dem Laden der Video-Metadaten neu berechnet,
+damit Videos mit unterschiedlichen Seitenverhältnissen sauber im
+Masonry bleiben.
+
+### ↕ Verschieben ohne Player-Konflikt
+
+Damit die Videosteuerung benutzbar bleibt, wird ein Medium nicht mehr
+durch Ziehen auf dem eigentlichen Bild/Video verschoben.
+
+Jede Kachel besitzt jetzt einen kleinen `⠿`-Ziehgriff.
+
+So lassen sich:
+
+- Videos normal bedienen
+- Bilder normal anklicken
+- beide Medientypen trotzdem zuverlässig per Drag & Drop verschieben
+
+### 💾 Lokale Videos & Speichergröße
+
+Videos werden lokal im Browser gespeichert, genau wie die übrigen
+Suite-Daten.
+
+Da Videodateien deutlich größer als Bilder sein können:
+
+- ab 40 MB wird vor dem Speichern nachgefragt
+- über 120 MB wird eine Datei nicht in das Inspiration Board übernommen
+
+### 🔄 Kompatibilität
+
+Bestehende Inspirationsbilder bleiben unverändert kompatibel.
+
+Neue Medieneinträge ergänzen das Datenmodell um:
+
+- `mediaKind`
+- `mediaData`
+- `mediaMime`
+- `mediaSize`
+
+Alte Bilddaten verwenden weiterhin `imageData`.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Bild- und Videodateien im gemeinsamen Board
+- Video-Drop auf Board und Ordner
+- Inline-Player mit Browser-Controls
+- Masonry-Neuberechnung nach `loadedmetadata`
+- Caption und Ordnerwechsel für Videos
+- Medien löschen
+- separater Drag-Griff verhindert Konflikte mit Video-Controls
+- bestehende Bilder bleiben kompatibel
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.43
 
 ### 🏠 Startseite endgültig vom Ideenarchiv entkoppelt
