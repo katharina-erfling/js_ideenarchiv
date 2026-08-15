@@ -6,6 +6,87 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.52
+
+### ♧ Inspiration – Masonry, Drag & Drop und Rechtsklick erneut korrigiert
+
+### ▦ Vervollständigendes Masonry
+
+Die Anordnung ist jetzt nicht mehr nur ein normales dichtes Grid.
+
+Das Board arbeitet mit einer eigenen Platzierungslogik:
+
+- erstes Medium beginnt links
+- weitere Medien beginnen zunächst rechts daneben
+- ist eine bereits verwendete Spalte deutlich kürzer, wird sie zuerst nach unten aufgefüllt
+- erst danach wird weiter rechts eine neue Spalte begonnen
+
+Beispiel:
+
+Ein hohes Bild links und ein kurzes Bild daneben können dazu führen, dass
+das nächste kurze Bild zunächst unter dem kurzen Bild landet, bevor die
+nächste Spalte rechts begonnen wird.
+
+### 🎨 Umrandung reduziert
+
+Die harte Umrandung der Inspirationskacheln wurde entfernt.
+
+Stattdessen gibt es nur noch einen sehr dezenten Schatten.
+
+Auch die Drag-Einfügemarkierung ist keine komplette Umrandung mehr,
+sondern nur noch eine schmale Linie ober- bzw. unterhalb der Zielkachel.
+
+### ↕ Verschieben nochmals repariert
+
+Eine alte globale Klicksteuerung behandelte weiterhin jede
+Inspirationskachel als normalen Aktionslink und öffnete dabei den
+Bearbeitungsdialog.
+
+Diese alte Klickaktion ist für Inspirationskacheln jetzt deaktiviert.
+
+Zusätzlich kann die Reorder-Logik die ID des gezogenen Mediums sowohl aus
+dem aktiven Drag-Zustand als auch direkt aus `dataTransfer` lesen.
+
+### 🖱 Rechtsklick jetzt exklusiv
+
+Das Inspirationsmodul fängt Rechtsklicks jetzt bereits in der Capture-Phase
+ab.
+
+Ein Rechtsklick auf eine Medienkachel:
+
+1. verhindert das Browser-Kontextmenü
+2. verhindert alte/übergeordnete Handler
+3. öffnet ausschließlich das Inspirations-Kontextmenü
+
+Dieses bietet:
+
+- Bearbeiten
+- Löschen
+
+Ein einfacher Linksklick auf die Kachel öffnet keinen Bearbeitungsdialog mehr.
+
+### 🛡 Regression-Schutz
+
+Erhalten bleiben:
+
+- Dashboard als Startseite
+- Medien löschen
+- externer Bild-/Video-Drop
+- Ordner
+- Captions
+- persistente Reihenfolge
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- alte globale Inspiration-Klickaktion deaktiviert
+- Capture-Rechtsklick für Inspiration vorhanden
+- Kontextmenü enthält Bearbeiten und Löschen
+- Drag-ID besitzt `dataTransfer`-Fallback
+- benutzerdefinierte Masonry-Platzierung vorhanden
+- Kartenumrandung entfernt
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.50
 
 ### ♧ Inspiration – ruhigere Medienkarten
