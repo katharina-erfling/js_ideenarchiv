@@ -6,6 +6,47 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.100.0 – Manuscript Professional · Gap Ausbau
+
+### 🔎 Professionelles Suchen & Ersetzen
+
+- Die vorhandene Suche im aktuellen Manuskriptabschnitt wurde um Groß-/Kleinschreibung, Ganzwortsuche und reguläre Ausdrücke erweitert.
+- Dieselben Optionen stehen auch in der bereits vorhandenen buchweiten Suche zur Verfügung.
+- Buchweites Ersetzen legt weiterhin vor jedem betroffenen Manuskriptabschnitt automatisch einen Sicherheits-Snapshot an.
+- Reguläre Ausdrücke werden validiert; ungültige Muster werden sichtbar gemeldet statt still zu scheitern.
+
+### 💬 Kommentare & Fußnoten
+
+- Kommentare und Fußnoten werden nicht mehr über native Browser-Prompts angelegt, sondern über einen eigenen Autoren-Suite-Dialog.
+- Der aktuell markierte Text bleibt beim Öffnen des Dialogs als Ziel erhalten.
+- Ein neuer Notizen-Manager listet alle Kommentare und Fußnoten des geöffneten Manuskriptabschnitts.
+- Notizen können aus der Liste direkt angesprungen oder entfernt werden.
+- Kommentare und Fußnoten bleiben Bestandteil der jeweiligen kreativen Fassung und werden dadurch automatisch mitversioniert.
+
+### Ω Sonderzeichen & Manuskriptumbrüche
+
+- Die Manuskript-Werkzeugleiste besitzt jetzt `Ω Einfügen`.
+- Häufige typografische Zeichen wie deutsche Anführungszeichen, Gedankenstrich, Halbgeviertstrich, Auslassungspunkte, geschütztes Leerzeichen und weitere Sonderzeichen können direkt am Cursor eingefügt werden.
+- Seiten- und Abschnittsumbrüche können bewusst in das Manuskript gesetzt werden und bleiben dort sichtbar markiert.
+
+### 📄 Normseitenansicht
+
+- Das Writing Studio besitzt jetzt optional eine `Normseitenansicht` mit ruhiger A4-Arbeitsbreite.
+- Die Statusleiste zeigt zusätzlich eine transparente Normseiten-Näherung auf Basis von 1.800 Zeichen pro Normseite.
+- Die Anzeige ist ausdrücklich eine Arbeitsorientierung und keine Behauptung über die tatsächliche Satz-/Druckseitenzahl.
+
+### 🧭 Gap-Audit statt Doppelbau
+
+- Vor dem Ausbau wurden die vorhandenen Manuskriptwerkzeuge geprüft.
+- Bereits vorhandene Funktionen wie Absatzstile, Fett/Kursiv/Unterstrichen, Listen, Szenentrenner, lokale Abschnittssuche, buchweites Suchen/Ersetzen, Revision, kreative Fassungen, Snapshots und Compile/Export wurden nicht neu gebaut.
+- v0.100 ergänzt gezielt die noch fehlenden professionellen Bedien- und Suchwerkzeuge.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration erforderlich.
+- Bestehende Manuskripte, kreative Fassungen, Snapshots und Compile-Profile bleiben kompatibel.
+
 ## v0.99.0 – Language Profiles & Dictionaries
 
 ### 📖 Prüfprofile
