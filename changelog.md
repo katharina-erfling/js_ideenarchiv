@@ -6,6 +6,41 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.85.0 – Story-Fäden 2.0
+
+### 🧵 Fadenstationen direkt im Manuskript verankern
+
+- Das bestehende Handlungsfaden-System wurde ausgebaut; es entsteht kein paralleles zweites Fadensystem.
+- Stationen können weiterhin direkt mit einem Buch und jetzt übersichtlicher mit einem konkreten Kapitel oder einer konkreten Szene verbunden werden.
+- Die Dokumentauswahl zeigt Kapitelnummer und Szenenhierarchie, damit auch große Manuskripte eindeutig bleiben.
+- Die bisherigen groben Stationstypen wurden zu Setup, Hinweis, Entwicklung, Eskalation, Wendung, Enthüllung und Payoff erweitert.
+- Bestehende ältere Stationen werden automatisch kompatibel auf die neuen Typen abgebildet.
+
+### ➝ Visuelle Fadenspur
+
+- Jeder Handlungsfaden zeigt im Fäden-Bereich eine horizontale Spur seiner Stationen durch das aktuelle Buch.
+- Jede Station zeigt Typ, Kapitel/Szene und optionale Notiz.
+- Dadurch wird auf einen Blick sichtbar, wo ein Faden eingeführt, weitergeführt, gewendet und aufgelöst wird.
+
+### ◇ Sachliche Fadenhinweise
+
+- Offene Handlungsfäden können darauf hinweisen, wenn sie seit mindestens acht Kapiteln nicht mehr aufgegriffen wurden.
+- Ein vorhandenes Setup ohne hinterlegten Payoff wird ebenfalls als sachlicher Hinweis angezeigt.
+- Die Hinweise bewerten ausdrücklich nicht die dramaturgische Qualität und verändern keine Storydaten automatisch.
+
+### 🗃 Szenenzentrale & Manuskript-Navigator
+
+- Die Szenenzentrale kann jetzt nach einem konkreten Story-Faden filtern.
+- Szenenkarten zeigen direkt die Handlungsfäden, die über eine Szenen- oder Kapitelstation mit ihnen verbunden sind.
+- Der bisherige freie `Handlungsstrang` bleibt davon getrennt und weiterhin filterbar.
+- Auch der Manuskript-Navigator erhält einen eigenen Story-Faden-Filter zusätzlich zum vorhandenen Handlungsstrang-Filter.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Handlungsfäden und Stationen bleiben kompatibel.
+- Keine destruktive Datenmigration erforderlich.
+
 ## v0.84.0 – Text-Parkplatz
 
 ### 📌 Text sicher aus dem Manuskript herausnehmen
