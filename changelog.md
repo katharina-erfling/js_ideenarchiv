@@ -6,6 +6,76 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.61
+
+### 🧠 Mindmaps – Bedienung & Gedanken
+
+- Der Fehler beim Anlegen eines neuen Gedankens über `＋ Gedanke` wurde abgesichert; der Dialog prüft nun zuerst die aktive Mindmap und öffnet zuverlässig.
+- Knoten können weiterhin per Doppelklick auf die freie Fläche an der gewünschten Position angelegt werden.
+- Das vorhandene Rechtsklick-Menü wurde um `Duplizieren` erweitert.
+- Knoten können weiterhin direkt mit Suite-Inhalten verknüpft oder in echte Suite-Inhalte umgewandelt werden.
+
+### 🖼 Bilder auf der Mindmap
+
+- Bilder können jetzt über `▧ Bild` direkt auf die aktuelle Mindmap gesetzt werden.
+- Bilddateien können außerdem per Drag & Drop auf die Mindmap gezogen werden.
+- Bilder werden als frei verschiebbare Mindmap-Elemente angelegt.
+- Mindmap-Elemente besitzen einen Resize-Griff und können direkt auf der Fläche vergrößert und verkleinert werden.
+- Beim Resize wird nur das aktive Element aktualisiert; die komplette Mindmap wird nicht bei jeder Pointer-Bewegung neu gerendert.
+- Dadurch bleibt das Größenändern deutlich ruhiger und vermeidet das aus Inspiration bekannte Flackern.
+- Bilder können auch direkt innerhalb eines normalen Gedanken-Knotens hinterlegt oder wieder entfernt werden.
+
+### ◯ Formen & Gestaltung
+
+- Die Formauswahl der Mindmap-Knoten wurde erweitert.
+- Verfügbar sind:
+  - Karte
+  - abgerundete Karte
+  - Kapsel
+  - Kreis
+  - Ellipse
+  - Raute
+  - Wolke
+  - Notizzettel
+  - reiner Text ohne sichtbare Karte
+- Zusätzlich können Textgröße und Rahmenstil pro Knoten gewählt werden.
+- Rahmen können normal, ausgeblendet, kräftig oder gestrichelt dargestellt werden.
+- Gestaltungseinstellungen werden individuell am jeweiligen Knoten gespeichert.
+
+### ↔ Verbindungen
+
+- Verbindungen können direkt beschriftet werden, z. B. `verursacht`, `gehört zu`, `Konflikt mit` oder `führt zu`.
+- Die Linienfarbe kann pro Verbindung gewählt werden.
+- Verfügbar sind:
+  - Braun
+  - Rosa
+  - Blau
+  - Grün
+  - Flieder
+  - Gold
+  - Grau
+- Die Linienart kann als durchgezogen, gestrichelt oder gepunktet gewählt werden.
+- Die Linienführung kann gerade, gebogen oder rechtwinklig sein.
+- Die Linienstärke ist individuell einstellbar.
+- Pfeilrichtungen können unabhängig von der Linienart gewählt werden:
+  - keine Pfeile
+  - zum Ziel
+  - zum Ursprung
+  - beidseitig
+- Bestehende Verbindungen können durch Anklicken direkt wieder bearbeitet werden.
+
+### ✦ Bestehender Mindmap-Workflow
+
+- Verknüpfte Suite-Inhalte bleiben direkt aus der Mindmap heraus öffnbar.
+- Freie Gedanken können weiterhin in Ideen, Figuren, Orte, Szenen, Kapitel, Handlungsfäden, Recherche, Bücher und weitere Story-Bibel-Inhalte umgewandelt werden.
+- `Alles zeigen`, Zoom, Tastaturverschiebung, Löschen, Bearbeiten und das Erstellen verbundener Gedanken bleiben erhalten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax der neuen Version geprüft.
+- Bestehende Mindmaps bleiben durch die erweiterten Standardwerte kompatibel.
+- Neue Bild-, Größen-, Form- und Verbindungseigenschaften werden direkt am jeweiligen Mindmap-Element gespeichert.
+
 ## v0.80.60
 
 ### 🗒 Romanideen
