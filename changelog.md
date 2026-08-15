@@ -6,6 +6,57 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.99.0 – Language Profiles & Dictionaries
+
+### 📖 Prüfprofile
+
+- Das Language & Style Studio besitzt jetzt die Profile `Schnellprüfung`, `Wiederholungsprüfung`, `Dialogprüfung`, `Stilrunde`, `Feinschliff` und `Eigenes Profil`.
+- Jedes Profil aktiviert gezielt die dafür sinnvollen lokalen Prüfregeln.
+- Das eigene Profil kann frei aus Wiederholungen, Füllwörtern, Satzlängen, komplexen Satzstrukturen, Passiv, allgemeinen Verben und eigenen Prüfmustern zusammengestellt werden.
+- Das zuletzt verwendete Profil bleibt lokal gespeichert.
+
+### 📚 Persönliches Wörterbuch
+
+- Eigene Begriffe können dauerhaft in einem persönlichen Wörterbuch hinterlegt werden.
+- Diese Wörter werden bei passenden lokalen Prüfungen nicht mehr unnötig als Auffälligkeit behandelt.
+- Das Wörterbuch bleibt vollständig lokal im Browser.
+
+### 📕 Projektwörterbuch
+
+- Zusätzlich gibt es ein eigenes Projektwörterbuch für Fantasybegriffe, Fachbegriffe, erfundene Wörter und andere projektspezifische Sprache.
+- Persönliches und Projektwörterbuch bleiben getrennt, damit allgemeiner Wortschatz nicht mit dem Vokabular eines einzelnen Romans vermischt werden muss.
+
+### 🧠 Story-Bibel als automatisches Wörterbuch
+
+- Namen und Aliasse aus der Story-Bibel des aktuellen Buch-/Reihenkontexts werden automatisch als bekannte Storybegriffe berücksichtigt.
+- Dadurch müssen Figuren, Orte, Organisationen, Gegenstände und andere bereits gepflegte Eigennamen nicht zusätzlich manuell ins Wörterbuch eingetragen werden.
+- Die Oberfläche zeigt an, wie viele Story-Bibel-Begriffe aktuell automatisch berücksichtigt werden.
+
+### 🙈 Ignorierte Wörter
+
+- Wörter können zusätzlich ausdrücklich auf eine Ignorierliste gesetzt werden.
+- Sie werden bei passenden lokalen Wort- und Wiederholungsprüfungen bewusst übersprungen.
+- Die Ignorierliste kann jederzeit wieder bearbeitet werden.
+
+### ✦ Eigene Prüfmuster
+
+- Die in v0.98 eingeführten eigenen Prüfmuster bleiben erhalten.
+- Im eigenen Prüfprofil lässt sich separat bestimmen, ob diese Muster Bestandteil der aktuellen Analyse sind.
+- Damit können persönliche Lieblingswörter und problematische Formulierungen gezielt in bestimmte Überarbeitungsrunden eingebaut werden.
+
+### 🔒 Datenschutz
+
+- Prüfprofile, Wörterbücher, Ausnahmen und eigene Regeln werden lokal gespeichert.
+- Die lokale Analyse bleibt vollständig offline.
+- LanguageTool bleibt davon getrennt und überträgt Text weiterhin ausschließlich nach einem ausdrücklichen Klick auf die Online-Prüfung.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine destruktive Datenmigration erforderlich.
+- Bestehende v0.98-Prüfmuster bleiben kompatibel.
+
 ## v0.98.0 – Language & Style Studio
 
 ### 🔤 Lokale Sprach- und Stilanalyse
