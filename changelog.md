@@ -6,6 +6,46 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.83.0 – Szenenzentrale & Manuskript-Navigator 2.0
+
+### 🗃️ Alle Szenen
+
+- Das bestehende Szenenboard besitzt jetzt zusätzlich die Ansicht `Alle Szenen`.
+- Die Szenenzentrale zeigt ausschließlich die echten Manuskriptszenen eines Buches in einer durchsuchbaren Kartenansicht.
+- Kombinierbare Filter stehen bereit für:
+  - Reifegrad
+  - POV
+  - Figur
+  - Ort
+  - Kapitel
+  - Handlungsfaden
+  - Timeline-Verknüpfung
+  - geschrieben / noch nicht geschrieben
+- Die Volltextsuche berücksichtigt unter anderem Titel, Kurzinhalt, Notizen, Ziel/Konflikt, Ergebnis, Stimmung, POV, Figuren, Ort, Kapitel, Handlungsfaden und Timeline-Daten.
+- Ein Treffer zeigt Reifegrad, Kapitel, POV, Ort, Faden, Timeline-Verknüpfungen, offene Revisionen und Wortzahl kompakt auf der Szenenkarte.
+- Szenen lassen sich direkt aus der Zentrale im Manuskript öffnen.
+
+### 🔍 Manuskript-Navigator 2.0
+
+- Der vorhandene Navigator bleibt die direkte Outline neben dem Schreiben und arbeitet weiter mit derselben Kapitel-/Szenenstruktur.
+- Sein Statusfilter verwendet für Szenen jetzt den vollständigen Scene Lifecycle aus v0.82 statt der alten groben Legacy-Statuswerte.
+- Damit können im Navigator gezielt Schnipsel, geplante, ausgearbeitete, schreibbereite, geschriebene, überarbeitete oder fertige Szenen gefiltert werden.
+- Die bereits vorhandenen Filter für POV, Ort, Handlungsfaden und offene Revisionen bleiben erhalten.
+- Die bestehende Drag-&-Drop-Outline bleibt erhalten: Szenen können innerhalb der Struktur umsortiert und in andere Kapitel gezogen werden; Kapitel lassen sich innerhalb der Manuskriptstruktur verschieben.
+- Struktur-, Karten- und Metaansicht des Navigators bleiben verfügbar.
+
+### 🔗 Gemeinsame Szenendaten
+
+- Szenenzentrale, Szenenboard und Manuskript-Navigator lesen dieselben Szenenobjekte und denselben `sceneCoreId`.
+- Die neue Zentrale erzeugt keine parallelen Szenenkopien und verändert die in v0.81 eingeführte Versionshistorie nicht.
+- Timeline-Verknüpfungen werden sowohl aus der vorhandenen Projekt-Timeline als auch aus buchgebundenen Timeline-Ereignissen berücksichtigt, soweit diese bereits mit einem Manuskriptabschnitt verbunden sind.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Manuskript- und Szenendaten bleiben kompatibel.
+- Keine destruktive Datenmigration erforderlich.
+
 ## v0.82.0 – Scene Lifecycle
 
 ### 🧩 Eine Szene, ein Szenenkern
