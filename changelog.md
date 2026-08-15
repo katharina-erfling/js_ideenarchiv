@@ -6,6 +6,56 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.42
+
+### ♧ Inspiration – Raster, Löschen & Drag-and-Drop korrigiert
+
+### ▦ Zeilenweise Masonry-/Kachelansicht
+
+Das Inspirationsboard füllt jetzt zuerst von links nach rechts auf.
+
+Erst wenn eine Zeile belegt ist, beginnt die nächste. Unterschiedlich hohe
+Bilder bleiben trotzdem unterschiedlich hoch; kleinere Karten können freie
+Lücken darunter dicht auffüllen.
+
+Technisch wurde die bisherige CSS-Spaltenansicht durch ein
+zeilenorientiertes, dichtes Grid ersetzt.
+
+### 🗑 Bilder wieder zuverlässig löschen
+
+Inspirationsbilder können jetzt:
+
+- direkt über `×` auf der Bildkarte gelöscht werden
+- weiterhin im Bearbeitungsdialog gelöscht werden
+
+Die Löschlogik verwendet jetzt eine gemeinsame Funktion und vergleicht IDs
+robust als Strings.
+
+### ↕ Keine Kopien mehr beim internen Drag & Drop
+
+Beim Verschieben eines bereits gespeicherten Inspirationsbildes wurde der
+interne Drag teilweise zusätzlich als Datei-Drop interpretiert.
+
+Dadurch entstand beim Loslassen im selben Ordner eine ungewollte Kopie.
+
+Das ist behoben:
+
+- interne Bild-Drags werden eindeutig erkannt
+- interne Drags werden niemals als neuer Datei-Upload verarbeitet
+- Drop in denselben Ordner ist ein No-op
+- nur echte Dateien von außerhalb der Suite erzeugen neue Bilder
+- der native Browser-Drag des eigentlichen Bildes wurde deaktiviert
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- zeilenorientiertes Dense-Grid aktiv
+- dynamische Grid-Höhenberechnung vorhanden
+- direktes Löschen und Dialog-Löschen nutzen dieselbe Funktion
+- interne Drag-Typen werden vor Datei-Drops ausgewertet
+- Same-Folder-Drop erzeugt keine neue Kopie
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.41
 
 ### 🏠 Startlogik erneut korrigiert – Dashboard ist jetzt die echte Startseite
