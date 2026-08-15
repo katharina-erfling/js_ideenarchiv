@@ -6,6 +6,46 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.98.0 – Language & Style Studio
+
+### 🔤 Lokale Sprach- und Stilanalyse
+
+- `Text prüfen` wurde zum Language & Style Studio ausgebaut.
+- Die lokale Analyse läuft vollständig im Browser und überträgt keinen Manuskripttext.
+- Geprüft werden Wiederholungen in kurzem Abstand, mögliche Füllwörter, lange und sehr lange Sätze, komplexe Satzstrukturen, mögliche Passivkonstruktionen und häufige allgemeine Verben.
+- Alle Treffer werden ausdrücklich als Prüfstelle formuliert und nicht als automatische Qualitätsbewertung.
+
+### 📊 Lesbarkeit & Wortfrequenzen
+
+- Das Studio zeigt Wortzahl, durchschnittliche Satzlänge, durchschnittliche Wortlänge und eine deutschsprachige Flesch-Näherung.
+- Häufige Inhaltswörter werden separat zusammengefasst, wobei typische Funktionswörter ausgefiltert werden.
+- Die Lesbarkeitsanzeige ist eine Orientierung und keine Bewertung des literarischen Stils.
+
+### ◉ Temporäre Markierungen im Manuskript
+
+- Lokale Prüfstellen können direkt im geöffneten Manuskript farblich markiert werden.
+- Die Markierungen verwenden – sofern vom Browser unterstützt – die CSS Highlight API und verändern dadurch den gespeicherten Manuskript-HTML-Code nicht.
+- Einzelne Treffer lassen sich aus der Ergebnisliste direkt im Manuskript anspringen.
+- Markierungen können jederzeit vollständig ausgeblendet werden.
+
+### ✦ Eigene Prüfmuster
+
+- Eigene Wörter und kurze Formulierungen können als persönliche Prüfmuster hinterlegt werden.
+- Ein Eintrag pro Zeile genügt; die Muster bleiben lokal in diesem Browser gespeichert.
+- Damit lassen sich beispielsweise persönliche Lieblingswörter oder bewusst zu kontrollierende Wendungen unabhängig von festen Stilregeln prüfen.
+
+### ✓ Rechtschreibung & Grammatik
+
+- Die native Browser-Rechtschreibung bleibt unverändert aktiv.
+- LanguageTool bleibt eine separate optionale Online-Prüfung und wird ausschließlich auf ausdrücklichen Klick gestartet.
+- Die lokale Stilanalyse ist vollständig davon unabhängig und funktioniert auch ohne LanguageTool.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration erforderlich.
+- Lokale Stilmarkierungen werden nicht in Manuskripten gespeichert.
+
 ## v0.97.0 – Story Rhythm
 
 ### 💓 Story-Puls pro Szene
