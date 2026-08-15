@@ -6,6 +6,79 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.24
+
+### 👤 Figurenbogen wird zur Figurenverwaltung
+
+Figuren werden nach der Trennung von Wissen & Welt und Anhang
+jetzt direkt im Figurenbogen angelegt und verwaltet.
+
+Neu:
+
+- Figur anlegen
+- Figur bearbeiten
+- Figuren suchen und auswählen
+- Steckbrief, Aliase, Bilder und weitere Felder pflegen
+- Entwicklungsstationen anlegen und bearbeiten
+- Szenen- und Timeline-Bezug verfolgen
+
+Der leere Zustand führt nicht mehr zum Anhang,
+sondern direkt zu „Erste Figur anlegen“.
+
+### 🗺 Weltkarte verwaltet Orte direkt
+
+- + Ort öffnet die Ortsakte direkt
+- vorhandene Orte besitzen eine Bearbeiten-Aktion
+- Kartenpins öffnen Ortsakten direkt
+- Figuren-Overlays öffnen Figurenakten direkt
+- kein unnötiger Wechsel in den Anhang
+
+### 🧠 Codex verwaltet Wissenseinträge direkt
+
+Der frühere Story-Bibel-Link wurde durch
+„+ Wissenseintrag“ ersetzt.
+
+- neue Wissenseinträge direkt im Codex
+- vorhandene Codex-Karten direkt bearbeiten
+- aktiver Typfilter wird für neue Einträge vorausgewählt
+
+### ↔ Beziehungen
+
+- + Wissenseintrag ergänzt
+- Beziehungsknoten per Doppelklick direkt bearbeiten
+- Beziehungen und ihre Knoten können im selben Bereich aufgebaut werden
+
+### 🧩 Gemeinsame Wissensbasis
+
+Die internen Wissenseinträge bleiben gemeinsame Datenbasis für:
+
+- Figurenbogen
+- Weltkarte
+- Codex
+- Beziehungen
+- Story Graph
+- Universum
+- Kontinuität
+- Manuskript-Verknüpfungen
+
+Der technische Container bleibt intern bestehen, ist aber nicht mehr
+die sichtbare Verwaltungsstelle.
+
+### 🔄 Speichern und Löschen
+
+Wissenseinträge aktualisieren nach Speichern oder Löschen
+direkt den aktuell geöffneten Fachbereich.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Figuren direkt im Figurenbogen anlegbar/bearbeitbar
+- Orte direkt in der Weltkarte anlegbar/bearbeitbar
+- Codex kann Wissenseinträge direkt anlegen/bearbeiten
+- Beziehungen können Wissenseinträge direkt anlegen
+- aktueller Fachbereich wird nach Speichern/Löschen aktualisiert
+- keine doppelten HTML-IDs
+
 ## v0.80.23
 
 ### 🔎 Kategorieauswahl bei „Neue Idee“ klar getrennt
