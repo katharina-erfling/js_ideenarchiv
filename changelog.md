@@ -6,6 +6,118 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+
+## v0.80.56
+
+### ♧ Inspiration – Kacheln per Eckgriff skalieren
+
+Inspirationsmedien können jetzt direkt im Board in ihrer Darstellungsbreite
+verändert werden.
+
+Jede Kachel besitzt beim Hover zwei dezente Eckgriffe unten links und rechts.
+
+Beim Ziehen wechselt die Kachel zwischen:
+
+- schmal
+- breit
+- sehr breit
+
+Die Größe wird als `displaySpan` am Inspirationsmedium gespeichert und bleibt
+nach dem Neuladen erhalten.
+
+Das Bild bzw. Video selbst bleibt proportional; verändert wird nur die
+Kachelbreite innerhalb des Masonry-Rasters.
+
+Das Masonry wurde dafür erweitert und unterstützt jetzt Kacheln, die eine,
+zwei oder drei Spalten belegen.
+
+### ▤ Zentraler Medienpool pro Buch
+
+Jedes Buch besitzt jetzt einen eigenen Medienpool unter:
+
+`Wissen & Welt → Medien`
+
+Dort können Bilder und Videos zentral gesammelt werden.
+
+Medien können:
+
+- direkt im Buch hochgeladen werden
+- per Drag & Drop in den Buchbereich gezogen werden
+- aus Inspiration übernommen werden
+- wieder aus dem Buch-Medienpool entfernt werden
+
+### ♧ Inspiration → Buch
+
+Links im Inspirationsbereich gibt es jetzt den Abschnitt `Zu einem Buch`.
+
+Ein Inspirationsmedium kann am vorhandenen `⠿`-Griff aufgenommen und direkt
+auf ein Buch gezogen werden.
+
+Das Buch wird beim Darüberziehen deutlich hervorgehoben.
+
+Beim Loslassen wird das Medium in den Medienpool dieses Buches übernommen.
+
+Inspiration bleibt dabei erhalten; das Medium wird nicht aus dem
+Inspirationsboard gelöscht.
+
+Zusätzlich bietet das Rechtsklick-Menü einer Inspiration direkt
+`Zu Buch hinzufügen`.
+
+### 👤⌖ Buchmedien für Charaktere, Orte & Wissen verwenden
+
+Im Bildbereich eines Wissen-&-Welt-Eintrags gibt es jetzt:
+
+`▧ Aus Buchmedien`
+
+Darüber kann ein Bild aus dem Medienpool des aktuellen Buches ausgewählt und
+der Galerie des Eintrags hinzugefügt werden.
+
+Damit funktioniert dies unter anderem für:
+
+- Charaktere
+- Orte
+- Welt-&-Lore-Einträge
+- weitere Wissen-&-Welt-Typen mit Bildern
+
+Das erste zugewiesene Bild kann wie bisher automatisch zum Hauptbild werden.
+
+### 🔗 Herkunft & Verwendung
+
+Buchmedien merken, wenn sie aus Inspiration stammen.
+
+Der Medienpool zeigt außerdem an, wie oft ein Medium bereits in
+Wissen-&-Welt-Einträgen verwendet wurde.
+
+Beim Löschen eines verwendeten Buchmediums erfolgt eine Warnung. Bereits in
+Einträgen verwendete Bildkopien bleiben dabei erhalten.
+
+### 💾 Datenmodell
+
+Bücher besitzen neu:
+
+- `mediaPool`
+
+Inspirationsmedien besitzen neu:
+
+- `displaySpan`
+
+Bestehende Bücher und Inspirationen bleiben kompatibel.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Inspirations-Kachelbreite persistent
+- Masonry unterstützt Mehrspalten-Kacheln
+- Buch-Medienpool im Workflow eingebunden
+- Inspiration → Buch per Drag & Drop
+- Inspiration → Buch per Rechtsklick
+- direkter Upload in Buchmedien
+- Auswahl aus Buchmedien im Wissenseintrag
+- Charaktere und Orte nutzen denselben Bildpicker
+- Dashboard-Startverhalten bleibt erhalten
+- Inspirations-Löschen bleibt erhalten
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.54
 
 ### ♧ Inspiration – sichtbares Live-Drag & Drop
