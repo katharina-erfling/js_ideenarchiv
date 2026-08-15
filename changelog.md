@@ -6,6 +6,47 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.67
+
+### 📚 Living Bookshelf – Drag & Drop repariert
+
+- Der tatsächliche Initialisierungsfehler der Regalinteraktion wurde behoben.
+- Buchrücken sind bereits beim Rendern als ziehbar markiert; die Drag-Handler werden erst danach gebunden.
+- Bücher können dadurch wieder innerhalb eines Regalbretts umsortiert und auf ein anderes Regalbrett gezogen werden.
+- Die Hoverkarte eines Buches fängt keine Drag-Ereignisse mehr ab.
+- Nach dem Ablegen werden Regalbrett und Position gespeichert und die Ansicht aus den gespeicherten Werten neu aufgebaut.
+- Ein normaler Klick öffnet das Buch weiterhin; ein vorheriges Ziehen löst nicht zusätzlich das Öffnen aus.
+
+### 🧠 Mindmaps – Verbindungsinteraktion repariert
+
+- Die transparente Knotenebene blockiert Mausereignisse auf Verbindungslinien nicht mehr.
+- Rechtsklick auf eine Mindmap-Verbindung erreicht jetzt tatsächlich die SVG-Linie und öffnet deren Kontextmenü.
+- Beschriften, Linienführung, Farbe, Pfeilrichtung, vollständige Eigenschaften und Löschen sind damit direkt an der Verbindung erreichbar.
+- Die unsichtbar vergrößerte Trefferfläche der Linie bleibt erhalten, damit dünne Verbindungen leicht angeklickt werden können.
+- Die Endpunkt-Griffe der Verbindung bleiben erreichbar und können weiterhin zum Umhängen einer Verbindung verwendet werden.
+
+### 🕸 Story Graph – Kanteninteraktion repariert
+
+- Die Story-Graph-SVG-Ebene blockiert Verbindungsaktionen nicht mehr global.
+- Die unsichtbaren Trefferpfade einzelner Verbindungen nehmen wieder gezielt Mausereignisse an.
+- Die darüberliegenden Story-Knoten bleiben unabhängig davon anklick- und ziehbar.
+- Das bereits vorhandene Rechtsklickmenü eigener Story-Graph-Verbindungen ist dadurch tatsächlich erreichbar.
+
+### 🖼 Romanideen – Bilderbereich & Footer
+
+- Der Bilderbereich ist jetzt vollständig normaler Dialoginhalt und endet sichtbar vor den Aktionsbuttons.
+- Die Dropzone besitzt einen eigenen klar begrenzten Bereich und verschwindet nicht mehr optisch hinter `Abbrechen` und `Speichern`.
+- `Abbrechen` und `Speichern` sitzen in einem eigenen Footer-Balken unterhalb des Inhalts.
+- Der Footer hat eine feste Hintergrundfläche, obere Trennlinie und Schatten statt eines transparenten Verlaufs über dem Bilderbereich.
+- Beim Scrollen kann kein Bildhinweis mehr scheinbar unter den Buttons liegen.
+
+### ✓ Technische Prüfung
+
+- Reihenfolge von Bookshelf-Rendering und Drag-Binding korrigiert.
+- Pointer-Event-Layering von Mindmap und Story Graph explizit getrennt.
+- JavaScript-Syntax geprüft.
+- Bestehende Bücher, Regalpositionen, Mindmaps und Story-Graph-Daten bleiben kompatibel.
+
 ## v0.80.66
 
 ### 📚 Living Bookshelf – freie Regalordnung
