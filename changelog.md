@@ -6,6 +6,52 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.39
+
+### 🏠 Startseite wieder eindeutig das Dashboard
+
+Beim frischen Öffnen der `index.html` startet die Autoren-Suite jetzt
+wieder zuverlässig auf dem globalen Dashboard.
+
+Der zuletzt geöffnete Bereich wird beim normalen Start nicht mehr
+versehentlich als Startseite übernommen.
+
+### ↻ F5 bleibt trotzdem erhalten
+
+Das gewünschte Reload-Verhalten bleibt bestehen:
+
+- `index.html` frisch öffnen → Dashboard
+- innerhalb der Suite zu Recherche, Inspiration, Ideenarchiv,
+  Buch usw. wechseln
+- `F5` / Browser-Neuladen → auf genau diesem Arbeitsbereich bleiben
+
+Dafür wird jetzt zusätzlich die History des aktuell geöffneten
+Dokuments geprüft.
+
+Der bisherige alleinige Check über `performance.navigation` war bei
+lokalen HTML-Dateien nicht zuverlässig und konnte ein frisch
+geöffnetes `file://`-Dokument fälschlich als Reload behandeln.
+
+### ✒ Logo / Startseite
+
+Ein Klick auf das Logo führt weiterhin ausdrücklich zum globalen
+Dashboard.
+
+### 💾 Daten
+
+An Ideen, Büchern, Manuskripten oder anderen gespeicherten Daten wird
+nichts verändert.
+
+Die Korrektur betrifft ausschließlich die Start-/Reload-Navigation.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- frischer Start → Dashboard
+- Reload-Kontext bleibt separat erhalten
+- Logo → Dashboard
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.38
 
 ### ♧ Inspiration neu gedacht – echtes visuelles Board
