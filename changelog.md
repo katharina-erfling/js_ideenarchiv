@@ -6,6 +6,52 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.41
+
+### 🏠 Startlogik erneut korrigiert – Dashboard ist jetzt die echte Startseite
+
+Die Start-/Reload-Erkennung wurde noch einmal grundsätzlich vereinfacht.
+
+Statt browserabhängiger `performance.navigation`-/History-Erkennung verwendet
+die Suite jetzt einen eigenen URL-Routen-Hash.
+
+Damit gilt eindeutig:
+
+- `index.html` frisch öffnen → Dashboard
+- innerhalb der Suite navigieren → Route wird im Hash gespeichert
+- `F5` → aktuelle Unterseite bzw. gespeicherter Arbeitskontext wird wiederhergestellt
+- Klick auf das Logo → Dashboard und Routen-Hash wird entfernt
+
+Ein frisch geöffnetes lokales `file://`-Dokument kann dadurch nicht mehr
+versehentlich als Reload des Ideenarchivs interpretiert werden.
+
+### 💡 Einfache Ideenanlage – Dublettenprüfung sichtbar gemacht
+
+Die bestehende Prüfung auf bereits vorhandene Ideen wurde ausgebaut und ist
+jetzt bei der normalen einzelnen Ideenanlage eindeutig sichtbar.
+
+Während des Tippens wird angezeigt:
+
+- `⚠ exakt vorhanden` bei identischer Idee
+- `≈ möglicherweise ähnlich` bei ausreichend hoher Textähnlichkeit
+- `✓ Neue Idee` wenn keine exakte oder ausreichend ähnliche Idee gefunden wird
+
+Bei exakten und ähnlichen Treffern werden Fundort und vorhandene Idee
+angezeigt und können direkt geöffnet werden.
+
+Sehr kurze Eingaben zeigen zunächst sichtbar, dass die Dublettenprüfung aktiv
+ist, ohne vorschnell eine Ähnlichkeitsbewertung zu behaupten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- frischer Start ohne Hash → Dashboard
+- F5 mit Suite-Hash → Resume-Kontext
+- Dashboard entfernt den Hash
+- Ideenprüfung nutzt exakte und Similarity-Prüfung
+- sichtbarer Status auch bei neuer Idee
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.40
 
 ### 🖼 Bildverarbeitung repariert
