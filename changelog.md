@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.96.0 – Manuscript Analytics 2.0
+
+### 📊 Storydaten in den globalen Statistiken
+
+- Die globale Statistik besitzt jetzt einen eigenen Bereich `Manuskript & Story`.
+- Für den gewählten Roman-/Reihenfilter werden Szenen, Kapitel, durchschnittliche Szenenlänge, Dialog-Näherung, Story-Fäden, Plotlinien, Timeline-Abdeckung und aktive Revision gemeinsam ausgewertet.
+- Der vollständige Scene Lifecycle wird als Verteilung sichtbar, statt nur die Gesamtzahl der Szenen zu zeigen.
+- Die häufigsten POVs, Figuren und Orte erscheinen direkt als kompakte Präsenzübersichten.
+- Die Auswertung verwendet dieselben Szenen-, Timeline-, Plot-, Faden- und Revisionsdaten wie die jeweiligen Fachbereiche; es entstehen keine separaten Statistikdaten.
+
+### 🧩 Manuscript Analysis Studio – Storydaten
+
+- Das bestehende Manuscript Analysis Studio erhält die zusätzliche Ansicht `Storydaten`.
+- Dort wird der Scene Lifecycle des aktuell gefilterten Manuskripts als eigener Reifegrad-Verlauf ausgewertet.
+- Die zeitliche Verankerung zeigt, wie viele Szenen bereits Story-Zeit, eigene Kalenderdaten oder ein verknüpftes Timeline-Ereignis besitzen.
+- Bei einem aktiven Revisionsdurchgang wird dessen echter Szenenfortschritt `Offen / In Arbeit / Überarbeitet` angezeigt.
+- Ohne aktiven Durchgang dient der Scene Lifecycle weiterhin als revisionsbezogener Überblick.
+- POVs, Figurenpräsenz, Orte, Plotlinien, Story-Fäden und Dialog-Näherung werden als gemeinsame Storystruktur-Kennzahlen zusammengeführt.
+
+### 🔗 Bestehende Analyse vertieft
+
+- Die bereits vorhandenen Detailansichten für Szenen-/Kapitellängen, POV & Figuren, Orte, Plot & Fäden, Pacing und strukturelle Hinweise bleiben erhalten.
+- v0.96 baut diese vorhandene Manuskriptanalyse aus, statt ein zweites Analytics-System daneben anzulegen.
+- Die Analyse bleibt bewusst beschreibend: Verteilungen, Lücken und Ausschläge werden sichtbar gemacht, aber nicht automatisch als erzählerische Fehler bewertet.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration erforderlich.
+- Bestehende Szenen-, Lifecycle-, Timeline-, Story-Faden-, Plotline- und Revisionsdaten bleiben die einzige Datenquelle.
+
 ## v0.95.0 – Versioning & Revision Polish
 
 ### 🔀 Versionslinien statt flacher Fassungsliste
