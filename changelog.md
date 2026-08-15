@@ -6,6 +6,55 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.82.0 – Scene Lifecycle
+
+### 🧩 Eine Szene, ein Szenenkern
+
+- Planungsszenen und Manuskriptszenen erhalten eine stabile gemeinsame `sceneCoreId`.
+- Beim Übergang von der Planungswand ins Manuskript wird nicht mehr nur eine lose Kopie erzeugt: Die Manuskriptszene übernimmt die Identität des vorhandenen Szenenkerns.
+- Änderungen an Szenendetails wie Titel, Kurzinhalt, POV, Ort, Zeit, Figuren, Story-Bibel-Verknüpfungen, Ziel/Konflikt, Ergebnis und Stimmung bleiben zwischen Planung und Manuskript synchron.
+- Die in v0.81 eingeführten kreativen Fassungen bleiben davon unabhängig erhalten; der gemeinsame Szenenkern überschreibt keine ältere bewusste Version.
+
+### 🌱 Sieben Reifegrade
+
+- Szenen verwenden jetzt den vollständigen Lebenszyklus:
+  - Schnipsel
+  - Geplant
+  - Ausgearbeitet
+  - Schreibbereit
+  - Geschrieben
+  - Überarbeitet
+  - Fertig
+- Der Reifegrad kann direkt in einer Planungsszene gewählt werden.
+- Im Manuskript ersetzt derselbe Lebenszyklus die bisher gröbere Szenenstatus-Auswahl.
+- Bereits vorhandene Statuswerte werden kompatibel in den neuen Lebenszyklus eingeordnet.
+
+### 🎬 Szenenboard
+
+- Das Szenenboard zeigt jetzt alle sieben Lebenszyklus-Stufen als durchgängigen Workflow.
+- Planungsszenen und bereits ins Manuskript überführte Szenen erscheinen gemeinsam in derselben Reifegrad-Ansicht.
+- Szenen können per Drag & Drop von einer Reifegrad-Spalte in eine andere verschoben werden.
+- Auch eine noch reine Planungsszene kann dadurch weiterentwickelt werden, ohne vorher ins Manuskript übertragen werden zu müssen.
+- Die Karten zeigen weiterhin POV, Ort, Zeit, Handlungsstrang und weitere Szenendaten.
+
+### ✒ Automatische Entwicklung beim Schreiben
+
+- Sobald eine Manuskriptszene tatsächlichen Text enthält, wird sie mindestens als `Geschrieben` behandelt.
+- Manuelle Reifegradwahl bleibt möglich und wird mit der Planungsansicht synchronisiert.
+- Bestehende Legacy-Statuswerte für Revision und Fertigstellung bleiben intern kompatibel, damit Revision Studio, Filter und ältere Daten nicht brechen.
+
+### 📈 Buchfortschritt
+
+- Der vorhandene Buchfortschritt greift für Szenen, Erstentwurf und Überarbeitung jetzt auf den neuen Szenen-Lebenszyklus zurück.
+- `Ausgearbeitet`, `Geschrieben` und `Überarbeitet` werden dadurch nicht mehr nur indirekt aus einzelnen Feldern oder alten Statuswerten geschätzt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Planungsszenen erhalten ihre Szenenidentität und ihren Reifegrad ohne destruktive Datenmigration.
+- Bestehende Manuskriptszenen werden aus ihren bisherigen Status-/Textdaten in einen kompatiblen Lebenszyklus eingeordnet.
+- Kreative Versionen aus v0.81 sowie automatische Snapshots bleiben kompatibel.
+
 ## v0.81.0 – Story Versioning Foundation
 
 ### 🕰️ Bewusste kreative Fassungen
