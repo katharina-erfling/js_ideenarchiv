@@ -6,6 +6,77 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+
+
+## v0.80.47
+
+### 🏠 Leere Startseite verhindert
+
+Nach der letzten Korrektur konnte die Hauptfläche beim Start komplett leer
+bleiben. Die Navigation links war sichtbar, das eigentliche Dashboard aber
+nicht.
+
+Die Startarchitektur wurde deshalb zusätzlich fehlertolerant gemacht.
+
+### Dashboard jetzt bereits im HTML vorhanden
+
+Das Dashboard ist nicht mehr nur ein leeres `<section>`-Element, das erst
+durch JavaScript gefüllt werden muss.
+
+Schon im Roh-HTML existiert jetzt eine echte Dashboard-Fallbackansicht.
+
+Dadurch gilt selbst bei einem unerwarteten JavaScript-Fehler:
+
+- Hauptfläche bleibt nicht leer
+- Dashboard bleibt als Startseite erkennbar
+- Ideenarchiv wird nicht als Ersatzansicht eingeblendet
+
+### Startlogik vor allen Bindings
+
+Bei einem frischen Öffnen wird das Dashboard jetzt unmittelbar aktiviert,
+bevor Navigation, Datenbank, alte UI-Bindings oder Audits initialisiert
+werden.
+
+Nach dem Laden der Daten wird es ein zweites Mal mit den echten Daten
+gerendert.
+
+### Fehlerisolierung
+
+Die einzelnen Startup-Schritte sind nun voneinander isoliert.
+
+Ein Fehler in beispielsweise:
+
+- Navigation
+- Core-Bindings
+- Kategorieverwaltung
+- Clipboard-Handler
+- Datenprüfung
+- Sicherheitscheck
+
+kann dadurch nicht mehr den kompletten Startvorgang abbrechen.
+
+### Dashboard selbst abgesichert
+
+Auch `renderDashboard()` läuft jetzt in einem eigenen Schutzblock. Sollte
+ausgerechnet die Dashboard-Datenaufbereitung fehlschlagen, bleibt eine
+verständliche Dashboard-Fallbackkarte sichtbar statt einer leeren braunen
+Fläche.
+
+### 💾 Daten
+
+Keine Nutzerdaten werden verändert oder zurückgesetzt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Dashboard besitzt statischen HTML-Fallback
+- frischer Start aktiviert Dashboard vor allen Bindings
+- Daten werden danach nachgeladen
+- endgültige Route wird nach dem Datenladen erneut gerendert
+- Startup-Schritte einzeln gegen Abbruch geschützt
+- Dashboard-Renderer selbst abgesichert
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.46
 
 ### 📁 Inspirationsordner repariert
