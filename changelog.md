@@ -6,6 +6,49 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.101.0 – Template Studio 2.0
+
+### 🧰 Zentrale Vorlagenverwaltung
+
+- In den Einstellungen gibt es jetzt ein eigenes `Template Studio 2.0`.
+- Vorlagen werden nach Buch, Schreibprozess, Szene, Story-Bibel, Revision und Prüfprofil gruppiert.
+- Eine Suche und Typfilter halten auch größere Vorlagensammlungen übersichtlich.
+- Eingebaute Startvorlagen liefern sofort nutzbare Beispiele, ohne bestehende Daten zu verändern.
+
+### ＋ Eigene Vorlagen aus dem aktuellen Arbeitskontext
+
+- Eigene Vorlagen können direkt aus einem aktuell geöffneten Buch, Schreibprozess, einer Szene, einem Story-Bibel-Eintrag, einem aktiven Revisionsdurchgang oder dem aktuellen Sprachprüfprofil erzeugt werden.
+- Buchvorlagen speichern wiederverwendbare Arbeitsparameter wie Status, Sprache, Schreibstatistik, Wortziel und Schreibprozess – nicht Titel, Cover oder Storyinhalt.
+- Schreibprozessvorlagen übernehmen die konfigurierbaren Phasen des vorhandenen Buchfortschritts.
+- Szenenvorlagen speichern wiederverwendbare Szenenmetadaten wie Reifegrad, POV-/Ortsvorgaben, Ziel, Ergebnis, Stimmung und Story-Rhythmus, ohne Manuskripttext zu kopieren.
+- Story-Bibel-Vorlagen speichern Typ, Feldstruktur und Kontinuitätsfakt-Struktur, aber keine konkreten Figuren-/Weltdaten.
+- Revisionsvorlagen speichern Schwerpunkt, Ziel und Arbeitsnotiz eines Durchgangs.
+- Prüfprofilvorlagen greifen auf die vorhandenen lokalen Language-&-Style-Regeln und eigenen Prüfmuster zurück.
+
+### ↗ Vorlagen direkt anwenden
+
+- Buchvorlagen können einen neuen Buchdialog mit passenden Standardwerten öffnen.
+- Schreibprozessvorlagen lassen sich auf das aktuell geöffnete Buch anwenden.
+- Szenenvorlagen starten einen neuen Szenendialog und übernehmen ihre Metadaten beim Anlegen der Szene.
+- Story-Bibel-Vorlagen öffnen einen neuen Wissenseintrag mit vorbereiteter Feldstruktur.
+- Revisionsvorlagen befüllen einen neuen Revisionsdurchgang.
+- Prüfprofilvorlagen aktivieren das passende lokale Sprach-/Stilprofil.
+- In Buch-, Szenen-, Story-Bibel- und Revisionsdialogen gibt es zusätzlich direkte `Vorlage`-Zugänge.
+
+### ⇧⇩ Import & Export
+
+- Eigene Vorlagen lassen sich gesammelt als JSON exportieren.
+- Exportierte Vorlagen können in derselben oder einer anderen Autoren-Suite wieder importiert werden.
+- Eingebaute Systemvorlagen bleiben von Export und Löschung getrennt.
+- Vorlagen bleiben vollständig lokal im Browser und benötigen keinen Account oder Server.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich; eigene Vorlagen werden lokal getrennt von den Roman-/Manuskriptdaten gespeichert.
+- Bestehende Bücher, Szenen, Story-Bibel-Akten, Revisionen und Prüfprofile bleiben kompatibel.
+
 ## v0.100.0 – Manuscript Professional · Gap Ausbau
 
 ### 🔎 Professionelles Suchen & Ersetzen
