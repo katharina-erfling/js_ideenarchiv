@@ -6,6 +6,50 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.43
+
+### 🏠 Startseite endgültig vom Ideenarchiv entkoppelt
+
+Die Autoren-Suite verwendet für die Start-/Reload-Erkennung keinen
+`#section`-Hash mehr.
+
+Genau dieser Hash konnte bei lokal geöffneten `index.html`-Dateien hängen
+bleiben und beim nächsten Start wieder das Ideenarchiv öffnen, obwohl das
+Dashboard die eigentliche Startseite ist.
+
+### Neue Startlogik
+
+Jetzt gilt:
+
+- `index.html` normal/frisch öffnen → immer globales Dashboard
+- alter `#section=ideas`-Hash → wird beim normalen Start entfernt
+- innerhalb der Suite navigieren → URL wird nicht mehr verändert
+- echtes `F5` im selben Browser-Tab → letzter Arbeitskontext wird restauriert
+- Logo → Dashboard
+
+Für F5 wird jetzt nur noch eine Kombination aus:
+
+- echtem Browser-Navigationstyp `reload`
+- derselben Tab-Sitzung
+
+verwendet.
+
+Damit ist ein gespeicherter Bereich allein nicht mehr in der Lage,
+sich zur Startseite zu machen.
+
+### 💾 Daten
+
+Ideen, Kategorien, Bücher und andere Daten werden nicht verändert.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Startlogik verwendet keinen Bereichs-Hash mehr
+- Dashboard räumt alte Hashes auf
+- F5-Resume bleibt über Tab-Sitzung erhalten
+- frischer Start fällt immer auf Dashboard zurück
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.42
 
 ### ♧ Inspiration – Raster, Löschen & Drag-and-Drop korrigiert
