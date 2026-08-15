@@ -6,6 +6,40 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.71
+
+### 📚 Living Bookshelf – Startpositionen
+
+- Freie Regalpositionen bleiben erhalten.
+- Nur kollidierende bzw. noch nicht sinnvoll positionierte Buchrücken werden beim ersten Rendern automatisch nebeneinander entzerrt.
+- Bewusst gelassene freie Abstände bleiben bestehen.
+- Korrigierte Ausgangspositionen werden gespeichert, damit derselbe Startzustand nicht nach jedem Neuladen erneut entsteht.
+
+### 📖 Echter Buchrücken
+
+- Ein hochgeladener einzelner, hochformatiger Buchrücken wird jetzt automatisch als echter Buchrücken übernommen.
+- Bei einem vollständigen Druckumschlag bleibt die manuelle Ausschnittwahl erhalten.
+- Gespeicherte Spine-Grafiken werden im Regal ausdrücklich als oberste sichtbare Ebene gerendert.
+- Bei vorhandenem echten Buchrücken werden generierte Rückenbeschriftungen und Hilfselemente vollständig ausgeblendet.
+
+### 🪶 Ruhigere generierte Buchrücken
+
+- Workflow-, Status- und Aktivitätsdekorationen erscheinen nicht mehr direkt auf dem Buchrücken.
+- Der bisherige kleine Aktivitätspunkt wurde entfernt.
+- Planner-Spirale, Notebook-Gummiband und Revisionsband werden im Living Bookshelf nicht mehr auf den Rücken gelegt.
+- Generierte Buchrücken konzentrieren sich auf Titel und – sofern vorhanden – Reihen-/Bandangabe.
+
+### 🖱 Hoverkarte
+
+- Die Buch-Hoverkarte wird nicht mehr vom Regalbrett abgeschnitten.
+- Regalreihen erlauben der Hoverkarte jetzt, sichtbar über den oberen Rand hinauszuragen.
+- Die Hoverkarte erhält einen sicheren Vordergrund-Layer, ohne Drag & Drop des Buchrückens zu blockieren.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende freie Regalpositionen, Umschlagdaten und Cover bleiben kompatibel.
+
 ## v0.80.70
 
 ### 📖 Buchdialog – Buchdaten zuerst
