@@ -6,6 +6,70 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.33
+
+### ♧ Inspiration Studio ausgebaut
+
+Der Inspirationsbereich kann jetzt sowohl visuell als auch strukturiert
+genutzt werden.
+
+### 📁 Verschachtelte Ordner
+
+- Ordner und Unterordner anlegen
+- beliebig verschachtelte Hierarchie
+- Ordner umbenennen und verschieben
+- Projektzuordnung für Ordner
+- Inspiration direkt in einen Ordner anlegen
+- Suche bleibt ordnerübergreifend
+- beim Löschen eines Ordners bleiben die Inspirationen erhalten
+
+### 🖼 Bilder & Drag and Drop
+
+- Hauptbild per Dateiauswahl oder Drag & Drop
+- optionale Bildergalerie
+- mehrere Bilder
+- Slider
+- Vorschaubilder
+- Bildnotizen
+- proportionale Darstellung ohne Strecken
+
+### 📎 Dateien
+
+PDFs, Dokumente und andere Dateien können per Auswahl oder Drag & Drop
+angehängt, angezeigt, entfernt und lokal gespeichert werden.
+
+### ✎ Eigene Felder
+
+Jede Inspiration kann beliebig viele frei benennbare Felder besitzen.
+
+### 💾 Datenmodell
+
+Bestehende Inspirationen bleiben kompatibel. Ergänzt wurden:
+
+- folderId
+- gallery
+- files
+- customFields
+
+Ordner werden im bestehenden Inspirationsspeicher verwaltet und sind
+dadurch automatisch Teil von Backup und Export.
+
+### 🧹 Kleine Bereinigung
+
+Ein versehentlich im Inspirationsdialog vorhandenes „Reiter“-Feld aus
+der Anhang-/Story-Bibel-Logik wurde entfernt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Ordner und Unterordner unterstützt
+- Ordner werden nicht als Inspirationen gezählt
+- Hauptbild unterstützt Drag & Drop
+- Galerie unterstützt Drag & Drop
+- Dateien unterstützt
+- eigene Felder unterstützt
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.32
 
 ### 🐞 Buch-Dashboard – Ladefehler behoben
