@@ -6,6 +6,55 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.40
+
+### 🖼 Bildverarbeitung repariert
+
+Beim direkten Hineinziehen von Bildern in Inspiration erschien die Meldung
+„Bild konnte nicht verarbeitet werden“.
+
+Ursache war eine fehlende zentrale Bildfunktion (`resizeImageFile`), die von
+Inspiration, Recherche, Charakterbildern, Buchcovern und weiteren
+Medienbereichen bereits aufgerufen wurde.
+
+### ✓ Reparatur
+
+Die gemeinsame Bildverarbeitung ist wieder vorhanden und übernimmt jetzt:
+
+- PNG
+- JPEG/JPG
+- WEBP
+- GIF als statisches Bild
+- SVG ohne Rasterung
+- proportionale Verkleinerung großer Bilder
+- Erhalt transparenter Hintergründe bei geeigneten Formaten
+- Fallback auf die Originaldatei, falls nur die Optimierung fehlschlägt
+
+### ♧ Inspiration
+
+Bilder können wieder direkt:
+
+- auf das Pinterest-artige Inspirationsboard gezogen werden
+- auf einen Inspirationsordner gezogen werden
+- über `＋ Bilder` ausgewählt werden
+- mit `Strg+V` eingefügt werden
+
+Nach erfolgreicher Verarbeitung werden sie sofort gespeichert und angezeigt.
+
+### 🔧 Nebenwirkung positiv
+
+Da dieselbe fehlende Funktion auch andere Bildbereiche verwendeten, sind
+damit zugleich die betroffenen Upload-Pfade für Recherche, Charakterbilder,
+Ortsbilder und Buchcover wieder funktionsfähig.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- `resizeImageFile` wieder zentral definiert
+- Inspiration verwendet die gemeinsame Bildpipeline
+- Fallback auf Original-Data-URL vorhanden
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.39
 
 ### 🏠 Startseite wieder eindeutig das Dashboard
