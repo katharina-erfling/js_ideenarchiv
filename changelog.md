@@ -6,6 +6,140 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.29
+
+### 👤 „Figurenbogen“ heißt jetzt „Charaktere“
+
+Der Bereich unter Wissen & Welt wurde in der sichtbaren Navigation
+von „Figurenbogen“ zu „Charaktere“ umbenannt.
+
+Auch der Schnellzugriff auf dem Buch-Dashboard verwendet jetzt
+„Charaktere“.
+
+Die interne Workflow-ID `characterarc` bleibt aus
+Kompatibilitätsgründen unverändert.
+
+### 🖼 Drag & Drop für Bilder
+
+Bilder können jetzt direkt in die Hauptgalerie gezogen werden.
+
+Die bestehende Galerie behält:
+
+- feste Darstellungsfläche
+- proportionale Darstellung
+- Slider
+- Vorschaubilder
+- Hauptbild
+- Bildnotizen
+
+Bilder können weiterhin auch über `＋ Bilder` ausgewählt werden.
+
+### 📎 Drag & Drop für andere Dateien
+
+Wissensakten unterstützen jetzt allgemeine Dateianhänge.
+
+Dateien können:
+
+- per Drag & Drop hinzugefügt
+- über `＋ Dateien` ausgewählt
+- mit Dateiname, Typ und Größe angezeigt
+- wieder entfernt
+- lokal aus der Akte gespeichert werden
+
+Bilder werden automatisch erkannt und der Bildergalerie zugeordnet.
+
+Dateien über 10 MB erzeugen eine Warnung.
+Dateien über 25 MB werden zum Schutz des lokalen Speichers
+nicht aufgenommen.
+
+### 🖼 Benennbare zusätzliche Bildergalerien für Charaktere
+
+Charaktere können beliebig viele weitere Galerien besitzen.
+
+Über:
+
+`＋ Galerie`
+
+kann z. B. angelegt werden:
+
+- Outfits
+- Kindheit
+- Familie
+- Referenzen
+- Beziehungen
+- unterschiedliche Lebensphasen
+
+Jede Galerie besitzt:
+
+- frei editierbaren Namen
+- eigenen Slider
+- feste Bildfläche
+- proportionale Bilddarstellung
+- Vorschaubilder
+- Bildnotizen
+- Bilder-Upload
+- Drag & Drop
+- einzelne Bilder löschen
+- komplette Galerie löschen
+
+### 💾 Datenmodell
+
+Wissenseinträge speichern jetzt zusätzlich:
+
+- `imageGalleries`
+- `files`
+
+Bestehende Einträge bleiben kompatibel.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- „Figurenbogen“ zu „Charaktere“ umbenannt
+- Hauptgalerie unterstützt Drag & Drop
+- zusätzliche Charaktergalerien unterstützt
+- Galerien frei benennbar
+- Dateien per Upload und Drag & Drop unterstützt
+- bestehende Bilder bleiben kompatibel
+- keine doppelten HTML-IDs
+
+## v0.80.28
+
+### 🖱 Mausbuttons für Zurück & Vor
+
+Die typischen Daumentasten einer Maus werden jetzt innerhalb der
+Autoren-Suite unterstützt:
+
+- Mausbutton „Zurück“ → vorherige Ansicht
+- Mausbutton „Vor“ → nächste Ansicht
+
+Die Navigation arbeitet mit einem eigenen Verlauf der Suite und springt
+deshalb nicht einfach aus der Anwendung heraus.
+
+Berücksichtigt werden unter anderem:
+
+- Hauptbereiche
+- Ideenarchiv
+- Bücher / Schreibansicht
+- Buch-Workflow-Reiter
+- Projektansichten
+- aktuell geöffnetes Manuskript
+- Mindmap-Kontext
+
+Neue Navigation nach einem Zurück-Sprung verwirft – wie bei einem
+normalen Browser – den bisherigen Vorwärts-Verlauf.
+
+Der interne Verlauf ist auf 100 Navigationsstände begrenzt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Mausbutton 3 als „Zurück“ gebunden
+- Mausbutton 4 als „Vor“ gebunden
+- Browser-Standardaktion der Daumentasten innerhalb der Suite abgefangen
+- eigener Vor-/Zurück-Verlauf vorhanden
+- F5-/Resume-Logik bleibt separat erhalten
+- keine doppelten HTML-IDs
+
 ## v0.80.27
 
 ### 👤 Charaktere – zeitliche Einordnung entfernt
