@@ -6,6 +6,65 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.37
+
+### 📋 Bilder aus der Zwischenablage
+
+Bildbereiche unterstützen jetzt `Strg+V`.
+
+Unterstützt werden:
+
+- Charakter-Hauptgalerie
+- zusätzliche benennbare Charaktergalerien
+- Inspiration-Hauptbild
+- Inspiration-Bildergalerie
+- Recherche-Hauptbild
+- Recherche-Bildergalerie
+
+### 🎯 Aktive Bildfläche
+
+Die zuletzt angeklickte oder fokussierte Bildfläche ist das Einfügeziel.
+
+Beispiel:
+
+1. Charakter öffnen
+2. Galerie „Outfits“ anklicken
+3. Bild kopieren
+4. `Strg+V`
+5. Bild landet in „Outfits“
+
+Die aktive Fläche wird dezent hervorgehoben.
+
+### ↩ Standardziel
+
+Wenn noch keine Bildfläche gewählt wurde:
+
+- Charakter → Hauptgalerie
+- Inspiration vom Typ Bild → Hauptbild
+- andere Inspirationstypen → Galerie
+- Recherche vom Typ Bild → Hauptbild
+- andere Recherchetypen → Galerie
+
+### 🖼 Gemeinsame Bildverarbeitung
+
+Zwischenablagebilder laufen durch dieselbe Verarbeitung wie Upload
+und Drag & Drop.
+
+Größenoptimierung, Galerielogik und proportionale Darstellung
+bleiben erhalten.
+
+Normales Text-Einfügen wird nicht abgefangen.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- zentraler Clipboard-Image-Handler
+- aktive Zielgalerie unterstützt
+- Standardziel je Dialog vorhanden
+- Charakter, Inspiration und Recherche unterstützt
+- Text-Paste bleibt unangetastet
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.36
 
 ### ◉ Recherche Studio – Sammlungen, Bücher & Medien
