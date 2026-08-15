@@ -6,6 +6,111 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.75
+
+### 🔎 Reihen- und Storyfilter
+
+- Der Bibliotheksfilter zeigt Reihen bzw. zusammengehörige Story-Gruppen statt jedes einzelne Buch separat.
+- Mehrere Bücher derselben Reihe oder desselben gleichnamigen Romanprojekts werden zu einem gemeinsamen Filterziel zusammengefasst.
+- Einzelbände bleiben als eigene Auswahl erhalten.
+- Der Filter wirkt anschließend auf alle Bücher der gewählten Reihe bzw. Story-Gruppe.
+
+### 🖼 Druckumschlag – klarer Übernehmen-Workflow
+
+- Buchrücken und Frontcover zeigen direkt ihren aktuellen Status:
+  - `Noch nicht übernommen`
+  - `Ausschnitt geändert – noch nicht übernommen`
+  - `✓ Übernommen`
+- Sobald Position oder Breite eines Ausschnitts verändert werden, ist sichtbar, dass die Änderung noch nicht übernommen wurde.
+- `Speichern` schließt das Buch nicht mehr stillschweigend mit einem nur eingestellten, aber nicht übernommenen Ausschnitt.
+- Stattdessen wird auf den noch offenen Ausschnitt hingewiesen und der passende `Übernehmen`-Button fokussiert.
+- Die Buttons `Buchrücken übernehmen` und `Cover übernehmen` bleiben vollständig innerhalb ihrer Karten und brechen bei Bedarf sauber um.
+- Bei knapper Dialogbreite stehen Buchrücken- und Frontcover-Steuerung untereinander statt gequetscht nebeneinander.
+
+### 🔔 Bestätigungen & Toasts
+
+- Suite-Meldungen werden als eigener Top-Layer dargestellt und bleiben auch über geöffneten Dialogen scharf und lesbar.
+- Bestätigungen verschwinden nicht mehr optisch hinter dem unscharfen Modal-Hintergrund.
+- Die Anzeigedauer wurde leicht verlängert, damit kurze Rückmeldungen sicher wahrgenommen werden können.
+
+### 📖 Buch-Dashboard
+
+- Vorhandene Cover werden im Buch-Dashboard in der rechten Spalte oberhalb von `Nächster Schritt` angezeigt.
+- Das Cover behält sein Seitenverhältnis und erhält eine dezente Buch-/Schattenwirkung.
+- Ein Klick auf das Cover öffnet direkt `Buch bearbeiten`.
+- Bücher ohne Cover erhalten keine künstliche leere Platzhalterfläche.
+
+### 🔀 Workflow – echte Buchübersicht
+
+- Die bisher überwiegend statische Workflow-Karte wurde zu einer interaktiven Übersicht des aktuell geöffneten Buches ausgebaut.
+- Direkt sichtbar sind unter anderem:
+  - verknüpfte Ideen
+  - Planung
+  - Manuskriptwörter
+  - Figuren & Orte
+  - offene Handlungsfäden
+  - Timeline-Ereignisse
+- Jede Kennzahl ist anklickbar und führt direkt in den passenden Arbeitsbereich.
+- Die alte Prozessdarstellung bleibt nur noch optional unter `So arbeitet die Suite zusammen` erhalten.
+- Kleine Workflow-Erklärungstexte wurden auf eine deutlich besser lesbare Mindestgröße angehoben.
+
+### ✓ Textprüfung nur im Manuskript
+
+- `Text prüfen` wird nur noch angezeigt, wenn tatsächlich der Manuskriptbereich geöffnet ist.
+- Ohne geöffneten Manuskriptabschnitt kann die LanguageTool-Prüfung nicht gestartet werden.
+- Die Browser-Rechtschreibprüfung bleibt lokal im Editor aktiv.
+- Das irreführende Textprüf-Overlay auf dem Buch-Dashboard entfällt dadurch.
+
+### ✒ Schreibumgebung
+
+- Die Schreibumgebung wurde layouttechnisch neu geordnet.
+- Checkbox, Titel und Erklärung stehen jeweils als saubere gemeinsame Optionszeile zusammen.
+- `Typewriter-Modus` und `Fokusmodus` laufen nicht mehr mit ihren Beschreibungstexten ineinander.
+- Die Sessionsteuerung wurde aus dem Studio entfernt; das Studio enthält jetzt dauerhafte Ansichtseinstellungen und Textwerkzeuge.
+- Textwerkzeuge erhalten gleichmäßige Buttons und brechen auf schmaleren Dialogen sauber um.
+- Erklärungstexte wurden vergrößert und besser lesbar gemacht.
+
+### 🎯 Fokusmodus
+
+- Der Fokusmodus blendet die Workflow-Navigation und Nebenbereiche jetzt tatsächlich aus, statt die obere Bedienleiste nur zusammenzuschieben.
+- Im Fokus bleiben Buchauswahl, Manuskript und eine kompakte Session-/Fokusleiste sichtbar.
+- `Fokus beenden` hat einen festen Platz in dieser reduzierten Leiste.
+- Manuskript und Schreibfläche werden zentriert und erhalten mehr Ruhe.
+- Außerhalb des Manuskripts greift der Fokusmodus nicht mehr in Dashboard oder andere Buchbereiche ein.
+
+### ⏱ Schreibsession & Timer
+
+- `Schreibsession` öffnet jetzt eine eigene leichte Sessionsteuerung direkt im Manuskript.
+- Zur Auswahl stehen:
+  - `Stoppuhr`
+  - `Countdown`
+- Für Countdown-Sessions gibt es:
+  - 15 Minuten
+  - 25 Minuten
+  - 30 Minuten
+  - 45 Minuten
+  - 60 Minuten
+  - frei einstellbare Dauer
+- Optional kann ein Wortziel für die Session gesetzt werden.
+- Eine Session kann direkt im Fokusmodus gestartet werden.
+- Während einer laufenden Session bleiben Timer, Pause/Fortsetzen und `Session beenden` sichtbar.
+- Countdown-Sessions werden nach Ablauf automatisch beendet und gespeichert.
+- Gespeichert werden weiterhin:
+  - Start
+  - Ende
+  - aktive Schreibzeit
+  - Startwortzahl
+  - Endwortzahl
+  - Nettowörter
+- Zusätzlich werden jetzt Sessionmodus, geplante Dauer und Wortziel gespeichert.
+- Die vorhandenen Schreibstatistiken greifen weiterhin auf denselben `writingSessions`-Speicher zu.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Bestehende Bücher, Sessions und Umschlagdaten bleiben kompatibel.
+
 ## v0.80.74
 
 ### 🖼 Druckumschlag-Editor
