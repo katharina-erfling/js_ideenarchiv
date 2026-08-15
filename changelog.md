@@ -9,6 +9,60 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 
 
 ## v0.80.47
+## v0.80.48
+
+### ♧ Inspiration – Drag & Drop wiederhergestellt
+
+Drag & Drop externer Dateien funktionierte im Inspirationsbereich nicht mehr
+zuverlässig.
+
+Die Drop-Erkennung wurde neu aufgebaut:
+
+- Bilder per Drag & Drop
+- Videos per Drag & Drop
+- mehrere Dateien gleichzeitig
+- Drop auf das leere Board
+- Drop auf ein bereits gefülltes Board
+- Drop direkt auf Inspirationsordner
+- interne Medienverschiebung bleibt von externem Datei-Drop getrennt
+
+Die Erkennung der Browser-DataTransfer-Typen ist jetzt browserrobust.
+
+Zusätzlich akzeptiert die komplette sichtbare Inspirationsfläche echte
+Dateidrops als Sicherheitsnetz.
+
+Beim Darüberziehen erscheint die Ablagefläche:
+
+„Bilder oder Videos hier ablegen“
+
+### 👤 Charaktere – „Wissenseintrag konnte nicht geöffnet werden“ repariert
+
+Der Charakterdialog erwartete intern weiterhin das Feld
+`#appendixEntrySection`.
+
+Dieses Feld war bei einer früheren UI-Bereinigung aus dem HTML entfernt
+worden, während die Wissen-&-Welt-Logik es weiterhin verwendete.
+
+Dadurch brach das Anlegen eines Charakters beim Öffnen des Dialogs ab.
+
+### ✓ Korrektur Charaktere
+
+- internes Bereichsfeld wieder als unsichtbares Zustandsfeld vorhanden
+- Öffnen des Wissenseintrags prüft das Feld defensiv
+- Speichern besitzt einen Fallback auf den passenden Systembereich
+- bestehende Charaktere und Bereiche bleiben kompatibel
+- ID-Suche beim Öffnen ist string-sicher
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- benötigte Appendix-Dialog-IDs gegen HTML geprüft
+- `appendixEntrySection` wieder vorhanden
+- Inspiration-Drop auf leerer Fläche unterstützt
+- Bilder und Videos werden akzeptiert
+- interne Drags werden nicht als neue Uploads behandelt
+- keine doppelten statischen HTML-IDs
+
 
 ### 🏠 Leere Startseite verhindert
 
