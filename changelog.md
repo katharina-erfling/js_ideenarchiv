@@ -6,6 +6,40 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.79
+
+### 📈 Buchdashboard – Schreibfortschritt
+
+- Zwischen Buchübersicht und den bisherigen Statuskarten gibt es jetzt einen eigenen Bereich `Buchfortschritt`.
+- Die große Hauptleiste bildet den Schreibprozess in mehreren Phasen ab statt nur einen einfachen Prozentbalken zu zeigen.
+- Die Standardphasen sind:
+  - Ideen
+  - Plot & Planung
+  - Szenen
+  - Erstentwurf
+  - Überarbeitung
+  - Fertig
+- Die aktuell erkannte Phase wird deutlich hervorgehoben; bereits durchlaufene Phasen bleiben sichtbar abgeschlossen.
+- Unter der Hauptleiste zeigen vier feinere Fortschrittsanzeigen den konkreten Stand von Planung, Szenen, Erstentwurf und Überarbeitung.
+- Die Detailwerte werden aus den bereits vorhandenen Buchdaten berechnet, z. B. geplanten Szenen, angelegten Szenen, Szenen mit Text und als fertig markierten Szenen.
+- Wortzahlen bleiben als Zusatzinformation erhalten, sind aber nicht mehr alleiniger Maßstab für den Schreibfortschritt.
+- Die Detailkarten sind anklickbar und führen direkt in den jeweiligen Arbeitsbereich.
+
+### ⚙ Individueller Schreibprozess
+
+- Über `Fortschritt anpassen` lässt sich der Prozess pro Buch konfigurieren.
+- Phasen können umbenannt, ein- oder ausgeblendet und in eine andere Reihenfolge gebracht werden.
+- Standardmäßig erkennt die Suite die aktuelle Phase automatisch aus Planung, Manuskript und Buchstatus.
+- Die automatische Erkennung kann deaktiviert werden; anschließend lässt sich die aktuelle Prozessphase bewusst manuell festlegen.
+- `Standard` stellt die ursprüngliche Prozessvorlage wieder her.
+- Die Konfiguration wird direkt am jeweiligen Buch gespeichert, sodass unterschiedliche Bücher mit unterschiedlichen Arbeitsweisen geführt werden können.
+
+### ✓ Technische Prüfung
+
+- Bestehende Bücher erhalten ohne Datenmigration automatisch die neue Standard-Prozessvorlage.
+- JavaScript-Syntax geprüft.
+- Bestehende Planungs-, Manuskript- und Statusdaten bleiben unverändert kompatibel.
+
 ## v0.80.78
 
 ### 📖 Buch bearbeiten – direkter Fehler behoben
