@@ -6,6 +6,46 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.94.0 – Revision Integration
+
+### 📝 Revisionsdurchgänge direkt an Szenen
+
+- Das vorhandene Revision Studio 2.0 führt den Fortschritt eines Durchgangs jetzt zusätzlich pro Manuskriptszene.
+- Jede Szene kann innerhalb des aktuell ausgewählten Durchgangs als `Offen`, `In Arbeit` oder `Überarbeitet` geführt werden.
+- Neue bzw. ältere Revisionsdurchgänge erhalten diese Szenenstatus rückwärtskompatibel aus dem vorhandenen Manuskript; bereits mindestens überarbeitete Szenen starten nicht wieder künstlich bei `Offen`.
+- Das Revision Studio zeigt einen eigenen Szenenfortschritt mit drei übersichtlichen Bereichen und einer gemeinsamen Fortschrittsleiste.
+- Pro Szene bleiben die bereits vorhandenen Revisionsaufgaben sichtbar; der Szenenstatus ergänzt diese Aufgaben und ersetzt sie nicht.
+- Die Ausgangsfassung einer Szene kann direkt aus dem Szenenfortschritt mit dem aktuellen Stand verglichen werden.
+
+### ✒ Revision direkt im Schreib-Inspector
+
+- Der Revisions-Inspector zeigt bei Szenen jetzt den aktiven Revisionsdurchgang direkt beim Schreiben.
+- Der Szenenstatus des Durchgangs kann dort ohne Wechsel ins Revision Studio auf `Offen`, `In Arbeit` oder `Überarbeitet` gesetzt werden.
+- Die fixierte Ausgangsfassung des Durchgangs lässt sich direkt aus dem Inspector vergleichen.
+- `＋ Überarbeitungsfassung` beginnt aus dem aktuellen Manuskript eine bewusste kreative Fassung vom Typ `Überarbeitung`.
+- Die vorherige kreative Fassung bleibt dabei erhalten und wird im Referenzmodus neben der neuen Überarbeitungsfassung eingeblendet.
+- Die neue Fassung merkt sich den Revisionsdurchgang, aus dem sie entstanden ist.
+
+### 🧩 Scene Lifecycle & Revision
+
+- Wird eine Szene in einem Revisionsdurchgang als `Überarbeitet` markiert, wird ihr Scene Lifecycle mindestens auf `Überarbeitet` angehoben.
+- Planungsszene und Manuskriptszene bleiben dabei über denselben Szenenkern synchron.
+- Ein Zurücksetzen des Revisionsstatus auf `Offen` oder `In Arbeit` setzt den bereits erreichten Scene Lifecycle bewusst nicht rückwärts.
+- Dadurch bleibt der Lebenszyklus ein Entwicklungsfortschritt und wird nicht von einer einzelnen Revisionsrunde rückwirkend entwertet.
+
+### 📈 Buchfortschritt
+
+- Läuft ein aktiver Revisionsdurchgang, verwendet die Detailanzeige `Überarbeitung` im Buchfortschritt jetzt dessen echten Szenenfortschritt.
+- Statt nur aus alten Szenenstatus zu schätzen, kann die Anzeige z. B. `17/31 Szenen in „Strukturüberarbeitung“ überarbeitet` zeigen.
+- Ohne aktiven Revisionsdurchgang bleibt die bisherige Scene-Lifecycle-Auswertung als Fallback erhalten.
+
+### ✓ Technische Prüfung
+
+- Revisionsdurchgänge wurden rückwärtskompatibel um gespeicherte Szenenstatus erweitert.
+- Bestehende Revisionsnotizen, Basis-/Abschluss-Snapshots, kreative Fassungen und Scene-Lifecycle-Daten bleiben kompatibel.
+- Keine destruktive Datenmigration erforderlich.
+- JavaScript-Syntax geprüft.
+
 ## v0.93.0 – Heute im Schreibzimmer
 
 ### 🕰️ Persönliche Tageskarte
