@@ -6,6 +6,99 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.68
+
+### 📚 Living Bookshelf – echte freie Regalordnung
+
+- Das Umsortieren von Büchern innerhalb desselben Regalbretts wurde nochmals auf einen expliziten Einfügepunkt umgestellt.
+- Beim Ziehen erscheint jetzt eine sichtbare Einfügemarkierung zwischen den Buchrücken.
+- Die Drop-Position wird sowohl auf dem Regalbrett als auch direkt zwischen zwei Buchrücken ausgewertet.
+- Nach dem Ablegen werden Regalbrett und Reihenfolge aller betroffenen Bücher neu gespeichert.
+- Die gespeicherte Reihenfolge bleibt nach dem Neuladen erhalten.
+- Regalwechsel zwischen mehreren Brettern bleibt weiterhin möglich.
+- Jedes Regalbrett kann optional beschriftet werden.
+- Die Beschriftung erscheint als kleines echtes Regalschild an der Vorderkante statt als Formularfeld.
+- Doppelklick oder Rechtsklick auf das Schild bearbeitet den Namen; unbeschriftete Regale bleiben optisch zurückhaltend.
+
+### 📖 Buchgestaltung – Cover, Buchrücken & Druckumschlag
+
+- Die Covervorschau im Buchdialog zeigt ein vorhandenes Cover ohne farbigen Rahmen.
+- Die automatische Buchrückenfarbe aus dem Cover bleibt vollständig erhalten und dient weiterhin als Fallback.
+- Optional kann ein eigener Buchrücken oder ein kompletter Druckumschlag hochgeladen werden.
+- Bilddateien können direkt im Umschlag-Editor angezeigt und ihr Rücken-Ausschnitt über Position und Breite angepasst werden.
+- Schmale, hochformatige Buchrückenbilder werden automatisch als vollständiger Rücken vorbelegt.
+- PDF-Druckumschläge können ebenfalls ausgewählt und als Quelldatei gespeichert werden.
+- Für die PDF-Vorschau wird PDF.js geladen; ist die Bibliothek erreichbar, wird die erste Umschlagseite direkt im Browser gerendert und kann wie ein Bild zugeschnitten werden.
+- Der übernommene Ausschnitt wird als echter visueller Buchrücken im Living Bookshelf verwendet.
+- Bücher ohne eigenen Rücken behalten die bisherige generierte Rückenoptik.
+- Das Layout von `Reihe` und `Band` im Buchdialog wurde wieder auf eine gemeinsame obere Linie gebracht.
+
+### 🖼 Buchmedien – Duplikate & Zielauswahl
+
+- Buchmedien lassen sich nicht mehr durch internes Ziehen auf die eigene Dropzone unbeabsichtigt duplizieren.
+- Bilder und Videos innerhalb des Medienpools starten keinen nativen Bild-Drag mehr.
+- Beim Dateiimport wird zusätzlich erkannt, wenn dieselbe bereits verarbeitete Mediendatei schon im Buchpool liegt.
+- Das bisher immer länger werdende Rechtsklickmenü zum Verschieben wurde durch einen durchsuchbaren Ziel-Picker ersetzt.
+- Ziele können über Suche nach Name, Untertitel oder Typ gefiltert werden.
+- Zusätzlich gibt es Typfilter für Figuren, Orte und weitere vorhandene Wissen-&-Welt-Typen.
+- Die Trefferliste ist scrollbar und damit auch für viele Figuren, Orte und Welt-Einträge geeignet.
+- Verschieben bleibt ein echtes Verschieben: Nach erfolgreicher Zuordnung verschwindet das Bild aus den allgemeinen Buchmedien.
+
+### 👤 Wissen & Welt – Inhalt zuerst
+
+- Beim Anlegen und Bearbeiten eines Wissenseintrags stehen Name, Typ, Steckbrief, Beschreibung und übrige Inhaltsdaten jetzt vor den Medienbereichen.
+- Bilder, zusätzliche Galerien und Dateien folgen anschließend als eigener Abschnitt `Medien & Anhänge`.
+- Dadurch beginnt insbesondere das Anlegen einer Figur nicht mehr mit einer großen Bilder-/Dateimaske.
+- Der Dialog-Footer bleibt klar unterhalb der Inhalte abgesetzt.
+- Der Ordner-/Plus-Button im Charakterbereich wurde korrigiert; Symbol und Plus bleiben vollständig innerhalb der Buttonfläche.
+
+### 🔗 Beziehungen – direkter Canvas-Workflow
+
+- Der Bereich `Beziehungen` arbeitet jetzt nach demselben direkten Grundprinzip wie Mindmap und Story Graph.
+- Wissenseinträge erscheinen als frei verschiebbare Knoten auf einer Canvas-Fläche.
+- Knotenpositionen werden pro Buch gespeichert.
+- Jeder Knoten besitzt einen kleinen Verbindungsgriff.
+- Eine Beziehung entsteht durch Ziehen vom Verbindungsgriff auf einen anderen Knoten – ohne vorherigen Formularzwang.
+- Bereits vorhandene Beziehungsdaten bleiben vollständig kompatibel.
+- Doppelklick auf einen Knoten öffnet weiterhin den verknüpften Wissen-&-Welt-Eintrag.
+- Verbindungslinien sind direkt anklickbar und besitzen ein eigenes Rechtsklickmenü.
+- Dort können Beschriftung und Richtung schnell geändert, die vollständigen Details geöffnet oder die Beziehung gelöscht werden.
+
+### ◷ Timeline – direkte Denkfläche
+
+- Die Story-Timeline wurde auf eine frei bedienbare Canvas-Ansicht umgestellt.
+- Timeline-Punkte können direkt per Drag & Drop verschoben werden; ihre visuelle Position wird pro Buch gespeichert.
+- Doppelklick auf eine freie Stelle erzeugt direkt dort eine kleine Texteingabe für ein neues Ereignis.
+- Rechtsklick auf die freie Fläche bietet `Ereignis hier hinzufügen` sowie den ausführlichen Ereignisdialog an.
+- `＋ Ereignis` startet ebenfalls den schnellen Inline-Workflow.
+- Ein bestehender Timeline-Punkt lässt sich weiterhin öffnen, um Datum, Uhrzeit, Handlungsstrang, Ort, Bücher und Verknüpfungen detailliert zu bearbeiten.
+- Exakte Story-Daten bleiben vom freien visuellen Verschieben unberührt.
+
+### 📊 Statistiken – mehr Kennzahlen zum Storybestand
+
+- `Ideen & Planung` wurde zu einer deutlich ausführlicheren Kennzahlenübersicht erweitert.
+- Zusätzlich sichtbar sind jetzt unter anderem:
+  - Ideenzettel gesamt
+  - Bücher gesamt
+  - aktive Bücher
+  - Reihen / Serien
+  - Kapitel
+  - Szenen
+  - geschätzte Seiten
+  - durchschnittliche Wörter pro Buch
+  - durchschnittliche Szenen pro Buch
+  - Figuren
+  - Orte
+- Die geschätzte Seitenzahl wird transparent mit 300 Wörtern pro Seite berechnet und ausdrücklich als Näherungswert angezeigt.
+- Die bestehenden Werte zu Romanideen, verknüpften Ideen, Planung, Wissen & Welt und offenen Handlungsfäden bleiben erhalten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Bestehende Bücher werden ohne Datenmigration um die neuen Layout-/Umschlagfelder ergänzt.
+- Bestehende Beziehungen, Timeline-Daten, Buchmedien und Regalpositionen bleiben kompatibel.
+
 ## v0.80.67
 
 ### 📚 Living Bookshelf – Drag & Drop repariert
