@@ -6,6 +6,36 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.86.0 – POV Analytics & Character Presence
+
+### 👤 POV-Spur durch das Manuskript
+
+- Die vorhandenen POV-Daten der Szenen werden jetzt als direkte visuelle Szenenfolge dargestellt.
+- Jede Szene erscheint mit einem kompakten POV-Kürzel; Kapitelmarker gliedern die Folge, ohne eine neue parallele Struktur anzulegen.
+- Ein Klick auf einen POV-Punkt öffnet die zugehörige Szene direkt im Manuskript.
+- Szenen ohne hinterlegten POV werden bewusst sichtbar markiert, statt aus der Auswertung zu verschwinden.
+
+### 📊 Perspektivverteilung
+
+- Die bestehende Manuskriptanalyse zeigt Szenenanteil und Wortmenge pro POV jetzt gemeinsam mit der visuellen POV-Spur.
+- Dadurch werden sowohl relative Anteile als auch die tatsächliche Reihenfolge der Perspektivwechsel sichtbar.
+- Die Analyse bleibt beschreibend: Eine ungewöhnliche POV-Verteilung wird nicht automatisch als dramaturgischer Fehler bewertet.
+
+### 👥 Character Presence
+
+- Figurenpräsenz erhält zusätzlich einen Verlauf über alle Szenen des aktuellen Filters.
+- Pro Figur wird sichtbar, in welchen Szenen sie vorkommt, wie groß ihr Szenenanteil ist und wann sie zuletzt auftritt.
+- POV-Figuren zählen automatisch als präsent, auch wenn sie nicht zusätzlich in der Figurenliste der Szene markiert wurden.
+- Die längste Pause einer Figur wird direkt am Präsenzverlauf ausgewiesen.
+- Bei auffällig langen Abständen erscheint lediglich ein sachlicher Hinweis – keine Qualitätsbewertung.
+
+### ✓ Technische Prüfung
+
+- Die neuen Auswertungen verwenden ausschließlich die bereits vorhandenen Szenen-, POV- und Figurenverknüpfungen.
+- Es entstehen keine neuen Kopien oder Analyse-Datensätze.
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration erforderlich.
+
 ## v0.85.0 – Story-Fäden 2.0
 
 ### 🧵 Fadenstationen direkt im Manuskript verankern
