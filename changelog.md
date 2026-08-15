@@ -6,6 +6,39 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.97.0 – Story Rhythm
+
+### 💓 Story-Puls pro Szene
+
+- Szenen besitzen jetzt optionale Story-Rhythmus-Werte für Konflikt, Action, Ruhe, Romantik, Enthüllung, Worldbuilding, Charakterentwicklung, Spannung und Humor.
+- Jede Eigenschaft kann im Szenen-Inspector bewusst von `nicht gesetzt` über `leicht` und `mittel` bis `stark` eingeschätzt werden.
+- Nicht gesetzte Eigenschaften bleiben neutral; die Suite versucht nicht, die Dramaturgie automatisch aus dem Manuskript zu erraten.
+- Rhythmusdaten bleiben am bestehenden Szenenobjekt und werden beim Synchronisieren zwischen Planung und Manuskript mitgeführt.
+
+### 📊 Story Rhythm im Manuscript Analysis Studio
+
+- Das bestehende Manuscript Analysis Studio besitzt die neue Ansicht `Story-Puls`.
+- Eine kompakte Hauptspur zeigt die durchschnittlich gesetzte Dynamik Szene für Szene.
+- Darunter werden die einzelnen Eigenschaften als getrennte Spuren über den gesamten Manuskriptverlauf dargestellt.
+- Klicken auf einen Rhythmuspunkt öffnet direkt die zugehörige Szene im Manuskript.
+- Die Ansicht respektiert die vorhandenen Analysefilter für Teile, Status und leere Szenen.
+- Szenen ohne Rhythmusangaben bleiben sichtbar, damit Lücken in der eigenen Erfassung erkennbar sind.
+
+### 📤 Analyseexport
+
+- Der bestehende CSV-Export der Manuskriptanalyse enthält jetzt zusätzlich die pro Szene gesetzten Story-Rhythmus-Werte.
+
+### 🧭 Grundsatz
+
+- Story Rhythm ist ausdrücklich eine vom Autor gepflegte Visualisierung, keine automatische Dramaturgie-Benotung.
+- Die Suite zeigt nur die eingetragenen Muster und Veränderungen und formuliert daraus keine Aussagen wie `zu wenig Spannung` oder `falsches Pacing`.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine destruktive Datenmigration erforderlich.
+- Bestehende Szenen ohne Rhythmusdaten bleiben vollständig kompatibel.
+
 ## v0.96.0 – Manuscript Analytics 2.0
 
 ### 📊 Storydaten in den globalen Statistiken
