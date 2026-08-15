@@ -6,6 +6,42 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.88.0 – Continuity Facts & Schreib-Inspector
+
+### 🧠 Kanonische Kontinuitätsfakten
+
+- Wissenseinträge besitzen jetzt zusätzlich zu zeitlichen Kontinuitäts-Checkpoints einen eigenen Bereich `Kontinuitätsfakten`.
+- Dort lassen sich feste Fakten wie Augenfarbe, Narben, Stockwerke, Besitzverhältnisse, Beziehungen oder Weltregeln als eigene Einträge speichern.
+- Jeder Fakt besitzt Art, Bezeichnung, Wert und eine optionale Notiz.
+- Über `Im Schreib-Inspector` lässt sich pro Fakt festlegen, ob er während des Schreibens schnell eingeblendet werden soll.
+- Die bestehenden zeitabhängigen Kontinuitäts-Checkpoints bleiben davon getrennt: Fakten beschreiben den kanonischen Grundzustand, Checkpoints beschreiben, was zu einem bestimmten Zeitpunkt gilt.
+
+### ✒ Kontinuität direkt beim Schreiben
+
+- Der vorhandene `Kontext`-Inspector im Manuskript zeigt jetzt einen eigenen Block `Kontinuitätsfakten`.
+- Berücksichtigt werden verknüpfte Story-Bibel-Akten sowie passende Figuren und Orte der aktuellen Szene.
+- Eindeutig erkannte Codex-Erwähnungen können ebenfalls relevante Fakten in den Schreibkontext bringen.
+- Jeder Fakt zeigt Wert, Ursprungseintrag und Kategorie kompakt an.
+- Ein Klick auf einen Fakt öffnet direkt die zugehörige Story-Bibel-Akte.
+- Vom Inspector aus kann außerdem unmittelbar in die vollständige Kontinuitätsansicht des Buches gewechselt werden.
+
+### 🧭 Kontinuitätszentrale
+
+- Die Kontinuitätsübersicht zählt jetzt zusätzlich die vorhandenen kanonischen Fakten.
+- Kanonische Fakten und zeitliche Checkpoints bleiben bewusst getrennte Informationsarten und ergänzen sich gegenseitig.
+
+### 🔎 Suche & Kompatibilität
+
+- Kontinuitätsfakten werden in die globale Suche der Suite aufgenommen.
+- Bestehende Story-Bibel-Akten ohne Fakten bleiben unverändert kompatibel.
+- Für bestehende Daten ist keine destruktive Migration erforderlich.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf die neuen Editor-IDs und Schreib-Inspector-Verknüpfungen geprüft.
+- Bestehendes Living Knowledge, Living Canon und die bisherigen Kontinuitäts-Checkpoints bleiben erhalten.
+
 ## v0.87.0 – Timeline ↔ Manuskript
 
 ### 🗓️ Szenen und Timeline wirklich verknüpfen
