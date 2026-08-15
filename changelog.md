@@ -6,6 +6,58 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.26
+
+### 🛠 Figuren- und Ortsaktionen repariert
+
+Die sichtbaren neuen Verwaltungsbuttons aus dem Wissen-&-Welt-Umbau
+waren teilweise noch nicht mit den neuen Aktionen verbunden.
+
+### 👤 Figuren
+
+Repariert:
+
+- + Figur
+- + in der Figuren-Seitenleiste
+- + Erste Figur anlegen
+- ✎ Figur bearbeiten
+
+Zusätzlich öffnet ein Doppelklick auf eine Figur in der Liste
+direkt ihre Akte.
+
+Die vorhandenen Links für Entwicklungsstationen, Szenen und
+Timeline bleiben erhalten.
+
+### 🗺 Orte / Weltkarte
+
+Der Stift neben einem Ort ist jetzt tatsächlich mit
+„Ortsakte bearbeiten“ verbunden.
+
+Aktionen sind sauber getrennt:
+
+- Ortszeile anklicken → Ort zum Platzieren auswählen
+- Stift → Ortsakte bearbeiten
+- Drag & Drop → Ort auf Karte ziehen
+- + Ort → neuen Ort anlegen
+
+Der Stift löst nicht mehr gleichzeitig die Kartenplatzierung aus.
+
+### 🛡 Wissensdialoge robuster
+
+Beim Öffnen von Figuren, Orten und anderen Wissenseinträgen werden
+Fehler abgefangen. Wenn ein Datensatz nicht gefunden wird, zeigt
+die Suite einen Hinweis statt eines scheinbar toten Links.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Figuren-Neuanlage gebunden
+- Figuren-Bearbeiten gebunden
+- Figuren-Doppelklick gebunden
+- Orts-Stift gebunden
+- Ortsauswahl und Bearbeiten getrennt
+- keine doppelten HTML-IDs
+
 ## v0.80.24
 
 ### 👤 Figurenbogen wird zur Figurenverwaltung
