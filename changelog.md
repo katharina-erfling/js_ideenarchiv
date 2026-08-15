@@ -7,6 +7,92 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 
 ---
 
+## v0.80.58
+
+### 💡 Neue Idee – Dublettenprüfung bremst das Tippen nicht mehr
+
+Die Prüfung auf exakte und ähnliche vorhandene Ideen lief bisher bei jedem
+einzelnen Tastendruck.
+
+Bei einem großen Ideenarchiv konnte das Schreiben dadurch deutlich verzögert
+wirken.
+
+Jetzt gilt:
+
+- während des Tippens läuft keine aufwendige Ähnlichkeitsprüfung
+- der bisherige Hinweis wird während neuer Eingabe ausgeblendet
+- sobald das Ideenfeld verlassen wird (`blur`), wird die Dublettenprüfung
+  einmal vollständig ausgeführt
+- exakte, ähnliche und neue Ideen werden anschließend wie bisher angezeigt
+
+### ⚙ Einstellungen – Beschreibung lesbarer
+
+Die kleinen Beschreibungstexte in den Einstellungen, unter anderem:
+
+`Wie weit soll der Baum beim Start standardmäßig geöffnet sein?`
+
+wurden vergrößert und erhalten mehr Zeilenhöhe.
+
+### 📊 Statistiken – Ideen & Planung ergänzt
+
+Die Statistikseite bildet nicht mehr ausschließlich das Schreiben ab.
+
+Neu ist ein eigener Bereich `Ideen & Planung` mit:
+
+- Romanideen
+- verknüpften Ideenzetteln
+- Planungsbausteinen
+- Wissen-&-Welt-Einträgen
+- offenen Handlungsfäden
+
+Die Werte reagieren auf dieselbe Reihen-/Buchauswahl wie die
+Schreibstatistiken.
+
+### 📚 Zusammengehörende Bücher gemeinsam im Statistikfilter
+
+Der Statistikfilter gruppiert Bücher jetzt tatsächlich nach ihrer Reihe.
+
+Unter einer Reihe steht:
+
+- `◆ Gesamte Reihe`
+- darunter hierarchisch eingerückt die einzelnen Bücher/Bände
+
+Bücher aus mehreren Romanprojekten mit demselben Reihennamen werden dadurch
+nicht mehr als getrennte gleichnamige Gruppen dargestellt.
+
+Statistische Wort- und Sessionauswertungen unterstützen die neue
+Reihen-Auswahl ebenfalls.
+
+### 🏷 Titel / Untertitel als Primäranzeige
+
+Die bestehende Einstellung im Buchdialog wurde klarer als
+`Primäranzeige in Listen & Statistiken` bezeichnet.
+
+Neu stehen zusätzlich zur Auswahl:
+
+- Titel
+- Untertitel
+- Titel — Untertitel
+- Untertitel — Titel
+- Bandnummer + Untertitel
+- eigener Anzeigename
+- automatische Anzeige
+
+Damit kann pro Buch festgelegt werden, welche Bezeichnung im
+Statistikfilter und anderen kompakten Buchlisten verwendet wird.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Dublettenprüfung nicht mehr an jedem `input`
+- Dublettenprüfung beim Verlassen des Ideenfeldes
+- größere Einstellungen-Beschreibung
+- Statistiken enthalten Ideen-/Planungsmetriken
+- Statistikfilter gruppiert nach tatsächlicher Reihe
+- Reihen-Scope in Schreibsessions und manuellen Wortzahlen unterstützt
+- Titel-/Untertitel-Kombinationen im Buchdialog
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.57
 
 ### ♧ Inspiration – Sortierung wirklich persistent
