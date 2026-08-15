@@ -6,6 +6,21 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.77
+
+### 📖 Buch bearbeiten – Direktfix
+
+- Der Button `✎ Buch` in der oberen Schreibprogramm-Leiste öffnet die Buchbearbeitung wieder zuverlässig.
+- Der Button `✎ Buch bearbeiten` sowie das anklickbare Cover auf dem Buch-Dashboard verwenden denselben robusten Öffnungspfad.
+- Die Aktion ist nicht mehr davon abhängig, ob ein nachträglicher Dashboard- oder Einzel-Handler korrekt gebunden wurde.
+- Zur Ermittlung des aktuellen Buches wird neben `writingBookId` zusätzlich der aktive Buchkontext als Fallback verwendet.
+- Falls kein aktuelles Buch auflösbar ist oder der Editor beim Öffnen einen Fehler wirft, erscheint jetzt eine klare Fehlermeldung statt eines wirkungslosen Klicks.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Buchdaten und Dialoge bleiben unverändert kompatibel.
+
 ## v0.80.76
 
 ### 🔎 Romanideen – Suchfeld
