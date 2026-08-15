@@ -6,6 +6,40 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.76
+
+### 🔎 Romanideen – Suchfeld
+
+- Der Fokuszustand der Romanideen-Suche wurde bereinigt.
+- Beim Klick in das Suchfeld erscheint nur noch ein einzelner ruhiger Fokusrahmen im Ideenarchiv-Stil statt mehrerer übereinanderliegender Umrandungen.
+
+### 📄 Romanideen – PDF als visuelles Medium
+
+- Romanideen akzeptieren neben Bildern jetzt auch PDF-Dateien.
+- Bei PDFs wird die erste Seite direkt im Browser gerendert und als Bildvorschau in derselben Galerie wie normale Bilder angezeigt.
+- PDF-Vorschauen erhalten nur eine kleine `PDF`-Kennzeichnung; ansonsten verhalten sie sich wie die übrigen Medien der Romanidee.
+- Die ursprüngliche PDF-Datei bleibt am Medium erhalten und kann aus der Detailansicht wieder geöffnet werden.
+- Drag & Drop und Mehrfachauswahl akzeptieren Bilder und PDFs gemeinsam.
+
+### 📖 Buch-Dashboard – eigene Buchkarte
+
+- Cover und Buchdaten sind nicht mehr Teil der Karte `Was möchtest du als Nächstes tun?`.
+- Rechts oben steht jetzt eine eigenständige Buchkarte mit Cover, Titel, Untertitel, Reihe/Band, Status, Wortzahl und letztem Änderungsdatum.
+- Darunter folgt separat die Karte `Nächster Schritt` mit persönlicher Arbeitsnotiz und den bisherigen Schnellkennzahlen.
+- Das Cover bleibt anklickbar und öffnet die Buchbearbeitung.
+- Zusätzlich gibt es einen eindeutigen Button `✎ Buch bearbeiten`.
+
+### 🛠 Buch bearbeiten – Dashboard-Link repariert
+
+- Die Dashboard-Aktion `Buch bearbeiten` wird jetzt zusätzlich über den zentralen Action-Dispatcher verarbeitet.
+- Dadurch öffnet der Button zuverlässig den Bearbeitungsdialog des aktuell geöffneten Buches und hängt nicht mehr von einem nachträglich gebundenen Einzel-Handler ab.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Romanideen-Bilder bleiben kompatibel; die zusätzlichen PDF-Metadaten sind optional.
+- Bestehende Bücher und Dashboard-Daten bleiben unverändert kompatibel.
+
 ## v0.80.75
 
 ### 🔎 Reihen- und Storyfilter
