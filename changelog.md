@@ -6,6 +6,49 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.81.0 – Story Versioning Foundation
+
+### 🕰️ Bewusste kreative Fassungen
+
+- Planung und Manuskript unterscheiden jetzt zwischen automatischen Sicherheits-Snapshots und bewusst angelegten kreativen Versionen.
+- Im Manuskript steht direkt am Abschnitt `Fassung: …` sowie `＋ Neue Version` zur Verfügung.
+- Neue Fassungen können als Kopie der aktuellen Fassung, leer mit der vorherigen Fassung als Referenz oder vollständig leer begonnen werden.
+- Phasen wie Schnipsel, Plot, Planung, Erstentwurf, Überarbeitung und Korrektur werden separat versioniert und automatisch durchnummeriert.
+- Optionale Versionsnamen und Versionsnotizen halten fest, was in einer Fassung ausprobiert werden soll.
+
+### ✒️ Referenzmodus beim Neuschreiben
+
+- `Neu schreiben mit Referenz` öffnet eine leere Schreibfläche und hält die vorherige Fassung sichtbar.
+- Die Referenz kann unter dem Manuskript oder daneben angezeigt und jederzeit ausgeblendet werden.
+- Dadurch kann z. B. aus einem Plot geschrieben werden, ohne den Plot selbst zu überschreiben oder in den Manuskripttext kopieren zu müssen.
+
+### ↶ Versionshistorie
+
+- Bewusste Fassungen erscheinen als eigener Typ `Fassungen` in der bestehenden Versionsverwaltung.
+- Alte kreative Fassungen können verglichen, wiederhergestellt oder als neue Version fortgesetzt werden.
+- `Als neue Version fortsetzen` übernimmt eine alte Fassung in eine neue aktuelle Version, ohne spätere Fassungen zu löschen.
+- `Leer + Referenz` startet von einer alten Fassung aus neu und zeigt diese nur als Schreibreferenz.
+- Kreative Fassungen werden nicht durch die automatische Snapshot-Aufräumlogik entfernt.
+
+### 🧩 Planungsversionen
+
+- Bestehende Buch-Planungsblöcke und geplante Szenen erhalten `＋ Neue Version` und eine Versionshistorie.
+- Auch bei der Planung kann eine neue Fassung als Kopie oder leer begonnen werden.
+- Frühere Planungsstände bleiben am jeweiligen Planungsobjekt erhalten und können später als neue Fassung fortgesetzt werden.
+
+### 🛡️ Sicherheit
+
+- Automatische Snapshots bleiben unverändert als technische Sicherheitsstände bestehen.
+- Kreative Versionen und Sicherheits-Snapshots haben bewusst unterschiedliche Aufgaben und werden in der Oberfläche getrennt gekennzeichnet.
+- Eine neue kreative Fassung archiviert den bisherigen Stand, bevor der Arbeitsbereich verändert oder geleert wird.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Bestehende Dokumente erhalten automatisch `Entwurf v1`, ohne dass eine Datenmigration erforderlich ist.
+- Bestehende Snapshots und Revisionen bleiben kompatibel.
+
 ## v0.80.79
 
 ### 📈 Buchdashboard – Schreibfortschritt
