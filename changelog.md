@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.89.0 – Knowledge & State Intelligence
+
+### 🧠 Wer weiß was – und wann?
+
+- Die vorhandenen Kontinuitäts-Checkpoints vom Typ `Wissensstand` werden jetzt als echte Wissensverläufe ausgewertet.
+- Checkpoints mit derselben Bezeichnung bilden ein gemeinsames Wissensthema, z. B. `Yaras Herkunft`.
+- Die Kontinuitätszentrale zeigt pro Wissensthema den jeweils letzten eingetragenen Stand der beteiligten Story-Akten.
+- Dadurch lässt sich auf einen Blick nachvollziehen, welche Figur zu einem Thema welchen Wissensstand besitzt.
+- Die Auswertung bleibt vollständig datenbasiert: Die Suite erfindet kein Figurenwissen und leitet keine vermeintlichen Fakten automatisch aus dem Manuskripttext ab.
+
+### ◇ State Tracking
+
+- Zustands-, Besitz-, Beziehungs-, Orts- und Wissens-Checkpoints werden zu zeitlichen Verläufen zusammengeführt.
+- Mehrere Einträge mit derselben Bezeichnung erzeugen automatisch eine visuelle Entwicklung wie `gesund → verletzt → genesen` oder `bei David → verloren → bei Yara`.
+- Jeder Zustand behält seine Verknüpfung zur Story-Akte, Szene und Story-Zeit.
+- Ein Klick auf einen Verlaufspunkt führt zurück zur zugehörigen Story-Bibel-Akte.
+- Es wird kein paralleles Zustandsmodell eingeführt; die neue Intelligence-Schicht verwendet die bereits vorhandenen Kontinuitätsdaten.
+
+### 🧭 Continuity Intelligence erweitert
+
+- Die Kontinuitätszentrale besitzt jetzt eigene Bereiche `Wer weiß was?` und `Was verändert sich?`.
+- Die bestehenden Prüfhinweise für Chronologie, Orte, widersprüchliche Checkpoints und Alter bleiben erhalten.
+- Die Erklärung der Prüfung wurde an die neue Knowledge- und State-Auswertung angepasst.
+- Wissens- und Zustandsauswertung sind bewusst beschreibend und erzeugen keine dramaturgischen Bewertungen.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Kontinuitäts-Checkpoints bleiben vollständig kompatibel.
+- Keine destruktive Datenmigration erforderlich.
+
 ## v0.88.0 – Continuity Facts & Schreib-Inspector
 
 ### 🧠 Kanonische Kontinuitätsfakten
