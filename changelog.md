@@ -6,6 +6,33 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.62
+
+### 🧠 Mindmaps
+
+- Der weiterhin auftretende Fehler bei `＋ Gedanke` wurde an der tatsächlichen Ursache behoben.
+- Beim Öffnen eines neuen, noch nicht vorhandenen Knotens wurde bisher bereits versucht, dessen Rolle auszulesen; dadurch brach der Dialog-Aufruf ab und die Systemprüfung meldete eine fehlgeschlagene Aktion.
+- Neue Gedanken lassen sich jetzt wieder direkt über `＋ Gedanke` anlegen.
+- Die bestehende Bearbeitung, Verknüpfung und Umwandlung vorhandener Mindmap-Knoten bleibt erhalten.
+
+### 🖼 Buchmedien
+
+- Die Herkunftsangabe `aus Inspiration` bzw. `lokal hinzugefügt` unter Buchmedien wurde entfernt.
+- Buchmedien besitzen jetzt ein eigenes Rechtsklick-Menü.
+- Bilder können von dort gezielt zu vorhandenen Wissen-&-Welt-Einträgen des aktuellen Buches verschoben werden.
+- Die Ziele werden nach Bereich gruppiert, z. B. Figuren, Orte, Welt & Lore, Organisationen, Gegenstände und weitere vorhandene Wissenseinträge.
+- Im Rechtsklick-Menü wird direkt der konkrete Ziel-Eintrag ausgewählt, z. B. eine bestimmte Figur oder ein bestimmter Ort.
+- `Verschieben` ist ein echtes Verschieben: Nach erfolgreicher Übernahme in den Ziel-Eintrag verschwindet das Bild aus dem allgemeinen Buchmedien-Pool.
+- Beim Verschieben wird das Bild in die Bildergalerie des Ziel-Eintrags übernommen; bei einem bisher bildlosen Eintrag wird es automatisch zum Hauptbild.
+- `Aus Buch entfernen` bleibt zusätzlich als eigene Aktion im Rechtsklick-Menü und über den bisherigen ×-Button verfügbar.
+- Videos bleiben im Buchmedien-Pool; für Wissen-&-Welt-Einträge, die derzeit nur Bilder unterstützen, wird kein irreführendes Verschieben angeboten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Buchmedien und Wissenseinträge bleiben kompatibel.
+- Beim Verschieben wird zuerst der Ziel-Eintrag gespeichert und erst danach das Medium aus dem Buchpool entfernt.
+
 ## v0.80.61
 
 ### 🧠 Mindmaps – Bedienung & Gedanken
