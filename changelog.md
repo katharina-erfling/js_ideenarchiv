@@ -6,6 +6,62 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.23
+
+### 🔎 Kategorieauswahl bei „Neue Idee“ klar getrennt
+
+Die bisherige Kategorieauswahl zeigte gleichzeitig die aktuelle
+Kategorie und diente als Suchfeld.
+
+Dadurch war nicht klar erkennbar, dass man dort suchen kann.
+
+### Jetzt gibt es zwei getrennte Elemente
+
+1. Ausgewählte Kategorie
+   - zeigt nur die aktuell gewählte Kategorie
+   - Klick öffnet die Auswahl
+
+2. Eigenes Suchfeld
+   - startet leer
+   - durchsucht sofort alle Kategorien
+   - sucht in Kategoriename und vollständigem Pfad
+
+### Vorschlagsliste
+
+Jeder Treffer zeigt:
+
+- Kategoriename
+- vollständigen Hierarchiepfad
+
+Die Liste bleibt scrollbar.
+
+### ⌨ Tastatur
+
+- Pfeil hoch/runter → Treffer wechseln
+- Enter → übernehmen
+- Escape → schließen
+
+### Auswahl beim Öffnen
+
+Die aktuelle Kategorie bleibt vorausgewählt.
+
+Sie wird aber nicht mehr in das Suchfeld geschrieben.
+
+Damit ist jetzt klar:
+
+> aktuelle Kategorie = Auswahl  
+> Suchfeld = Suche
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- separates Suchfeld vorhanden
+- separate Kategorieauswahl vorhanden
+- Speichern verwendet die tatsächlich ausgewählte Kategorie
+- Suche über Name und Pfad
+- keine doppelten HTML-IDs
+- keine Datenmigration notwendig
+
 ## v0.80.22
 
 ### ✦ Wissen & Welt wird zur gemeinsamen Wissensbasis
