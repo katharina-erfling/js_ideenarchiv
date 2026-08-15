@@ -6,6 +6,30 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.91.0 – Cross-Book Continuity 2.0
+
+### 🌌 Bandübergreifende Kontinuität
+- Die bestehende Reihen-/Universumsansicht wertet Living Canon, Bandzustände und Kontinuitäts-Checkpoints jetzt gemeinsam über die Reihenfolge der Bände aus.
+- Für geteilte Story-Bibel-Akten entsteht eine kompakte Bandspur, auf der Zustände, Orte, Wissen und gepflegte Kontinuitätswerte von Band zu Band sichtbar werden.
+- Die neue Ansicht baut ausschließlich auf vorhandenen Reihen-, Story-Bibel-, Living-Canon- und Continuity-Daten auf; es entsteht kein paralleles Kanon-System.
+
+### ◇ Sachliche Cross-Book-Hinweise
+- Alterswerte werden über mehrere Bände verglichen; sinkt ein als Alter gepflegter Zahlenwert in einer späteren Bandposition, wird dies als Prüfhinweis markiert.
+- Bei Zustandswerten werden auffällige Rückkehr-Konstellationen wie `zerstört → wieder vorhanden` oder `verstorben → lebend` als mögliche Kontinuitätsstelle angezeigt.
+- Widersprechen sich Bandzustand und zeitlicher Kontinuitätswert beim Aufenthaltsort, erscheint ein direkter Hinweis.
+- Bandübergreifende Story-Fäden können darauf hinweisen, wenn zwischen zwei Fadenstationen ganze Bände ohne Station liegen oder ein als aufgelöst markierter Faden keinen Payoff/Auflösungspunkt besitzt.
+- Alle Hinweise bleiben bewusst datenbasiert und werden als Prüfstellen formuliert, nicht als automatische Storyfehler.
+
+### 🧭 Cross-Book-Verläufe
+- Geteilte Akten können direkt aus der neuen Verlaufsliste geöffnet werden.
+- Die Bandspur zeigt auf einen Blick, in welchen Bänden ein abweichender Zustand gepflegt ist und wo lediglich der gemeinsame Kanon gilt.
+- Die bestehende Living-Canon-Detailansicht bleibt erhalten und ergänzt die neue kompakte Reihenperspektive.
+
+### ✓ Technische Prüfung
+- JavaScript-Syntax geprüft.
+- Keine destruktive Datenmigration erforderlich.
+- Bestehende Bandzustände, Kontinuitäts-Checkpoints, Story-Fäden und Reihen bleiben kompatibel.
+
 ## v0.90.0 – Reihen-Dashboard & Cross-Book View
 
 ### 📚 Reihenübersicht
