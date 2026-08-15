@@ -6,6 +6,48 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.73
+
+### 🔎 Einheitliche Suchauswahlen
+
+- Lange native Browser-Dropdowns werden an den aktuell besonders störenden Stellen durch eine eigene Ideenarchiv-Auswahl im LilyStudio-Stil ersetzt.
+- Die neue Auswahl besitzt ein kompaktes geschlossenes Feld, ein eigenes Popover, ein Suchfeld und eine scrollbar begrenzte Trefferliste.
+- `Idee verschieben` verwendet jetzt die neue Suchauswahl für Kategorien.
+- Kategorien werden mit ihrem vollständigen Pfad angezeigt, damit gleichnamige oder tief verschachtelte Ziele eindeutig bleiben.
+- Die Buchzuordnung einer Idee verwendet ebenfalls die neue durchsuchbare Auswahl statt des langen nativen Buch-Dropdowns.
+- Reihenbücher werden dort kompakt als `Reihentitel · Band X` angezeigt; unnötig doppelte Projekt-/Reihenüberschriften entfallen.
+- Eine kleinere zweite Zeile liefert nur dann zusätzliche Buch-/Projektinformation, wenn sie zur Unterscheidung nötig ist.
+
+### 🪧 Regalbeschriftung ohne Browser-Prompt
+
+- `Regal beschriften` öffnet keinen nativen `JavaScript von file://`-Prompt mehr.
+- Die Beschriftung wird in einem normalen Ideenarchiv-Dialog mit passender Typografie und Buttons bearbeitet.
+- Eine leere Beschriftung entfernt das Regalschild wieder.
+
+### 📚 Ruhigere generierte Buchrücken
+
+- Die nutzbare Textfläche generierter Buchrücken hält mehr Abstand zu den seitlichen Licht- und Schattenkanten.
+- Titel und Bandangabe laufen dadurch nicht mehr optisch in die 3D-Schattierung hinein.
+- Der Textschatten wurde etwas zurückgenommen, damit die Rückenbeschriftung ruhiger wirkt.
+
+### 🖼 Druckumschlag – zwei unabhängige Ausschnitte
+
+- Buchrücken und Frontcover besitzen im Umschlag-Editor jetzt zwei getrennte Ausschnitte.
+- Beide Markierungen sind gleichzeitig auf dem Umschlag sichtbar und eindeutig als `Buchrücken` bzw. `Frontcover` beschriftet.
+- Der Buchrücken besitzt eigene Regler für Position und Breite.
+- Das Frontcover besitzt unabhängig davon eigene Regler für Position und Breite.
+- `Buchrücken übernehmen` verwendet ausschließlich den Rücken-Ausschnitt.
+- `Cover übernehmen` verwendet ausschließlich den Frontcover-Ausschnitt.
+- Das Verschieben oder Verbreitern eines Ausschnitts verändert den jeweils anderen nicht mehr.
+- Die Positionen beider Ausschnitte werden am Buch gespeichert und beim erneuten Bearbeiten wiederhergestellt.
+
+### ✓ Technische Prüfung
+
+- Bestehende Umschlagdaten bleiben kompatibel; für ältere Bücher werden sinnvolle Standardwerte für den neuen Cover-Ausschnitt verwendet.
+- Die bisherigen versteckten Select-Felder bleiben intern als kompatible Wertehalter bestehen, während die sichtbare Bedienung über die neue Suchkomponente erfolgt.
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+
 ## v0.80.72
 
 ### 📚 Living Bookshelf – echte Buchproportionen
