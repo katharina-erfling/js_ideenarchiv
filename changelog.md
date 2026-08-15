@@ -6,6 +6,99 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.38
+
+### ♧ Inspiration neu gedacht – echtes visuelles Board
+
+Der Inspirationsbereich wurde grundlegend vereinfacht.
+
+Er ist jetzt bewusst kein Formular-Modul mehr, sondern ein visuelles
+Bildarchiv ähnlich einem Pinterest-Board.
+
+### 🖼 Bilder direkt sammeln
+
+Bilder können jetzt direkt:
+
+- per Drag & Drop auf das Board gezogen werden
+- per Drag & Drop direkt auf einen Ordner gezogen werden
+- über `＋ Bilder` ausgewählt werden
+- mit `Strg+V` aus der Zwischenablage eingefügt werden
+
+Jedes Bild wird sofort als eigener Inspirationseintrag gespeichert.
+
+Es ist kein zusätzlicher Speichern-Dialog mehr nötig.
+
+### 📌 Pinterest-artige Ansicht
+
+Die Inspirationen werden in einer bildorientierten Masonry-/Pinterest-
+Ansicht dargestellt.
+
+- unterschiedliche Bildformate behalten ihre natürliche Höhe
+- keine einheitlichen künstlichen Kartenhöhen
+- Bilder werden nicht gestreckt
+- mehrere Spalten nutzen den verfügbaren Platz
+- lange und kurze Bilder können frei nebeneinander stehen
+
+### ✎ Caption statt Formular
+
+Ein Bild benötigt keine Metadaten.
+
+Optional kann per Klick auf das Bild eine kurze Caption hinterlegt werden.
+
+Diese Caption erscheint direkt unter dem Bild.
+
+Im kleinen Bearbeitungsdialog können nur noch:
+
+- Caption
+- Ordner
+
+geändert werden.
+
+Außerdem kann das Bild dort gelöscht werden.
+
+### 📁 Ordner bleiben erhalten
+
+Die verschachtelten Inspirationsordner bleiben vollständig erhalten.
+
+Zusätzlich können jetzt:
+
+- neue Bilder direkt in einen geöffneten Ordner geladen werden
+- Bilder per Drag & Drop zwischen Ordnern verschoben werden
+- Bilder auf „Alle Inspirationen“ gezogen und damit aus einem Ordner
+  gelöst werden
+- Ordner weiterhin verschachtelt werden
+
+### 📋 Zwischenablage-Bug behoben
+
+Der bisherige Clipboard-Handler zeigte zwar „Bild eingefügt“, legte bei
+Inspiration aber nur einen noch nicht gespeicherten Formularzustand an.
+
+Inspiration speichert Zwischenablagebilder jetzt sofort direkt ins Board.
+
+Damit ist nach `Strg+V` das Bild unmittelbar sichtbar und dauerhaft
+gespeichert.
+
+Charakter- und Recherche-Dialoge behalten ihre bisherige Clipboard-Logik.
+
+### 🧹 Inspiration und Recherche wieder klar getrennt
+
+Die komplexeren Funktionen wie Quellen, Dateien, eigene Felder und
+strukturierte Recherche bleiben im Recherchebereich.
+
+Inspiration ist dagegen bewusst visuell und leichtgewichtig.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- direkte Bildspeicherung bei Drag & Drop
+- direkte Bildspeicherung bei Strg+V
+- Datei-Mehrfachauswahl unterstützt
+- Masonry-/Pinterest-Board aktiv
+- Caption optional
+- Bildverschiebung zwischen Ordnern per Drag & Drop
+- Ordner-Verschachtelung bleibt erhalten
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.37
 
 ### 📋 Bilder aus der Zwischenablage
