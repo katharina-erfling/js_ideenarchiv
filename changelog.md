@@ -6,6 +6,35 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.87.0 – Timeline ↔ Manuskript
+
+### 🗓️ Szenen und Timeline wirklich verknüpfen
+
+- Timeline-Ereignisse können jetzt direkt mit einer konkreten Manuskriptszene verknüpft werden.
+- Die Szenenauswahl zeigt Buch, Kapitel und Szenentitel, damit auch große Manuskripte eindeutig bleiben.
+- Eine verknüpfte Timeline-Station und ihre Manuskriptszene teilen sich Datum, Uhrzeit, eigene Kalenderzeit, relative Story-Zeit und Handlungsstrang.
+- Beim Speichern eines Timeline-Ereignisses werden diese Zeitdaten direkt in die verknüpfte Szene übernommen.
+- Änderungen an denselben Zeitfeldern im Szenen-Inspector werden umgekehrt in alle mit dieser Szene verknüpften Timeline-Ereignisse synchronisiert.
+- Dadurch entstehen für eine verknüpfte Szene nicht mehr zwei unabhängig gepflegte Zeitstände.
+
+### ◷ Eigene Zeitrechnung bleibt Teil derselben Verbindung
+
+- Story-Jahr, Monat, Tag und Story-Zeit des bereits vorhandenen eigenen Kalenders werden gemeinsam mit normalen Datums- und Zeitangaben synchronisiert.
+- Relative oder unscharfe Angaben wie `Tag 4`, `drei Tage später` oder `Jahre zuvor` bleiben ebenfalls Teil der gemeinsamen Szenenzeit.
+- Der bereits vorhandene Handlungsstrang wird zwischen Szene und verknüpftem Timeline-Ereignis mitgeführt.
+
+### 🔗 Bestehende Systeme statt neuer Parallelstruktur
+
+- Die vorhandene Story-Timeline, der Szenen-Inspector und der eigene Kalender bleiben die Grundlage.
+- Es wird kein zweites Timeline- oder Datumsmodell eingeführt.
+- Bestehende Timeline-Ereignisse ohne Szenenverknüpfung funktionieren unverändert weiter und können weiterhin frei als eigenständige Ereignisse genutzt werden.
+
+### ✓ Technische Prüfung
+
+- `documentId` ergänzt Timeline-Ereignisse rückwärtskompatibel und optional.
+- JavaScript-Syntax geprüft.
+- Keine destruktive Datenmigration erforderlich.
+
 ## v0.86.0 – POV Analytics & Character Presence
 
 ### 👤 POV-Spur durch das Manuskript
