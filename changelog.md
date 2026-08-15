@@ -6,6 +6,29 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.64
+
+### 🧠 Mindmaps – direkter Erstellworkflow zuverlässig aktiviert
+
+- Der zentrale Klick-Handler von `＋ Gedanke` ruft jetzt direkt die Inline-Eingabe auf und nicht mehr den alten Mindmap-Knoten-Dialog.
+- Damit wird der alte Formular-Dialog beim normalen Hinzufügen eines Gedankens nicht mehr durch den globalen Event-Dispatcher vorgezogen.
+- Doppelklick auf freie Fläche öffnet weiterhin direkt eine Texteingabe an der geklickten Position.
+- Rechtsklick auf einen vorhandenen Knoten öffnet das bestehende Knoten-Kontextmenü mit Gestaltung, Notiz, Verbindung, Verknüpfen, Umwandeln, Duplizieren und Löschen.
+
+### 🖱 Mindmap – Rechtsklick auf freie Fläche
+
+- Die freie Mindmap-Fläche besitzt jetzt ein eigenes Rechtsklick-Menü.
+- `Gedanke hier hinzufügen` erzeugt die Inline-Texteingabe exakt an der angeklickten Position.
+- `Bild hinzufügen` steht ebenfalls direkt im Flächen-Kontextmenü bereit.
+- Knoten- und Flächen-Kontextmenü schließen sich gegenseitig, damit nie zwei Menüs gleichzeitig offen bleiben.
+- `Esc` schließt zusätzlich das Flächen-Kontextmenü.
+
+### ✓ Technische Prüfung
+
+- Konflikt zwischen altem globalem `mindmapAddNodeBtn`-Handler und neuem Inline-Workflow beseitigt.
+- JavaScript-Syntax geprüft.
+- Bestehende Mindmaps und Daten bleiben unverändert kompatibel.
+
 ## v0.80.63
 
 ### 🧠 Mindmaps – direkter Denkfluss
