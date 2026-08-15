@@ -6,6 +6,28 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.74
+
+### 🖼 Druckumschlag-Editor
+
+- Die Vorschau für hochgeladene Druckumschläge wird wieder zuverlässig gerendert.
+- PDF-Umschläge werden über PDF.js direkt auf die Editor-Canvas gezeichnet; Bildumschläge werden lokal im Browser gerendert.
+- Buchrücken- und Frontcover-Markierung liegen sichtbar über der tatsächlichen Umschlagvorschau statt auf einer leeren Fläche.
+- Die beiden Einstellbereiche für Buchrücken und Frontcover sind responsiver aufgebaut und laufen nicht mehr in den Dialog-Footer.
+- Regler bleiben auch in schmaleren Dialogbreiten vollständig innerhalb ihres Bereichs.
+- Die Beschriftungen der Ausschnitte werden an den Rändern nicht mehr abgeschnitten.
+
+### 🪧 Regalbeschriftung
+
+- Ein Regalbrett kann jetzt bereits mit einem normalen Klick auf das kleine Regalschild beschriftet bzw. umbenannt werden.
+- Doppelklick und Rechtsklick bleiben zusätzlich als alternative Wege erhalten.
+- Unbeschriftete Schilder sind etwas deutlicher als interaktive Aktion erkennbar.
+
+### ✓ Technische Prüfung
+
+- Fehlende Renderfunktion des Umschlag-Editors ergänzt.
+- JavaScript-Syntax geprüft.
+
 ## v0.80.73
 
 ### 🔎 Einheitliche Suchauswahlen
