@@ -6,6 +6,30 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.60
+
+### 🗒 Romanideen
+
+- Das Rechtsklick-Menü der Romanideen funktioniert wieder zuverlässig.
+- Die fehlerhafte Verschachtelung des Kontextmenüs mit dem normalen Ideen-Kontextmenü wurde korrigiert.
+- In der geöffneten Detailansicht einer Romanidee gibt es jetzt zusätzlich einen direkten Button `🗑 Löschen`.
+- Löschen aus Detailansicht, Bearbeiten-Dialog und Rechtsklick-Menü verwendet dieselbe abgesicherte Löschlogik.
+
+### 🖼 Inspiration – Bildgröße
+
+- Das Vergrößern und Verkleinern von Inspirationsbildern reagiert ruhiger und direkter.
+- Während des Ziehens wird nicht mehr bei jeder einzelnen Mausbewegung das komplette Inspirationsboard neu berechnet.
+- Dadurch wurde das starke Flackern der übrigen Bilder beim Skalieren beseitigt bzw. deutlich reduziert.
+- Die endgültige Board-Anordnung wird erst nach Abschluss der Größenänderung sauber neu berechnet und gespeichert.
+
+### 📚 Inspiration → Buch
+
+- Das Ablegen eines Inspirationsbildes auf einem Buch ist jetzt ein echtes **Verschieben** statt Kopieren.
+- Nach erfolgreicher Übernahme in den Medienpool des Buches verschwindet das Medium aus `Inspiration`.
+- Die Buchkopie bleibt vollständig erhalten und ist anschließend unabhängig vom Inspirationsbereich.
+- Buchziele werden eindeutiger bezeichnet: Der Romanprojekt-Titel dient als Primärtitel; ergänzend werden – sofern vorhanden und nötig – Reihe, Bandnummer und konkreter Buchtitel angezeigt.
+- Die eindeutige Buchbezeichnung wird sowohl in den Ablagezielen als auch im Rechtsklick-Menü von Inspiration verwendet.
+
 ## v0.80.59
 
 ### 🗒 Romanideen – Rechtsklick-Menü
