@@ -6,6 +6,25 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.69
+
+### 📚 Living Bookshelf – freie Position auf dem Regalbrett
+
+- Buchrücken werden innerhalb eines Regalbretts nicht mehr automatisch lückenlos zusammengeschoben.
+- Jedes Buch besitzt jetzt zusätzlich eine gespeicherte horizontale Position auf seinem Regalbrett.
+- Beim Ziehen kann ein Buch frei weiter links, mittig oder weit rechts auf dem Brett abgestellt werden.
+- Freie Zwischenräume zwischen Büchern bleiben bewusst erhalten und werden nach dem Neuladen wiederhergestellt.
+- Beim Wechsel auf ein anderes Regalbrett wird die neue horizontale Position dort ebenfalls gespeichert.
+- Die Position wird an die nutzbare Breite des Regalbretts begrenzt, damit ein Buch nicht außerhalb des Regals abgelegt werden kann.
+- Bestehende Bücher ohne gespeicherte X-Position erhalten weiterhin eine sinnvolle Ausgangsposition und können anschließend frei platziert werden.
+- Klick zum Öffnen und Ziehen zum Umstellen bleiben voneinander getrennt.
+
+### ✓ Technische Prüfung
+
+- Das bisherige reine Reihenfolge-Modell bleibt aus Kompatibilitätsgründen erhalten; `shelfX` ergänzt es um echte freie Platzierung.
+- JavaScript-Syntax geprüft.
+- Bestehende Regalbrett-Zuordnungen und Regalbeschriftungen bleiben erhalten.
+
 ## v0.80.68
 
 ### 📚 Living Bookshelf – echte freie Regalordnung
