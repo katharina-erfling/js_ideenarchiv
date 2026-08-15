@@ -6,6 +6,67 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.27
+
+### 👤 Charaktere – zeitliche Einordnung entfernt
+
+Der Block „Zeitliche Einordnung · optional“ wird bei Figuren nicht mehr angezeigt.
+
+Für eine Figurenakte war eine einzelne Zuordnung zu Datum, Uhrzeit und
+Handlungsstrang fachlich irreführend, weil die Entwicklung einer Figur
+bereits über Character Arc, Szenen und Timeline verfolgt wird.
+
+Bei anderen Wissenseinträgen bleibt die zeitliche Einordnung weiterhin
+verfügbar, wenn sie dort sinnvoll ist.
+
+### 🖼 Bildergalerie direkt oben
+
+Die Bildergalerie sitzt im Wissenseintragsdialog jetzt direkt unter Titel
+und Überschrift.
+
+Damit sind Portraits und visuelle Referenzen bei Figuren sofort sichtbar.
+
+### ↔ Galerie als Slider
+
+Mehrere Bilder werden als echte Galerie dargestellt:
+
+- Pfeil links / rechts
+- Bildzähler
+- klickbare Vorschaubilder
+- Bildnotiz
+- Hauptbild festlegen
+- Bild entfernen
+
+Beim Öffnen einer vorhandenen Akte startet die Galerie nach Möglichkeit
+mit dem Hauptbild.
+
+### 📐 Unterschiedliche Bildgrößen ohne springendes Layout
+
+Die Galerie besitzt eine feste Bildfläche.
+
+Bilder werden:
+
+- nicht gestreckt
+- nicht verzerrt
+- nicht automatisch beschnitten
+- mittig ausgerichtet
+- proportional so groß wie möglich dargestellt
+
+Dadurch bleibt die Oberfläche gleich groß, egal ob ein Bild Hochformat,
+Querformat oder quadratisch ist.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Zeitblock bei Charakteren ausgeblendet
+- Galerie sitzt nur einmal im Dialog
+- Galerie direkt oben
+- Slider-Navigation gebunden
+- Hauptbild-/Löschen-Funktionen erhalten
+- Bildnotizen werden weiterhin gespeichert
+- Mehrfachupload bleibt erhalten
+- keine doppelten HTML-IDs
+
 ## v0.80.26
 
 ### 🛠 Figuren- und Ortsaktionen repariert
