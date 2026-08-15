@@ -6,6 +6,94 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.22
+
+### ✦ Wissen & Welt wird zur gemeinsamen Wissensbasis
+
+Die Buchzuordnung sitzt jetzt auf der richtigen Ebene:
+bei Wissen & Welt.
+
+In der Navigation von Wissen & Welt gibt es:
+
+> ⚙ Bücherzuordnung
+
+Dort werden per Mehrfachauswahl alle Bücher festgelegt,
+die dieselbe Wissensbasis verwenden.
+
+Das gilt gemeinsam für:
+
+- Charaktere
+- Orte
+- Weltwissen / Lore
+- Codex
+- Figurenbogen
+- Beziehungen
+- Weltkarte
+- Story Graph
+- weitere Werkzeuge, die auf diesen Wissensdaten aufbauen
+
+Änderungen an der gemeinsamen Wissensbasis stehen dadurch
+in allen ausgewählten Büchern zur Verfügung.
+
+### 📎 Anhang neu definiert
+
+Der sichtbare Bereich Anhang enthält keine vorbereiteten
+Story-Bibel-Reiter mehr.
+
+Entfernt wurden dort:
+
+- Charaktere
+- Orte
+- Welt & Lore
+- Notizen als vorgegebene Reiter
+- World Building Studio / Modulsteuerung
+- zweite Freigabe-Schaltfläche
+
+Die zugrunde liegenden Wissensdaten bleiben vollständig erhalten.
+
+### ＋ Anhang nur noch für eigene Reiter
+
+Der Anhang startet leer und dient ausschließlich frei
+angelegten Zusatzbereichen.
+
+Beispiele:
+
+- Soundtrack
+- Zitate
+- Moodboard
+- Bonusmaterial
+- Leseliste
+- eigene Sammlungen
+
+Eigene Reiter behalten:
+
+- frei definierbare Templates
+- Felder
+- Ordner
+- Unterordner
+- Bilder
+- Notizen / Inhalte
+
+### 🧭 Weniger Doppelstrukturen
+
+Die Trennung ist jetzt:
+
+- Wissen & Welt = gemeinsame strukturierte Wissensbasis
+- Anhang = selbst definierte Zusatzbereiche
+
+Charaktere, Orte und Weltwissen müssen nicht mehr in einem
+zweiten sichtbaren System gepflegt werden.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- zentrale Bücherzuordnung in Wissen & Welt gebunden
+- Anhang zeigt nur benutzerdefinierte Reiter
+- bestehende System-/Worldbuilding-Daten werden nicht gelöscht
+- bestehende eigene Reiter bleiben sichtbar
+- Einträge übernehmen weiterhin die Buchzuordnung der Wissensbasis
+- keine doppelten HTML-IDs
+
 ## v0.80.21
 
 ### 🏠 Frischer Start und F5 jetzt getrennt
