@@ -6,6 +6,70 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.50
+
+### ♧ Inspiration – ruhigere Medienkarten
+
+Die Darstellung der Inspirationsmedien wurde reduziert.
+
+### 📁 Ordnername nicht mehr unter dem Medium
+
+Die Ordner-/Kategoriezuordnung wird auf der Bild- bzw. Videokarte nicht mehr
+angezeigt.
+
+Die Zuordnung bleibt gespeichert und ist weiterhin über den
+Bearbeitungsdialog änderbar.
+
+### 🖱 Rechtsklick statt Stift
+
+Der bisherige Stift-Button wurde entfernt.
+
+Ein Rechtsklick auf eine Inspirationskachel öffnet jetzt direkt den kompakten
+Bearbeitungsdialog für:
+
+- Caption
+- Ordnerzuordnung
+
+### ✎ Unterer Bereich nur noch bei Inhalt
+
+Unter einem Medium erscheint nur noch dann ein sichtbarer Bereich, wenn eine
+Caption vorhanden ist.
+
+Ohne Caption endet die Karte direkt am Bild bzw. Video.
+
+### ↕ Verschieben & Löschen
+
+Drag-Griff und Löschen wurden in eine kleine schwebende Bedienleiste auf der
+Kachel verschoben.
+
+Die Leiste:
+
+- erscheint erst bei Hover/Fokus
+- liegt über dem Medium statt dauerhaft darunter
+- enthält weiterhin den Drag-Griff
+- enthält weiterhin die funktionierende Löschaktion
+
+### 🛡 Regression-Schutz
+
+Bewusst erhalten:
+
+- Dashboard bleibt Startseite
+- Medien löschen bleibt funktionsfähig
+- externer Medien-Drop bleibt erhalten
+- freie Sortierung bleibt erhalten
+- Masonry-Layout bleibt erhalten
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Ordnername aus Kartenmarkup entfernt
+- kein Stift-Button mehr im Kartenmarkup
+- Rechtsklick öffnet Bearbeitungsdialog
+- Caption wird nur bei vorhandenem Text gerendert
+- Drag- und Löschfunktionen bleiben vorhanden
+- Dashboard-Startcode bleibt vorhanden
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.49
 
 ### ♧ Inspiration – Drag & Drop & freie Sortierung
