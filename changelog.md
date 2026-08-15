@@ -6,6 +6,56 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.31
+
+### 🏠 Buch-Dashboard & Navigation – Konsistenzrunde
+
+Die Buchübersicht wurde grundlegend überarbeitet.
+Sie wiederholt nicht mehr die komplette obere Navigation.
+
+Das Dashboard konzentriert sich jetzt auf:
+
+- aktuellen Buchstatus
+- Schreib- und Planungsstand
+- Wissen-&-Welt-Status
+- zuletzt bearbeitete Manuskriptabschnitte
+- offene Handlungsfäden
+- Story-Intelligence-Hinweise
+- Kontinuität
+- Wochenfortschritt
+- persönliche Notiz zum nächsten Arbeitsschritt
+
+Die eigentlichen Arbeitsbereiche bleiben bewusst
+in der oberen Navigation.
+
+### 👤 Charaktere
+
+- „Steckbrief & Medien“ heißt jetzt nur noch „Steckbrief“.
+- Ein Fehler in der Steckbriefansicht wurde behoben,
+  durch den der Charakterbereich mit
+  „Dieser Bereich ist gerade gestolpert“ abbrechen konnte.
+- Die Beziehungsanzeige im Charaktersteckbrief verwendet
+  jetzt das aktuelle Beziehungs-Datenmodell.
+
+### 🧭 Informationshierarchie
+
+Das Buch-Dashboard ist jetzt Status- und
+Fortsetzungszentrale statt zweiter Menüleiste.
+
+Direkte Links im Dashboard werden nur noch dort verwendet,
+wo sie aus einem konkreten Status oder offenen Punkt entstehen.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Charakter-Steckbrief-Renderer auf aktuelles
+  Beziehungsmodell korrigiert
+- Dashboard-Navigation entdoppelt
+- vorhandene Arbeitsbereiche bleiben über die
+  obere Navigation erreichbar
+- Dashboard-Aktionslinks geprüft
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.30
 
 ### 👤 Charaktere – Steckbrief und Entwicklung getrennt
