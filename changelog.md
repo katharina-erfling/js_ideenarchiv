@@ -6,6 +6,34 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.90.0 – Reihen-Dashboard & Cross-Book View
+
+### 📚 Reihenübersicht
+
+- Die Bibliothek besitzt jetzt eine eigene `Reihenübersicht`, ohne eine zweite Reihenbibel einzuführen.
+- Alle Bücher mit demselben Reihennamen werden automatisch zu einer übergeordneten Reihenansicht zusammengeführt.
+- Die Bände erscheinen in Bandreihenfolge und lassen sich direkt aus der Übersicht öffnen.
+- Pro Reihe werden Gesamtwortzahl, Szenen, gemeinsame Figuren, gemeinsame Orte, offene Story-Fäden und Living-Canon-Akten zusammengefasst.
+
+### 🔗 Cross-Book View
+
+- Die Reihenansicht wertet die bereits vorhandenen gemeinsamen Story-Bibel-Akten aus und zeigt, wie viel Kanon tatsächlich über mehrere Bände geteilt wird.
+- Story-Fäden und Timeline-Ereignisse werden bandübergreifend zusammengezählt.
+- Timeline-Ereignisse, die mehreren Bänden derselben Reihe zugeordnet sind, werden gesondert als bandübergreifend sichtbar.
+- Living-Canon/Bandvarianten werden aus den bestehenden Story-Bibel-Daten ermittelt; es entsteht kein paralleles Kanon-System.
+
+### 📈 Reihenfortschritt
+
+- Jede Reihe erhält eine kompakte Entwicklungsanzeige aus dem bereits vorhandenen Buchfortschritt ihrer Bände.
+- Veröffentlichte Bände und der Status jedes einzelnen Bandes bleiben direkt sichtbar.
+- `Story-Bibel öffnen` führt aus der Reihenübersicht unmittelbar in die bestehende gemeinsame Wissensbasis.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine destruktive Datenmigration erforderlich.
+- Bestehende Reihen-, Story-Bibel-, Living-Canon-, Story-Faden- und Timeline-Daten bleiben die einzige Datenquelle.
+
 ## v0.89.0 – Knowledge & State Intelligence
 
 ### 🧠 Wer weiß was – und wann?
