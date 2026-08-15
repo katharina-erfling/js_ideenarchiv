@@ -6,6 +6,41 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.92.0 – Writing Goals 2.0
+
+### 🎯 Tages-, Wochen- und Monatsziele
+
+- Die vorhandenen Schreibziele wurden um unabhängige Wochen- und Monatsziele ergänzt.
+- Tages-, Wochen- und Monatsziel sind optional und können einzeln genutzt werden.
+- Die Wochenansicht rechnet von Montag bis Sonntag; das Monatsziel verwendet den aktuellen Kalendermonat.
+- Schreibsessions und – sofern aktiviert – manuelle Wordcount-Einträge fließen weiterhin in dieselbe Fortschrittsbasis ein.
+
+### 📈 Ruhige Fortschrittsanzeige
+
+- Das Projekt-Dashboard zeigt jetzt getrennte Fortschrittsleisten für Heute, diese Woche, diesen Monat und das Gesamtziel.
+- Jede Leiste zeigt aktuellen Stand, Ziel, Prozentwert und verbleibende Wörter.
+- Nicht gesetzte Ziele bleiben neutral und zeigen nur den tatsächlich geschriebenen Umfang.
+- Deadlines werden als Orientierung verwendet; die Suite formuliert daraus keine Straf-, Streak- oder Versagensmeldungen.
+- Bei vorhandenem Gesamtziel und Deadline wird lediglich ein gleichmäßig verteilter Tageswert als Orientierung angegeben.
+
+### 📖 Buchziel & Deadline
+
+- Die bereits vorhandene Zielwortzahl und Deadline eines Buches werden jetzt auch direkt auf dem Buch-Dashboard als eigener Schreibziel-Block sichtbar.
+- Angezeigt werden aktueller Wortstand, Ziel, verbleibende Wörter, Deadline und – sofern sinnvoll – eine ungefähre tägliche Orientierung bis zum Termin.
+- Ohne eigenes Buchziel bleibt ein ruhiger Hinweis mit direktem Zugang zu `Buch bearbeiten`.
+
+### ⚙ Ziele bearbeiten
+
+- Die Projekteinstellungen besitzen jetzt Felder für Tages-, Wochen- und Monatsziel.
+- Gesamtwortziel, Deadline und Challenge-Start bleiben erhalten.
+- Bestehende Projekte ohne die neuen Zielwerte bleiben vollständig kompatibel.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenbankmigration erforderlich; Wochen- und Monatsziele werden als optionale Projektfelder gespeichert.
+- Bestehende Schreibsessions, manuelle Wordcounts, Buchziele und Deadlines bleiben kompatibel.
+
 ## v0.91.0 – Cross-Book Continuity 2.0
 
 ### 🌌 Bandübergreifende Kontinuität
