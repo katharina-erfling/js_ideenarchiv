@@ -6,6 +6,48 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.84.0 – Text-Parkplatz
+
+### 📌 Text sicher aus dem Manuskript herausnehmen
+
+- Markierter Manuskripttext kann über Rechtsklick mit `📌 Auswahl auf Parkplatz legen` sicher aus dem aktuellen Abschnitt herausgenommen werden.
+- Vor dem Ausschneiden wird zusätzlich ein Sicherheits-Snapshot des betroffenen Manuskriptabschnitts angelegt.
+- Der geparkte Text behält seine ursprüngliche Formatierung soweit sie im Manuskript als HTML vorliegt.
+- Gespeichert werden außerdem Buch, ursprünglicher Manuskriptabschnitt, Szenenkern, Kapitel und Zeitpunkt der Entfernung.
+- Erst nachdem der Parkplatz-Eintrag erfolgreich in IndexedDB gespeichert wurde, wird der markierte Text aus dem Manuskript entfernt.
+
+### 🗃️ Schnipselkiste im Schreibbereich
+
+- In der Manuskript-Werkzeugleiste steht `📌 Parkplatz` zur Verfügung.
+- Die Zahl am Button zeigt, wie viele Textschnipsel für das aktuelle Buch geparkt sind.
+- Der Parkplatz öffnet sich als nicht-modale Schnipselkiste neben dem Manuskript, sodass der Schreibbereich weiterhin erreichbar bleibt.
+- Der Parkplatz ist nach Text, Kapitel und ursprünglichem Abschnitt durchsuchbar.
+- Jeder Schnipsel zeigt seine Herkunft und den Zeitpunkt der Entfernung.
+- Längere Schnipsel werden in einer eigenen scrollbaren Vorschau dargestellt.
+
+### ↩ Text wiederverwenden
+
+- `↗ Quelle` springt zum ursprünglichen Manuskriptabschnitt, sofern dieser noch existiert.
+- `⧉ Kopieren` übernimmt den reinen Text in die Zwischenablage.
+- `↩ An Cursor einsetzen` fügt den Schnipsel in den aktuell geöffneten Manuskriptabschnitt ein.
+- Parkplatzkarten können außerdem direkt per Drag & Drop an eine gewünschte Stelle im Manuskript gezogen werden.
+- Das Einsetzen entfernt den Parkplatz-Eintrag bewusst nicht automatisch, damit ein wiederverwendeter Text nicht versehentlich verloren geht.
+- Ein Parkplatz-Schnipsel kann separat und ausdrücklich gelöscht werden.
+
+### 🛡️ Datensicherheit & Backup
+
+- Der Text-Parkplatz besitzt einen eigenen IndexedDB-Speicherbereich `textParking`.
+- Der Speicherbereich ist Bestandteil neuer vollständiger Backups und des System-Schreibtests.
+- Backups aus v0.83 und älteren Versionen bleiben importierbar, obwohl sie noch keinen Text-Parkplatz enthalten.
+- Ein Buch mit verbliebenen geparkten Textschnipseln kann nicht versehentlich gelöscht werden.
+
+### ✓ Technische Prüfung
+
+- IndexedDB-Schema auf Version 9 erweitert.
+- Backupformat auf Version 11 erweitert.
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+
 ## v0.83.0 – Szenenzentrale & Manuskript-Navigator 2.0
 
 ### 🗃️ Alle Szenen
