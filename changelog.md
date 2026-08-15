@@ -6,6 +6,78 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.63
+
+### 🧠 Mindmaps – direkter Denkfluss
+
+- `＋ Gedanke` öffnet keinen großen Formular-Dialog mehr, sondern direkt eine kleine Texteingabe auf der Mindmap.
+- Ein Doppelklick auf eine freie Stelle erzeugt die Texteingabe genau an dieser Position.
+- `Enter` speichert den Gedanken; `Shift + Enter` fügt einen Zeilenumbruch ein; `Esc` verwirft die Eingabe.
+- Die neue Texteingabe kann bereits während des Schreibens über ihren Griff frei verschoben werden.
+- Ein Doppelklick auf einen vorhandenen Knoten bearbeitet dessen Text direkt auf der Mindmap.
+- `F2` bearbeitet den ausgewählten Knoten direkt.
+- `Enter` erzeugt bei ausgewähltem Knoten schnell einen weiteren freien Gedanken in dessen Nähe.
+- `Tab` oder `Einfg` erzeugt einen neuen verbundenen Gedanken.
+- Bestehendes Drag & Drop, Resize, Bildknoten und direkte Verbindungen bleiben erhalten.
+
+### 🎨 Mindmaps – Gestaltung per Rechtsklick
+
+- Form, Farbe, Knotenart, Textgröße und Rahmen wurden aus dem normalen Erstellworkflow in das Rechtsklick-Menü verschoben.
+- Formen können direkt zwischen Karte, abgerundet, Kapsel, Kreis, Ellipse, Raute, Wolke, Notizzettel und reinem Text gewechselt werden.
+- Farben, Textgrößen und Rahmenstile lassen sich unmittelbar am ausgewählten Knoten ändern.
+- Die semantische Knotenart kann nachträglich als freier Gedanke, Idee, Figur, Ort, Szene, Recherche oder Buch gesetzt werden.
+- Bilder können direkt über das Rechtsklick-Menü eines Knotens hinzugefügt, ersetzt oder entfernt werden.
+- Längere Notizen werden über einen kleinen, leichten Notiz-Popover bearbeitet statt über den großen Knoten-Dialog.
+- Verknüpfen, in Suite-Inhalt umwandeln, Duplizieren, Verbinden und Löschen bleiben im Rechtsklick-Menü erreichbar.
+
+### ↔ Mindmap-Verbindungen
+
+- Die bereits vorhandenen individuellen Verbindungseinstellungen bleiben erhalten: Farbe, Linienart, Linienführung, Stärke, Pfeilrichtung und Beschriftung.
+- Neue verbundene Gedanken können jetzt ohne Zwischenformular direkt geschrieben werden.
+
+### 🪶 Mindmap-Layout & Lesbarkeit
+
+- Werkzeugleiste, Metadatenzeile und Mindmap-Fläche haben mehr vertikalen Abstand bekommen; die Arbeitsfläche beginnt nicht mehr optisch abgeschnitten direkt unter dem Balken.
+- Der Erklärungstext unter `Mindmaps` wurde deutlich lesbarer gesetzt.
+- Knotenüberschriften, Knotennotizen, Metadaten, Zoom-Hinweise und Tastaturhilfe wurden auf besser lesbare Größen angehoben.
+
+### 📚 Bücherregal
+
+- Die Hoverkarte eines Buches wurde lesbarer überarbeitet.
+- Buchtitel, Serien-/Bandangaben, Status, Kennzahlen, Phase und letzte Aktivität verwenden keine kaum lesbare Mikroschrift mehr.
+- Die Hoverkarte wurde geringfügig vergrößert, damit die bessere Lesbarkeit nicht zu gequetschten Inhalten führt.
+
+### 🗒 Romanideen
+
+- Die Aktionsbuttons in der geöffneten Romanidee bleiben jetzt innerhalb des Dialogs.
+- Die Buttonleiste kann sauber umbrechen und passt sich auf schmaleren Fenstern in ein zweispaltiges Layout ein.
+
+### ✦ Ideenarchiv – neue Idee
+
+- `Idee speichern` reagiert wieder zuverlässig auf den ersten Klick.
+- Der Speichervorgang läuft jetzt über einen expliziten Button-Handler statt vom nativen Dialogverhalten abhängig zu sein.
+- Während eines laufenden Speichervorgangs wird ein versehentliches doppeltes Speichern verhindert.
+
+### 🔎 Namenskategorien
+
+- Die Kategorienauswahl der Namenslisten wurde von einer langen nativen Auswahlliste auf ein suchbares Auswahlfeld umgestellt.
+- Beim Öffnen steht direkt eine Suche nach Kategorien zur Verfügung.
+- Die Liste wird beim Tippen sofort nach Wortbestandteilen gefiltert.
+- Die Ergebnisliste besitzt eine begrenzte Höhe und einen eigenen Scrollbalken, sodass viele Kategorien nicht mehr über den Bildschirm hinauslaufen.
+- Die bestehende Filterlogik und eigene Namenskategorien bleiben vollständig erhalten.
+
+### 👁 Lesbarkeits-Audit
+
+- Mehrere besonders kleine Hilfs-, Status- und Metatexte der Suite wurden auf eine lesbare Mindestgröße angehoben.
+- Besonders betroffen sind Dialoghinweise, Dashboard-Metadaten, Buchinformationen und weitere sekundäre Texte, die bisher teilweise unterhalb einer angenehmen Lesbarkeit lagen.
+- Die visuelle Hierarchie bleibt erhalten: Sekundärtexte bleiben dezenter als Hauptinhalte, sind aber nicht mehr nur mit Mühe zu entziffern.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Mindmaps und Knoten bleiben kompatibel; es ist keine Datenmigration notwendig.
+- Die bisherige ausführliche Knotenmaske bleibt intern für Verknüpfungs-Sonderfälle verfügbar, ist aber nicht mehr Teil des normalen Gedanken-Workflows.
+
 ## v0.80.62
 
 ### 🧠 Mindmaps
