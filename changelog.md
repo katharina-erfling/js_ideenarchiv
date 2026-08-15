@@ -6,6 +6,34 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.70
+
+### 📖 Buchdialog – Buchdaten zuerst
+
+- Titel, Untertitel, Romanprojekt und Status stehen jetzt direkt am Anfang des Buchdialogs.
+- Cover, Buchrückenfarbe und Druckumschlag folgen erst danach.
+- Die Reihenfolge gilt gleichermaßen beim Anlegen und Bearbeiten eines Buches.
+
+### 📚 Bücherregal – echter Buchrücken zuverlässig sichtbar
+
+- Ein übernommener Buchrücken-Ausschnitt liegt jetzt als echte, vollflächige Spine-Grafik über dem generierten Buchrücken.
+- Generierte Titel-, Reihen- und Dekorationselemente werden bei einem echten Buchrücken vollständig ausgeblendet.
+- Status, Aktivitätspunkt und Veröffentlichungsstern werden nicht mehr direkt auf Buchrücken angezeigt; diese Informationen bleiben in der Hoverkarte verfügbar.
+- Generierte Buchrücken bleiben dadurch ebenfalls ruhiger und näher an echten Buchrücken.
+
+### 🖼 Druckumschlag – Cover ebenfalls übernehmen
+
+- Derselbe Umschlag-Editor kann jetzt nicht nur einen Buchrücken, sondern auch das Frontcover aus einem kompletten Umschlag übernehmen.
+- `Ausschnitt als Cover übernehmen` verwendet die aktuell markierte Position und Breite als Coverausschnitt.
+- Separates Hochladen eines normalen Coverbildes bleibt weiterhin möglich.
+- Cover und Buchrücken können unabhängig voneinander aus unterschiedlichen Ausschnitten desselben Umschlags übernommen werden.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Bestehende Bücher ohne Druckumschlag bleiben kompatibel.
+- Die automatische Buchrückenfarbe aus dem Cover bleibt als Fallback vollständig erhalten.
+
 ## v0.80.69
 
 ### 📚 Living Bookshelf – freie Position auf dem Regalbrett
