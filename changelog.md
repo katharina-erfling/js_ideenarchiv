@@ -6,6 +6,44 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.54
+
+### ♧ Inspiration – sichtbares Live-Drag & Drop
+
+Das Verschieben im Inspirationsboard wurde auf eine Pointer-basierte
+Sortierung umgestellt.
+
+Während des Ziehens:
+
+- bleibt die Ursprungskachel transparent sichtbar
+- folgt eine schwebende Vorschau dem Mauszeiger
+- erscheint an der Zielposition eine echte Lücke mit `Hier ablegen`
+- die übrigen Kacheln reagieren bereits während des Ziehens auf diese Lücke
+
+Beim Loslassen wird genau die zuvor angezeigte Position gespeichert.
+Nach erfolgreichem Drop erscheint `Position gespeichert`.
+
+### 🗒 Romanideen – Masonry-Verteilung
+
+Die Romanideen liegen nicht mehr in starren gemeinsamen Kartenzeilen.
+
+Jeder Zettel nutzt nur seine tatsächlich benötigte Höhe. Die jeweils nächste
+Karte wird in die aktuell kürzeste Spalte gesetzt, sodass freie Flächen unter
+kürzeren Zetteln direkt aufgefüllt werden.
+
+Das gilt auch für Romanideen mit Vorschaubild.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Pointer-basiertes Inspirations-Reorder vorhanden
+- schwebende Drag-Vorschau vorhanden
+- Live-Platzhalter vorhanden
+- gespeicherte Reihenfolge wird neu nummeriert
+- Romanideen-Masonry vorhanden
+- Dashboard-Startverhalten erhalten
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.53
 
 ### 🖼 Bilder bei Romanideen
