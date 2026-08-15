@@ -6,6 +6,33 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.21
+
+### 🏠 Frischer Start und F5 jetzt getrennt
+
+Das Startverhalten wurde klar getrennt:
+
+- index.html neu öffnen → Dashboard
+- F5 / Browser neu laden → letzte Arbeitsposition wiederherstellen
+
+Damit beeinflusst der gespeicherte F5-Kontext nicht mehr den normalen Start der Suite.
+
+### Technisch
+
+Beim Start wird die Browser-Navigation geprüft:
+
+- navigate → Dashboard
+- reload → Resume-Kontext wiederherstellen
+- ältere Browser verwenden performance.navigation als Fallback
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- frischer Start verwendet showDashboard()
+- F5 verwendet weiterhin restoreResumeContext()
+- bestehende Buch-/Projekt-/Manuskript-Kontexte bleiben beim Reload erhalten
+- keine Datenmigration notwendig
+
 ## v0.80.20
 
 ### 🛠 Story-Bibel – „Charaktere anlegen“ repariert
