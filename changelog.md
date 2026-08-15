@@ -6,6 +6,77 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.59
+
+### 🗒 Romanideen – Rechtsklick-Menü
+
+Romanideen besitzen jetzt zusätzlich zur normalen Detailansicht ein
+Rechtsklick-Menü.
+
+Ein normaler Linksklick öffnet die Romanidee weiterhin wie bisher.
+
+Per Rechtsklick stehen direkt zur Verfügung:
+
+- `Bearbeiten`
+- `Zu Romanprojekt machen`
+- `Löschen`
+
+Ist bereits ein Romanprojekt aus der Idee entstanden, wird die Projektaktion
+deaktiviert und entsprechend gekennzeichnet.
+
+### 🗑 Romanideen löschen
+
+Die vorhandene Löschlogik wurde zentralisiert und steht jetzt sowohl im
+Bearbeiten-Dialog als auch im Rechtsklick-Menü zuverlässig zur Verfügung.
+
+Ein bereits aus der Romanidee erzeugtes Romanprojekt bleibt beim Löschen der
+Romanidee erhalten.
+
+### 🏷 Namenslisten – eigene Kategorien
+
+Die bisher fest vorgegebenen Namensarten sind jetzt verwaltbare
+Namenskategorien.
+
+Neben dem Kategorienfilter gibt es neu:
+
+`⚙ Kategorien`
+
+Dort können:
+
+- bestehende Kategorien umbenannt werden
+- beliebig viele eigene Kategorien angelegt werden
+- eigene Kategorien wieder gelöscht werden
+
+Die fünf Standardkategorien können umbenannt, aber nicht gelöscht werden.
+Dadurch bleiben bestehende Namen und interne Zuordnungen sicher erhalten.
+
+### Eigene Kategorien überall verfügbar
+
+Die dynamischen Kategorien erscheinen in:
+
+- Namensfilter
+- `Neuer Name`
+- Mehrfachanlage
+- Namenskarten
+- Zufallsziehung
+
+Wird eine eigene Kategorie gelöscht, die noch Namen enthält, erfolgt eine
+Warnung. Nach Bestätigung werden diese Namen in die Kategorie
+`Sonstiger Name` verschoben.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Romanideen-Linksklick bleibt erhalten
+- Romanideen-Rechtsklick vorhanden
+- Bearbeiten / Romanprojekt / Löschen im Kontextmenü
+- zentrale Löschfunktion für Romanideen
+- zentrale Romanprojekt-Konvertierung
+- dynamische Namenskategorien
+- Standardkategorien umbenennbar
+- eigene Kategorien anlegbar und löschbar
+- Kategorieauswahl in Einzel- und Mehrfachanlage
+- keine doppelten statischen HTML-IDs
 
 ## v0.80.58
 
