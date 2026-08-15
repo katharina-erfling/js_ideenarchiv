@@ -6,6 +6,34 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.32
+
+### 🐞 Buch-Dashboard – Ladefehler behoben
+
+Beim Öffnen eines Buches konnte die neue Buchübersicht mit
+„Dieser Bereich ist gerade gestolpert“ abbrechen.
+
+Ursache war ein veralteter bzw. nicht vorhandener Helper-Aufruf
+für die Ortsdaten im neuen Dashboard.
+
+### 🔗 Wissen & Welt
+
+Die Ortsanzahl der Buchübersicht wird jetzt direkt aus den
+für das jeweilige Buch sichtbaren Wissen-&-Welt-Einträgen ermittelt.
+
+Dabei werden:
+
+- nur Einträge vom Typ „Ort“ berücksichtigt
+- die Buchfreigaben beachtet
+- mehrfach erreichbare Einträge dedupliziert
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- nicht definierter `knowledgeEntriesForBook`-Aufruf entfernt
+- Dashboard-Abhängigkeiten auf vorhandene Funktionen geprüft
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.31
 
 ### 🏠 Buch-Dashboard & Navigation – Konsistenzrunde
