@@ -6,6 +6,68 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.45
+
+### 🏠 Startseite – Ursache an der Wurzel behoben
+
+Die leere „Alle Ideen“-Ansicht konnte weiterhin als Startseite sichtbar
+bleiben, obwohl die Routing-Logik anschließend eigentlich das Dashboard
+öffnen sollte.
+
+Die Ursache lag tiefer: Das Ideenarchiv war im rohen HTML weiterhin die
+standardmäßig sichtbare Ansicht. Außerdem wurde vor der eigentlichen
+Startnavigation noch `renderAll()` sowie mehrere Audits ausgeführt.
+
+Wenn in dieser Phase etwas abbrach oder verzögert wurde, blieb genau diese
+rohe Archivansicht stehen.
+
+### Neue robuste Startarchitektur
+
+Die Startreihenfolge wurde geändert:
+
+1. Daten laden
+2. Kernbindings aufbauen
+3. Startansicht sofort bestimmen und rendern
+4. erst danach optionale Audits, Sicherheitschecks und Integritätsprüfungen
+
+Dadurch kann ein Fehler in einem Nebenmodul die Startnavigation nicht mehr
+verhindern.
+
+### HTML-Fallback ebenfalls korrigiert
+
+Schon bevor JavaScript fertig geladen ist, ist jetzt:
+
+- Dashboard die Standardansicht
+- Ideenarchiv ausgeblendet
+- Archiv-Topbar ausgeblendet
+- Archiv-Toolbar ausgeblendet
+- Archiv-Bottom-Controls ausgeblendet
+
+Selbst wenn JavaScript beim Start unerwartet abbrechen sollte, fällt die
+Seite damit nicht mehr auf „Alle Ideen“ zurück.
+
+### ↻ F5
+
+Das bestehende F5-Verhalten bleibt erhalten:
+
+- frischer Start → Dashboard
+- echter Reload derselben Tab-Sitzung → letzter Arbeitskontext
+
+### 💾 Daten
+
+Keine gespeicherten Inhalte wurden verändert.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Dashboard im Roh-HTML sichtbar
+- Ideenarchiv im Roh-HTML verborgen
+- Startnavigation läuft vor Audits
+- `renderAll()` aus dem globalen Startup entfernt
+- Audits können die Startnavigation nicht mehr abbrechen
+- `showDashboard()` schließt Archiv-Chrome defensiv
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.44
 
 ### 🎬 Videos im Inspiration Board
