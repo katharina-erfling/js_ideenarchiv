@@ -6,9 +6,81 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.49
+
+### ♧ Inspiration – Drag & Drop & freie Sortierung
+
+Die Drag-&-Drop-Logik im Inspirationsboard wurde erneut grundlegend
+stabilisiert.
+
+### ⇩ Medien von außen hineinziehen
+
+Bilder und Videos können wieder direkt aus Explorer/Finder auf Inspiration
+gezogen werden.
+
+Die Drop-Erkennung sitzt jetzt zusätzlich auf Capture-Ebene des Dokuments,
+solange Inspiration geöffnet ist. Dadurch können Kacheln, Buttons, leere
+Bereiche oder andere verschachtelte Elemente den Dateidrop nicht mehr
+verschlucken.
+
+Zusätzlich werden Dateitypen nicht nur über MIME-Type erkannt, sondern bei
+Bedarf auch über die Dateiendung.
+
+### ↕ Medien innerhalb des Boards anordnen
+
+Inspirationsmedien lassen sich jetzt über den `⠿`-Griff auf eine andere
+Kachel ziehen.
+
+Beim Drop kann das Medium vor oder nach der Zielkachel einsortiert werden.
+Eine Markierung an der Kachel zeigt die Einfügeposition.
+
+Die Reihenfolge wird als `sortOrder` gespeichert und bleibt nach Neuladen
+erhalten.
+
+Auch das Verschieben auf einen anderen Ordner setzt das Medium dort ans Ende
+der vorhandenen Reihenfolge.
+
+### 🧱 Masonry bleibt erhalten
+
+Die freie Reihenfolge ändert nichts am bestehenden zeilenorientierten
+Masonry-/Kachelraster:
+
+- zuerst links nach rechts
+- danach nächste Reihe
+- unterschiedliche Medienhöhen bleiben erhalten
+- freie Lücken werden weiterhin dicht genutzt
+
+### 🧵 Wissen & Welt → Fäden
+
+Die große helle Fäden-Box hat jetzt deutlich mehr Innenabstand:
+
+- mehr Abstand links und rechts
+- mehr Abstand oben und unten
+- Button und Inhalte kleben nicht mehr am Rand
+- responsive kleinere Abstände auf schmalen Bildschirmen
+
+### 🛡 Regression-Schutz
+
+Bewusst unverändert gelassen und statisch mitgeprüft:
+
+- Dashboard bleibt die Startseite
+- Löschen von Inspirationsmedien bleibt erhalten
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- externer Bild-/Video-Drop über Capture-Handler
+- Dateiendungs-Fallback vorhanden
+- interne Drags bleiben von Datei-Uploads getrennt
+- persistente Medienreihenfolge vorhanden
+- Drop vor/nach einer Kachel unterstützt
+- Ordnerwechsel behält Sortierlogik
+- bestehende Medien ohne `sortOrder` bleiben kompatibel
+- Dashboard-Startlogik nicht entfernt
+- Medien-Löschfunktion nicht entfernt
+- keine doppelten statischen HTML-IDs
 
 
-## v0.80.47
 ## v0.80.48
 
 ### ♧ Inspiration – Drag & Drop wiederhergestellt
@@ -63,6 +135,7 @@ Dadurch brach das Anlegen eines Charakters beim Öffnen des Dialogs ab.
 - interne Drags werden nicht als neue Uploads behandelt
 - keine doppelten statischen HTML-IDs
 
+## v0.80.47
 
 ### 🏠 Leere Startseite verhindert
 
