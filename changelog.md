@@ -6,6 +6,51 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.46
+
+### 📁 Inspirationsordner repariert
+
+Die Inspirationsordner waren nach der Video-Erweiterung durch einen
+rekursiven Funktionsfehler blockiert.
+
+Durch eine zu breite Umbenennung existierten zwei Funktionen mit dem Namen
+`inspirationMediaItems()`. Die zweite rief sich selbst endlos auf und
+verursachte beim Rendern von Board und Ordnerbaum einen Stack-Overflow.
+
+### ✓ Korrektur
+
+- rekursive Doppeldefinition entfernt
+- `inspirationImageItems()` wieder als sauberer Kompatibilitätsalias
+- Ordnerbaum rendert wieder
+- Ordner anlegen funktioniert wieder
+- Unterordner funktionieren wieder
+- Ordner bearbeiten und löschen funktionieren wieder
+- Speichern ohne Namen zeigt jetzt einen Hinweis
+
+### 🛡 Zusätzliche Absicherung
+
+Ordnerbaum und Unterordner-Ermittlung besitzen jetzt einen Tiefen-/Zyklusschutz,
+damit fehlerhafte alte Ordnerdaten keine Endlosrekursion mehr auslösen.
+
+### ✎ Inspirationsdialog bereinigt
+
+Die zentrale Formularsteuerung erwartete noch das entfernte Feld
+`#inspirationTitle`. Diese Altlast wurde entfernt.
+
+Der kompakte Inspirationsdialog speichert wieder nur:
+
+- Caption
+- Ordnerzuordnung
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- genau eine echte `inspirationMediaItems()`-Definition
+- `inspirationImageItems()` ist nicht rekursiv
+- Ordnerbaum besitzt Zyklusschutz
+- Ordner-Submit referenziert keine entfernten Felder
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.45
 
 ### 🏠 Startseite – Ursache an der Wurzel behoben
