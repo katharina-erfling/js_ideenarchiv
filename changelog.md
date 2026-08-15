@@ -6,6 +6,83 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.30
+
+### 👤 Charaktere – Steckbrief und Entwicklung getrennt
+
+Der Charakterbereich besitzt jetzt zwei klare Ansichten:
+
+- Steckbrief & Medien
+- Entwicklung
+
+Beim Öffnen eines Charakters ist „Steckbrief & Medien“
+standardmäßig aktiv.
+
+### 📋 Steckbrief & Medien
+
+Die Standardansicht zeigt direkt:
+
+- Name
+- Untertitel
+- Aliase
+- Kurzbeschreibung
+- Hauptbild
+- Haupt-Bildergalerie
+- sämtliche ausgefüllten Steckbrief-Felder
+- freie Notizen
+- zusätzliche benannte Bildergalerien
+- Dateianhänge
+- vorhandene Beziehungen
+
+Die Charakterakte kann direkt über:
+
+> ✎ Charakter bearbeiten
+
+geöffnet werden.
+
+### 🖼 Galerien in der Leseansicht
+
+Die Hauptgalerie und zusätzliche Charaktergalerien besitzen:
+
+- feste Bildfläche
+- proportionale Darstellung
+- Vor-/Zurück-Navigation
+- Vorschaubilder
+- Bildnotiz
+
+### ↗ Entwicklung
+
+Der zweite Reiter enthält die bisherige Character-Arc-Ansicht:
+
+- Entwicklungs-Timeline
+- Anfang vs. aktueller Stand
+- Story-Kontext
+- Manuskriptverknüpfungen
+- Entwicklungsstationen
+- Szenenbezug
+- Timeline-Bezug
+
+### 🧭 Charakterwechsel
+
+Beim Wechsel auf einen anderen Charakter wird automatisch
+wieder der Steckbrief geöffnet.
+
+Auch nach dem Anlegen oder Bearbeiten eines Charakters landet
+die Ansicht wieder im Steckbrief.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Steckbrief als Standardansicht
+- Entwicklung als separater Reiter
+- gespeicherte Steckbrief-Felder werden dargestellt
+- Hauptgalerie wird dargestellt
+- zusätzliche benannte Galerien werden dargestellt
+- Dateien werden dargestellt
+- Beziehungen werden zusammengefasst
+- Charakterwechsel setzt auf Steckbrief zurück
+- keine doppelten HTML-IDs
+
 ## v0.80.29
 
 ### 👤 „Figurenbogen“ heißt jetzt „Charaktere“
