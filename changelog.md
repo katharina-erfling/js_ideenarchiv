@@ -6,6 +6,66 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.36
+
+### ◉ Recherche Studio – Sammlungen, Bücher & Medien
+
+Der Recherchebereich wurde analog zum Inspiration Studio ausgebaut.
+
+### 📁 Verschachtelte Recherchesammlungen
+
+- Sammlungen und Untersammlungen
+- Drag & Drop für Recherchen und Sammlungen
+- „Alle Recherchen“ als Hauptebene
+- Suche bleibt sammlungsübergreifend
+- Löschen einer Sammlung löscht keine Rechercheeinträge
+
+### 📚 Mehrfach-Buchzuordnung
+
+Jede Recherchesammlung kann optional mit einem oder mehreren
+konkreten Büchern verknüpft werden.
+
+Ohne Buchauswahl bleibt sie projektweit verfügbar.
+
+Die Rechercheauswahl im Manuskript berücksichtigt diese Zuordnung.
+
+### 🖼 Medien & Dateien
+
+- Hauptbild per Drag & Drop
+- optionale Bildergalerie
+- Slider
+- Vorschaubilder
+- Bildnotizen
+- PDFs, Scans und andere Dateianhänge
+- eigene frei benennbare Felder
+
+### 💾 Datenmodell
+
+Rechercheeinträge:
+
+- collectionId
+- gallery
+- files
+- customFields
+
+Sammlungen:
+
+- parentCollectionId
+- projectId
+- bookIds
+
+Bestehende Rechercheeinträge bleiben kompatibel.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Sammlungen nicht als Rechercheeinträge gezählt
+- Verschachtelung und Drag & Drop unterstützt
+- Mehrfach-Buchzuordnung unterstützt
+- Manuskript-Rechercheauswahl berücksichtigt Buchzuordnung
+- Galerie, Dateien und eigene Felder unterstützt
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.35
 
 ### ♧ Inspirationssammlungen – Plus-Button repariert
