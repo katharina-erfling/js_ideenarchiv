@@ -6,6 +6,32 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.72
+
+### 📚 Living Bookshelf – echte Buchproportionen
+
+- Die Buchhöhe ist nicht mehr für alle Regalbücher starr gleich.
+- Generierte Bücher erhalten je nach Arbeitsstand leicht unterschiedliche, aber zusammenpassende Höhen.
+- Bei einem echten Buchrücken wird das Verhältnis von Rückenbreite zu Buchhöhe aus der hochgeladenen bzw. ausgeschnittenen Spine-Grafik übernommen.
+- Dadurch wird ein echter Buchrücken nicht mehr in eine unpassende Standardbox gezwängt.
+- Die Breite eines echten Buches wird passend zur Spine-Proportion berechnet und innerhalb sinnvoller Regalgrenzen gehalten.
+- Ältere gespeicherte Buchrücken ohne Proportionsangabe werden beim Laden einmalig aus der Bilddatei vermessen und automatisch ergänzt.
+
+### 📖 Mehr Buchgefühl im Regal
+
+- Echte und generierte Buchrücken stehen weiterhin auf derselben unteren Regal-Grundlinie.
+- Das Regal bietet etwas mehr vertikalen Platz, damit höhere Buchproportionen nicht gequetscht werden.
+- Buchrücken besitzen jetzt einen stärkeren, aber weiterhin dezenten Kontaktschatten zum Regalbrett.
+- Seitliche Licht- und Schattenkanten geben den Büchern mehr Tiefe.
+- Echte Spine-Grafiken erhalten eine sehr leichte Randwölbung und Materialkante, statt wie ein flaches Rechteck auf dem Regal zu wirken.
+- Die eigentliche Rücken-Grafik bleibt unverändert sichtbar; die neue Tiefenwirkung wird nur als dezente Ebene darübergelegt.
+
+### ✓ Technische Prüfung
+
+- `spineAspect` ergänzt bestehende Buchdaten ohne Migration.
+- JavaScript-Syntax geprüft.
+- Bestehende Bücher ohne eigenen Buchrücken bleiben kompatibel.
+
 ## v0.80.71
 
 ### 📚 Living Bookshelf – Startpositionen
