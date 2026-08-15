@@ -6,6 +6,73 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.53
+
+### 🖼 Bilder bei Romanideen
+
+Romanideen können jetzt optional eine eigene Bildsammlung besitzen.
+
+### Bilder hinzufügen
+
+Im Romanideen-Dialog gibt es einen neuen Bereich `Bilder`.
+
+Bilder können:
+
+- über `＋ Bilder` ausgewählt werden
+- per Drag & Drop hinzugefügt werden
+- mit `Strg+V` aus der Zwischenablage eingefügt werden
+- einzeln wieder entfernt werden
+
+Mehrere Bilder pro Romanidee sind möglich.
+
+### Vorschaubild
+
+Das erste Bild der Sammlung wird automatisch als Vorschaubild der Romanidee
+verwendet und direkt auf der Romanideen-Karte angezeigt.
+
+Damit können Romanideen bereits in der Übersicht visuell voneinander
+unterschieden werden.
+
+### Bildnotizen
+
+Jedes Bild kann optional eine kurze Bildnotiz / Caption erhalten.
+
+Diese wird zusammen mit dem Bild gespeichert.
+
+### Detailansicht
+
+In der Detailansicht einer Romanidee erscheint die gesamte Bildsammlung als
+Galerie.
+
+Die Bilder werden proportional dargestellt und nicht gestreckt.
+
+### 💾 Datenmodell
+
+Romanideen besitzen neu:
+
+- `images`
+
+Jeder Bildeintrag enthält:
+
+- `id`
+- `data`
+- `caption`
+- optional den ursprünglichen Dateinamen
+
+Bestehende Romanideen ohne Bilder bleiben vollständig kompatibel.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- Mehrfach-Bildupload vorhanden
+- Drag & Drop vorhanden
+- Zwischenablage-Unterstützung vorhanden
+- Bild entfernen vorhanden
+- erstes Bild als Kartenvorschau
+- Galerie in Detailansicht
+- bestehende Romanideen kompatibel
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.52
 
 ### ♧ Inspiration – Masonry, Drag & Drop und Rechtsklick erneut korrigiert
