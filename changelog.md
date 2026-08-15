@@ -6,6 +6,102 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.80.66
+
+### 📚 Living Bookshelf – freie Regalordnung
+
+- Bücher können im Bücherregal jetzt per Drag & Drop frei umgestellt werden.
+- Die manuelle Reihenfolge wird direkt am jeweiligen Buch gespeichert und bleibt nach einem Neustart erhalten.
+- Bücher können auf ein anderes Regalbrett gezogen und dort an der gewünschten Position einsortiert werden.
+- Unter dem Regal kann jederzeit ein zusätzliches leeres Regalbrett angelegt werden.
+- Leere zusätzliche Regalbretter können wieder entfernt werden; belegte Bretter werden dabei nicht gelöscht.
+- Beim Ziehen wird das Ziel-Regalbrett hervorgehoben und die Einfügeposition ergibt sich direkt aus der Mausposition.
+- Suche und Filter verändern die gespeicherte Regalposition nicht.
+
+### 🖼 Romanideen – Bildbereich im Dialog
+
+- Der Bilderbereich einer Romanidee wurde vom sticky Dialog-Footer stärker getrennt.
+- Die Dropzone besitzt mehr Abstand nach unten und wird nicht mehr optisch von `Abbrechen` und `Speichern` überlagert.
+- Der Dialog reserviert zusätzlichen Platz für die Aktionsleiste, damit die Bildhinweise wie ein echter Eingabebereich und nicht wie verdeckter Inhalt wirken.
+
+### 🧠 Mindmaps – Rechtsklick auf Verbindungen
+
+- Verbindende Linien besitzen jetzt ein eigenes Rechtsklick-Menü.
+- Direkt an der Linie können jetzt gewählt werden:
+  - Beschriftung
+  - gerade Linienführung
+  - gebogene Linienführung
+  - rechtwinklige Linienführung
+  - Linienfarbe
+  - Pfeilrichtung
+  - vollständige Verbindungseigenschaften
+  - Verbindung löschen
+- Farbe und Pfeilrichtung können schnell durch die vorhandenen Varianten weitergeschaltet werden; für alle Detailwerte bleibt der vollständige Verbindungsdialog verfügbar.
+
+### 🕸 Story Graph – direkter Canvas-Workflow
+
+- Der Story Graph übernimmt den direkten Interaktionsstil der Mindmaps, ohne seine Story-Graph-Semantik zu verlieren.
+- Knoten bleiben echte Inhalte wie Figuren, Orte, Szenen, Ideen, Handlungsfäden, Recherche, Mindmap-Inhalte und Plotlinien.
+- An einem Story-Graph-Knoten erscheint beim Fokus ein kleiner Verbindungsgriff.
+- Vom Verbindungsgriff kann mit gedrückter Maustaste direkt zu einem anderen Knoten gezogen werden.
+- Während des Ziehens erscheint eine Vorschau-Linie und mögliche Zielknoten werden hervorgehoben.
+- Solche frei ergänzten Graph-Verbindungen werden im jeweiligen Buch gespeichert.
+- Eigene Graph-Verbindungen können per Rechtsklick beschriftet, gerade oder gebogen dargestellt, gestrichelt und wieder gelöscht werden.
+- Automatisch aus Storydaten abgeleitete Verbindungen bleiben geschützt; ihre Quelle wird weiterhin im jeweiligen Fachbereich bearbeitet.
+- Das Verschieben der Knoten auf der Graph-Fläche bleibt unabhängig von den eigentlichen Storydaten gespeichert.
+
+### ✦ Namensgeneratoren
+
+- Neben den Namenslisten gibt es jetzt eine eigene `Namensgeneratoren`-Werkstatt.
+- Enthalten sind mehrere Generatorarten:
+  - Fantasy-Namen
+  - Ortsnamen
+  - Vornamen
+  - Nachnamen
+- Ein lokaler Generator funktioniert vollständig offline und ohne API-Kosten.
+- Für reale Vor- und Nachnamen steht zusätzlich RandomUser als optionale Online-Quelle zur Verfügung.
+- Region/Stil und gewünschte Anzahl lassen sich vor dem Generieren wählen.
+- Fällt die Online-Quelle aus, wird automatisch auf den lokalen Generator zurückgefallen.
+- Einzelne generierte Namen können mit `＋ Sammeln` direkt in die bestehenden Namenslisten übernommen werden.
+- Generator-Herkunft und gewählter Stil werden beim übernommenen Namen als Sammlung/Herkunft festgehalten.
+
+### ⚄ Zufallsname – Darstellung
+
+- Der Zufallsfund wurde visuell stärker als bewusste Fundkarte in die Namensseite integriert.
+- Der Zettel schwebt nicht mehr wie ein losgelöstes Zwischenelement im großen freien Bereich.
+- Abstände, Größe, Innenrahmen und Aktionsbuttons wurden an die übrigen Zufalls-/Ideenmodule angeglichen.
+
+### ⏱ Schreibsessions – Timer & Fokus
+
+- Im Manuskript gibt es jetzt einen sichtbaren Button `▶ Schreibsession`.
+- Eine Schreibsession kann bewusst gestartet und beendet werden.
+- Während einer laufenden Session zeigt eine Stoppuhr die aktive Schreibzeit an.
+- Sessions können pausiert und anschließend fortgesetzt werden.
+- Pausenzeiten werden nicht als aktive Schreibzeit gespeichert.
+- Startwortzahl, Endwortzahl, Netto-Wörter, aktive Dauer, Buch und Manuskriptabschnitt werden weiterhin in `writingSessions` gespeichert.
+- Bewusst gestartete Sessions werden zusätzlich als manuelle Sessions gekennzeichnet.
+- Die vorhandenen Session-Statistiken greifen weiterhin auf denselben Schreibsession-Speicher zu und berücksichtigen damit auch die neuen Timer-Sessions.
+- Der bisherige automatische Sessionstart beim ersten Schreiben bleibt erhalten; der sichtbare Timer macht den laufenden Zustand jetzt transparent.
+
+### ✓ Rechtschreibung, Grammatik & Stil ohne Duden-Zwang
+
+- Die native Browser-Rechtschreibprüfung des Manuskripts bleibt standardmäßig aktiv und benötigt keinen externen Dienst.
+- Zusätzlich gibt es im Schreibbereich `✓ Text prüfen`.
+- Die erweiterte Prüfung wird ausschließlich auf ausdrücklichen Klick gestartet; es wird nichts automatisch übertragen.
+- Für Grammatik- und Stilhinweise kann der aktuelle Manuskriptabschnitt über die öffentliche LanguageTool-Schnittstelle geprüft werden.
+- Vor der Online-Prüfung weist der Dialog ausdrücklich darauf hin, dass der Text dafür an LanguageTool übertragen wird.
+- Ergebnisse werden mit Meldung, Kontext und Korrekturvorschlägen im Ideenarchiv dargestellt.
+- Korrekturvorschläge werden bewusst nicht automatisch in den Rich-Text eingefügt, damit bestehende Manuskriptformatierungen nicht beschädigt werden; ein Vorschlag kann stattdessen kopiert werden.
+- Ist LanguageTool nicht erreichbar, bleibt die lokale Browser-Rechtschreibung uneingeschränkt nutzbar.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Bestehende Bücher erhalten ohne Migration automatisch eine gültige Standard-Regalposition.
+- Story-Graph-Verbindungen werden innerhalb des bereits buchgebundenen Graph-Layouts gespeichert; keine neue IndexedDB-Struktur erforderlich.
+- Bestehende Schreibsessions bleiben vollständig kompatibel.
+
 ## v0.80.64
 
 ### 🧠 Mindmaps – direkter Erstellworkflow zuverlässig aktiviert
