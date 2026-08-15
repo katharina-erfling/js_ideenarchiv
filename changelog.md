@@ -6,6 +6,48 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.95.0 – Versioning & Revision Polish
+
+### 🔀 Versionslinien statt flacher Fassungsliste
+
+- Kreative Fassungen zeigen jetzt sichtbar, aus welcher vorherigen Fassung sie entstanden sind.
+- Die Versionsverwaltung besitzt zusätzlich die Ansicht `⑂ Stammbaum`, die bewusste kreative Fassungen entlang ihrer Eltern-/Kind-Beziehungen darstellt.
+- Die aktuell bearbeitete Fassung erscheint als eigener Endpunkt im Stammbaum.
+- Verzweigte Arbeitswege bleiben dadurch nachvollziehbar, wenn von einer älteren Fassung aus ein alternativer Ansatz begonnen wird.
+- Kreative Fassungen, auf denen spätere Fassungen aufbauen, können nicht versehentlich aus der Versionslinie gelöscht werden.
+
+### 📝 Revision & Fassung enger verbunden
+
+- Kreative Überarbeitungsfassungen zeigen den Revisionsdurchgang, aus dem sie entstanden sind.
+- Revisionsbezug wird sowohl in der Versionsliste als auch im Versionsstammbaum sichtbar.
+- Ausgangs-/Abschluss-Snapshots eines Revisionsdurchgangs bleiben weiterhin technische bzw. fixierte Vergleichsstände; kreative Fassungen bleiben davon klar getrennt.
+
+### 🔎 Versionsvergleich mit Herkunft
+
+- Der Versionsvergleich verwendet für kreative Fassungen deren tatsächliche Fassungstitel statt allgemeiner Snapshot-Beschriftungen.
+- Oberhalb des Diffs wird angezeigt, aus welcher Fassung beide Seiten entstanden sind und ob sie zu einem Revisionsdurchgang gehören.
+- Dadurch ist beim Vergleich besser erkennbar, ob zwei Fassungen direkt aufeinander aufbauen oder unterschiedliche Zweige darstellen.
+
+### ↩ Alte Formulierungen gezielt zurückholen
+
+- Entfernte Absätze einer älteren Fassung besitzen im Versionsvergleich jetzt `↩ übernehmen`.
+- Ein einzelner alter Absatz kann damit an der aktuellen Cursorposition in die aktuelle Manuskriptfassung eingesetzt werden, ohne die komplette alte Version wiederherzustellen.
+- Die aktuelle Fassung bleibt dabei aktiv und wird anschließend normal per Autosave gesichert.
+
+### 🛡 Kreative Wiederherstellung ohne Versionsverlust
+
+- Das Wiederherstellen einer bewussten kreativen Fassung überschreibt die aktuelle Fassung nicht mehr.
+- Stattdessen wird zuerst die bisherige aktuelle Fassung archiviert und anschließend eine neue Fassung aus der ausgewählten historischen Version erzeugt.
+- Die neue Fassung erhält die ausgewählte alte Version als Elternversion.
+- Spätere Fassungen und alternative Zweige bleiben vollständig erhalten.
+- Technische/manuelle Snapshots verwenden weiterhin den bisherigen abgesicherten Wiederherstellungsweg mit zusätzlichem Sicherheits-Snapshot.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine destruktive Datenmigration erforderlich.
+- Bestehende kreative Fassungen ohne vollständige Elternkette bleiben kompatibel und werden im Stammbaum als ältere Ausgangspunkte dargestellt.
+
 ## v0.94.0 – Revision Integration
 
 ### 📝 Revisionsdurchgänge direkt an Szenen
