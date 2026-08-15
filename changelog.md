@@ -7,6 +7,87 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 
 ---
 
+## v0.80.57
+
+### ♧ Inspiration – Sortierung wirklich persistent
+
+Beim Verschieben wurde zwar `Position gespeichert` gemeldet, die Kachel
+erschien anschließend aber häufig wieder an ihrer alten Position.
+
+Ursache war eine Mischung aus ordnerbezogenen Sortiernummern und einer
+globalen Darstellung.
+
+Die Reihenfolge ist jetzt eindeutig global:
+
+- Drag & Drop verändert nur die Reihenfolge
+- die Ordnerzuordnung eines Mediums wird beim Sortieren nicht mehr verändert
+- nach jedem Drop wird die globale Reihenfolge sauber neu nummeriert
+- dieselbe Sortierfunktion wird anschließend auch beim Rendern verwendet
+
+Damit entsprechen gespeicherte und sichtbare Position jetzt derselben
+Datenreihenfolge.
+
+### ↔ Größenänderung ohne überlappende Kacheln
+
+Beim Verbreitern einer Inspirationskachel konnte die alte Kartenhöhe noch vor
+der neuen Kartenbreite gemessen werden. Dadurch wurden falsche Masonry-Zeilen
+berechnet und Medien konnten sich überlagern.
+
+Das Layout läuft jetzt zweistufig:
+
+1. zuerst wird die neue Breite im Grid gesetzt
+2. erst nach dem Browser-Layout wird die tatsächliche neue Höhe gemessen
+3. danach werden Spalte und Masonry-Zeilen berechnet
+
+Nach dem Speichern einer neuen Kachelgröße wird das Board zusätzlich sauber
+neu gerendert.
+
+### 📚 Bücher nicht mehr dauerhaft links aufgelistet
+
+Die Liste `Zu einem Buch` wurde aus der Inspirations-Sidebar entfernt.
+
+Buchzuordnungen sind jetzt dort, wo sie gebraucht werden:
+
+- im Rechtsklick-Menü unter dem aufklappbaren Punkt `Zu Buch hinzufügen`
+- im Bearbeiten-Dialog als Mehrfachauswahl `In Büchern verwenden`
+
+Damit kann ein Medium gleichzeitig mehreren Buch-Medienpools zugeordnet
+werden, ohne dass bei vielen Büchern die linke Navigation immer länger wird.
+
+Wird eine Buchzuordnung entfernt, die bereits von einem Wissen-&-Welt-Eintrag
+verwendet wird, bleibt sie aus Sicherheitsgründen erhalten.
+
+### 📁 Ordnerliste mit eigenem Scrollbereich
+
+Die Inspirationsordner besitzen jetzt einen eigenen begrenzten Scrollbereich.
+
+Bei vielen Ordnern wächst die komplette linke Seitenleiste dadurch nicht mehr
+endlos nach unten.
+
+### 🛡 Regression-Schutz
+
+Erhalten bleiben:
+
+- Dashboard als Startseite
+- Medien löschen
+- externe Bild-/Video-Uploads
+- Rechtsklick-Menü
+- Buch-Medienpool
+- Auswahl von Buchmedien bei Charakteren, Orten und Wissen & Welt
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft
+- globale Inspiration-Sortierreihenfolge
+- Reorder verändert keine Ordnerzuordnung
+- zweiphasige Masonry-Höhenberechnung
+- Kachelgröße wird nach Speichern neu gerendert
+- dauerhafte Buchliste aus Sidebar entfernt
+- Buchzuordnung im Bearbeiten-Dialog vorhanden
+- Rechtsklick-Buchliste einklappbar und scrollbar
+- Inspirationsordner scrollbar
+- keine doppelten statischen HTML-IDs
+
 ## v0.80.56
 
 ### ♧ Inspiration – Kacheln per Eckgriff skalieren
