@@ -3,6 +3,20 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.8 – Dashboard-Link zum Manuskript
+
+### ↩ „Zuletzt am Schreibtisch“
+- Der Rücksprung verwendet jetzt wieder den kanonischen Schreibbereich-Pfad `showWriting()` statt einzelne Workflow-Panels manuell sichtbar/unsichtbar zu schalten.
+- Erst nachdem das richtige Buch vollständig geöffnet wurde, wird der Workflow ausdrücklich auf `Manuskript` gesetzt und der gespeicherte Abschnitt als aktives Dokument gewählt.
+- Der Zielzustand wird im nächsten Render-Frame verifiziert; falls ein gespeicherter Planungs-/Ideen-Tab dazwischenfunkt, wird der Manuskript-Tab erneut gesetzt.
+- Auch Dokumenttreffer der globalen Suche verwenden denselben zentralen Öffnungspfad.
+
+### ✓ Technische Prüfung
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Manuskript- oder Storydaten verändert.
+
 ## v1.2.7 – Dashboard-Rücksprung & Manuskriptkopf
 
 ### ↩ Zuletzt am Schreibtisch
