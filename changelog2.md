@@ -3,6 +3,24 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.10
+
+### ✒ Dashboard → Manuskript: gleiche Schreibhöhe
+- Der Rücksprung über `Zuletzt am Schreibtisch` bringt den Schreibbereich vor der Höhenmessung in denselben Viewport-Zustand wie das normale Öffnen des Manuskripts.
+- Die dynamische Höhenberechnung bricht nicht mehr ab, wenn der Schreibbereich durch eine vorherige Scrollposition bereits oberhalb des sichtbaren Viewports beginnt.
+- Die verfügbare Manuskripthöhe wird nach dem Dashboard-Sprung nochmals nach dem tatsächlichen Layout berechnet, damit der Editor dieselbe Höhe wie beim normalen Einstieg erhält.
+
+### 🖼 Inspirations-Dashboard
+- Unter `Gerade im Blick` werden keine Dateinamen oder Preview-Namen mehr unter den Bildern angezeigt.
+- Die Bildkarten verwenden `auto-fit` statt `auto-fill`; leere Phantomspalten entfallen und die vorhandenen Bilder nutzen die verfügbare Zeilenbreite bis zum rechten Rand.
+- Bildformat und Lightbox-Verhalten bleiben unverändert.
+
+### ✓ Technische Prüfung
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Manuskript-, Inspirations- oder Mediendaten verändert.
+
 ## v1.2.8 – Dashboard-Link zum Manuskript
 
 ### ↩ „Zuletzt am Schreibtisch“
