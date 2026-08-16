@@ -3,6 +3,33 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.3 – Dashboard-Korrekturen & Inspiration-Performance
+
+### 💡 Dashboard & Ideenarchiv
+- Auf dem allgemeinen Dashboard zeigt der Ideenblock jetzt `heute gesammelt`, `Ideen insgesamt` und `Romanideen`; die dort nicht benötigte Favoritenzahl entfällt.
+- Unter dem 14-Tage-Aktivitätsdiagramm wird neben den geschriebenen Wörtern jetzt auch die Zahl neuer Ideenzettel der letzten 7 Tage angezeigt.
+- Das Ideen-Dashboard ersetzt `Favoriten` und `noch keinem Buch zugeordnet` durch `diesen Monat` und `Kategorien`.
+- Der Kategorien-Donut ist visuell mit der Rangliste verbunden: Farben erscheinen sowohl im Ring als auch an Markern und Balken der jeweiligen Kategorie.
+- Die Donut-Mitte ist transparent und zeigt damit exakt den Hintergrund der Dashboard-Karte; Zahl und Beschriftung bleiben sauber innerhalb des Rings.
+
+### ✒ Zuletzt am Schreibtisch
+- `Weiter schreiben` und der zuletzt bearbeitete Manuskriptabschnitt öffnen jetzt ausdrücklich den Manuskript-Reiter des richtigen Buchs und den gespeicherten Abschnitt, statt auf einen anderen Workflow-Bereich zu fallen.
+
+### 🖼 Inspiration – Start, Performance & Lightbox
+- Inspiration startet jetzt auf einem leichten eigenen Dashboard statt sofort das vollständige Medienboard zu rendern.
+- Das Dashboard zeigt Bestand, Aktivität, Sammlungen, Buchverwendung, zuletzt bearbeitete Medien und ältere Inspirationen zum Wiederentdecken.
+- `Alle Inspirationen` oder eine konkrete Sammlung öffnet erst auf Wunsch das vollständige Board.
+- Sammlungszähler werden beim Rendern jetzt über eine einmal berechnete Hierarchie ausgewertet statt für jeden Ordner wiederholt das gesamte Archiv zu durchsuchen.
+- Board-Bilder verwenden Lazy Loading und asynchrones Decoding, um unnötige Bilddekodierung beim Öffnen großer Ansichten zu reduzieren.
+- Die seit v1.0.4 vorgesehene Lightbox ist jetzt tatsächlich im DOM vorhanden; Linksklick auf ein Bild öffnet sie zuverlässig.
+- Lightbox schließen über `ESC`, `×` oder Klick auf den abgedunkelten Hintergrund; Pfeiltasten blättern durch die sichtbaren Bilder.
+- Der hartnäckige grüne Fokus-/Auswahlrahmen bei Inspirationskarten wurde an der Fokusursache entfernt; ein normaler Bildklick erzeugt keinen bleibenden Auswahlzustand mehr.
+
+### ✓ Technische Prüfung
+- JavaScript-Syntax geprüft.
+- Keine IndexedDB-Migration erforderlich.
+- Bestehende Ideen-, Inspirations-, Ordner-, Buch- und Manuskriptdaten bleiben unverändert kompatibel.
+
 ## v1.2.2 – Inspirationsnavigation & Manuskript-Polish
 
 ### 🖼️ Inspirations-Kategorien
