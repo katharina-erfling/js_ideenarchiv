@@ -3,6 +3,29 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.11 – Inspiration: Kategorien & Sortierung
+
+### 🗂 Kategorien per Drag & Drop
+- Das Verschieben von Inspirationskategorien verwendet jetzt eine robuste Pointer-Drag-Logik statt des browserabhängigen nativen HTML5-Drags auf verschachtelten Kategoriezeilen.
+- Hauptkategorien können unter andere Kategorien gezogen werden.
+- Unterkategorien können zu einem anderen Elternordner oder zurück auf die Hauptebene verschoben werden.
+- Ungültige Drops in die eigene Kategorie bzw. eigene Unterstruktur werden blockiert.
+- Externe Bild-/Videodateien können weiterhin per normalem Datei-Drop auf Kategorien gelegt werden.
+
+### 🕒 Neueste / zuletzt bearbeitete Inspirationen zuerst
+- `Alle Inspirationen` sortiert konsequent nach dem tatsächlichen Änderungszeitpunkt absteigend.
+- Alte Daten mit ISO-Datumsstrings und neuere numerische Zeitstempel werden einheitlich ausgewertet.
+- Fehlt `updatedAt`, wird sauber auf `createdAt` zurückgefallen.
+- Das Inspirations-Dashboard verwendet dieselbe robuste Zeitlogik für `Gerade im Blick` und `Wiederentdecken`.
+- Reines Öffnen einer Inspiration verändert den Änderungszeitpunkt weiterhin nicht.
+
+### ✓ Technische Prüfung
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Sortierlogik zusätzlich mit gemischten numerischen und ISO-Zeitstempeln geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Inspirations- oder Kategoriedaten strukturell verändert.
+
 ## v1.2.10
 
 ### ✒ Dashboard → Manuskript: gleiche Schreibhöhe
