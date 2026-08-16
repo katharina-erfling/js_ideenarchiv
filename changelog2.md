@@ -3,6 +3,26 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.5 – Cache-sicherer Manuskript-UI-Fix
+
+### 🧯 Ursache der scheinbar wirkungslosen UI-Fixes
+- `styles.css` und `app.js` wurden bisher in jeder Version unter exakt derselben lokalen URL eingebunden.
+- Bei lokal geöffneten Paketen konnte der Browser dadurch ältere Asset-Versionen aus dem Cache weiterverwenden, obwohl das neue Paket bereits geänderte Dateien enthielt.
+- Die Assets werden ab v1.2.5 mit der App-Version im URL-Query geladen (`styles.css?v=1.2.5`, `app.js?v=1.2.5`), damit ein neues Paket garantiert seine eigenen CSS-/JS-Dateien lädt.
+
+### ✒ Manuskript-Kopf & Schreibhöhe
+- Der kompakte Manuskript-Kopf aus v1.2.4 bleibt erhalten und wird zusätzlich durch einen kleinen kritischen CSS-Fallback direkt in `index.html` abgesichert.
+- Titel, Fassung, Status und Schnellaktionen teilen sich damit zuverlässig die kompakte Kopfzone.
+- Toolbar und Statusleiste bleiben verdichtet; die freie Höhe steht dem Manuskript zur Verfügung.
+- Die dynamische Viewport-Messung aus v1.2.4 bleibt aktiv.
+
+### ✓ Technische Prüfung
+- App-Version auf 1.2.5 angehoben.
+- JavaScript-Syntax geprüft.
+- HTML-Asset-Referenzen versioniert.
+- Keine Datenbankmigration erforderlich.
+- Keine Manuskript- oder Storydaten verändert.
+
 ## v1.2.4 – Verifizierter UI-Fix & Implementierungs-Audit
 
 ### ✒ Manuskript – strukturell kompakter statt nur CSS-Padding
