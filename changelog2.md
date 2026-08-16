@@ -3,6 +3,28 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.7 – Dashboard-Rücksprung & Manuskriptkopf
+
+### ↩ Zuletzt am Schreibtisch
+- Der Dashboard-Rücksprung umgeht jetzt bewusst die normale Workflow-Restaurierung.
+- Das gespeicherte Buch wird direkt im Manuskript geöffnet.
+- Der konkrete Abschnitt wird vor dem Rendern gesetzt und danach nochmals als aktives Dokument bestätigt.
+- Ein zuvor gespeicherter Ideen-/Planungs-Tab kann den Sprung nicht mehr überschreiben.
+
+### ✒ Manuskript
+- Der Abschnittskopf ist auf eine echte 26-px-Zeile reduziert.
+- Titel und Speichermetadaten liegen nebeneinander.
+- Die Toolbar ist fest 27 px hoch.
+- Die Statusleiste unten ist fest 24 px hoch.
+- Der restliche verfügbare Platz gehört dem Manuskript.
+- Im Fokusmodus werden die Leisten nochmals etwas kleiner.
+
+### ✓ Prüfung
+- JavaScript-Syntax geprüft.
+- Keine doppelten HTML-IDs.
+- Paketversion, HTML-Titel und Asset-Versionen auf v1.2.7 abgeglichen.
+- Keine Datenbankmigration.
+
 ## v1.2.6 – Manuskript-Strukturfix & Dashboard-Rücksprung
 
 ### ✒ Manuskript wirklich strukturell verdichtet
