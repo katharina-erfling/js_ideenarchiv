@@ -6,6 +6,34 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.108.0 – Destruction & Scale Testing
+
+### 💥 Nicht-destruktiver Belastungscheck
+
+- Datensicherheit besitzt jetzt einen eigenen Belastungstest für gewachsene Archive.
+- Geprüft werden Datenmengen, Manuskriptumfang, eingebettete Medien, Versionshistorie und Aufbauzeit des globalen Suchindex.
+- Der Test erzeugt bewusst keine künstlichen Datensätze im echten Archiv und verändert keine Storydaten.
+- Auffällige Größenordnungen werden als Belastungshinweise sichtbar, nicht automatisch als Fehler bewertet.
+
+### 🧱 Integrität unter Last
+
+- Der Belastungscheck kombiniert seine Messwerte mit dem bestehenden Integritätsbericht.
+- Große Ideenarchive, sehr viele Manuskriptabschnitte, umfangreiche Versionshistorien und große eingebettete Medienbestände erhalten gezielte Prüfhinweise.
+- Ein separater JSON-Belastungsbericht kann für spätere Regressionstests exportiert werden.
+
+### 🛡️ Reliability-Härtung
+
+- Das Datenmanifest verwendet jetzt die zentrale App-Version statt einer veralteten fest codierten Versionskennung.
+- Der bestehende Startup Data Guard, das Schreibjournal, atomare IndexedDB-Writes, Notfallentwurf und Backupprüfung bleiben unverändert aktiv.
+- Keine automatischen Reparaturen oder Bereinigungen werden aufgrund eines Scale-Hinweises durchgeführt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine künstlichen Stressdaten werden im Nutzerarchiv gespeichert.
+
 ## v0.107.0 – Gap Closure
 
 ### ⇧ Fremdmanuskript-Import
