@@ -3,6 +3,26 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.0.9
+
+### 💾 Backup klarer als vollständige Suite-Sicherung
+
+- Die Backup-Aktionen heißen in der Oberfläche jetzt ausdrücklich `Suite-Backup` bzw. `Vollständiges Autoren-Suite-Backup`.
+- Datensicherheit erklärt direkt, dass ein vollständiges Backup nicht nur Ideenzettel, sondern auch Bücher/Reihen, Manuskripte, Story-Bibel, Timeline, Versionen/Revision, Medien und wichtige Einstellungen sichert.
+- Auch das Exportzentrum zeigt den Umfang der vollständigen Sicherung als kompakte Inhaltsübersicht.
+- Der Unterschied zwischen vollständiger Wiederherstellung und reinem Ideen-Zusammenführen wird klarer beschrieben: Ohne Ersetzen werden bewusst nur Ideen, Kategorien und Schnellregister ergänzt.
+- Exportformate wie PDF, EPUB, DOCX, RTF, HTML, Markdown und TXT werden weiterhin ausdrücklich nicht als Ersatz für ein vollständiges Backup dargestellt.
+
+### 🕰️ Heute im Schreibzimmer
+
+- Die bisher verkürzte Bezeichnung `Zettel` wurde in der Tageszusammenfassung zu `Ideenzettel` geändert, damit eindeutig ist, was gezählt wird.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Ideen-, Buch-, Manuskript-, Story- oder Backupdaten strukturell verändert.
 
 ## v1.0.8
 
