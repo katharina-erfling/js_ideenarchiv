@@ -3,6 +3,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.4 – Verifizierter UI-Fix & Implementierungs-Audit
+
+### ✒ Manuskript – strukturell kompakter statt nur CSS-Padding
+
+- Titel, Metadaten, kreative Fassung, Reifegrad und Schnellaktionen teilen sich jetzt denselben kompakten Dokumentkopf.
+- Die Fassung liegt nicht mehr als eigene zusätzliche Zeile unter dem Titel.
+- Die Manuskripthöhe wird zur Laufzeit aus der tatsächlichen Position des Schreibbereichs und der real verfügbaren Viewport-Höhe berechnet.
+- Die Höhe wird nach Resize, Panel-/Workflow-Änderungen und beim Rendern des Manuskripts neu gemessen.
+- Formatleiste und Statusleiste wurden nochmals vertikal verdichtet, ohne Funktionen zu entfernen.
+- Navigator, Inspector, Dokumentkopf und Toolbars verwenden eine konsistentere UI-Typografie.
+- Dokumenttitel und Manuskript bleiben bewusst Serifenschrift.
+- Im Fokusmodus verschwinden zusätzliche Metadaten und die verbleibenden Leisten werden weiter reduziert.
+
+### 🔎 Audit früherer Umsetzungsbehauptungen
+
+- v1.0.1, v1.0.3 und v1.2.2 hatten die Manuskripthöhe nur über feste CSS-Abzüge vergrößert.
+- v1.2.4 ersetzt diese Schätzung durch eine echte Viewport-Messung.
+- Die in v1.2.2 behauptete deutliche Verdichtung des Dokumentkopfs war im sichtbaren Layout nicht ausreichend und wurde deshalb strukturell neu umgesetzt.
+- Die Inspirations-Lightbox war zwischenzeitlich durch eine Paket-/Markup-Regression wieder aus dem DOM verschwunden, obwohl sie zuvor als umgesetzt dokumentiert war.
+- Der grüne Inspirations-Fokusrahmen war in v1.2.1 nicht vollständig beseitigt.
+- Für die übrigen v1.0.2–v1.2.3-Hauptfunktionen wurden im aktuellen Code die zugehörigen DOM-Strukturen/Funktionen statisch nachgewiesen.
+- Visuelle Laufzeitkorrektheit wird künftig nicht allein aufgrund vorhandenen Codes als erledigt behauptet.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Interaktive Controls statisch auf fehlende Code-Referenzen geprüft.
+- Keine IndexedDB-Migration erforderlich.
+- Keine Manuskript- oder Storydaten strukturell verändert.
+
 ## v1.2.3 – Dashboard-Korrekturen & Inspiration-Performance
 
 ### 💡 Dashboard & Ideenarchiv
