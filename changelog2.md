@@ -3,6 +3,38 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.0 – Writing Experience & Workspace
+
+### 🎨 Dashboard Studio
+- Das allgemeine Dashboard besitzt jetzt eine eigene Anpassung, mit der zentrale Dashboard-Bausteine ein- und ausgeblendet werden können.
+- Die Auswahl bleibt lokal gespeichert und verändert keine Projektdaten.
+
+### 📖 Lesemodus
+- Bücher können direkt vom Buch-Dashboard in einem ruhigen, editorfreien Lesemodus geöffnet werden.
+- Der Lesemodus führt die vorhandenen Manuskriptabschnitte in Reihenfolge zusammen und zeigt Wortumfang und Abschnittszahl.
+
+### 📈 Projektgeschichte & „Damals“
+- Eine visuelle Projektchronik führt datierte Entstehungsmomente wie Buchanlage, Manuskriptabschnitte, Schreibsessions und Story-Growth-Ereignisse zusammen.
+- „Damals an diesem Projekt“ greift ältere Momente separat auf, ohne daraus eine Produktivitätswertung zu machen.
+
+### 🧪 Projekt-Gesundheitscheck
+- Ein neuer organisatorischer Check weist unter anderem auf leere Szenen, fehlende POV-Zuordnungen und offene Story-Fäden hin.
+- Der Check bewertet weder Stil noch Dramaturgie und repariert nichts automatisch.
+
+### 📚 Buchvergleich innerhalb einer Reihe
+- Bände derselben Reihe lassen sich kompakt nach Status, Wortumfang, Szenenzahl und POV-Anzahl vergleichen.
+- Jeder Band kann aus dem Vergleich direkt geöffnet werden.
+
+### 📦 Projekte archivieren
+- Bücher können aus dem aktiven Arbeitsbestand archiviert und später wieder reaktiviert werden, ohne Inhalte zu löschen.
+- Archivierte Bücher bleiben vollständig in der lokalen Datenbasis und im Suite-Backup erhalten.
+
+### ✓ Technische Prüfung
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine neue IndexedDB-Migration erforderlich.
+- Bestehende Buch-, Manuskript-, Versions- und Storydaten bleiben kompatibel.
+
 ## v1.1.0
 
 ### ⌘ Command Palette & Global Search 2.0
