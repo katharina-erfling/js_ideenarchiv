@@ -3,6 +3,26 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.2 – Inspirationsnavigation & Manuskript-Polish
+
+### 🖼️ Inspirations-Kategorien
+- Die dominanten Ordnersymbole wurden aus der Kategorienavigation entfernt.
+- Haupt- und Unterkategorien werden jetzt ruhiger über Einrückung, Gewichtung und dezente Führungslinien unterschieden.
+- Zähler sind rechts sauberer ausgerichtet; Hinzufügen- und Bearbeiten-Aktionen treten erst bei Hover/Fokus deutlicher hervor.
+- Die aktive Kategorie verwendet einen neutralen warmen Auswahlstil statt eines auffälligen Farbrahmens.
+
+### ✒️ Manuskript
+- Der Schreibarbeitsplatz nutzt auf großen Viewports noch etwas mehr der verfügbaren Höhe und reduziert den bisher verbliebenen Leerraum unterhalb des Editors.
+- Der Kopf des aktuellen Abschnitts um Titel, Fassung, Status und Schnellaktionen wurde deutlich flacher gesetzt.
+- Versionszeile, Statusaktionen, Toolbar und Statusleiste wurden vertikal verdichtet, ohne Funktionen zu entfernen.
+- Der Manuskripttext selbst bleibt in seiner bisherigen Breite; der gewonnene Platz kommt der sichtbaren Textmenge in der Höhe zugute.
+- Die UI-Typografie im Schreibbereich wurde konsistenter hierarchisiert: Bedienelemente verwenden eine gemeinsame UI-Schrift, während Dokumenttitel und Manuskript bewusst in Serifenschrift bleiben.
+- Der Fokusmodus nutzt die Viewport-Höhe ebenfalls noch konsequenter.
+
+### ✓ Technische Prüfung
+- Keine Datenbankmigration erforderlich.
+- Keine Manuskript-, Inspirations- oder Storydaten verändert.
+
 ## v1.2.1 – Korrekturlauf
 
 ### 💡 Ideenarchiv
