@@ -4,6 +4,25 @@ Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von 
 
 ----
 
+## v1.0.7
+
+### 📊 Dashboards & Statistiken
+
+- Das allgemeine Dashboard zeigt jetzt einen kompakten 14-Tage-Aktivitätsverlauf für Schreiben und neue Ideen statt einer weiteren reinen Zahlenkarte.
+- Das Buch-Dashboard erhält zwei visuelle Schnellübersichten für Scene Lifecycle und Schreibverlauf der letzten 14 Tage; beide führen direkt in den passenden Arbeitsbereich.
+- Das Ideenarchiv-Dashboard ergänzt die Kategorienansicht um eine visuelle Verteilung, während die bestehenden anklickbaren Kategorien erhalten bleiben.
+- Die Reihenübersicht zeigt den Entwicklungsstand ihrer Bände jetzt zusätzlich als kompakte, anklickbare Fortschrittsgrafik.
+- Die Statistikansicht besitzt einen neuen Bereich `Visuelle Übersicht` mit Lifecycle-Verteilung, Schreibaktivität nach Wochentag und Entwicklungsstand der Bücher im aktuellen Filter.
+- Diagramme verwenden ausschließlich bereits vorhandene Story-, Schreib- und Ideendaten und erzeugen keine parallelen Statistikdaten.
+- Wo ein Diagramm ein konkretes Objekt repräsentiert, führt ein Klick direkt zum betreffenden Buch bzw. Arbeitsbereich.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Manuskript-, Story-, Ideen- oder Statistikdaten verändert.
+
 ## v1.0.6
 
 ### 📚 Bücher & Reihen Polish
