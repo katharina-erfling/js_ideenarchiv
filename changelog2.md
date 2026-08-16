@@ -4,6 +4,34 @@ Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von 
 
 ----
 
+## v1.0.8
+
+### 🖱️ Interaktions-Konsistenz
+
+- Recherchekarten besitzen jetzt ein eigenes Rechtsklick-Menü mit Details, Bearbeiten, Quelle öffnen, Verschieben in Sammlungen und sicherem Zugang zum Löschen.
+- Recherchesammlungen reagieren ebenfalls auf Rechtsklick und bieten Öffnen, neuen Eintrag, Untersammlung und Bearbeiten direkt am Objekt an.
+- Inspirationskategorien besitzen ergänzend ein passendes Kontextmenü für Öffnen, Unterkategorie und Bearbeiten; Linksklick auf Inspirationsmedien bleibt weiterhin für die Lightbox reserviert.
+- Die neuen Kontextmenüs verwenden einen gemeinsamen viewport-sicheren Stil und bleiben auch bei langen Sammlungslisten scrollbar.
+
+### ↶ Rückgängig bei Verschieben
+
+- Das Verschieben von Inspirationen zwischen Kategorien bietet jetzt unmittelbar `Rückgängig`, statt für eine ungefährliche Ordnungsaktion zusätzliche Bestätigungsdialoge zu benötigen.
+- Dasselbe gilt beim Verschieben von Rechercheeinträgen zwischen Recherchesammlungen.
+- Kritische Aktionen wie echtes Löschen bleiben weiterhin bewusst abgesichert.
+
+### ◇ Leere Filterzustände
+
+- Recherche und Inspiration unterscheiden jetzt klar zwischen `noch keine Inhalte` und `der aktuelle Filter findet nichts`.
+- Bei leeren Such-/Filterergebnissen erscheint ein eigener verständlicher Zustand mit direkter Aktion `Filter zurücksetzen`.
+- Vorhandene Inhalte werden dadurch nicht mehr wie ein tatsächlich leeres Archiv dargestellt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Story-, Manuskript-, Recherche- oder Inspirationsdaten strukturell verändert.
+
 ## v1.0.7
 
 ### 📊 Dashboards & Statistiken
