@@ -6,6 +6,46 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.109.0 – Accessibility & Compatibility
+
+### ♿ Tastatur & Fokus
+
+- Ein echter `Zum Hauptinhalt springen`-Link macht die umfangreiche Seitennavigation für Tastaturnutzer überspringbar.
+- Der Hauptarbeitsbereich kann nach dem Sprung gezielt fokussiert werden.
+- Fokuszustände verwenden einen deutlichen, nicht nur farbbasierten Rahmen.
+- Dialoge erhalten soweit möglich automatisch eine programmgesteuerte Beschriftung aus ihrer Überschrift.
+- Nach dem Schließen eines Dialogs kehrt der Tastaturfokus zum auslösenden Bedienpunkt zurück.
+- Dynamisch erzeugte Icon-Buttons übernehmen vorhandene `title`-Texte als zugängliche Beschriftung, wenn sonst kein verständlicher Name vorhanden ist.
+
+### 🌀 Reduzierte Bewegung & Kontrast
+
+- Die Systemeinstellung `prefers-reduced-motion` wird respektiert; Animationen, Übergänge und weiches Scrollen werden bei gewünschter Bewegungsreduktion praktisch deaktiviert.
+- Für Browser-/Systemmodi mit erzwungenen Farben (`forced-colors`) bleiben zentrale Controls und Fokusindikatoren sichtbar.
+- Kleine Icon- und Dialogbuttons erhalten verlässlichere Mindest-Trefferflächen.
+
+### 📱 Kleine Viewports
+
+- Standarddialoge werden auf kleinen Displays defensiv an die sichtbare Viewporthöhe begrenzt.
+- Dialoginhalte bleiben scrollbar und Aktionsleisten dürfen umbrechen, damit primäre Aktionen nicht außerhalb des Bildschirms liegen.
+
+### 🌐 Browser-Kompatibilitätscheck
+
+- `Datensicherheit` besitzt jetzt einen nicht-destruktiven Bereich `Kompatibilität`.
+- Geprüft werden unter anderem IndexedDB, native Dialoge, Drag & Drop, File API, ResizeObserver, IntersectionObserver, CSS Highlights, Clipboard API und Storage-Funktionen.
+- Fehlende Kernfunktionen werden von optional fehlenden Komfortfunktionen getrennt dargestellt.
+- Der Check verändert keine Projekt-, Story- oder Manuskriptdaten und überträgt keine Daten.
+
+### 🛡️ Bewusst risikoarmer Qualitäts-Pass
+
+- v0.109 verändert keine Storylogik, Datenmodelle, Canvas-Strukturen oder Manuskriptinhalte.
+- Die bestehenden Reliability-, Backup-, Versioning- und Scale-Test-Systeme bleiben unverändert erhalten.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+
 ## v0.108.0 – Destruction & Scale Testing
 
 ### 💥 Nicht-destruktiver Belastungscheck
