@@ -6,6 +6,33 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v1.0.0 – Erster stabiler Release
+
+### 🌟 Autoren-Suite 1.0
+
+- v1.0 markiert den ersten stabilen Release der Autoren-Suite nach den beiden Release-Candidate-Runden v0.110 und v0.111.
+- Der Feature Freeze der RC-Phase endet mit diesem Release; v1.0 selbst enthält bewusst keine neuen Story-, Planungs- oder Publishing-Funktionen.
+- Die bestehende lokale Architektur mit Ideenarchiv, Büchern/Reihen, Szenen, Manuskript, Story-Bibel, Timeline, Kontinuität, Versionierung, Revision, Analyse, Compile/Publishing und Backup bleibt unverändert die Grundlage.
+
+### 🧭 Release-Konsistenz
+
+- Die zentrale `APP_VERSION` wurde auf `1.0.0` angehoben.
+- README, Changelog und Release-Unterlagen wurden vom Release-Candidate-Stand auf den stabilen v1.0-Stand umgestellt.
+- Backup-, Diagnose-, Dossier- und Template-Exporte übernehmen weiterhin die App-Version aus derselben zentralen Quelle.
+
+### 💾 Daten & Kompatibilität
+
+- Für v1.0 ist keine neue IndexedDB-Migration erforderlich.
+- Das Backupformat bleibt unverändert; bestehende unterstützte Backups bleiben importierbar.
+- Bestehende Projekte, kreative Fassungen, Snapshots, Revisionen, Storydaten, Medien, Templates und Workspace-Einstellungen bleiben kompatibel.
+
+### ✓ Finaler statischer Release-Check
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Versionsangaben in den ausgelieferten Kernunterlagen auf v1.0 abgeglichen.
+- Keine neue Datenmigration und kein Feature-Umbau im finalen Release-Pass.
+
 ## v0.111.0 – Release Candidate II
 
 ### 🧪 Letzte Stabilitätsrunde vor v1.0
