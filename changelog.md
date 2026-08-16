@@ -6,6 +6,54 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.104.0 – UX Master Pass
+
+### 👁 Lesbarkeit
+
+- Zentrale Hinweis-, Meta- und Hilfstexte wurden auf eine besser lesbare Mindestgröße angehoben.
+- Besonders Dialoghinweise, Detail-Metadaten, leere Zustände, Transfer-/Importhinweise und kleinere Dashboard-Texte wurden vereinheitlicht.
+- Die visuelle Hierarchie bleibt erhalten: Sekundärtexte bleiben dezenter, sind aber nicht mehr unnötig klein.
+
+### ◉ Einheitliche Fokuszustände
+
+- Formfelder verwenden jetzt einen einzigen ruhigen Fokusrahmen im Stil der Autoren-Suite statt übereinanderliegender Browser- und App-Umrandungen.
+- Buttons, Links und tastaturfokussierbare Elemente erhalten einen gut sichtbaren `:focus-visible`-Zustand.
+- Mausbedienung wird dadurch nicht mit dauerhaften Fokusrahmen überladen; Tastaturbedienung bleibt klar erkennbar.
+
+### ▣ Dialoge & Formulare
+
+- Standarddialoge werden defensiv an die verfügbare Fensterhöhe begrenzt und können innerhalb ihres Inhalts scrollen, statt unten abgeschnitten zu werden.
+- Dialogaktionen dürfen sauber umbrechen; lange Buttontexte laufen nicht mehr aus ihren Flächen heraus.
+- Eingaben, Auswahllisten und Textfelder verwenden konsistentere Grundgrößen und bleiben innerhalb ihrer Karten/Spalten.
+- Checkbox-/Radio-Zeilen halten Kontrolle, Titel und zugehörigen Text auch bei engeren Dialogbreiten zusammen.
+- Auf kleinen Displays werden Aktionsleisten automatisch in ein zweispaltiges bzw. einspaltiges Layout überführt.
+
+### 🔔 Toasts & Bestätigungen
+
+- Suite-eigene Toasts liegen jetzt zuverlässig auf einem sehr hohen UI-Layer und bleiben auch über geöffneten Modals scharf sichtbar.
+- Lange Meldungen werden auf die Fensterbreite begrenzt und brechen kontrolliert um.
+
+### 🪶 Werkzeugleisten & Überläufe
+
+- Wiederverwendete Toolbars erhalten etwas mehr vertikale Luft und dürfen ihre Inhalte sauber umbrechen.
+- Häufige Karten-, Dialog- und Popover-Inhalte brechen lange Wörter/Bezeichnungen kontrolliert um, statt Nachbarbereiche zu überdecken.
+- Popover und Kontextmenüs werden defensiv an Viewportbreite und -höhe begrenzt.
+- Medien und längere Vorschauinhalte innerhalb von Dialogen bleiben auf die verfügbare Breite begrenzt.
+
+### 🛡️ Bewusst risikoarmer UX-Pass
+
+- v0.104 verändert keine Story-, Manuskript-, Canvas- oder Datenmodelle.
+- Mindmap, Story Graph, Beziehungen und Timeline behalten die in v0.103 konsolidierte Interaktionslogik unverändert.
+- Bestehende Fachfunktionen wurden nicht neu implementiert; der Pass konzentriert sich auf gemeinsame Oberflächenregeln und defensive Layoutkorrekturen.
+- Native sicherheitskritische Browser-Bestätigungen wurden in diesem Pass nicht pauschal durch asynchrone Eigenlösungen ersetzt, damit Lösch-/Restore-Pfade nicht durch einen rein visuellen Umbau gefährdet werden.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Bestehende Projekte und Workspace-Einstellungen bleiben kompatibel.
+
 ## v0.103.0 – Canvas Foundation
 
 ### 🕸️ Gemeinsame Interaktionsbasis
