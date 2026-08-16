@@ -4,6 +4,36 @@ Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von 
 
 ----
 
+## v1.0.5
+
+### 💡 Ideenarchiv-Dashboard
+
+- Beim Öffnen des Ideenarchivs erscheint jetzt zuerst ein eigenes Ideen-Dashboard statt unmittelbar der vollständigen Zettelwand.
+- Das Dashboard zeigt Ideenzettel gesamt, heutige Aktivität, Favoriten, noch keinem Buch zugeordnete Ideen und Romanideen.
+- Ein 14-Tage-Verlauf macht das Ideenwachstum sichtbar, ohne daraus Produktivitätsdruck abzuleiten.
+- Häufig genutzte Kategorien, zuletzt bearbeitete Ideen und ein Bereich `Wiederentdecken` bringen ältere Gedanken zurück ins Blickfeld.
+- Schnellaktionen führen direkt zu neuer Idee, allen Ideen oder zum vorhandenen Zufalls-/Wiederentdecken-Werkzeug.
+
+### 🏠 Allgemeines Dashboard
+
+- Das Ideenarchiv ist auf dem allgemeinen Autoren-Suite-Dashboard wieder stärker präsent.
+- Der Ideenblock zeigt kompakt heutige Ideenaktivität, Favoriten, Romanideen und die zuletzt bearbeiteten Ideenzettel.
+- Von dort führt ein eigener Link direkt ins neue Ideen-Dashboard.
+
+### 🗒️ Lange Ideenzettel
+
+- Ideentexte bleiben inhaltlich unbegrenzt lang.
+- In der normalen Karten-/Listenansicht besitzt der Textbereich nun eine sinnvolle Maximalhöhe mit eigenem Scrollbereich.
+- Eine einzelne sehr lange Idee kann dadurch nicht mehr die gesamte Zettelansicht auseinanderziehen.
+- In Detail- und Fokusansichten bleibt der vollständige Inhalt weiterhin komfortabel zugänglich.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Bestehende Ideen, Kategorien, Favoriten und Buchverknüpfungen bleiben unverändert kompatibel.
+
 ## v1.0.4 – Inspiration UX
 
 ### 🖼️ Inspiration UX
