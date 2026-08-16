@@ -6,6 +6,39 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.110.0 – Release Candidate I
+
+### 🧪 Feature Freeze
+
+- Die Autoren-Suite geht mit v0.110 in den ersten Release-Candidate-Stand.
+- Ab diesem Stand werden bis zum Abschluss der RC-Phase keine neuen großen Story-, Planungs- oder Publishing-Funktionen ergänzt.
+- Änderungen konzentrieren sich auf Regressionen, Datenintegrität, Migrationen, Backup/Restore, Export, Performance und klar reproduzierbare UX-Fehler.
+
+### 🔎 Regression & Versionskonsistenz
+
+- JavaScript-Syntax und doppelte HTML-IDs wurden erneut geprüft.
+- Die zentrale App-Version wurde auf v0.110.0 angehoben; Backup-, Diagnose-, Dossier- und Template-Exporte beziehen ihre Versionsangabe weiterhin aus derselben zentralen Quelle.
+- Eine veraltete zweite Versionsangabe in der README wurde bereinigt, damit Dokumentation und Paketstand nicht mehr auseinanderlaufen.
+- Die zuletzt ergänzten Qualitätsbereiche – Gap Closure, Scale Testing und Accessibility/Compatibility – bleiben unverändert Bestandteil des RC-Pakets.
+
+### 💾 Daten & Rückwärtskompatibilität
+
+- Für RC1 ist keine neue IndexedDB-Migration erforderlich.
+- Das Backupformat bleibt bei Version 12; ältere unterstützte Backups bleiben importierbar.
+- Story-, Manuskript-, Versions-, Revisions-, Canvas- und Medienmodelle werden in RC1 nicht strukturell verändert.
+- Bestehende Reliability-Werkzeuge wie Schreibjournal, Startup Data Guard, Integritätsprüfung, Belastungscheck und Diagnoseexport bleiben aktiv.
+
+### 📋 Release-Checkliste
+
+- Dem Paket liegt `RELEASE_CANDIDATE_CHECKLIST.md` mit den für RC1/RC2 relevanten manuellen Regressionstests bei.
+- Die Checkliste deckt insbesondere Start/Navigation, Manuskript, kreative Versionen, Revision, Canvas-Werkzeuge, Backup/Restore, Import/Export, Medien und große Projekte ab.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+
 ## v0.109.0 – Accessibility & Compatibility
 
 ### ♿ Tastatur & Fokus
