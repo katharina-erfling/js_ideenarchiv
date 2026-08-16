@@ -3,6 +3,45 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.1 – Korrekturlauf
+
+### 💡 Ideenarchiv
+
+- Die Statistik-Karte `Dein Ideenraum` in der Seitenleiste wird beim Öffnen des neuen Ideen-Dashboards jetzt ebenfalls aus dem tatsächlich geladenen Ideenbestand aktualisiert.
+- Bereits vorhandene Ideenzettel erscheinen dadurch wieder korrekt in Gesamt-, Wochen-, Monats- und Jahreszahlen; es werden keine Ideen migriert oder dupliziert.
+
+### 📖 Buch-Dashboard
+
+- Der künstliche helle/weiße Saum am Cover im Buch-Dashboard wurde entfernt.
+- Das Cover behält weiterhin seinen dezenten Buchschatten, ohne zusätzliche helle Kontur.
+
+### 🖼️ Inspiration
+
+- Linksklick auf Inspirationsbilder öffnet die vorhandene Lightbox jetzt über einen eindeutigen Bild-Handler und wird nicht mehr von anderen Board-Interaktionen verschluckt.
+- Der alte grünliche Fokus-/Auswahlrahmen beim normalen Anklicken wurde neutralisiert.
+- Unterkategorien können beim Drag & Drop über einen deutlich sichtbaren Dropbereich `Auf Hauptebene verschieben` wieder aus ihrer Elternkategorie herausgezogen werden.
+- Bestehendes Verschieben zwischen Kategorien bleibt erhalten.
+
+### 👤 Story-Bibel · Bildergalerie
+
+- Die permanenten Aktionen `Als Hauptbild` und `Entfernen` wurden aus der Galeriezeile entfernt.
+- Rechtsklick auf das große Bild oder ein Thumbnail öffnet jetzt ein passendes Kontextmenü für `Als Hauptbild festlegen` und `Bild löschen`.
+- Thumbnails können per Drag & Drop neu sortiert werden; die Reihenfolge wird mit dem Story-Bibel-Eintrag gespeichert.
+- Interne Drag-&-Drop-Vorgänge werden von der Datei-Dropzone getrennt, damit ein bereits vorhandenes Galeriebild beim Verschieben nicht mehr dupliziert wird.
+- Browser-eigenes Ziehen der Vorschaubilder wurde unterbunden.
+
+### 👤 Charakterakte
+
+- Das Vorschaubild im Kopf der Charakterakte wird jetzt vollständig innerhalb seines Bildbereichs dargestellt statt in einen festen Ausschnitt gezwungen zu werden.
+- Der Bildbereich bleibt kompakt und erhält bei abweichendem Seitenverhältnis lediglich ruhigen Hintergrundraum.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Ideen-, Buch-, Inspirations-, Story-Bibel- oder Bilddaten strukturell verändert.
+
 ## v1.2.0 – Writing Experience & Workspace
 
 ### 🎨 Dashboard Studio
