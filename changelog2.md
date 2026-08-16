@@ -2,6 +2,21 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
+## v1.0.2
+
+### ◀ Manuskript-Navigator ein-/ausblenden
+
+- Der linke Manuskript-Navigator kann jetzt direkt im Schreibbereich über einen kleinen Pfeil eingeklappt werden.
+- Das Manuskript nutzt den frei gewordenen Platz sofort; der rechte Inspector bleibt dabei erhalten.
+- Ein dezenter `› Navigator`-Schalter am linken Rand der Schreibfläche blendet die Seitenleiste wieder ein.
+- Der Zustand wird lokal gespeichert und bleibt beim erneuten Öffnen der Suite erhalten.
+- Die bestehende Workspace-Studio-Einstellung für Navigator und Inspector bleibt kompatibel.
+
+### ✓ Technische Prüfung
+
+- Keine Datenbankmigration erforderlich.
+- Keine Manuskript-, Story- oder Versionsdaten verändert.
+
 ## v1.0.1
 
 ### ✒️ Schreibbereich – mehr Platz für das Manuskript
