@@ -6,6 +6,70 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.106.0 – Feature-Parity & Gap Audit
+
+### ⚔️ Aktualisierter Feature-Audit
+
+- Der bereits vorhandene interne Feature-Audit wurde vollständig gegen den tatsächlichen Stand nach v0.81–v0.105 aktualisiert.
+- Verglichen werden Papyrus Autor, Scrivener, Plottr, Campfire, LivingWriter, Novelcrafter und bibisco anhand aktueller offizieller Produkt-/Dokumentationsseiten.
+- Bereits vorhandene Systeme wie Language & Style Studio, Template Studio, Revision, Versioning, Cross-Book Continuity, Compile/Publishing und Reliability werden nicht länger fälschlich als zukünftige Lücken geführt.
+- Der Audit unterscheidet jetzt:
+  - `USP`
+  - `stark`
+  - `teilweise`
+  - `Lücke`
+  - `bewusst draußen`
+- Cloud-Sync, Mobile Apps und KI-Textgenerierung werden als Produktentscheidungen sichtbar gemacht, aber nicht in die gewichtete Parity-Wertung eingerechnet.
+
+### 🧭 Reales Gap-Backlog für v0.107
+
+- Als besonders relevante echte Lücken wurden identifiziert:
+  - Fremdmanuskript-Import / Interop
+  - suiteweites Undo / Redo
+  - klassische Änderungsverfolgung / Track Changes
+- Weitere Ausbaupunkte sind:
+  - frei konfigurierbare Outliner-Spalten
+  - speicherbare Smart Views / dynamische Collections
+  - Thesaurus / Synonymwerkzeug
+  - professioneller Printsatz-Feinschliff
+- Spezialisierte Komfortmodule wie genealogischer Stammbaum oder Conlang-Werkzeuge bleiben nachrangig und werden nicht mit grundlegenden Storyfunktionen verwechselt.
+
+### 📄 Dokumentierter Audit
+
+- `FEATURE_PARITY_AUDIT.md` dokumentiert Methodik, Vergleichsbasis, Statusmatrix und die priorisierten Gap-Closure-Kandidaten.
+- Die Datei trennt ausdrücklich den tatsächlichen Code-/Bestandsstand der Autoren-Suite von extern recherchierten Konkurrenzmerkmalen.
+- Der Audit ist als Momentaufnahme dokumentiert, damit sich zukünftige Konkurrenzänderungen nicht stillschweigend in unsere Produktplanung einschleichen.
+
+### 🧠 Bereits stark bzw. besonders tief integriert
+
+- Scene Lifecycle und gemeinsame Szenenkerne
+- kreative Fassungen, Versionsstammbaum und Snapshots
+- Text-Parkplatz
+- Story-Fäden durchs Manuskript
+- POV Analytics & Character Presence
+- Timeline ↔ Manuskript
+- Continuity Facts, Living Knowledge und State Intelligence
+- Reihen-Dashboard, Living Canon und Cross-Book Continuity
+- Revision Studio und Revisionsintegration
+- Manuscript Analytics & Story Rhythm
+- Language & Style Studio mit Profilen und Wörterbüchern
+- Template Studio und Workspace Studio
+- Compile & Publishing
+- lokale Backups, Recovery, Schreibjournal und Integritätsprüfung
+
+### — Bewusste Nicht-Gaps
+
+- KI-Textgenerierung bleibt ausdrücklich außerhalb der Produktvision.
+- Cloud-Sync und Echtzeit-Kollaboration werden nicht automatisch als notwendige v1.0-Funktionen behandelt.
+- Dedizierte Mobile Apps sind ebenfalls kein Pflichtpunkt für die lokale v1.0.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- v0.106 verändert keine Story-, Manuskript- oder Projektdaten.
+
 ## v0.105.0 – Architecture & Reliability
 
 ### 🛡️ Schreibjournal & unterbrochene Vorgänge
