@@ -6,6 +6,51 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.105.0 – Architecture & Reliability
+
+### 🛡️ Schreibjournal & unterbrochene Vorgänge
+
+- Serielle IndexedDB-Schreibvorgänge werden jetzt zusätzlich in einem kleinen lokalen Schreibjournal markiert.
+- Wird der Browser während eines noch laufenden Schreibvorgangs geschlossen, bleibt dieser Zustand beim nächsten Start sichtbar und die Suite empfiehlt einen Systemcheck.
+- Ein erfolgreich abgeschlossener oder fehlgeschlagener Schreibvorgang wird mit Zeitpunkt und Status dokumentiert.
+- Die Suite repariert bei einem solchen Hinweis keine Storydaten automatisch; IndexedDB-Transaktionen bleiben atomar und der bestehende Notfallentwurf schützt den Manuskripttext zusätzlich.
+
+### 🧱 Datenbankschema & Tiefenprüfung
+
+- Die Zuverlässigkeitsprüfung kontrolliert jetzt ausdrücklich, ob alle erwarteten IndexedDB-Stores vorhanden sind.
+- Der Sicherheitsdialog zeigt Datenbankschema und letzten Schreibvorgang getrennt von Erreichbarkeit und Schreibtest an.
+- Der bestehende Systemcheck wurde um zentrale Referenzen der neueren Suite-Architektur erweitert: `sceneCoreId`, Kapitel-/Szenen-Hierarchie, Timeline→Manuskript, Text-Parkplatz sowie kreative Eltern-/Referenzfassungen.
+- Zyklische Manuskripthierarchien und versehentlich mehrfach verwendete Szenenkerne werden als kritische Auffälligkeiten behandelt.
+- Bewusst erhaltene Rettungsdaten – etwa Parkplatztexte oder Snapshots eines inzwischen gelöschten Abschnitts – werden weiterhin nur als Hinweis und nicht als automatisch zu löschender Fehler behandelt.
+
+### 💾 Vollständigere Backups
+
+- Das Backupformat wurde auf Version 12 erweitert.
+- Vollständige Backups sichern jetzt zusätzlich ausgewählte lokale Suite-Einstellungen, die bisher außerhalb von IndexedDB lagen.
+- Dazu gehören unter anderem Workspace Studio, Template Studio, persönliche und projektbezogene Sprach-/Stilwörterbücher, eigene Prüfregeln, Namenskategorien, Regalschilder/Regalanzahl sowie buchbezogene Schreib- und Workflow-Einstellungen.
+- Bei einer vollständigen Wiederherstellung werden diese portablen Einstellungen mit zurückgespielt.
+- Beim reinen Zusammenführen von Ideen werden globale Einstellungen weiterhin bewusst nicht überschrieben.
+- Ältere Backups bleiben importierbar.
+
+### ⇩ Diagnosebericht
+
+- Der Bereich `Datensicherheit` kann jetzt einen separaten technischen Diagnosebericht als JSON exportieren.
+- Enthalten sind App-/DB-Version, Schema-Status, Speicherangaben, Integritätsprüfung, Datenmengen, letzter Schreibstatus und der vorhandene Datenmanifest-Stand.
+- Der Diagnosebericht ist kein vollständiges Inhaltsbackup und enthält bewusst nicht den kompletten Manuskripttext.
+
+### 🧭 Architekturpflege
+
+- Die aktuelle App-Version ist jetzt zentral als `APP_VERSION` definiert und wird von Backup, Diagnose, Dossier und Template-Export gemeinsam verwendet.
+- Backupformat und App-Version sind voneinander getrennt versioniert.
+- Bestehende Story-, Canvas-, Manuskript- und Revisionsmodelle wurden in diesem Pass nicht neu gebaut.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine IndexedDB-Migration erforderlich.
+- Bestehende v11- und ältere Backupformate bleiben kompatibel.
+
 ## v0.104.0 – UX Master Pass
 
 ### 👁 Lesbarkeit
