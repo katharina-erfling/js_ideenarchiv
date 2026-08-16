@@ -3,6 +3,39 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.2.6 – Manuskript-Strukturfix & Dashboard-Rücksprung
+
+### ✒ Manuskript wirklich strukturell verdichtet
+
+- Der Dokumentkopf wurde nicht erneut nur per Padding verkleinert, sondern strukturell geändert.
+- Im Kopf stehen jetzt nur noch Abschnittstitel und kompakte Metadaten.
+- Fassung, neue Version, Szenen-Reifegrad, Split/Merge, `＋ Gedanke` und Abschnittsoptionen wurden in die vorhandene Editor-Toolbar verschoben.
+- Dadurch entfällt die zusätzliche Fassungs-/Aktionshöhe vollständig aus dem Titelbereich.
+- Titelkopf, Toolbar und Statusleiste sind jeweils fest einzeilig; bei knapper Breite darf die Toolbar horizontal scrollen, statt den Schreibbereich nach unten zu drücken.
+- Die dynamische Viewport-Höhenmessung bleibt aktiv und gibt den übrigen vertikalen Platz an das Manuskript weiter.
+
+### ↩ „Zuletzt am Schreibtisch“
+
+- Der Dashboard-Rücksprung verwendet jetzt einen eigenen `openDashboardDocument()`-Pfad.
+- Das gewünschte Buch, der Manuskript-Workflow und der konkrete Abschnitt werden vor dem ersten Render gesetzt.
+- Der Zielabschnitt wird als zuletzt geöffnetes Dokument des Buches gespeichert.
+- Nach dem Wechsel in den Schreibbereich wird der Zielzustand nochmals explizit bestätigt, damit ein zuvor gespeicherter Ideen-/Planungs-Tab den Rücksprung nicht überschreibt.
+- ID-Vergleiche im Rücksprung sind string-sicher und hängen nicht mehr von numerischer Konvertierung ab.
+
+### 🔎 Implementierungs-Audit
+
+- Die letzten v1.x-Hauptfunktionen wurden erneut gegen den tatsächlich ausgelieferten DOM-/JavaScript-Stand geprüft.
+- `IMPLEMENTATION_AUDIT_v1.2.6.md` dokumentiert, welche Funktionen statisch nachweisbar sind und welche früheren UI-Aussagen nicht ausreichend verifiziert waren.
+- Besonders die früheren Aussagen zur Manuskript-Verdichtung werden dort ausdrücklich korrigiert.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Die IDs für Versionierung, Szenenstatus, Split/Merge, Schnellgedanke und Abschnittsoptionen bleiben unverändert; nur ihre Position im DOM wurde verschoben.
+- Keine IndexedDB-Migration erforderlich.
+- Keine Manuskript- oder Storydaten verändert.
+
 ## v1.2.5 – Cache-sicherer Manuskript-UI-Fix
 
 ### 🧯 Ursache der scheinbar wirkungslosen UI-Fixes
