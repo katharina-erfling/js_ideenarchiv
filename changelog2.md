@@ -2,6 +2,38 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
+----
+
+## v1.0.3
+
+### ✒️ Manuskript & Fokus
+
+- Der Manuskript-Arbeitsplatz nutzt die verfügbare Fensterhöhe jetzt deutlich konsequenter; die bisherige feste Obergrenze von 920 px entfällt.
+- Freier Platz unterhalb des Editors wird dem eigentlichen Schreibfeld zugeschlagen, statt als ungenutzte Fläche stehenzubleiben.
+- Die Breite des Manuskripts wurde dabei bewusst nicht vergrößert.
+- Der obere Schreibkopf wurde weiter beruhigt: häufige Aktionen bleiben direkt sichtbar, seltenere Schreib- und Buchwerkzeuge liegen in kompakten Dropdown-Menüs.
+- Undo/Redo bleiben als kleine Direktaktionen erreichbar.
+
+### 🎯 Fokusmodus
+
+- Der Fokusmodus nutzt nahezu die gesamte verfügbare Viewport-Höhe für den Schreibbereich.
+- Workflow-Leisten, Navigator und Inspector bleiben dort ausgeblendet.
+- Sichtbar bleiben nur der minimale Buchkontext, Schreibsession/Timer und der Schalter zum Beenden des Fokusmodus.
+- Editorüberschrift, Toolbar und Statusleiste wurden im Fokusmodus vertikal verdichtet.
+
+### ◀ Seitenleisten
+
+- Neben dem Navigator kann jetzt auch der rechte Inspector direkt im Manuskript ein- und ausgeblendet werden.
+- Ein dezenter Wiederherstellungs-Schalter bringt den Inspector zurück.
+- Navigator und Inspector lassen sich unabhängig voneinander ausblenden; beide Zustände werden lokal gemerkt.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Manuskript-, Story- oder Versionsdaten verändert.
+
 ## v1.0.2
 
 ### ◀ Manuskript-Navigator ein-/ausblenden
