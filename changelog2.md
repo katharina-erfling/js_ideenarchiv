@@ -4,6 +4,23 @@ Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von 
 
 ----
 
+## v1.0.4 – Inspiration UX
+
+### 🖼️ Inspiration UX
+
+- Ein normaler Linksklick auf ein Inspirationsbild öffnet jetzt eine große, modern abgedunkelte Lightbox; Rechtsklick bleibt für Aktionen reserviert.
+- In der Lightbox kann mit Pfeiltasten bzw. Vor/Zurück-Schaltern durch die aktuell sichtbaren Bilder geblättert werden.
+- Inspirationsbilder lassen sich mit dem vorhandenen Drag-Griff jetzt direkt auf Kategorien ziehen; „Alle Inspirationen“ entfernt die Kategoriezuordnung wieder.
+- Das Rechtsklick-Menü wurde um Vergrößern und „In Kategorie verschieben“ ergänzt.
+- „In Büchern verwenden“ ist im Bearbeiten-Dialog standardmäßig eingeklappt, zeigt kompakt die Zahl vorhandener Zuordnungen und besitzt nach dem Aufklappen eine Buchsuche sowie gruppierte Buchlisten.
+- „Alle Inspirationen“ sortiert standardmäßig nach letzter echter Bearbeitung: neue und bearbeitete Medien stehen oben; reines Öffnen verändert die Reihenfolge nicht.
+- Veraltete grüne Kartenrahmen wurden entfernt und Fokus-/Drop-Zustände an den ruhigeren Suite-Stil angepasst.
+
+### ✓ Technische Prüfung
+
+- Keine Datenbankmigration erforderlich.
+- Bestehende Inspirationen, Ordner, Buchmedien-Zuordnungen und manuelle Ordnersortierungen bleiben kompatibel.
+
 ## v1.0.3
 
 ### ✒️ Manuskript & Fokus
