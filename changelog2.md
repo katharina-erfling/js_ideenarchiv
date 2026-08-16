@@ -3,6 +3,51 @@ Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ----
+## v1.1.0
+
+### ⌘ Command Palette & Global Search 2.0
+
+- Die bereits vorhandene globale Suche wurde zum Connected-Workspace-Schnellstarter ausgebaut statt durch ein zweites Suchsystem ersetzt.
+- Treffer können nach `Story & Schreiben`, `Wissen` und `Material` gefiltert werden.
+- Romanideen sind jetzt ebenfalls direkt Bestandteil des globalen Suchindex.
+- Treffer zeigen bei passenden Textfunden einen kompakten Kontextausschnitt und weiterhin die Zahl ihrer direkten Verknüpfungen.
+- Häufig benötigte Inhalte können mit `☆` als persönliche Schnellzugriffe angepinnt werden und erscheinen beim Öffnen der Command Palette sofort oben.
+- Persönliche Schnellzugriffe werden lokal gespeichert und in vollständigen Suite-Backups mitgeführt.
+
+### 📥 Universal Inbox
+
+- Die Command Palette besitzt jetzt eine Universal Inbox für Gedanken und beliebige Dateien, die noch keinem festen Bereich zugeordnet werden sollen.
+- Inbox-Einträge können später bewusst zu Ideenzettel, Romanidee, Recherche oder – bei Bild/Video-Material – Inspiration weiterentwickelt werden.
+- Bis zur Zuordnung bleiben Text und Dateien gemeinsam in der Inbox erhalten.
+- Die Inbox verwendet den bereits vorhandenen `media`-Datenbereich und ist dadurch Teil vollständiger Backups; es wurde kein neues Datenbankschema benötigt.
+
+### 📎 Zentrale Dateien-&-Medien-Ansicht
+
+- Eine neue suiteweite Dateiansicht führt Anhänge aus Romanideen, Recherche, Inspiration, Story-Bibel, Buchmedien und Universal Inbox zusammen.
+- Suche und Quellenfilter helfen auch bei wachsenden Projekten, Dateien wiederzufinden.
+- `Herkunft` springt zurück zum eigentlichen Storyobjekt; die zentrale Ansicht erzeugt bewusst keine parallelen Dateikopien.
+- Gespeicherte lokale Dateien können aus der Übersicht direkt geöffnet werden.
+
+### ⌘ „Wo verwendet?“
+
+- Die vorhandene Verknüpfungsanalyse bleibt die gemeinsame Grundlage und ist jetzt bei Story-Bibel-Einträgen direkt über `Wo verwendet?` erreichbar.
+- Damit lässt sich unmittelbar nachvollziehen, in welchen Szenen, Ideen, Fäden, Timeline-Ereignissen, Rechercheeinträgen oder anderen Suite-Bereichen ein Wissenseintrag verwendet wird.
+- Auch globale Suchtreffer führen weiterhin direkt in dieselbe Verknüpfungsansicht.
+
+### ✂ Szenen teilen & zusammenführen
+
+- Die bereits vorhandenen sicheren Aktionen zum Teilen und Zusammenführen von Manuskriptabschnitten bleiben erhalten und sind jetzt zusätzlich über die Command Palette auffindbar.
+- Beim Teilen einer Szene erhält die neu entstehende Szene ausdrücklich eine eigene `sceneCoreId`; sie teilt damit nicht versehentlich denselben Szenenkern mit der Ursprungsszene.
+- Planungskern-Zuordnungen werden beim Split nicht blind auf die neue Szene dupliziert.
+- Sicherheits-Snapshots vor Teilen und Zusammenführen bleiben unverändert aktiv.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine IndexedDB-Migration erforderlich.
+- Bestehende Command-Palette-, Global-Links-, Szenen-, Recherche-, Inspirations- und Mediendaten bleiben kompatibel.
+
 ## v1.0.9
 
 ### 💾 Backup klarer als vollständige Suite-Sicherung
