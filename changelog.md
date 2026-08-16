@@ -6,6 +6,33 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.111.0 – Release Candidate II
+
+### 🧪 Letzte Stabilitätsrunde vor v1.0
+
+- Der Feature Freeze bleibt vollständig bestehen; v0.111 ergänzt keine neuen Story-, Planungs- oder Publishing-Funktionen.
+- Die Release-Candidate-Checkliste wurde zu einem expliziten v1.0-Release-Gate erweitert und deckt Regression, Recovery, Backup→Restore, kreative Fassungen, Cross-Book-Daten, Canvas, Medien, Import/Export, Scale und Accessibility ab.
+- Datenverlust, beschädigte Wiederherstellung, nicht wiederherstellbare Fassungen und nicht erreichbare Kernfunktionen sind ausdrücklich als v1.0-Blocker definiert.
+
+### 🧭 Versionskonsistenz
+
+- Die sichtbare Versionsangabe im Bereich `Datensicherheit` wird jetzt aus der zentralen `APP_VERSION` erzeugt statt aus einem fest codierten UI-Text.
+- Dadurch kann die Sicherheitsansicht bei zukünftigen Releases nicht mehr unbemerkt eine ältere Versionsnummer anzeigen.
+- App-Version, Diagnose, Backup, Dossier und Template-Exporte bleiben weiterhin an dieselbe zentrale Versionsquelle gebunden.
+
+### 💾 Daten & Kompatibilität
+
+- IndexedDB-Schema und Backupformat bleiben unverändert; RC II erfordert keine Datenmigration.
+- Bestehende Projekte, kreative Versionen, Snapshots, Revisionen, Storydaten, Medien, Templates und Workspace-Einstellungen bleiben kompatibel.
+- Der bestehende Startup Data Guard, das Schreibjournal, Integritätsprüfung, Diagnose, Belastungs- und Kompatibilitätscheck bleiben unverändert aktiv.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Zentrale und sichtbare Versionsangaben auf v0.111.0 abgeglichen.
+- Keine Datenbankmigration erforderlich.
+
 ## v0.110.0 – Release Candidate I
 
 ### 🧪 Feature Freeze
