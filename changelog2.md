@@ -4,6 +4,24 @@ Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von 
 
 ----
 
+## v1.0.6
+
+### 📚 Bücher & Reihen Polish
+
+- Der Zugang `Reihenübersicht` im Bücherbereich wurde optisch beruhigt und fügt sich als neutraler Werkzeugbutton in die Bibliotheksleiste ein.
+- Die Reihenübersicht öffnet jetzt als schwebendes, scrollbar begrenztes Panel statt den gesamten Bücherregal-Inhalt nach unten zu schieben.
+- Die Übersicht kann über `×` oder `Esc` geschlossen werden; beim Öffnen eines Bandes schließt sie sich automatisch.
+- Kleine Beschriftungen in Reihen-, Band-, Kennzahlen- und Cross-Book-Bereichen wurden deutlich lesbarer gesetzt.
+- Karten und Kennzahlen wurden kompakter angeordnet, sodass trotz größerer Schrift mehr Informationen ohne unnötige vertikale Länge sichtbar bleiben.
+- Auf kleineren Displays passt sich das Panel an den verfügbaren Viewport an und bleibt intern scrollbar.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Keine Bücher-, Reihen-, Story-Bibel- oder Living-Canon-Daten verändert.
+
 ## v1.0.5
 
 ### 💡 Ideenarchiv-Dashboard
