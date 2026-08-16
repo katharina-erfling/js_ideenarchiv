@@ -1,4 +1,6 @@
+Alle wichtigen Änderungen und Entwicklungsschritte der Autoren-Suite.
 
+Die Autoren-Suite wird iterativ anhand einer realen, umfangreichen Sammlung von Storyideen weiterentwickelt. Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ## v1.0.1
 
