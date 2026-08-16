@@ -6,6 +6,64 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.107.0 – Gap Closure
+
+### ⇧ Fremdmanuskript-Import
+
+- Manuskripte können jetzt aus DOCX, Markdown, HTML und TXT in ein geöffnetes Buch importiert werden.
+- Vor dem Import wird eine Vorschau der erkannten Struktur angezeigt; bestehende Manuskriptteile werden nicht überschrieben.
+- Überschriften werden soweit möglich als Teil-, Kapitel- und Szenenstruktur erkannt.
+- DOCX wird lokal im Browser aus `word/document.xml` gelesen; dafür ist kein Cloud-Dienst erforderlich.
+- Ein Import wird als rückgängig machbare Strukturaktion erfasst.
+
+### ↶ Suiteweites Undo / Redo
+
+- Zusätzlich zum nativen Texteditor-Undo gibt es jetzt eine eigene Undo-/Redo-Ebene für zentrale Struktur- und Canvas-Aktionen.
+- Drag & Drop im Manuskript sowie relevante Buch-/Canvas-Zustände können schrittweise zurückgesetzt und wiederholt werden.
+- Die Undo-Historie speichert nur den betroffenen Arbeitskontext des aktuellen Buches, keine vollständigen Datenbankkopien.
+- `Strg/Cmd + Z` bzw. `Strg/Cmd + Y` greifen außerhalb von Eingabefeldern auf diese Suite-Historie zu; im Manuskripttext bleibt das native Editor-Undo erhalten.
+
+### ✎ Änderungsverfolgung
+
+- Der Manuskriptbereich besitzt jetzt einen optionalen Modus `Änderungen`.
+- Einfügungen werden als Einfügungen markiert, Löschungen bleiben als gestrichene Änderung sichtbar, bis sie angenommen oder abgelehnt werden.
+- Änderungen können gesammelt angenommen oder verworfen werden.
+- Für Wortzählung und Compile gilt der angenommene Lesestand: als gelöscht markierter Text zählt nicht zum finalen Manuskripttext.
+- Die bestehende kreative Versionskontrolle und Revision bleiben zusätzlich erhalten; Track Changes ersetzt sie nicht.
+
+### ⌘ Outliner 3.0
+
+- Die Meta-Ansicht des Manuskript-Navigators besitzt jetzt pro Buch frei wählbare Spalten.
+- Verfügbar sind Status, POV, Ort, Handlungsstrang, Revision, Wörter, Scene-Lifecycle und Story-Zeit.
+- Die Auswahl wird am Buch gespeichert und kann jederzeit auf den Standard zurückgesetzt werden.
+
+### ☆ Smart Views
+
+- Aktuelle Navigator-Suchen und Filterkombinationen lassen sich als benannte Smart Views speichern.
+- Gespeicherte Ansichten können später mit einem Klick wiederhergestellt werden.
+- Damit lassen sich z. B. Ansichten wie `ungeschriebene Elise-Szenen` oder `offene Revisionen` dauerhaft ablegen.
+
+### ≈ Lokales Synonymwerkzeug
+
+- Im Manuskript gibt es ein kleines lokales Synonymwerkzeug ohne KI-Umschreiben.
+- Eine Grundauswahl häufiger deutscher Wörter ist direkt enthalten.
+- Eigene Wort→Synonym-Zuordnungen können lokal ergänzt werden.
+- Ein markiertes Manuskriptwort wird beim Öffnen nach Möglichkeit direkt übernommen.
+
+### ▤ Printsatz-Feinschliff
+
+- Compile-Profile erhalten zusätzliche Einstellungen für Innen-, Außen-, oberen und unteren Seitenrand.
+- Kopf-/Fußzeilentexte und ein Absatzschutz-Schalter können im Profil gepflegt werden.
+- Der PDF-Export berücksichtigt die konfigurierten Seitenränder.
+- Die vorhandenen Compile-/Publishing-Funktionen bleiben die Grundlage; es entsteht kein zweiter Buchdesigner.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine IndexedDB-Migration erforderlich.
+- Bestehende Manuskripte, Versionen, Revisionen, Compile-Profile und Storydaten bleiben kompatibel.
+
 ## v0.106.0 – Feature-Parity & Gap Audit
 
 ### ⚔️ Aktualisierter Feature-Audit
