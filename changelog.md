@@ -6,6 +6,52 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.103.0 – Canvas Foundation
+
+### 🕸️ Gemeinsame Interaktionsbasis
+
+- Mindmap, Story Graph, Beziehungen und Timeline behalten ihre bestehenden Renderer, Datenmodelle und Fachlogiken; v0.103 ersetzt sie bewusst nicht durch einen riskanten Komplettumbau.
+- Eine gemeinsame Canvas-Foundation bündelt jetzt Koordinatenumrechnung, Zoom-/Pan-Grundwerte, Drag-Deltas, Bewegungs-Schwellen, Zielmarkierungen und die sichere Positionierung von Kontextmenüs.
+- Dadurch greifen die vier Canvas-Bereiche bei denselben Grundinteraktionen auf dieselben Hilfsfunktionen zurück, statt vier leicht unterschiedliche Varianten derselben Mathematik zu pflegen.
+- Vorhandene Layoutdaten werden beim Zugriff defensiv normalisiert; ungültige Positionswerte werden verworfen, ohne gültige gespeicherte Layouts zu verändern.
+
+### 🧠 Mindmap
+
+- Canvas-Koordinaten für Doppelklick, Rechtsklick und Bild-Drop verwenden jetzt die gemeinsame Foundation.
+- Knoten-Drag und Verbindungsziehen verwenden dieselbe gemeinsame Bewegungs- und Zielmarkierungslogik wie die übrigen Canvas-Bereiche.
+- Die vorhandene Mindmap-Bedienung, Inline-Texteingabe, Resize, Bilder, Knotenformen und Verbindungseigenschaften bleiben erhalten.
+
+### 🕸 Story Graph
+
+- Node-Dragging, Verbindungs-Vorschau, Zielhervorhebung und Kontextmenüpositionierung verwenden jetzt die gemeinsame Foundation.
+- Das bestehende Pan-/Zoom-Verhalten und die gespeicherten Story-Graph-Layouts bleiben unverändert erhalten.
+- Fachlich abgeleitete und frei ergänzte Story-Graph-Verbindungen bleiben weiterhin getrennt.
+
+### 🔗 Beziehungen
+
+- Freies Verschieben der Beziehungsknoten sowie das Ziehen neuer Verbindungen verwenden die gemeinsame Drag-/Target-Logik.
+- Das Rechtsklickmenü auf Beziehungen verwendet dieselbe sichere Bildschirmpositionierung wie die anderen Canvas-Kontextmenüs.
+- Bestehende Story-Relations und gespeicherte Knotenpositionen bleiben unverändert die Datenquelle.
+
+### 🗓 Timeline
+
+- Freies Verschieben der Timeline-Karten, Doppelklick-/Rechtsklick-Positionen und Canvas-Menüs verwenden jetzt dieselben Canvas-Grundfunktionen.
+- Die vorhandene Timeline-Synchronisierung mit Manuskriptszenen und dem eigenen Story-Kalender bleibt vollständig erhalten.
+- Es wird kein neues Timeline-Datenmodell eingeführt.
+
+### 🛡️ Kompatibilitätsprinzip
+
+- v0.103 ist bewusst ein konsolidierender Unterbau statt eines visuellen oder datenmodellseitigen Neubaus.
+- Bestehende IDs, IndexedDB-Stores, Buchlayouts, Mindmap-Daten, Story-Relations und Timeline-Ereignisse bleiben kompatibel.
+- Die Foundation enthält einen kleinen Laufzeit-Selbsttest für ihre defensiven Layout-Grundfunktionen.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- HTML auf doppelte IDs geprüft.
+- Keine Datenbankmigration erforderlich.
+- Bestehende Canvas-Interaktionen wurden nicht durch neue parallele Renderer ersetzt.
+
 ## v0.102.0 – Workspace Studio
 
 ### 🪟 Persönliche Arbeitsoberfläche
