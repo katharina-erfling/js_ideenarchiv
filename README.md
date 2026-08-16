@@ -1,154 +1,148 @@
 <img width="1892" height="863" alt="Screenshot 2026-08-16 001533" src="https://github.com/user-attachments/assets/2df9202d-b6d8-4257-a106-4279b93d8328" />
 
-
 # ✒️ Autoren-Suite
 
 > Eine lokale All-in-One-Schreibumgebung für Ideen, Romanplanung, Worldbuilding, Manuskript, Überarbeitung und den gesamten Weg von der ersten Idee bis zum fertigen Buch.
 
-**Aktuelle Version: v0.88.0**
+**Aktuelle stabile Version: v1.0.0**
 
-Die Autoren-Suite ist aus einem digitalen Ideenarchiv entstanden und inzwischen zu einer umfangreichen Arbeitsumgebung für Autorinnen und Autoren gewachsen.
+Die **Autoren-Suite** ist eine lokale Schreib- und Planungsumgebung für Autorinnen und Autoren. Sie verbindet Ideensammlung, Bücher und Reihen, Storyplanung, Szenen, Manuskript, Story-Bibel, Figuren, Orte, Recherche, Timeline, Kontinuität, Versionierung, Überarbeitung, Analyse und Export in einer gemeinsamen Anwendung.
 
-Sie verbindet Ideensammlung, Bücher und Reihen, Storyplanung, Szenen, Manuskript, Story-Bibel, Figuren, Orte, Recherche, visuelle Planung, Timeline, Kontinuität, Schreibstatistiken, Revision, Versionierung und Export in einer gemeinsamen lokalen Anwendung.
+Im Mittelpunkt steht nicht nur der fertige Text, sondern der gesamte kreative Prozess:
 
-Dabei steht nicht nur das fertige Manuskript im Mittelpunkt, sondern der gesamte kreative Prozess:
+**Idee → Planung → Szene → Manuskript → Überarbeitung → fertiges Buch**
 
-**Idee → Romanidee → Planung → Szene → Manuskript → Überarbeitung → fertiges Buch**
+Dabei bleiben die einzelnen Bereiche miteinander verbunden. Eine Szene ist beispielsweise nicht nur ein Eintrag auf einer Planungswand, sondern kann sich vom ersten Schnipsel bis zur fertigen Manuskriptfassung weiterentwickeln.
 
 ---
 
 ## ✨ Highlights
 
+- 💡 umfangreiches Ideenarchiv mit Kategorien, Romanideen und Verknüpfungen
 - 📚 visuelles Bücherregal für Bücher und Reihen
-- 💡 umfangreiches Ideenarchiv mit Kategorien und Zufallsideen
-- ▱ eigene Romanideen mit Dateien, Bildern und Verknüpfungen
-- 🧩 Szenen mit vollständigem Entwicklungsstatus
-- ✒️ Manuskript mit Kapitel- und Szenenstruktur
-- 🕰️ bewusste kreative Versionen zusätzlich zu automatischen Sicherheits-Snapshots
+- 📖 eigene Buch-Dashboards mit Schreibfortschritt
+- 🧩 Scene Lifecycle vom Schnipsel bis zur fertigen Szene
+- 🗃️ zentrale Szenendatenbank und Manuskript-Navigator
+- ✒️ strukturierter Manuskripteditor
+- 🕰️ kreative Fassungen und automatische Sicherheits-Snapshots
 - 📌 Text-Parkplatz für herausgeschnittene Manuskriptpassagen
 - 🧵 Story-Fäden mit Stationen durchs Manuskript
-- 👤 POV-Auswertung und Figurenpräsenz
-- 🗓️ synchronisierte Timeline und Szenenzeit
-- 🧠 Story-Bibel, Living Knowledge, Living Canon und Kontinuitätsfakten
-- 🕸️ Mindmaps, Story Graph und Beziehungsansichten
-- 🌍 anpassbares Worldbuilding
-- 📊 Schreibsessions, Timer und umfangreiche Statistiken
+- 👤 POV Analytics und Figurenpräsenz
+- 🗓️ Timeline mit Manuskript- und Szenenverknüpfung
+- 🧠 Story-Bibel, Living Knowledge, Living Canon und Continuity
+- 📚 bandübergreifende Reihen- und Kontinuitätsansichten
+- 🕸️ Mindmaps, Story Graph, Beziehungen und visuelle Timeline
+- 🌍 modulares Worldbuilding mit eigenen Feldern und Bereichen
+- 💓 Story Rhythm und Manuscript Analytics
+- 🔤 lokales Language & Style Studio
+- ⏱️ Schreibsessions, Fokusmodus, Timer und Schreibziele
 - 📝 Revision Studio mit Überarbeitungsdurchgängen
+- 🧰 Template Studio und Workspace Studio
 - 📦 Compile & Publishing Studio
-- 📖 Export unter anderem als EPUB, DOCX, PDF, RTF, HTML, Markdown und TXT
+- 📤 Export unter anderem als EPUB, DOCX, PDF, RTF, HTML, Markdown und TXT
 - 💾 lokale Speicherung ohne Account oder Server
 
 ---
 
 # 💡 Ideenarchiv
 
-Der Ursprung der Suite bleibt ein zentraler Bestandteil der Anwendung.
+Ideen können wie digitale Zettel gesammelt, sortiert und miteinander verbunden werden.
 
-Ideen werden wie digitale Zettel gesammelt und können frei organisiert werden.
-
-## Funktionen
+Zur Verfügung stehen unter anderem:
 
 - frei verschachtelte Kategorien
-- Kategorien mit Zählern und Schnellzugriffen
 - schnelle Ideenerfassung
 - Massenerfassung
-- Volltextsuche
-- Exaktsuche
-- Sortierung und Filter
-- Paginierung
-- Stöberansicht
+- Suche und Filter
 - Favoriten
 - Papierkorb
-- direkte Bearbeitung
+- Drag & Drop
 - Mehrfachauswahl
-- Sammelaktionen
-- Drag & Drop zwischen Kategorien
 - Duplizieren
-- Ideen miteinander und mit anderen Bereichen verknüpfen
+- Zufallsideen
+- Ideenverknüpfungen
+- Zuordnung zu Büchern und Projekten
 
-Ideen können später zu größeren Storyelementen weiterentwickelt werden, ohne dass der ursprüngliche Zettel aus dem Ideenarchiv verschwinden muss.
+Ideen müssen dabei nicht in einem abgeschlossenen Archiv verschwinden. Sie können später mit Romanideen, Szenen, Figuren, Büchern und anderen Bereichen der Suite verbunden werden.
 
 ---
 
 # ▱ Romanideen
 
-Zwischen losem Ideenzettel und vollständigem Buchprojekt gibt es einen eigenen Bereich für größere Romanideen.
+Größere Storyansätze können als eigene Romanideen gesammelt werden.
 
 Eine Romanidee kann unter anderem enthalten:
 
-- Arbeitstitel
+- Titel
 - Beschreibung
-- Bilder
 - Dateien
+- Bilder und visuelle Referenzen
+- PDFs mit Vorschau
 - verknüpfte Ideenzettel
 - weitere Materialien
 
-Dateien und visuelle Referenzen können direkt an der Romanidee gesammelt werden.
-
-Aus einer Romanidee kann später ein Romanprojekt bzw. Buch entstehen.
+Aus einer Romanidee kann später ein vollständiges Buchprojekt entstehen.
 
 ---
 
-# 📚 Bücher, Projekte & Reihen
+# 📚 Bücher & Reihen
 
-Bücher werden in einem visuellen **Bücherregal** organisiert.
+Bücher werden in einem visuellen **Living Bookshelf** organisiert.
 
-Das Regal ist nicht nur eine Liste, sondern Teil der Oberfläche: Bücher besitzen Buchrücken, Cover und können auf Regalbrettern angeordnet werden.
+Buchrücken können frei auf Regalbrettern positioniert werden. Regalbretter lassen sich ergänzen und beschriften.
 
-## Bücher können unter anderem besitzen
+Ein Buch kann unter anderem besitzen:
 
 - Titel und Untertitel
 - Cover
 - eigenen Buchrücken
-- vollständigen Buchumschlag als Grundlage für Cover/Buchrücken
-- Farbe
+- vollständigen Druckumschlag
+- Reihe und Bandnummer
 - Status
-- Reihe
-- Bandnummer
 - Zielwortzahl
+- Deadline
 - individuellen Schreibprozess
 - Manuskript
 - Planung
 - Story-Bibel
 - Medien und Dateien
 
-Regalbretter können angelegt, beschriftet und zur Organisation der Bücher verwendet werden.
+Mehrere Bücher können zu Reihen zusammengefasst werden.
 
-Bücher lassen sich außerdem zu **Reihen bzw. Serien** zusammenfassen.
+Die gemeinsame Story-Bibel und **Living Canon** ermöglichen es, Figuren, Orte und Weltwissen über mehrere Bände hinweg zu verwenden, ohne dieselben Inhalte mehrfach anlegen zu müssen.
 
 ---
 
 # 📖 Buch-Dashboard
 
-Jedes Buch besitzt eine eigene zentrale Übersicht.
+Jedes Buch besitzt eine eigene Arbeitsübersicht.
 
-Dort laufen wichtige Informationen zusammen, beispielsweise:
+Dort laufen unter anderem zusammen:
 
-- Cover
-- Grunddaten
-- Buchstatus
+- Cover und Grunddaten
 - Wortstand
-- Schreibfortschritt
-- aktueller Prozessstand
-- Schnellzugriffe auf Manuskript, Planung, Wissen und weitere Bereiche
+- Schreibziele
+- aktueller Schreibprozess
+- Scene Lifecycle
+- Planung
+- Manuskript
+- Story-Bibel
+- Revision
+- Story-Fortschritt
 
-Der Fortschritt ist nicht auf eine einfache Wortzahl beschränkt.
-
-Der Schreibprozess kann mehrere Entwicklungsstufen berücksichtigen – von Ideen und Planung über Szenen und Erstentwurf bis zur Überarbeitung.
+Der Buchfortschritt bildet nicht nur eine Wortzahl ab, sondern berücksichtigt mehrere Phasen des kreativen Prozesses.
 
 ---
 
 # 🧩 Scene Lifecycle
 
-Seit v0.82 besitzen Szenen einen gemeinsamen Entwicklungszyklus:
+Szenen besitzen einen gemeinsamen Lebenszyklus:
 
 **Schnipsel → geplant → ausgearbeitet → schreibbereit → geschrieben → überarbeitet → fertig**
 
-Planung und Manuskript sollen dabei nicht als voneinander isolierte Kopien behandelt werden.
+Planung und Manuskript arbeiten dabei möglichst mit demselben **Szenenkern**.
 
-Eine Szene besitzt einen gemeinsamen Szenenkern und kann sich durch den Schreibprozess weiterentwickeln.
-
-Zu einer Szene können unter anderem gehören:
+Eine Szene kann unter anderem enthalten:
 
 - Titel
 - Kurzinhalt
@@ -156,230 +150,162 @@ Zu einer Szene können unter anderem gehören:
 - Figuren
 - Ort
 - Zeit
-- Handlungsstrang
 - Story-Fäden
-- Story-Bibel-Verknüpfungen
+- Plotline
 - Ziel und Konflikt
 - Ergebnis
 - Stimmung
 - Timeline-Daten
-- Reifegrad
-- Revisionen
+- Story-Rhythmus
+- Continuity-Verknüpfungen
+- Revision
 - kreative Fassungen
 
 ---
 
-# 🗃️ Szenenboard & „Alle Szenen“
+# 🗃️ Szenenzentrale & Manuskript-Navigator
 
-Szenen können auf unterschiedliche Weise betrachtet werden.
+Die Ansicht **Alle Szenen** bietet eine zentrale, durchsuchbare Übersicht über das Manuskript.
 
-## Szenenboard
+Filter sind unter anderem möglich nach:
 
-Das Szenenboard zeigt die Szenen entlang ihres Entwicklungsstands:
-
-**Schnipsel · Geplant · Ausgearbeitet · Schreibbereit · Geschrieben · Überarbeitet · Fertig**
-
-Szenen können zwischen den Stufen verschoben werden.
-
-## Alle Szenen
-
-Zusätzlich gibt es eine zentrale Szenenansicht.
-
-Szenen können dort gesucht und unter anderem gefiltert werden nach:
-
+- Buch
+- Kapitel
 - Reifegrad
 - POV
 - Figur
 - Ort
-- Kapitel
-- Handlungsstrang
 - Story-Faden
-- Timeline-Verknüpfung
-- geschrieben / noch nicht geschrieben
+- Plotline
+- Timeline
+- geschrieben / ungeschrieben
+- Revision
 
-Damit lässt sich beispielsweise gezielt nach noch ungeschriebenen Szenen einer bestimmten Figur oder eines bestimmten Ortes suchen.
+Der Manuskript-Navigator bildet Kapitel und Szenen als Outline ab und unterstützt Drag & Drop innerhalb der Manuskriptstruktur.
 
 ---
 
 # ✒️ Manuskript
 
-Das Manuskript ist in Kapitel, Szenen und weitere Dokumenttypen gegliedert.
+Der Manuskriptbereich verbindet Schreiben und Storyplanung.
 
-Der Schreibbereich verbindet eigentlichen Text und Storyplanung miteinander, ohne dass während des Schreibens ständig zwischen getrennten Programmen gewechselt werden muss.
+Zum Schreibworkflow gehören unter anderem:
 
-## Manuskript-Navigator
-
-Der Navigator bietet eine strukturierte Übersicht über das Manuskript.
-
-Er unterstützt unter anderem:
-
-- Kapitel- und Szenenstruktur
-- Drag & Drop
-- Umsortieren von Szenen
-- Verschieben zwischen Kapiteln
-- Filter nach Szenenstatus
-- POV
-- Ort
-- Handlungsstrang
-- Story-Faden
-- offene Revisionen
+- Kapitel und Szenen
+- Szenen-Inspector
+- Manuskript-Navigator
+- Kontext- und Continuity-Informationen
+- Kommentare und Fußnoten
+- Suchen und Ersetzen
+- Regex-Suche
+- Sonderzeichen
+- Seiten- und Abschnittsumbrüche
+- Normseitenansicht
+- Textprüfung
+- Fokusmodus
+- Schreibsessions
 
 ---
 
-# 🕰️ Kreative Versionen
+# 🕰️ Kreative Fassungen & Versionierung
 
-Neben technischen Sicherheits-Snapshots besitzt die Suite seit v0.81 eine bewusste **kreative Versionskontrolle**.
+Neben automatischen Sicherheitsständen können bewusst neue kreative Fassungen angelegt werden.
 
-Beim Planen und Schreiben können gezielt neue Fassungen begonnen werden.
+Beispielsweise:
 
-Beispiel:
-
-**Schnipsel v1**  
-→ **Plot v1**  
+**Plot v1**  
 → **Plot v2**  
 → **Planung v1**  
 → **Erstentwurf v1**  
 → **Erstentwurf v2**  
 → **Überarbeitung v1**
 
-Eine neue Version kann:
+Eine neue Fassung kann:
 
 1. die aktuelle Fassung übernehmen,
 2. leer mit der vorherigen Fassung als Referenz beginnen,
 3. vollständig leer beginnen.
 
-Gerade beim Übergang vom Plot zum Manuskript kann dadurch ein neuer Text geschrieben werden, während die Planung weiterhin als Referenz sichtbar bleibt.
+Alte Fassungen bleiben erhalten.
 
-Alte kreative Fassungen bleiben erhalten und können später wieder geöffnet oder als Grundlage einer neuen Fassung verwendet werden.
+Versionen können verglichen, wiederhergestellt oder als Grundlage eines neuen Versionszweigs verwendet werden.
 
----
-
-# 🛡️ Snapshots & Wiederherstellung
-
-Kreative Versionen und Sicherheitsstände erfüllen unterschiedliche Aufgaben.
-
-**Kreative Versionen** sind bewusst angelegte Fassungen.
-
-**Snapshots** sichern den tatsächlichen Arbeitsstand technisch ab.
-
-Die Suite unterstützt unter anderem:
-
-- manuelle Snapshots
-- automatische Sicherheitsstände
-- Versionsvergleich
-- Wiederherstellung
-- Sicherheitsstände vor kritischen Änderungen
-
-Damit soll kreatives Experimentieren möglich sein, ohne frühere Textstände aufgeben zu müssen.
+Zusätzlich existieren automatische und manuelle **Snapshots** als technisches Sicherheitsnetz.
 
 ---
 
 # 📌 Text-Parkplatz
 
-Text, der aus einem Manuskript entfernt werden soll, muss nicht gelöscht oder in einer externen Datei zwischengespeichert werden.
+Herausgeschnittener Manuskripttext muss nicht gelöscht oder extern zwischengespeichert werden.
 
-Markierter Text kann über das Kontextmenü auf den **Text-Parkplatz** gelegt werden.
+Markierter Text kann auf den **Text-Parkplatz** gelegt werden.
 
-Dabei werden unter anderem gespeichert:
+Gespeichert werden dabei unter anderem:
 
 - Text
 - Buch
 - Kapitel
 - Szene
 - Herkunft
-- Zeitpunkt der Entfernung
+- Zeitpunkt
 
-Geparkte Texte können später:
-
-- durchsucht
-- gelesen
-- kopiert
-- an der Cursorposition eingesetzt
-- per Drag & Drop zurück ins Manuskript gezogen
-- anderweitig wiederverwendet werden
-
-Vor dem Ausschneiden wird zusätzlich ein Sicherheitsstand angelegt.
+Der Text kann später durchsucht, kopiert oder wieder in ein Manuskript eingesetzt werden.
 
 ---
 
 # 🧵 Story-Fäden
 
-Handlungsfäden können durch das Manuskript verfolgt werden.
+Handlungsfäden lassen sich direkt durch das Manuskript verfolgen.
 
-Ein Faden kann beispielsweise Stationen besitzen wie:
+Mögliche Stationen sind beispielsweise:
 
-**Setup → Hinweis → Entwicklung → Wendung → Enthüllung → Payoff**
+**Setup → Hinweis → Entwicklung → Eskalation → Wendung → Enthüllung → Payoff**
 
 Die Stationen können mit konkreten Kapiteln oder Szenen verbunden werden.
 
-Beispiel:
+Eine visuelle Fadenspur zeigt, wann und wo ein Faden im Manuskript vorkommt.
 
-**Yaras Herkunft**
-
-**Kapitel 2** ● Setup  
-→ **Kapitel 5** ● Hinweis  
-→ **Kapitel 11** ● Wendung  
-→ **Kapitel 17** ● Payoff
-
-Eine visuelle Fadenspur zeigt, wo ein Handlungsfaden im Buch auftaucht.
-
-Die Suite kann außerdem sachlich auf längere Abstände oder ein Setup ohne hinterlegten Payoff aufmerksam machen.
-
-Sie bewertet dabei nicht, ob eine dramaturgische Entscheidung richtig oder falsch ist.
+Die Suite kann sachlich auf längere Abstände oder fehlende Fadenstationen hinweisen, bewertet aber nicht automatisch die Dramaturgie.
 
 ---
 
 # 👤 POV & Figurenpräsenz
 
-Szenen können einer Perspektivfigur zugeordnet werden.
+Szenen können Perspektivfiguren zugeordnet werden.
 
-Aus den vorhandenen Szenendaten entstehen Auswertungen zur POV-Verteilung.
+Die Suite wertet daraus unter anderem aus:
 
-Zusätzlich zeigt eine visuelle POV-Spur die tatsächliche Reihenfolge der Perspektiven durch das Manuskript.
+- POV-Anteile
+- Wörter pro POV
+- Szenen pro POV
+- Reihenfolge der Perspektiven
+- Figurenpräsenz
+- Abstand zwischen Figurenauftritten
 
-Beispielsweise:
-
-`E E D D Y E E D Y`
-
-Auch die Präsenz von Figuren kann über das Manuskript betrachtet werden.
-
-Dadurch wird sichtbar:
-
-- in welchen Szenen eine Figur vorkommt
-- wie hoch ihr Szenenanteil ist
-- wann sie zuletzt auftritt
-- wie groß längere Abstände zwischen ihren Auftritten sind
-
-Die Analyse bleibt beschreibend und wertet ungewöhnliche Verteilungen nicht automatisch als Fehler.
+Eine visuelle POV-Spur macht die Reihenfolge direkt sichtbar.
 
 ---
 
 # 🗓️ Timeline & Story-Zeit
 
-Die Suite besitzt eine Story-Timeline, die mit dem Manuskript verbunden werden kann.
+Szenen und Timeline-Ereignisse können miteinander verbunden werden.
 
-Timeline-Ereignisse können direkt mit einer Manuskriptszene verknüpft werden.
-
-Dabei können unter anderem gemeinsam verwendet werden:
+Dabei können gemeinsam gepflegt werden:
 
 - Datum
 - Uhrzeit
-- Story-Jahr
-- Story-Monat
-- Story-Tag
-- Story-Zeit
+- eigene Story-Zeit
+- eigener Kalender
 - relative Zeitangaben
 - Handlungsstrang
 
-Änderungen zwischen verknüpfter Szene und Timeline-Ereignis werden synchronisiert.
-
-Eigenständige Timeline-Ereignisse ohne Manuskriptverknüpfung bleiben weiterhin möglich.
+Änderungen an verknüpften Szenen und Timeline-Ereignissen werden synchronisiert.
 
 ---
 
-# 📅 Eigene Zeitrechnung
+# 📅 Eigene Kalender
 
-Für Geschichten mit eigener Zeitrechnung kann ein eigener Kalender konfiguriert werden.
+Für fiktionale Welten können eigene Zeitrechnungen angelegt werden.
 
 Konfigurierbar sind unter anderem:
 
@@ -387,22 +313,20 @@ Konfigurierbar sind unter anderem:
 - Ära
 - Stunden pro Tag
 - Minuten pro Stunde
-- eigene Wochentage
-- eigene Monate
-- unterschiedliche Monatslängen
+- Wochentage
+- Monate
+- Monatslängen
 - Jahreszeiten
 
-Die eigene Zeitrechnung kann in Timeline und Kontinuität verwendet werden.
+Die eigene Zeitrechnung kann in Timeline und Continuity verwendet werden.
 
 ---
 
 # 🧠 Story-Bibel & Worldbuilding
 
-Jedes Buch besitzt eine Story-Bibel.
+Die Story-Bibel bildet die Wissensbasis eines Buches oder einer Reihe.
 
-Story-Bibeln können gemeinsam von mehreren Büchern genutzt werden, sodass Figuren, Orte und Weltwissen nicht für jeden Band neu angelegt werden müssen.
-
-Mögliche Grundtypen umfassen unter anderem:
+Mögliche Bereiche umfassen unter anderem:
 
 - Figuren
 - Orte
@@ -421,21 +345,17 @@ Mögliche Grundtypen umfassen unter anderem:
 - Systeme
 - Kalender
 - Ereignisse
-- freie Notizen
+- freie Akten
 
-Eigene Story-Bibel-Reiter und eigene Felder ermöglichen eine Anpassung an unterschiedliche Projekte.
-
-Nicht benötigte Module können ausgeblendet werden, ohne vorhandene Daten zu löschen.
+Eigene Bereiche und eigene Felder können angelegt werden.
 
 ---
 
-# 🔄 Living Canon & Bandzustände
+# 🔄 Living Canon & Cross-Book Continuity
 
-Bei Reihen können gemeinsame Story-Bibel-Akten über mehrere Bücher verwendet werden.
+Story-Bibel-Inhalte können von mehreren Büchern gemeinsam verwendet werden.
 
-Gleichzeitig können Informationen pro Band abweichen.
-
-So kann beispielsweise dieselbe Figur über die Reihe hinweg bestehen, während sich je Band verändert:
+Gleichzeitig können pro Band abweichende Zustände gepflegt werden, etwa:
 
 - Status
 - Rolle
@@ -445,179 +365,242 @@ So kann beispielsweise dieselbe Figur über die Reihe hinweg bestehen, während 
 - Zugehörigkeiten
 - Notizen
 
-Dadurch muss dieselbe Figur nicht für jeden Band als neuer unabhängiger Datensatz angelegt werden.
+Die Reihenübersicht führt die Bände zusammen und ermöglicht bandübergreifende Kontinuitätsauswertungen.
 
 ---
 
-# 🧠 Kontinuität & Living Knowledge
+# 🧠 Continuity & Knowledge Intelligence
 
-Die Suite besitzt Werkzeuge, um Storywissen und zeitabhängige Zustände nachvollziehbar zu halten.
-
-Neben zeitlichen Kontinuitäts-Checkpoints gibt es seit v0.88 **kanonische Kontinuitätsfakten**.
-
-Beispiele:
+Kontinuitätsfakten können feste Storyinformationen abbilden, beispielsweise:
 
 **Augenfarbe:** Grün  
 **Narbe:** linke Augenbraue  
 **Stockwerke:** 3
 
-Kontinuitätsfakten können als für den Schreibprozess relevant markiert werden.
+Zusätzlich können zeitliche Zustände verfolgt werden.
+
+Beispielsweise:
+
+`gesund → verletzt → genesen`
+
+oder:
+
+`bei David → verloren → von Yara gefunden`
+
+Auch Wissensstände können nachvollziehbar gemacht werden:
+
+**Wer weiß was – und wann?**
 
 ---
 
-# ✒️ Schreib-Inspector
+# 🕸️ Visuelle Story-Werkzeuge
 
-Beim Schreiben können relevante Storyinformationen direkt im Manuskript eingeblendet werden.
+Zur freien visuellen Arbeit stehen mehrere Canvas-Werkzeuge zur Verfügung.
 
-Der Kontext-Inspector kann unter anderem Informationen aus verknüpften Story-Bibel-Akten, Figuren, Orten und erkannten Codex-Erwähnungen heranziehen.
+## Mindmaps
 
-Seit v0.88 erscheinen dort auch ausgewählte **Kontinuitätsfakten**.
+Für freies Denken und Brainstorming.
 
-Dadurch können wichtige Angaben kontrolliert werden, ohne den Schreibbereich verlassen zu müssen.
+## Story Graph
 
----
+Für strukturelle Storyzusammenhänge.
 
-# 🕸️ Mindmaps
+## Beziehungen
 
-Für freie visuelle Planung stehen Mindmaps zur Verfügung.
+Für Beziehungsnetze zwischen Figuren und anderen Storyelementen.
 
-Gedanken können als Knoten angelegt, frei positioniert und miteinander verbunden werden.
+## Timeline
 
-Knoten können mit echten Inhalten der Suite verknüpft werden, beispielsweise:
+Für zeitliche Entwicklung.
 
-- Ideen
-- Romanideen
-- Bücher
-- Story-Bibel-Akten
-- Kapitel und Szenen
-- Handlungsfäden
-- Timeline-Ereignisse
-- Recherche
-- Inspiration
-
-Dadurch bleibt die Mindmap nicht nur eine Zeichnung, sondern kann Teil des eigentlichen Storysystems sein.
+Die Bereiche teilen eine gemeinsame technische Canvas-Basis, behalten aber ihre unterschiedlichen fachlichen Aufgaben.
 
 ---
 
-# 🕸️ Story Graph
+# 💓 Story Rhythm
 
-Der Story Graph bietet eine weitere visuelle Darstellung für Storyzusammenhänge.
+Szenen können optionale Rhythmuswerte bekommen, etwa:
 
-Er baut auf einer ähnlichen intuitiven Canvas-Bedienung wie die Mindmaps auf, ist aber auf Storystruktur und Zusammenhänge ausgerichtet.
+- Konflikt
+- Action
+- Ruhe
+- Romantik
+- Enthüllung
+- Worldbuilding
+- Charakterentwicklung
+- Spannung
+- Humor
 
----
+Daraus entsteht ein visueller Story-Puls über das Manuskript.
 
-# 🔗 Beziehungen
-
-Figuren und andere Storyelemente können über visuelle Beziehungsansichten miteinander verbunden werden.
-
-Die Beziehungsansicht dient dazu, Verbindungen und Dynamiken innerhalb der Geschichte räumlich sichtbar zu machen.
-
----
-
-# 🔎 Recherche & Inspiration
-
-Recherche und Inspiration besitzen eigene Bereiche innerhalb der Suite.
-
-Material kann gesammelt, organisiert und mit anderen Storyelementen verbunden werden.
-
-Dadurch bleiben Quellen, visuelle Referenzen und Storywissen innerhalb desselben Projekts erreichbar.
+Die Suite zeigt dabei ausschließlich Muster – keine dramaturgischen Noten.
 
 ---
 
-# 👶 Namenslisten & Namensgeneratoren
+# 📊 Manuscript Analytics
 
-Namen können in eigenen Listen gesammelt werden.
+Die Manuskriptanalyse verbindet Text- und Storydaten.
 
-Zusätzlich stehen Namensgeneratoren als Werkzeug zur Verfügung.
+Unter anderem können ausgewertet werden:
 
-Damit können vorhandene Namenssammlungen und generierte Vorschläge gemeinsam innerhalb der Suite genutzt werden.
+- Wörter pro Kapitel
+- Wörter pro Szene
+- Szenenlängen
+- POV-Verteilung
+- Figurenpräsenz
+- Orte
+- Story-Fäden
+- Plotlines
+- Scene Lifecycle
+- Timeline-Abdeckung
+- Revision
+- Story Rhythm
+- Schreibentwicklung
 
 ---
 
-# ⏱️ Schreibsessions & Fokusmodus
+# 🔤 Language & Style Studio
 
-Für konzentrierte Schreibphasen gibt es eigene Schreibsessions.
+Die Suite besitzt eine lokale regelbasierte Sprach- und Stilanalyse.
 
-Unterstützt werden unter anderem:
+Geprüft werden können unter anderem:
+
+- Wortwiederholungen
+- Füllwörter
+- Satzlängen
+- lange Sätze
+- komplexe Satzstrukturen
+- Passivkonstruktionen
+- häufige allgemeine Verben
+- Wortfrequenzen
+- Lesbarkeit
+- eigene Prüfmuster
+
+Die lokale Analyse funktioniert ohne KI und ohne Übertragung des Manuskripttextes.
+
+Zusätzlich kann LanguageTool optional und nur nach ausdrücklichem Klick für eine externe Grammatik-/Rechtschreibprüfung verwendet werden.
+
+---
+
+# 📖 Sprachprofile & Wörterbücher
+
+Für die lokale Textanalyse stehen unterschiedliche Prüfprofile zur Verfügung.
+
+Beispielsweise:
+
+- Schnellprüfung
+- Wiederholungsprüfung
+- Dialogprüfung
+- Stilrunde
+- Feinschliff
+- eigenes Profil
+
+Dazu kommen:
+
+- persönliches Wörterbuch
+- Projektwörterbuch
+- Story-Bibel-Namen und Aliasse
+- ignorierte Wörter
+- eigene Prüfmuster
+
+---
+
+# ⏱️ Schreibsessions & Schreibziele
+
+Für konzentrierte Schreibphasen stehen zur Verfügung:
 
 - Stoppuhr
 - Countdown
+- Pause / Fortsetzen
 - Wortziel
 - Fokusmodus
-- tatsächliche Schreibzeit
-- Wortfortschritt während einer Session
 
-Der Fokusmodus reduziert Navigation und Nebenbereiche, damit der Manuskripttext stärker im Mittelpunkt steht.
+Schreibziele können beispielsweise gelten für:
+
+- heute
+- diese Woche
+- diesen Monat
+- das gesamte Buch
+- eine Deadline
+
+Die Zielanzeigen sind bewusst optional und verzichten auf künstlichen Produktivitätsdruck.
 
 ---
 
-# 📊 Statistiken
+# 🕰️ Heute im Schreibzimmer
 
-Die Statistik geht über eine einfache Gesamtwortzahl hinaus.
+Das globale Dashboard zeigt eine kompakte Tagesübersicht, beispielsweise:
 
-Unter anderem werden Bereiche für folgende Auswertungen angeboten:
-
-- Wortfortschritt
-- Schreibsessions
-- Schreibdauer
-- Schreibtempo
-- Schreibkalender
-- Heatmap
-- produktive Zeiten
-- Bestwerte
-- Wachstum der Story
-- Ideen
-- Romanideen
-- Bücher
-- Seiten
-- Reihen
-- offene Handlungsfäden
-- weitere Projektkennzahlen
-
-Die Statistik soll sichtbar machen, **wie eine Geschichte wächst**, nicht nur wie viele Wörter bereits geschrieben wurden.
+- heutige Schreibsessions
+- aktive Schreibzeit
+- neue Wörter
+- neue Ideen
+- abgeschlossene Szenen
+- zuletzt bearbeiteter Manuskriptabschnitt
+- heutiges Schreibziel
 
 ---
 
 # 📝 Revision Studio
 
-Für die Überarbeitung existiert ein eigenes Revisionssystem.
-
-Revisionsdurchgänge können unterschiedliche Schwerpunkte besitzen, beispielsweise:
+Überarbeitungsdurchgänge können beispielsweise folgende Schwerpunkte besitzen:
 
 - Plot & Struktur
 - Figuren
 - Logik & Kontinuität
 - Stil & Sprache
-- Pacing & Szenenlänge
+- Pacing
 - Recherche
 - eigener Schwerpunkt
 
-Durchgänge können geplant, aktiv oder abgeschlossen sein.
+Szenen können innerhalb eines Revisionsdurchgangs einen eigenen Status besitzen.
 
-Überarbeitungsnotizen lassen sich mit den jeweiligen Arbeitsphasen verbinden.
-
-Vor größeren Überarbeitungen können Ausgangsfassungen über Snapshots gesichert werden.
+Revision, Scene Lifecycle, Snapshots und kreative Fassungen arbeiten dabei zusammen.
 
 ---
 
-# 📦 Compile & Publishing Studio
+# 🧰 Template Studio
 
-Die Suite besitzt ein eigenes Compile- und Publishing-System.
+Eigene Vorlagen können unter anderem erstellt werden für:
 
-Manuskriptbestandteile können für die spätere Ausgabe zusammengestellt werden.
+- Bücher
+- Schreibprozesse
+- Szenen
+- Story-Bibel-Einträge
+- Revisionen
+- Sprach-/Stilprofile
 
-Dazu gehören auch Front- und Backmatter bzw. weitere Buchbestandteile.
-
-Die eigentliche Storyplanung und interne Story-Bibel-Daten werden dabei vom fertigen Manuskript getrennt behandelt.
+Vorlagen können exportiert und importiert werden.
 
 ---
 
-# 📤 Export
+# 🪟 Workspace Studio
 
-Das Exportzentrum unterstützt verschiedene Ausgabeformate.
+Die Arbeitsoberfläche kann an die eigene Arbeitsweise angepasst werden.
 
-Je nach Export stehen unter anderem zur Verfügung:
+Unter anderem:
+
+- Startbereich
+- sichtbare Module
+- Navigator
+- Inspector
+- Panelbreiten
+- Schreibflächenbreite
+- bevorzugte Ansichten
+- Schnellzugriffe
+- Tastaturkürzel
+
+Alle Einstellungen bleiben optional – die Suite besitzt vollständige Standardwerte.
+
+---
+
+# 📦 Compile & Publishing
+
+Manuskript und Ausgabeformatierung werden getrennt behandelt.
+
+Compile-Profile können für unterschiedliche Ausgaben vorbereitet werden.
+
+Unterstützte Exportformate umfassen unter anderem:
 
 - EPUB 3
 - DOCX
@@ -626,10 +609,8 @@ Je nach Export stehen unter anderem zur Verfügung:
 - HTML
 - Markdown
 - TXT
-- Projektdossiers
-- vollständige Backups
 
-Compile-Profile ermöglichen es, den Aufbau der Buchausgabe getrennt vom eigentlichen Manuskript zu verwalten.
+Zusätzlich sind Projektdossiers und vollständige Backups möglich.
 
 ---
 
@@ -637,37 +618,53 @@ Compile-Profile ermöglichen es, den Aufbau der Buchausgabe getrennt vom eigentl
 
 Die Autoren-Suite arbeitet lokal im Browser.
 
-**Kein Account, kein Server und kein laufendes Abo sind für die lokale Nutzung erforderlich.**
+**Kein Account, kein eigener Server und kein laufendes Abo sind für die lokale Nutzung erforderlich.**
 
-Die Daten werden über IndexedDB im Browser gespeichert.
+Zur Datensicherheit gehören unter anderem:
 
-Zur Datensicherheit stehen unter anderem zur Verfügung:
-
+- IndexedDB
 - Autosave
+- Notfallentwurf
 - automatische Snapshots
 - manuelle Snapshots
 - kreative Fassungen
 - Versionsvergleich
-- Wiederherstellung
-- vollständige Backups
-- Backup-Import
-- lokale Datenprüfung
+- Schreibjournal
+- Startup Data Guard
+- Integritätsprüfung
+- Belastungscheck
+- Diagnoseexport
+- vollständiger Backup-Export und -Import
 
-> **Wichtig:** Browserdaten sind kein Ersatz für ein externes Backup. Gerade bei echten Romanprojekten sollten regelmäßig vollständige Backups außerhalb des Browsers gespeichert werden.
+> **Wichtig:** Browserdaten ersetzen kein extern gespeichertes Backup. Für echte Projekte sollten regelmäßig vollständige Backups außerhalb des Browsers gespeichert werden.
 
 ---
 
-# 🚀 Start
+# ♿ Accessibility & Compatibility
 
-Die Anwendung besteht aktuell aus einer lokalen Web-App.
+Die Oberfläche berücksichtigt unter anderem:
 
-Repository herunterladen bzw. entpacken und anschließend:
+- Tastaturbedienung
+- Fokusführung
+- Skip-Link
+- reduzierte Bewegung
+- kleinere Viewports
+- zugängliche Dialogbeschriftungen
+- Browser-Kompatibilitätsprüfung
+
+---
+
+# 🚀 Nutzung
+
+Die Autoren-Suite ist eine lokale Web-Anwendung.
+
+Repository herunterladen bzw. das Release-Paket entpacken und anschließend:
 
 `index.html`
 
 im Browser öffnen.
 
-Für die lokale Speicherung sollte die Anwendung möglichst immer über denselben Speicherort bzw. dieselbe lokale Umgebung geöffnet werden.
+Da die Projektdaten lokal im Browser gespeichert werden, sollten regelmäßig vollständige Backups exportiert werden.
 
 ---
 
@@ -676,10 +673,11 @@ Für die lokale Speicherung sollte die Anwendung möglichst immer über denselbe
 ```text
 /
 ├── index.html
-├── styles.css
-├── app.js
 ├── README.md
-└── CHANGELOG.md
+├── CHANGELOG.md
+├── FEATURE_PARITY_AUDIT.md
+├── RELEASE_CANDIDATE_CHECKLIST.md
+└── RELEASE_NOTES_v1.0.md
 ```
 
 ---
@@ -688,77 +686,48 @@ Für die lokale Speicherung sollte die Anwendung möglichst immer über denselbe
 
 Die Kernanwendung arbeitet lokal.
 
-Manuskripte, Story-Bibel, Ideen und Projektdaten müssen für die normale Nutzung nicht auf einen externen Server hochgeladen werden.
+Ideen, Manuskripte, Story-Bibel, Planungsdaten und andere Projektinhalte müssen für die normale Nutzung nicht auf einen externen Server hochgeladen werden.
 
-Dadurch bleibt die Kontrolle über unveröffentlichte Texte und Storydaten beim Nutzer.
+Externe Dienste werden nicht automatisch mit Manuskripttext versorgt.
+
+Eine optionale Online-Prüfung wie LanguageTool wird ausschließlich nach einer ausdrücklichen Nutzeraktion gestartet.
 
 ---
 
 # 🚧 Entwicklungsstand
 
-**Aktuelle Version: v0.88.0**
+**Aktuelle stabile Version: v1.0.0**
 
-Die Autoren-Suite befindet sich weiterhin in aktiver Entwicklung.
+v1.0 ist der erste stabile Release nach der umfangreichen Entwicklungs- und Release-Candidate-Phase.
 
-Der aktuelle Schwerpunkt liegt darauf, die bereits umfangreichen Einzelbereiche immer stärker miteinander zu verbinden.
+Der Funktionsumfang umfasst inzwischen den gesamten Arbeitsweg von der Ideensammlung über Planung und Manuskript bis zu Revision, Analyse und Export.
 
-Seit v0.81 bildet insbesondere die **Szene als gemeinsames Storyobjekt** eine wichtige Grundlage für die weitere Entwicklung.
-
-Die letzten großen Ausbauschritte waren:
-
-- **v0.81 – Story Versioning Foundation**
-- **v0.82 – Scene Lifecycle**
-- **v0.83 – Szenenzentrale & Manuskript-Navigator 2.0**
-- **v0.84 – Text-Parkplatz**
-- **v0.85 – Story-Fäden 2.0**
-- **v0.86 – POV Analytics & Character Presence**
-- **v0.87 – Timeline ↔ Manuskript**
-- **v0.88 – Continuity Facts & Schreib-Inspector**
+Künftige v1.x-Versionen sollen auf dieser Basis weiterentwickelt werden, ohne die bestehende Datenkompatibilität leichtfertig aufzubrechen.
 
 ---
 
-# 🗺️ Roadmap
-
-Die weitere Entwicklung führt die bestehenden Systeme zunehmend zusammen.
-
-Als nächste größere Bereiche sind unter anderem vorgesehen:
-
-- Knowledge & State Intelligence
-- Reihen-Dashboard und Cross-Book-Auswertung
-- erweiterte Schreibziele
-- „Heute im Schreibzimmer“
-- stärkere Integration von Revision und kreativen Versionen
-- Manuscript Analytics 2.0
-- Story Rhythm
-- Language & Style Studio
-- Language Profiles & Dictionaries
-- weitere professionelle Manuskriptwerkzeuge
-- Template- und Workspace-Ausbau
-- technische Vereinheitlichung der visuellen Canvas-Werkzeuge
-- umfassender UX-, Architektur- und Stabilitäts-Pass
-- Feature-Parity-Audit
-- Scale- und Destruction-Tests
-- Accessibility- und Compatibility-Prüfung
-- Release-Candidate-Phase
-
-Ziel ist eine stabile **v1.0**, die den gesamten Arbeitsprozess vom ersten Ideenzettel bis zum fertigen Manuskript in einer zusammenhängenden lokalen Autorenumgebung abbildet.
-
----
-
-## Grundidee
-
-Die Autoren-Suite soll nicht aus vielen voneinander isolierten Werkzeugen bestehen.
-
-**Ideen, Planung, Szenen, Manuskript, Storywissen, Timeline, Kontinuität, Revision und Export sollen unterschiedliche Perspektiven auf dieselbe Geschichte sein.**
-
-Dabei gelten drei zentrale Prinzipien:
+# 🧭 Produktprinzipien
 
 > **Eine Geschichte besteht aus miteinander verbundenen Informationen – nicht aus voneinander isolierten Modulen.**
 
 > **Nichts Kreatives muss verloren gehen, nur weil sich eine Geschichte weiterentwickelt.**
 
 > **Die Suite unterstützt beim Denken, Organisieren, Schreiben, Prüfen und Überarbeiten – die Geschichte bleibt die Arbeit des Autors.**
+
+
+Die Autoren-Suite generiert keine Romantexte und schreibt keine Szenen für den Nutzer.
+
+Analysefunktionen sollen beim Handwerk unterstützen und Informationen sichtbar machen, nicht den kreativen Schreibprozess ersetzen.
+
 ---
+
+# 📜 Changelog
+
+**v1.0.0** markiert den Abschluss der ursprünglichen Entwicklungsphase.
+
+Die vollständige Entwicklungsgeschichte bis einschließlich v1.0.0 kann als Pre-1.0-Historie archiviert werden.
+
+Ab den folgenden v1.x-Versionen wird der laufende Changelog kompakter geführt und konzentriert sich auf Änderungen, die für die tatsächliche Nutzung relevant sind.
 
 ## 📄 Lizenz
 
