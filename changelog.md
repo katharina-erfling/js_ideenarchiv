@@ -6,6 +6,37 @@ Alle wichtigen Änderungen und Entwicklungsschritte des **Ideenarchivs**.
 > Der Changelog dokumentiert Funktionen, Verbesserungen und Fehlerbehebungen, ohne interne Implementierungsdetails offenzulegen.
 
 ---
+## v0.102.0 – Workspace Studio
+
+### 🪟 Persönliche Arbeitsoberfläche
+
+- In den Einstellungen gibt es jetzt ein eigenes `Workspace Studio`.
+- Der bevorzugte Startbereich kann zwischen Dashboard, zuletzt verwendetem Bereich und den wichtigsten Hauptmodulen gewählt werden.
+- Hauptbereiche lassen sich aus Seiten- und Fußnavigation ausblenden, ohne Daten oder Funktionen zu löschen.
+- Einstellungen bleiben vollständig lokal und können jederzeit auf den Standard zurückgesetzt werden.
+
+### ✒ Schreibarbeitsplatz
+
+- Manuskript-Navigator und Inspector können unabhängig voneinander standardmäßig ein- oder ausgeblendet werden.
+- Für beide Seitenbereiche stehen kompakte, normale und breite Arbeitsbreiten zur Verfügung.
+- Die maximale Breite des Schreibarbeitsplatzes kann fokussiert, normal, weit oder maximal gewählt werden.
+- Für Navigator und Inspector lässt sich festlegen, mit welcher Ansicht bzw. welchem Register der Schreibarbeitsplatz startet.
+- Die Einstellungen greifen auf die bestehende Manuskriptoberfläche zurück; es entsteht kein zweiter Editor.
+
+### ⌨ Persönliche Schnellkürzel
+
+- Vier lokale Sprungtasten können mit häufig verwendeten Bereichen belegt werden.
+- Als Modifier steht `Alt` oder `Strg + Alt` zur Verfügung.
+- Ziele können unter anderem Dashboard, Ideenarchiv, Bücher, Manuskript, Workflow und globale Suche sein.
+- Bestehende Kernkürzel wie `Strg/Cmd + K`, Speichern und Suchen bleiben unverändert.
+
+### ✓ Technische Prüfung
+
+- JavaScript-Syntax geprüft.
+- Keine Datenmigration erforderlich.
+- Workspace-Einstellungen werden getrennt von Roman-, Manuskript- und Storydaten in `localStorage` gespeichert.
+- Bestehende Standardansichten bleiben für Nutzer ohne eigene Workspace-Konfiguration erhalten.
+
 ## v0.101.0 – Template Studio 2.0
 
 ### 🧰 Zentrale Vorlagenverwaltung
